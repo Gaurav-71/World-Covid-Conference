@@ -1,0 +1,116 @@
+<template>
+  <div class="register">
+    <Heading :obj="headingObj" />
+    <div class="card-container">
+      <div class="card">
+        <div class="body">
+          <img src="../../assets/Register/target.svg" alt="participants">
+          <h2>Participant</h2>
+          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+        </div>
+        <div class="action">Register as a participant</div>
+      </div>
+      <div class="card">
+        <div class="body">
+          <img src="../../assets/Register/speaker.svg" alt="speaker">
+          <h2>Speaker</h2>
+          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+        </div>
+        <div class="action">Register as a speaker</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Heading from "../../components/Heading";
+
+export default {
+  name: "Register",
+  components: {
+    Heading
+  },
+  data() {
+    return {
+      headingObj: {
+        h1: "Registration",
+        h4:
+          "Be a part of the 2nd World Conference on Advances in COVID-19 jointly organized by Bengaluru Genomics Center & High Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)",
+        src: "register.svg"
+      }
+    };
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "../../scss/colors";
+.register {
+  height: calc(100vh - 4.5rem);
+  background-image: $background-1;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0.5rem 4rem 0 4rem;
+  @include iphone {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card-container {    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @include iphone{
+      margin-top: 3rem;
+    }
+    .card {
+      width: 18rem;
+      height: 22rem;
+      margin: 3rem;
+      border-radius: 0.8rem;
+      background: white;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+      display: grid;
+      grid-template-rows: 85% 15%;
+      overflow: hidden;
+      .body{
+        display: flex;
+        flex-direction: column;        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2,h4{
+          margin:0;          
+          font-weight: lighter;
+        } 
+        h2{
+          color: $primary;
+          margin: 1rem 0;        
+        }
+        img{
+          width: 150px;
+          height: 150px;
+        }
+      }
+      .action {
+        width: 18rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: $gradient;
+        color: white;       
+        cursor: pointer; 
+      }
+      @include iphone {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+</style>
+

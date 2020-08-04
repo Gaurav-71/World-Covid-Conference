@@ -1,32 +1,52 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header />
+    <div class="spacer"></div>    
     <router-view />
   </div>
 </template>
 
+<script>
+import Header from "./components/Header";
+
+export default {
+  components: {
+    Header
+  }
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "./scss/colors";
+
+::-webkit-scrollbar {
+  width: 0.35rem;  
 }
 
-#nav {
-  padding: 30px;
+::-webkit-scrollbar-track {
+  background: none;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+::-webkit-scrollbar-thumb {
+  background-color: #08e1ae;
+  background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3rem;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.spacer{
+  margin-top: 4rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;    
+  letter-spacing: 1px;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 </style>
