@@ -1,6 +1,11 @@
 <template>
   <div class="header">
-    <div class="logos"></div>
+    <div class="logos">
+      <img src="../assets/Header/bcg-logo.png" class="bgc" alt="logo" />
+      
+      <div class="line"></div>
+      <img src="../assets/Header/ippa-logo.png" class="ippa" alt="logo" />
+    </div>
     <nav>
       <img v-if="!isMenuOpen" @click="showMenu" src="../assets/Header/menu.svg" alt="menu" />
       <img v-else @click="showMenu" src="../assets/Header/close.svg" alt="close" />
@@ -38,6 +43,23 @@ export default {
       if (menuAction == "close") {
         this.showMenu();
       }
+      switch (page) {
+        case 1:
+          this.$router.push("/");
+          break;
+        case 2:
+          this.$router.push("/speakers");
+          break;
+        case 3:
+          this.$router.push("/organizers");
+          break;
+        case 4:
+          this.$router.push("/contacts");
+          break;
+        case 5:
+          this.$router.push("/registration");
+          break;
+      }
     },
     showMenu() {
       this.isMenuOpen = !this.isMenuOpen;
@@ -59,6 +81,24 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .logos {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 1rem;
+    .ippa{
+      width: 50px;      
+    }
+    .line{
+      height: 3.5rem;
+      width: 1px;
+      background: gainsboro;
+      margin: 0 1rem;
+    }
+    .bgc {
+      width: 140px;
+    }
+  }
   nav {
     img {
       width: 2rem;
@@ -77,9 +117,9 @@ export default {
     .hide {
       display: none;
     }
-    .list-nav {               
+    .list-nav {
       display: block;
-      position: fixed;      
+      position: fixed;
       top: 4.7rem;
       right: 0;
       left: 0;
@@ -87,7 +127,7 @@ export default {
       color: white;
       list-style-type: none;
       padding: 0 2.5rem;
-      margin: 0;            
+      margin: 0;
       li {
         margin: 2rem 0;
         padding: 0;

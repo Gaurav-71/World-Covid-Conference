@@ -8,7 +8,7 @@
           <h2>Participant</h2>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
         </div>
-        <div class="action">Register as a participant</div>
+        <div @click="route(1)" class="action">Register as a participant</div>
       </div>
       <div class="card">
         <div class="body">
@@ -16,7 +16,7 @@
           <h2>Speaker</h2>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
         </div>
-        <div class="action">Register as a speaker</div>
+        <div @click="route(2)" class="action">Register as a speaker</div>
       </div>
     </div>
   </div>
@@ -39,6 +39,18 @@ export default {
         src: "register.svg"
       }
     };
+  },
+  methods:{
+    route(page){
+      switch(page){
+        case 1:
+          this.$router.push("/register/participant");
+          break;
+        case 2:
+          this.$router.push("/register/speaker");
+          break;
+      }
+    }
   }
 };
 </script>

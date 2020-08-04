@@ -30,7 +30,7 @@ export default {
 
 ::-webkit-scrollbar-thumb {
   background-color: #08e1ae;
-  background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);  
+  background-image: linear-gradient(90deg, rgb(252, 108, 53),rgb(170, 18, 159));
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -48,5 +48,6 @@ body {
   letter-spacing: 1px;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
 }
 </style>
