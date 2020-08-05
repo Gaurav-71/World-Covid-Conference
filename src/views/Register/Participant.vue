@@ -4,7 +4,7 @@
       <img src="../../assets/Register/target.svg" alt="participant" />
       <div class="title">
         <h1>Participant Registration</h1>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+        <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
       </div>
     </div>
     <div v-if="pageNav == 1">
@@ -16,15 +16,15 @@
         <form>
           <div class="input">
             <label>Name</label>
-            <input type="text" placeholder="Enter name" class="name" />
+            <input type="text" placeholder="Enter name" class="name" v-model="name" />
           </div>
           <div class="input">
             <label>Phone Number</label>
-            <input type="text" placeholder="Enter number" class="number" />
+            <input type="text" placeholder="Enter number" class="number" v-model="phno" />
           </div>
           <div class="input no-margin">
             <label>Email</label>
-            <input type="text" placeholder="Enter email" class="email" />
+            <input type="text" placeholder="Enter email" class="email" v-model="email" />
           </div>
         </form>
         <div class="flex">
@@ -73,29 +73,29 @@
         <form>
           <div class="input">
             <label>Street 1</label>
-            <input type="text" placeholder="Enter Street 1" class="street" />
+            <input type="text" placeholder="Enter Street 1" class="street" v-model="street1" />
           </div>
           <div class="input">
             <label>Street 2</label>
-            <input type="text" placeholder="Enter Street 2" class="street" />
+            <input type="text" placeholder="Enter Street 2" class="street" v-model="street2" />
           </div>
           <div class="input">
             <label>Landmark</label>
-            <input type="text" placeholder="Enter Landmark" class="landmark" />
+            <input type="text" placeholder="Enter Landmark" class="landmark" v-model="landmark" />
           </div>
         </form>
         <form>
           <div class="input">
             <label>State</label>
-            <input type="text" placeholder="Enter State" class="state" />
+            <input type="text" placeholder="Enter State" class="state" v-model="state" />
           </div>
           <div class="input">
             <label>City</label>
-            <input type="text" placeholder="Enter City" class="city" />
+            <input type="text" placeholder="Enter City" class="city" v-model="city" />
           </div>
           <div class="input">
             <label>Pincode</label>
-            <input type="text" placeholder="Enter Pincode" class="pin" />
+            <input type="text" placeholder="Enter Pincode" class="pin" v-model="pin" />
           </div>
         </form>
         <form>
@@ -397,11 +397,21 @@
         <form>
           <div class="input">
             <label>Designation</label>
-            <input type="text" placeholder="Enter Designation" class="designation" />
+            <input
+              type="text"
+              placeholder="Enter Designation"
+              class="designation"
+              v-model="designation"
+            />
           </div>
           <div class="input">
             <label>Area of Research</label>
-            <input type="text" placeholder="Enter Area of Research" class="research" />
+            <input
+              type="text"
+              placeholder="Enter Area of Research"
+              class="research"
+              v-model="research"
+            />
           </div>
         </form>
       </div>
@@ -413,11 +423,11 @@
         <form>
           <div class="input">
             <label>University / College Name</label>
-            <input type="text" placeholder="Enter name" class="college" />
+            <input type="text" placeholder="Enter name" class="college" v-model="universityName" />
           </div>
           <div class="input">
             <label>Stream</label>
-            <input type="text" placeholder="Enter Stream" class="stream" />
+            <input type="text" placeholder="Enter Stream" class="stream" v-model="stream" />
           </div>
           <div class="input">
             <label>Student ID proof</label>
@@ -434,29 +444,29 @@
         <form>
           <div class="input">
             <label>Locality</label>
-            <input type="text" placeholder="Enter Locality" class="street" />
+            <input type="text" placeholder="Enter Locality" class="street" v-model="locality2" />
           </div>
           <div class="input">
             <label>Landmark</label>
-            <input type="text" placeholder="Enter Landmark" class="landmark" />
+            <input type="text" placeholder="Enter Landmark" class="landmark" v-model="landmark2" />
           </div>
           <div v-if="profession == 'o'" class="input">
             <label>Office Number</label>
-            <input type="text" placeholder="Enter Office Number" class="number" />
+            <input type="text" placeholder="Enter Office Number" class="number" v-model="landline2" />
           </div>
         </form>
         <form>
           <div class="input">
             <label>State</label>
-            <input type="text" placeholder="Enter State" class="state" />
+            <input type="text" placeholder="Enter State" class="state" v-model="state2" />
           </div>
           <div class="input">
             <label>City</label>
-            <input type="text" placeholder="Enter City" class="city" />
+            <input type="text" placeholder="Enter City" class="city" v-model="city2" />
           </div>
           <div class="input">
             <label>Pincode</label>
-            <input type="text" placeholder="Enter Pincode" class="pin" />
+            <input type="text" placeholder="Enter Pincode" class="pin" v-model="pin2" />
           </div>
         </form>
         <form>
@@ -467,7 +477,7 @@
               name="countries"
               placeholder="Enter Country"
               class="country"
-              v-model="country"
+              v-model="country2"
             />
             <datalist id="allCountries">
               <option value="Afghanistan"></option>
@@ -731,22 +741,22 @@
         <div class="category">
           <form>
             <div class="custom-label">
-              <input type="radio" id="male" name="gender" value="M" v-model="gender" />
+              <input type="radio" id="f1" name="feedback" value="f1" v-model="feedback" />
               <img src="../../assets/Register/Participant/friends.svg" alt="male" />
               <label for="male">Friends / Colleagues</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="female" name="gender" value="F" v-model="gender" />
+              <input type="radio" id="f2" name="feedback" value="f2" v-model="feedback" />
               <img src="../../assets/Register/Participant/social.svg" alt="male" />
               <label for="female">Social Media</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="other" name="gender" value="O" v-model="gender" />
+              <input type="radio" id="f3" name="feedback" value="f3" v-model="feedback" />
               <img src="../../assets/Register/Participant/search.svg" alt="male" />
               <label for="other">Search Engine</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="other" name="gender" value="O" v-model="gender" />
+              <input type="radio" id="f4" name="feedback" value="f4" v-model="feedback" />
               <img src="../../assets/Register/Participant/other-feedback.svg" alt="male" />
               <label for="other">Other</label>
             </div>
@@ -869,7 +879,12 @@
           <form>
             <div class="input">
               <label>Transaction ID</label>
-              <input type="text" placeholder="Enter Transaction ID" class="transaction" />
+              <input
+                type="text"
+                placeholder="Enter Transaction ID"
+                class="transaction"
+                v-model="transactionID"
+              />
             </div>
             <div class="input">
               <label>Transaction Proof (A screenshot of the completed transaction)</label>
@@ -882,7 +897,7 @@
     <div @click="validate(2)" v-if="pageNav == 1" class="btn">Save & Pay</div>
     <div v-if="pageNav == 2" class="actions">
       <div @click="pageNav=1" class="btn transparent">Back</div>
-      <div @clicl="validate(2)" class="btn">Register</div>
+      <div @click="validate(3)" class="btn">Register</div>
     </div>
   </div>
 </template>
@@ -892,9 +907,6 @@ export default {
   name: "Participant",
   data() {
     return {
-      gender: "",
-      profession: null,
-      country: "",
       allDevelopedCountries: [
         "Austria",
         "Belgium",
@@ -940,11 +952,54 @@ export default {
       ],
       isDeveloped: true,
       pageNav: 1,
+
+      //personal info
+      name: "",
+      phno: "",
+      email: "",
+      gender: "",
+      profession: null,
+
+      //postal addr
+      street1: "",
+      street2: "",
+      landmark: "",
+      state: "",
+      city: "",
+      pin: "",
+      country: "",
+
+      //academic details
+      universityName: "",
+      stream: "",
+      studentIdProof: "", // have to model, file type
+
+      //profesional details
+      qualification: null,
+      designation: "",
+      research: "",
+
+      //second addr
+      locality2: "",
+      landmark2: "",
+      state2: "",
+      city2: "",
+      pin2: "",
+      country2: "",
+      landline2: null,
+
+      //feedback
+      feedback: null,
+
+      //fee
       amount: 0,
       finalAmount: 0,
       discount: 0,
-      qualification: null,
-      paymentMode: null
+
+      //payment
+      paymentMode: null,
+      transactionID: "",
+      transactionProof: "" // have to model, file type
     };
   },
   methods: {
@@ -984,6 +1039,9 @@ export default {
           }
         }
         this.pageNav = page;
+      } else if (page == 3) {
+        this.$router.push("/");
+        this.$store.state.navItem = 1;
       }
     },
     checkDeveloped() {
