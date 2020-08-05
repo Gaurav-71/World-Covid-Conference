@@ -986,7 +986,7 @@ export default {
       city2: "",
       pin2: "",
       country2: "",
-      landline2: null,
+      landline2: null, // only if other profession
 
       //feedback
       feedback: null,
