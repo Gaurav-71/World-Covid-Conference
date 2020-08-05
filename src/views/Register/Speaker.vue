@@ -350,17 +350,60 @@
       </form>
       <form>
         <div class="input">
-          <label>Title of Talk</label>
-          <input type="text" placeholder="Enter Street 1" class="street" v-model="street1" />
+          <div class="input">
+            <label>Upload Abstract</label>
+            <input type="file" class="default" />
+          </div>
         </div>
       </form>
     </div>
+    <div class="card talk">
+      <div class="heading">
+        <h2>Guest Name</h2>
+        <div class="line"></div>
+      </div>
+      <p>Registration for a speaker is free. Each speaker is allowed to have one guest</p>
+      <form>
+        <div class="input">
+          <label>Name</label>
+          <input type="text" placeholder="Enter Guest Name" class="name" v-model="guestName" />
+        </div>
+      </form>
+    </div>
+    <div @click="validate" class="btn">Register</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Speaker"
+  name: "Speaker",
+  data() {
+    return {
+      //personal info
+      name: "",
+      phno: "",
+      email: "",
+      affiliation: "",
+
+      //postal addr
+      street1: "",
+      street2: "",
+      landmark: "",
+      state: "",
+      city: "",
+      pin: "",
+      country: "",
+
+      //guest
+      guestName: ""
+    };
+  },
+  methods: {
+    validate() {
+      this.$router.push("/");
+      this.$store.state.navItem = 1;
+    }
+  }
 };
 </script>
 
@@ -583,6 +626,29 @@ export default {
         }
       }
     }
+  }
+  .talk {
+    .default {
+      text-indent: 0;
+    }
+  }
+  .btn {
+    text-align: center;
+    width: 6rem;
+    margin: 0 1.2rem 4rem 0.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.6rem;
+    background: #7d62a9;
+    box-shadow: 10px 10px 20px rgba(grey, 0.5);
+    color: white;
+    transition: background 0.3s ease-in;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: darken(#7d62a9, 12%);
+  }
+  .btn:active {
+    transform: scale(0.8);
   }
 }
 </style>

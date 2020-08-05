@@ -772,7 +772,7 @@
         </div>
         <div class="body">
           <div class="amount">Registration Fees : ${{amount}} | &#8377;{{amount * 74.90}}</div>
-          <div class="discount">Discount : 50%</div>
+          <div class="discount">Discount : {{discount}}%</div>
           <div class="line"></div>
           <div class="final-amt">
             Final Fee :
@@ -1338,7 +1338,7 @@ export default {
     background: #7d62a9;
     box-shadow: 10px 10px 20px rgba(grey, 0.5);
     color: white;
-    transition: all 0.3s ease-in;
+    transition: background 0.3s ease-in;
     cursor: pointer;
   }
   .btn:hover {

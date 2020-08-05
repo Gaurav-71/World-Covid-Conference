@@ -161,7 +161,7 @@ export default {
           background: #7d62a9;
           box-shadow: 10px 10px 20px rgba(grey, 0.5);
           color: white;
-          transition: all 0.3s ease-in;
+          transition: background 0.3s ease-in;
         }
         .btn:hover {
           background: darken(#7d62a9, 12%);
