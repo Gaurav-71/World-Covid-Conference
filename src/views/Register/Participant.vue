@@ -469,20 +469,20 @@
             <label>Stream</label>
             <input type="text" placeholder="Enter Stream" class="stream" v-model="detail.stream" />
           </div>
-          <div class="input file-type">
-            <label>Student ID proof</label>
-            <input
-              type="file"
-              class="student-id"
-              ref="studentImage"
-              accept="image/*"
-              @change="onStudentFilePicked"
-            />
-            <div @click="pickStudentImage" class="btn my-btn">Upload File</div>
-            <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
-            <p class="upload-msg" v-else>No file uploaded</p>
-          </div>
         </form>
+        <div class="input file-type">
+          <label>Student ID proof</label>
+          <input
+            type="file"
+            class="student-id"
+            ref="studentImage"
+            accept="image/*"
+            @change="onStudentFilePicked"
+          />
+          <div @click="pickStudentImage" class="btn my-btn">Upload File</div>
+          <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
+          <p class="upload-msg" v-else>No file uploaded</p>
+        </div>
       </div>
       <div v-if="detail.profession != null " class="card address">
         <div class="heading">
@@ -1103,14 +1103,14 @@ export default {
       this.images.transactionImage = files[0];
       this.transactionImgName = this.images.transactionImage.name;
     },
-    allFieldsFilled(){
+    allFieldsFilled() {
       /*if(this.name == ""){
         return false;
       }
       else if(this.phno == ""){return false;}
       else if(this.email == ""){return false;}  
       else if(this.gender == null){return false;}  */
-        return true;
+      return true;
     },
     validate(page) {
       if (page == 2) {
@@ -1152,8 +1152,7 @@ export default {
             }
           }
           this.pageNav = page;
-        }
-        else {
+        } else {
           alert("Please fill all fields !");
         }
       } else if (page == 3) {
@@ -1171,8 +1170,7 @@ export default {
             .catch(resp => {
               console.log(resp);
             });
-        }
-        else {
+        } else {
           alert("Please fill all fields !");
         }
       }
@@ -1413,12 +1411,20 @@ export default {
       }
     }
   }
+  .academic-details {
+    form {
+      width: 100%;
+    }
+  }
   .address {
     form {
       width: 100%;
       .input {
         .country {
           width: 100%;
+          @include iphone {
+            width: 90%;
+          }
         }
       }
     }
@@ -1529,10 +1535,13 @@ export default {
     margin: 0;
     padding: 0;
   }
-  .my-btn {
-    margin: 0.2rem 0;
+  .my-btn {    
     box-shadow: none;
     background: $primary;
+    margin: 0.8rem 0;
+    @include iphone{
+      margin: 0;
+    }
   }
   .my-btn:hover {
     background: darken($primary, 10%);

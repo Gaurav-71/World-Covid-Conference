@@ -29,7 +29,7 @@
           <label>Affiliation</label>
           <input
             type="text"
-            placeholder="Enter affiliation"
+            placeholder="Enter Affiliation"
             class="affiliation"
             v-model="detail.affiliation"
           />
@@ -52,7 +52,12 @@
         </div>
         <div class="input">
           <label>Landmark</label>
-          <input type="text" placeholder="Enter Landmark" class="landmark" v-model="detail.landmark" />
+          <input
+            type="text"
+            placeholder="Enter Landmark"
+            class="landmark"
+            v-model="detail.landmark"
+          />
         </div>
       </form>
       <form>
@@ -341,21 +346,19 @@
       <form>
         <div class="input">
           <label>Title</label>
-          <input type="text" placeholder="Enter Street 1" class="street" v-model="detail.street1" />
-        </div>
-        <div class="input">
-          <label>Theme</label>
-          <input type="text" placeholder="Enter Street 1" class="street" v-model="detail.street1" />
+          <input type="text" placeholder="Enter Title" class="title" v-model="detail.title" />
         </div>
       </form>
-      <form>
-        <div class="input">
-          <div class="input">
-            <label>Upload Abstract</label>
-            <input type="file" class="default" />
-          </div>
-        </div>
-      </form>
+      <div class="input file-type">
+        <label>Speaker Abstract</label>
+        <input type="file" class="student-id" ref="abstractFile" @change="onFilePicked" />
+        <div @click="pickFile" class="btn my-btn">Upload File</div>
+        <p
+          class="upload-msg"
+          v-if=" !abstractFileName == ''"
+        >Uploaded {{abstractFileName}} succesfully !</p>
+        <p class="upload-msg" v-else>No file uploaded</p>
+      </div>
     </div>
     <div class="card talk">
       <div class="heading">
@@ -393,17 +396,30 @@ export default {
         city: "",
         pin: "",
         country: "",
+        //talk
+        title: "",
         //guest
         guestName: "",
         //file
-        abstractFile: "",  
+        abstractFile: ""
       },
       abstractFile: null,
       abstractFileName: ""
     };
   },
   methods: {
-    validate() {      
+    pickFile() {
+      this.$refs.abstractFile.click();
+    },
+    onFilePicked(event) {
+      const files = event.target.files;
+      const fileReader = new FileReader();
+      fileReader.addEventListener("load", () => {});
+      fileReader.readAsDataURL(files[0]);
+      this.abstractFile = files[0];
+      this.abstractFileName = this.abstractFile.name;
+    },
+    validate() {
       let payload = {
         abstractFile: this.abstractFile,
         detail: this.detail
@@ -572,6 +588,9 @@ export default {
         .designation {
           background-image: url("../../assets/Register/Participant/ceo.svg");
         }
+        .title {
+          background-image: url("../../assets/Register/Speaker/title.svg");
+        }
       }
       .no-margin {
         margin-right: 0;
@@ -664,6 +683,32 @@ export default {
   }
   .btn:active {
     transform: scale(0.8);
+  }
+  .file-type {
+    margin: 0;
+    padding: 0;
+  }
+  .my-btn {
+    margin: 0.8rem 0;
+    @include iphone {
+      margin: 0;
+    }
+    box-shadow: none;
+    background: $primary;
+  }
+  .my-btn:hover {
+    background: darken($primary, 10%);
+  }
+  .upload-msg {
+    margin: 0.8rem 0.2rem;
+    color: #333;
+  }
+  .student-id {
+    height: 0;
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
   }
 }
 </style>
