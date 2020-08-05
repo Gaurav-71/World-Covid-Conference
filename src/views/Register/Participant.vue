@@ -16,32 +16,32 @@
         <form>
           <div class="input">
             <label>Name</label>
-            <input type="text" placeholder="Enter name" class="name" v-model="name" />
+            <input type="text" placeholder="Enter name" class="name" v-model="detail.name" />
           </div>
           <div class="input">
             <label>Phone Number</label>
-            <input type="text" placeholder="Enter number" class="number" v-model="phno" />
+            <input type="text" placeholder="Enter number" class="number" v-model="detail.phno" />
           </div>
           <div class="input no-margin">
             <label>Email</label>
-            <input type="text" placeholder="Enter email" class="email" v-model="email" />
+            <input type="text" placeholder="Enter email" class="email" v-model="detail.email" />
           </div>
         </form>
         <div class="flex">
           <div class="gender">
             <label>Gender</label>
             <form>
-              <input type="radio" id="male" name="gender" value="M" v-model="gender" />
+              <input type="radio" id="male" name="gender" value="M" v-model="detail.gender" />
               <div class="custom-label">
                 <img src="../../assets/Register/Participant/male.svg" alt="male" />
                 <label for="male">Male</label>
               </div>
-              <input type="radio" id="female" name="gender" value="F" v-model="gender" />
+              <input type="radio" id="female" name="gender" value="F" v-model="detail.gender" />
               <div class="custom-label">
                 <img src="../../assets/Register/Participant/female.svg" alt="male" />
                 <label for="female">Female</label>
               </div>
-              <input type="radio" id="other" name="gender" value="O" v-model="gender" />
+              <input type="radio" id="other" name="gender" value="O" v-model="detail.gender" />
               <div class="custom-label">
                 <img src="../../assets/Register/Participant/other.svg" alt="male" />
                 <label for="other">Other</label>
@@ -51,12 +51,24 @@
           <div class="profession">
             <label>Profession</label>
             <form>
-              <input type="radio" id="student" name="profession" value="s" v-model="profession" />
+              <input
+                type="radio"
+                id="student"
+                name="profession"
+                value="s"
+                v-model="detail.profession"
+              />
               <div class="custom-label">
                 <img src="../../assets/Register/Participant/student.svg" alt="student" />
                 <label for="student">Student</label>
               </div>
-              <input type="radio" id="other" name="profession" value="o" v-model="profession" />
+              <input
+                type="radio"
+                id="other"
+                name="profession"
+                value="o"
+                v-model="detail.profession"
+              />
               <div class="custom-label">
                 <img src="../../assets/Register/Participant/other-prof.svg" alt="other-prof" />
                 <label for="other">Other</label>
@@ -73,29 +85,34 @@
         <form>
           <div class="input">
             <label>Street 1</label>
-            <input type="text" placeholder="Enter Street 1" class="street" v-model="street1" />
+            <input type="text" placeholder="Enter Street 1" class="street" v-model="detail.street1" />
           </div>
           <div class="input">
             <label>Street 2</label>
-            <input type="text" placeholder="Enter Street 2" class="street" v-model="street2" />
+            <input type="text" placeholder="Enter Street 2" class="street" v-model="detail.street2" />
           </div>
           <div class="input">
             <label>Landmark</label>
-            <input type="text" placeholder="Enter Landmark" class="landmark" v-model="landmark" />
+            <input
+              type="text"
+              placeholder="Enter Landmark"
+              class="landmark"
+              v-model="detail.landmark"
+            />
           </div>
         </form>
         <form>
           <div class="input">
             <label>State</label>
-            <input type="text" placeholder="Enter State" class="state" v-model="state" />
+            <input type="text" placeholder="Enter State" class="state" v-model="detail.state" />
           </div>
           <div class="input">
             <label>City</label>
-            <input type="text" placeholder="Enter City" class="city" v-model="city" />
+            <input type="text" placeholder="Enter City" class="city" v-model="detail.city" />
           </div>
           <div class="input">
             <label>Pincode</label>
-            <input type="text" placeholder="Enter Pincode" class="pin" v-model="pin" />
+            <input type="text" placeholder="Enter Pincode" class="pin" v-model="detail.pin" />
           </div>
         </form>
         <form>
@@ -106,7 +123,7 @@
               name="countries"
               placeholder="Enter Country"
               class="country"
-              v-model="country"
+              v-model="detail.country"
             />
             <datalist id="allCountries">
               <option value="Afghanistan"></option>
@@ -135,7 +152,7 @@
               <option value="Benin"></option>
               <option value="Bermuda"></option>
               <option value="Bhutan"></option>
-              <option value="Bolivia, Plurinational State of"></option>
+              <option value="Bolivia"></option>
               <option value="Bonaire, Sint Eustatius and Saba"></option>
               <option value="Bosnia and Herzegovina"></option>
               <option value="Botswana"></option>
@@ -253,7 +270,7 @@
               <option value="Mauritius"></option>
               <option value="Mayotte"></option>
               <option value="Mexico"></option>
-              <option value="Micronesia, Federated States of"></option>
+              <option value="Micronesia"></option>
               <option value="Moldova, Republic of"></option>
               <option value="Monaco"></option>
               <option value="Mongolia"></option>
@@ -278,7 +295,7 @@
               <option value="Oman"></option>
               <option value="Pakistan"></option>
               <option value="Palau"></option>
-              <option value="Palestinian Territory, Occupied"></option>
+              <option value="Palestine"></option>
               <option value="Panama"></option>
               <option value="Papua New Guinea"></option>
               <option value="Paraguay"></option>
@@ -362,7 +379,7 @@
           </div>
         </form>
       </div>
-      <div v-if="profession == 'o'" class="card category-container">
+      <div v-if="detail.profession == 'o'" class="card category-container">
         <div class="heading">
           <h2>Qualification Category</h2>
           <div class="line"></div>
@@ -370,26 +387,44 @@
         <div class="category">
           <form>
             <div class="custom-label">
-              <input type="radio" id="1" name="qualification" value="1" v-model="qualification" />
+              <input
+                type="radio"
+                id="1"
+                name="qualification"
+                value="1"
+                v-model="detail.qualification"
+              />
               <img src="../../assets/Register/Participant/teacher.svg" alt="male" />
               <label
                 for="male"
               >Faculty / Post-doctoral Fellow / Research Associate / Research Engineer</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="2" name="qualification" value="2" v-model="qualification" />
+              <input
+                type="radio"
+                id="2"
+                name="qualification"
+                value="2"
+                v-model="detail.qualification"
+              />
               <img src="../../assets/Register/Participant/businessman.svg" alt="male" />
               <label for="female">Industry Personnel</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="3" name="qualification" value="3" v-model="qualification" />
+              <input
+                type="radio"
+                id="3"
+                name="qualification"
+                value="3"
+                v-model="detail.qualification"
+              />
               <img src="../../assets/Register/Participant/other-prof.svg" alt="male" />
               <label for="other">Other</label>
             </div>
           </form>
         </div>
       </div>
-      <div v-if="profession == 'o'" class="card professional-details">
+      <div v-if="detail.profession == 'o'" class="card professional-details">
         <div class="heading">
           <h2>Professional Information</h2>
           <div class="line"></div>
@@ -401,7 +436,7 @@
               type="text"
               placeholder="Enter Designation"
               class="designation"
-              v-model="designation"
+              v-model="detail.designation"
             />
           </div>
           <div class="input">
@@ -410,12 +445,12 @@
               type="text"
               placeholder="Enter Area of Research"
               class="research"
-              v-model="research"
+              v-model="detail.research"
             />
           </div>
         </form>
       </div>
-      <div v-if="profession == 's'" class="card academic-details">
+      <div v-if="detail.profession == 's'" class="card academic-details">
         <div class="heading">
           <h2>Academic Details</h2>
           <div class="line"></div>
@@ -423,50 +458,79 @@
         <form>
           <div class="input">
             <label>University / College Name</label>
-            <input type="text" placeholder="Enter name" class="college" v-model="universityName" />
+            <input
+              type="text"
+              placeholder="Enter name"
+              class="college"
+              v-model="detail.universityName"
+            />
           </div>
           <div class="input">
             <label>Stream</label>
-            <input type="text" placeholder="Enter Stream" class="stream" v-model="stream" />
+            <input type="text" placeholder="Enter Stream" class="stream" v-model="detail.stream" />
           </div>
-          <div class="input">
+          <div class="input file-type">
             <label>Student ID proof</label>
-            <input type="file" class="student-id" />
+            <input
+              type="file"
+              class="student-id"
+              ref="studentImage"
+              accept="image/*"
+              @change="onStudentFilePicked"
+            />
+            <div @click="pickStudentImage" class="btn my-btn">Upload File</div>
+            <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
+            <p class="upload-msg" v-else>No file uploaded</p>
           </div>
         </form>
       </div>
-      <div v-if="profession != null " class="card address">
+      <div v-if="detail.profession != null " class="card address">
         <div class="heading">
-          <h2 v-if="profession == 'o'">Office Address</h2>
+          <h2 v-if="detail.profession == 'o'">Office Address</h2>
           <h2 v-else>University / College Address</h2>
           <div class="line"></div>
         </div>
         <form>
           <div class="input">
             <label>Locality</label>
-            <input type="text" placeholder="Enter Locality" class="street" v-model="locality2" />
+            <input
+              type="text"
+              placeholder="Enter Locality"
+              class="street"
+              v-model="detail.locality2"
+            />
           </div>
           <div class="input">
             <label>Landmark</label>
-            <input type="text" placeholder="Enter Landmark" class="landmark" v-model="landmark2" />
+            <input
+              type="text"
+              placeholder="Enter Landmark"
+              class="landmark"
+              v-model="detail.landmark2"
+            />
           </div>
-          <div v-if="profession == 'o'" class="input">
+          <div v-if="detail.profession == 'o'" class="input">
             <label>Office Number</label>
-            <input type="text" placeholder="Enter Office Number" class="number" v-model="landline2" />
+            <input
+              type="text"
+              placeholder="Enter Office Number"
+              class="number"
+              v-model="detail.landline2"
+            />
           </div>
         </form>
         <form>
           <div class="input">
             <label>State</label>
-            <input type="text" placeholder="Enter State" class="state" v-model="state2" />
+            <input type="text" placeholder="Enter State" class="state" v-model="detail.state2" />
           </div>
           <div class="input">
             <label>City</label>
-            <input type="text" placeholder="Enter City" class="city" v-model="city2" />
+            <input type="text" placeholder="Enter City" class="city" v-model="detail.city2" />
           </div>
           <div class="input">
             <label>Pincode</label>
-            <input type="text" placeholder="Enter Pincode" class="pin" v-model="pin2" />
+            <input type="text" placeholder="Enter Pincode" class="pin" v-model="detail.pin2" />
           </div>
         </form>
         <form>
@@ -477,7 +541,7 @@
               name="countries"
               placeholder="Enter Country"
               class="country"
-              v-model="country2"
+              v-model="detail.country2"
             />
             <datalist id="allCountries">
               <option value="Afghanistan"></option>
@@ -506,7 +570,7 @@
               <option value="Benin"></option>
               <option value="Bermuda"></option>
               <option value="Bhutan"></option>
-              <option value="Bolivia, Plurinational State of"></option>
+              <option value="Bolivia"></option>
               <option value="Bonaire, Sint Eustatius and Saba"></option>
               <option value="Bosnia and Herzegovina"></option>
               <option value="Botswana"></option>
@@ -624,7 +688,7 @@
               <option value="Mauritius"></option>
               <option value="Mayotte"></option>
               <option value="Mexico"></option>
-              <option value="Micronesia, Federated States of"></option>
+              <option value="Micronesia"></option>
               <option value="Moldova, Republic of"></option>
               <option value="Monaco"></option>
               <option value="Mongolia"></option>
@@ -741,22 +805,22 @@
         <div class="category">
           <form>
             <div class="custom-label">
-              <input type="radio" id="f1" name="feedback" value="f1" v-model="feedback" />
+              <input type="radio" id="f1" name="feedback" value="f1" v-model="detail.feedback" />
               <img src="../../assets/Register/Participant/friends.svg" alt="male" />
               <label for="male">Friends / Colleagues</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="f2" name="feedback" value="f2" v-model="feedback" />
+              <input type="radio" id="f2" name="feedback" value="f2" v-model="detail.feedback" />
               <img src="../../assets/Register/Participant/social.svg" alt="male" />
               <label for="female">Social Media</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="f3" name="feedback" value="f3" v-model="feedback" />
+              <input type="radio" id="f3" name="feedback" value="f3" v-model="detail.feedback" />
               <img src="../../assets/Register/Participant/search.svg" alt="male" />
               <label for="other">Search Engine</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="f4" name="feedback" value="f4" v-model="feedback" />
+              <input type="radio" id="f4" name="feedback" value="f4" v-model="detail.feedback" />
               <img src="../../assets/Register/Participant/other-feedback.svg" alt="male" />
               <label for="other">Other</label>
             </div>
@@ -771,12 +835,14 @@
           <div class="line"></div>
         </div>
         <div class="body">
-          <div class="amount">Registration Fees : ${{amount}} | &#8377;{{amount * 74.90}}</div>
+          <div
+            class="amount"
+          >Registration Fees : ${{detail.amount}} | &#8377;{{detail.amount * 74.90}}</div>
           <div class="discount">Discount : {{discount}}%</div>
           <div class="line"></div>
           <div class="final-amt">
             Final Fee :
-            <span>${{finalAmount}} | &#8377;{{finalAmount * 74.90}}</span>
+            <span>${{detail.finalAmount}} | &#8377;{{detail.finalAmount * 74.90}}</span>
           </div>
         </div>
       </div>
@@ -788,24 +854,24 @@
         <div class="category">
           <form>
             <div class="custom-label">
-              <input type="radio" id="p1" name="paymentMode" value="1" v-model="paymentMode" />
+              <input type="radio" id="p1" name="paymentMode" value="1" v-model="detail.paymentMode" />
               <img src="../../assets/Register/Participant/neft.svg" alt="neft" />
               <label for="male">NEFT</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="p2" name="paymentMode" value="2" v-model="paymentMode" />
+              <input type="radio" id="p2" name="paymentMode" value="2" v-model="detail.paymentMode" />
               <img src="../../assets/Register/Participant/gpay.png" alt="gpay" />
               <label for="female">Google Pay</label>
             </div>
             <div class="custom-label">
-              <input type="radio" id="p3" name="paymentMode" value="3" v-model="paymentMode" />
+              <input type="radio" id="p3" name="paymentMode" value="3" v-model="detail.paymentMode" />
               <img src="../../assets/Register/Participant/paypal.svg" alt="paypal" />
               <label for="other">PayPal</label>
             </div>
           </form>
         </div>
       </div>
-      <div v-if="paymentMode==1" class="card category-container">
+      <div v-if="detail.paymentMode==1" class="card category-container">
         <div class="heading">
           <h2>NEFT</h2>
           <div class="line"></div>
@@ -834,11 +900,11 @@
           <br />
           <p>
             Please make a payment of
-            <span>${{finalAmount}} | &#8377;{{finalAmount * 74.90}}</span>
+            <span>${{detail.finalAmount}} | &#8377;{{detail.finalAmount * 74.90}}</span>
           </p>
         </div>
       </div>
-      <div v-else-if="paymentMode==2" class="card category-container">
+      <div v-else-if="detail.paymentMode==2" class="card category-container">
         <div class="heading">
           <h2>Google Pay</h2>
           <div class="line"></div>
@@ -846,7 +912,7 @@
         <div class="category">
           <p>
             Please make a payment of
-            <span>${{finalAmount}} | &#8377;{{finalAmount * 74.90}}</span>
+            <span>${{detail.finalAmount}} | &#8377;{{detail.finalAmount * 74.90}}</span>
           </p>
           <p>
             Phone Number :
@@ -854,7 +920,7 @@
           </p>
         </div>
       </div>
-      <div v-else-if="paymentMode==3" class="card category-container">
+      <div v-else-if="detail.paymentMode==3" class="card category-container">
         <div class="heading">
           <h2>PayPal</h2>
           <div class="line"></div>
@@ -862,7 +928,7 @@
         <div class="category">
           <p>
             Please make a payment of
-            <span>${{finalAmount}} | &#8377;{{finalAmount * 74.90}}</span>
+            <span>${{detail.finalAmount}} | &#8377;{{detail.finalAmount * 74.90}}</span>
           </p>
           <p>
             Phone Number :
@@ -870,7 +936,7 @@
           </p>
         </div>
       </div>
-      <div v-if="paymentMode!=null" class="card pay-container">
+      <div v-if="detail.paymentMode!=null" class="card pay-container">
         <div class="heading">
           <h2>Payment Confirmation</h2>
           <div class="line"></div>
@@ -883,12 +949,24 @@
                 type="text"
                 placeholder="Enter Transaction ID"
                 class="transaction"
-                v-model="transactionID"
+                v-model="detail.transactionID"
               />
             </div>
-            <div class="input">
+            <div class="input file-type">
               <label>Transaction Proof (A screenshot of the completed transaction)</label>
-              <input type="file" class="student-id" />
+              <input
+                type="file"
+                class="student-id"
+                accept="image/*"
+                ref="transactionImage"
+                @change="onTransactionFilePicked"
+              />
+              <div @click="pickTransactionImage" class="btn my-btn">Upload File</div>
+              <p
+                class="upload-msg"
+                v-if=" !transactionImgName == ''"
+              >Uploaded {{transactionImgName}} succesfully !</p>
+              <p class="upload-msg" v-else>No file uploaded</p>
             </div>
           </form>
         </div>
@@ -952,96 +1030,151 @@ export default {
       ],
       isDeveloped: true,
       pageNav: 1,
-
-      //personal info
-      name: "",
-      phno: "",
-      email: "",
-      gender: "",
-      profession: null,
-
-      //postal addr
-      street1: "",
-      street2: "",
-      landmark: "",
-      state: "",
-      city: "",
-      pin: "",
-      country: "",
-
-      //academic details
-      universityName: "",
-      stream: "",
-      studentIdProof: "", // have to model, file type
-
-      //profesional details
-      qualification: null,
-      designation: "",
-      research: "",
-
-      //second addr
-      locality2: "",
-      landmark2: "",
-      state2: "",
-      city2: "",
-      pin2: "",
-      country2: "",
-      landline2: null, // only if other profession
-
-      //feedback
-      feedback: null,
-
-      //fee
-      amount: 0,
-      finalAmount: 0,
-      discount: 0,
-
-      //payment
-      paymentMode: null,
-      transactionID: "",
-      transactionProof: "" // have to model, file type
+      images: {
+        studentImage: null,
+        transactionImage: null
+      },
+      detail: {
+        //personal info
+        name: "",
+        phno: "",
+        email: "",
+        gender: "",
+        profession: null,
+        //postal addr
+        street1: "",
+        street2: "",
+        landmark: "",
+        state: "",
+        city: "",
+        pin: "",
+        country: "",
+        //academic details
+        universityName: "",
+        stream: "",
+        studentIdProof: "", // have to model, file type
+        //profesional details
+        qualification: null,
+        designation: "",
+        research: "",
+        //second addr
+        locality2: "",
+        landmark2: "",
+        state2: "",
+        city2: "",
+        pin2: "",
+        country2: "",
+        landline2: null,
+        //feedback
+        feedback: null,
+        //fee
+        amount: 0,
+        finalAmount: 0,
+        discount: 0,
+        //payment
+        paymentMode: null,
+        transactionID: "",
+        transactionProof: "" // have to model, file type
+      },
+      transactionImgName: "",
+      idImgName: ""
     };
   },
   methods: {
+    pickStudentImage() {
+      this.$refs.studentImage.click();
+    },
+    onStudentFilePicked(event) {
+      const files = event.target.files;
+      const fileReader = new FileReader();
+      fileReader.addEventListener("load", () => {});
+      fileReader.readAsDataURL(files[0]);
+      this.images.studentImage = files[0];
+      this.idImgName = this.images.studentImage.name;
+    },
+    pickTransactionImage() {
+      this.$refs.transactionImage.click();
+    },
+    onTransactionFilePicked(event) {
+      const files = event.target.files;
+      const fileReader = new FileReader();
+      fileReader.addEventListener("load", () => {});
+      fileReader.readAsDataURL(files[0]);
+      this.images.transactionImage = files[0];
+      this.transactionImgName = this.images.transactionImage.name;
+    },
+    allFieldsFilled(){
+      /*if(this.name == ""){
+        return false;
+      }
+      else if(this.phno == ""){return false;}
+      else if(this.email == ""){return false;}  
+      else if(this.gender == null){return false;}  */
+        return true;
+    },
     validate(page) {
       if (page == 2) {
-        this.isDeveloped = this.checkDeveloped();
-        if (this.isDeveloped) {
-          this.discount = 0;
-          if (this.profession == "s") {
-            this.amount = 75;
-            this.finalAmount = 75;
-          } else {
-            if (this.qualification == 1) {
-              this.amount = 150;
-              this.finalAmount = 150;
+        if (this.allFieldsFilled) {
+          this.isDeveloped = this.checkDeveloped();
+          if (this.isDeveloped) {
+            this.detail.discount = 0;
+            if (this.detail.profession == "s") {
+              this.detail.amount = 75;
+              this.detail.finalAmount = 75;
             } else {
-              this.amount = 250;
-              this.finalAmount = 250;
+              if (this.detail.qualification == 1) {
+                this.detail.amount = 150;
+                this.detail.finalAmount = 150;
+              } else {
+                this.detail.amount = 250;
+                this.detail.finalAmount = 250;
+              }
+            }
+          } else {
+            this.detail.discount = 50;
+            if (this.detail.profession == "s") {
+              this.detail.amount = 75;
+              this.detail.finalAmount =
+                this.detail.amount -
+                (this.detail.amount * this.detail.discount) / 100;
+            } else {
+              if (this.detail.qualification == 1) {
+                this.detail.amount = 150;
+                this.detail.finalAmount =
+                  this.detail.amount -
+                  (this.detail.amount * this.detail.discount) / 100;
+              } else {
+                this.detail.amount = 250;
+                this.detail.finalAmount =
+                  this.detail.amount -
+                  (this.detail.amount * this.detail.discount) / 100;
+              }
             }
           }
-        } else {
-          this.discount = 50;
-          if (this.profession == "s") {
-            this.amount = 75;
-            this.finalAmount =
-              this.amount - (this.amount * this.discount) / 100;
-          } else {
-            if (this.qualification == 1) {
-              this.amount = 150;
-              this.finalAmount =
-                this.amount - (this.amount * this.discount) / 100;
-            } else {
-              this.amount = 250;
-              this.finalAmount =
-                this.amount - (this.amount * this.discount) / 100;
-            }
-          }
+          this.pageNav = page;
         }
-        this.pageNav = page;
+        else {
+          alert("Please fill all fields !");
+        }
       } else if (page == 3) {
-        this.$router.push("/");
-        this.$store.state.navItem = 1;
+        if (this.allFieldsFilled) {
+          let payload = {
+            images: this.images,
+            detail: this.detail
+          };
+          this.$store
+            .dispatch("saveParticipantDetails", payload)
+            .then(() => {
+              this.$router.push("/");
+              this.$store.state.navItem = 1;
+            })
+            .catch(resp => {
+              console.log(resp);
+            });
+        }
+        else {
+          alert("Please fill all fields !");
+        }
       }
     },
     checkDeveloped() {
@@ -1174,6 +1307,9 @@ export default {
         }
         input {
           width: 100%;
+          @include iphone {
+            width: 90%;
+          }
         }
         .name {
           background-image: url("../../assets/Register/Participant/name.svg");
@@ -1207,9 +1343,6 @@ export default {
         }
         .research {
           background-image: url("../../assets/Register/Participant/research.svg");
-        }
-        .student-id {
-          text-indent: 0;
         }
         .stream {
           background-image: url("../../assets/Register/Participant/stream.svg");
@@ -1338,7 +1471,7 @@ export default {
     background: #7d62a9;
     box-shadow: 10px 10px 20px rgba(grey, 0.5);
     color: white;
-    transition: background 0.3s ease-in;
+    transition: all 0.3s ease-in;
     cursor: pointer;
   }
   .btn:hover {
@@ -1391,6 +1524,29 @@ export default {
         align-items: flex-start;
       }
     }
+  }
+  .file-type {
+    margin: 0;
+    padding: 0;
+  }
+  .my-btn {
+    margin: 0.2rem 0;
+    box-shadow: none;
+    background: $primary;
+  }
+  .my-btn:hover {
+    background: darken($primary, 10%);
+  }
+  .upload-msg {
+    margin: 0.8rem 0.2rem;
+    color: #333;
+  }
+  .student-id {
+    height: 0;
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
   }
 }
 </style>

@@ -15,15 +15,15 @@
       <form>
         <div class="input">
           <label>Name</label>
-          <input type="text" placeholder="Enter name" class="name" v-model="name" />
+          <input type="text" placeholder="Enter name" class="name" v-model="detail.name" />
         </div>
         <div class="input">
           <label>Phone Number</label>
-          <input type="text" placeholder="Enter number" class="number" v-model="phno" />
+          <input type="text" placeholder="Enter number" class="number" v-model="detail.phno" />
         </div>
         <div class="input">
           <label>Email</label>
-          <input type="text" placeholder="Enter email" class="email" v-model="email" />
+          <input type="text" placeholder="Enter email" class="email" v-model="detail.email" />
         </div>
         <div class="input no-margin">
           <label>Affiliation</label>
@@ -31,7 +31,7 @@
             type="text"
             placeholder="Enter affiliation"
             class="affiliation"
-            v-model="affiliation"
+            v-model="detail.affiliation"
           />
         </div>
       </form>
@@ -44,29 +44,29 @@
       <form>
         <div class="input">
           <label>Street 1</label>
-          <input type="text" placeholder="Enter Street 1" class="street" v-model="street1" />
+          <input type="text" placeholder="Enter Street 1" class="street" v-model="detail.street1" />
         </div>
         <div class="input">
           <label>Street 2</label>
-          <input type="text" placeholder="Enter Street 2" class="street" v-model="street2" />
+          <input type="text" placeholder="Enter Street 2" class="street" v-model="detail.street2" />
         </div>
         <div class="input">
           <label>Landmark</label>
-          <input type="text" placeholder="Enter Landmark" class="landmark" v-model="landmark" />
+          <input type="text" placeholder="Enter Landmark" class="landmark" v-model="detail.landmark" />
         </div>
       </form>
       <form>
         <div class="input">
           <label>State</label>
-          <input type="text" placeholder="Enter State" class="state" v-model="state" />
+          <input type="text" placeholder="Enter State" class="state" v-model="detail.state" />
         </div>
         <div class="input">
           <label>City</label>
-          <input type="text" placeholder="Enter City" class="city" v-model="city" />
+          <input type="text" placeholder="Enter City" class="city" v-model="detail.city" />
         </div>
         <div class="input">
           <label>Pincode</label>
-          <input type="text" placeholder="Enter Pincode" class="pin" v-model="pin" />
+          <input type="text" placeholder="Enter Pincode" class="pin" v-model="detail.pin" />
         </div>
       </form>
       <form>
@@ -77,7 +77,7 @@
             name="countries"
             placeholder="Enter Country"
             class="country"
-            v-model="country"
+            v-model="detail.country"
           />
           <datalist id="allCountries">
             <option value="Afghanistan"></option>
@@ -341,11 +341,11 @@
       <form>
         <div class="input">
           <label>Title</label>
-          <input type="text" placeholder="Enter Street 1" class="street" v-model="street1" />
+          <input type="text" placeholder="Enter Street 1" class="street" v-model="detail.street1" />
         </div>
         <div class="input">
           <label>Theme</label>
-          <input type="text" placeholder="Enter Street 1" class="street" v-model="street1" />
+          <input type="text" placeholder="Enter Street 1" class="street" v-model="detail.street1" />
         </div>
       </form>
       <form>
@@ -366,7 +366,7 @@
       <form>
         <div class="input">
           <label>Name</label>
-          <input type="text" placeholder="Enter Guest Name" class="name" v-model="guestName" />
+          <input type="text" placeholder="Enter Guest Name" class="name" v-model="detail.guestName" />
         </div>
       </form>
     </div>
@@ -380,28 +380,43 @@ export default {
   data() {
     return {
       //personal info
-      name: "",
-      phno: "",
-      email: "",
-      affiliation: "",
-
-      //postal addr
-      street1: "",
-      street2: "",
-      landmark: "",
-      state: "",
-      city: "",
-      pin: "",
-      country: "",
-
-      //guest
-      guestName: ""
+      detail: {
+        name: "",
+        phno: "",
+        email: "",
+        affiliation: "",
+        //postal addr
+        street1: "",
+        street2: "",
+        landmark: "",
+        state: "",
+        city: "",
+        pin: "",
+        country: "",
+        //guest
+        guestName: "",
+        //file
+        abstractFile: "",  
+      },
+      abstractFile: null,
+      abstractFileName: ""
     };
   },
   methods: {
-    validate() {
-      this.$router.push("/");
-      this.$store.state.navItem = 1;
+    validate() {      
+      let payload = {
+        abstractFile: this.abstractFile,
+        detail: this.detail
+      };
+      this.$store
+        .dispatch("saveSpeakerRegistrationDetails", payload)
+        .then(() => {
+          this.$router.push("/");
+          this.$store.state.navItem = 1;
+        })
+        .catch(resp => {
+          console.log(resp);
+        });
     }
   }
 };
