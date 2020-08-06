@@ -1,6 +1,13 @@
 <template>
   <div class="register">
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated bounceInLeft"
+      leave-active-class="animated bounceOutRight"      
+      appear
+    >
     <Heading :obj="headingObj" />
+    </transition>
     <transition
       name="custom-classes-transition"
       enter-active-class="animated bounceInUp"

@@ -429,7 +429,7 @@
                 v-model="detail.landmark2"
               />
             </div>
-            <div v-if="detail.profession == 'o'" class="input">
+            <div class="input">
               <label>Office Number</label>
               <input
                 type="text"
@@ -979,7 +979,7 @@ export default {
       } else if (this.detail.country2 == "") {
         return "Country - Second Address";
       } else if (this.detail.landline2 == null) {
-        return "Landline - Second Address";
+        return "Office Number";
       } else if (this.detail.fee == 0) {
         return "Sponsorship Fee";
       } else if (this.detail.feedback == null) {
@@ -988,7 +988,8 @@ export default {
       return "allFilled";
     },
     validate() {
-      let validation = this.allFieldsFilled();
+      //let validation = this.allFieldsFilled();
+      let validation = 'allFilled';
       if (validation == "allFilled") {
         this.$router.push({
           name: "Payment",

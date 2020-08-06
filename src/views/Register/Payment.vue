@@ -20,7 +20,21 @@
             <h2>Amount to be Paid</h2>
             <div class="line"></div>
           </div>
-          <div v-if="type == 'Participant' || 'Workshop'" class="body">
+          <div v-if="type == 'Participant'" class="body">
+            <div
+              v-if="detail.country == 'India'"
+              class="amount"
+            >Registration Fees : &#8377;{{detail.amount}}</div>
+            <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
+            <div class="discount">Discount : {{detail.discount}}%</div>
+            <div class="line"></div>
+            <div
+              v-if="detail.country == 'India'"
+              class="final-amt"
+            >Final Fee : &#8377;{{detail.finalAmount }}</div>
+            <div v-else class="final-amt">Final Fee : ${{detail.finalAmount}}</div>
+          </div>
+          <div v-else-if="type == 'Workshop'" class="body">
             <div
               v-if="detail.country == 'India'"
               class="amount"
@@ -119,7 +133,14 @@
               <span>SBININBB 425</span>
             </p>
             <br />
-            <p v-if="type == 'Participant' || 'Workshop'">
+            <p v-if="type == 'Participant'">
+              Please make a payment of
+              <span
+                v-if="detail.country == 'India'"
+              >&#8377;{{detail.finalAmount }}</span>
+              <span v-else>${{detail.finalAmount}}</span>
+            </p>
+            <p v-else-if="type == 'Workshop'">
               Please make a payment of
               <span
                 v-if="detail.country == 'India'"
@@ -139,7 +160,14 @@
             <div class="line"></div>
           </div>
           <div class="category">
-            <p v-if="type == 'Participant' || 'Workshop'">
+            <p v-if="type == 'Participant'">
+              Please make a payment of
+              <span
+                v-if="detail.country == 'India'"
+              >&#8377;{{detail.finalAmount }}</span>
+              <span v-else>${{detail.finalAmount}}</span>
+            </p>
+            <p v-else-if="type == 'Workshop'">
               Please make a payment of
               <span
                 v-if="detail.country == 'India'"
@@ -163,7 +191,14 @@
             <div class="line"></div>
           </div>
           <div class="category">
-            <p v-if="type == 'Participant' || 'Workshop'">
+            <p v-if="type == 'Participant'">
+              Please make a payment of
+              <span
+                v-if="detail.country == 'India'"
+              >&#8377;{{detail.finalAmount }}</span>
+              <span v-else>${{detail.finalAmount}}</span>
+            </p>
+            <p v-else-if="type == 'Workshop'">
               Please make a payment of
               <span
                 v-if="detail.country == 'India'"
