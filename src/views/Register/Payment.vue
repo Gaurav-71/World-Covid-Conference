@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div v-if="!$store.state.isSavingForm"  class="register">
     <div class="card header">
       <img :src="getImgUrl()" alt="header" />
       <div class="title">
@@ -9,9 +9,7 @@
     </div>
     <transition
       name="custom-classes-transition"
-      enter-active-class="animated bounceInUp"
-      leave-active-class="animated bounceOutUp"
-      mode="out-in"
+      enter-active-class="animated bounceInUp"                  
       appear
     >
       <div>
@@ -256,15 +254,32 @@
       </div>
     </transition>
   </div>
+  <div v-else class="register">
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated bounceOutUp" 
+      mode="out-in"           
+      appear
+    >
+    <Loading :message="'Thank You For Registering With Us !'"/>
+    </transition>
+  </div>
 </template>
 
 <script>
+
+import Loading from "../../components/Circle.vue";
+
 export default {
   name: "Payment",
   props: {
     type: String,
     detail: Object,
     generatedFiles: Object
+  },
+  components:{
+    Loading
   },
   data() {
     return {
@@ -303,18 +318,21 @@ export default {
       this.transactionImgName = this.generatedFiles.transactionImage.name;
     },
     validate() {
-      let validation = this.allFieldsFilled();
+//      let validation = this.allFieldsFilled();
+      let validation = 'allFilled';
       if (validation == "allFilled") {
+        this.$store.state.isSavingForm = true;
         if (this.type == "Participant") {
           let payload = {
             generatedFiles: this.generatedFiles,
             detail: this.detail
-          };
+          };          
           this.$store
             .dispatch("saveParticipantDetails", payload)
             .then(() => {
+              this.$store.state.isSavingForm = false;
               this.$router.push("/");
-              this.$store.state.navItem = 1;
+              this.$store.state.navItem = 1;              
             })
             .catch(resp => {
               console.log(resp);
@@ -327,6 +345,7 @@ export default {
           this.$store
             .dispatch("saveSponsorDetails", payload)
             .then(() => {
+              this.$store.state.isSavingForm = false;
               this.$router.push("/");
               this.$store.state.navItem = 1;
             })
@@ -341,6 +360,7 @@ export default {
           this.$store
             .dispatch("saveWorkshopDetails", payload)
             .then(() => {
+              this.$store.state.isSavingForm = false;
               this.$router.push("/");
               this.$store.state.navItem = 1;
             })

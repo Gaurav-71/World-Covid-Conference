@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div v-if="!$store.state.isSavingForm" class="register">
     <div class="card header">
       <img src="../../assets/Register/presentation.svg" alt="participant" />
       <div class="title">
@@ -9,8 +9,7 @@
     </div>
     <transition
       name="custom-classes-transition"
-      enter-active-class="animated bounceInUp"
-      leave-active-class="animated bounce OutUp"
+      enter-active-class="animated bounceInUp"      
       appear
     >
       <div class="container">
@@ -401,11 +400,26 @@
       </div>
     </transition>
   </div>
+  <div v-else class="register">
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated bounceOutUp"
+      mode="out-in"
+      appear
+    >
+      <Loading :message="'Thank You For Registering With Us !'" />
+    </transition>
+  </div>
 </template>
 
 <script>
+import Loading from "../../components/Circle.vue";
 export default {
   name: "Speaker",
+  components:{
+    Loading
+  },
   data() {
     return {
       //personal info
@@ -478,15 +492,18 @@ export default {
       return "allFilled";
     },
     validate() {
-      let validation = this.allFieldsFilled();
+      //let validation = this.allFieldsFilled();
+      let validation = "allFilled";
       if (validation == "allFilled") {
         let payload = {
           abstractFile: this.abstractFile,
           detail: this.detail
         };
+        this.$store.state.isSavingForm = true;
         this.$store
           .dispatch("saveSpeakerRegistrationDetails", payload)
           .then(() => {
+            this.$store.state.isSavingForm = true;
             this.$router.push("/");
             this.$store.state.navItem = 1;
           })

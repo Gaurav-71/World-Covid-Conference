@@ -8,10 +8,12 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     navItem: 1,
+    isSavingForm: false,
   },
   mutations: {},
   actions: {
     async saveParticipantDetails(context, payload) {
+       
       console.log(context);
       try {
         if (payload.generatedFiles.studentImage) {
@@ -64,6 +66,7 @@ export default new Vuex.Store({
       }
     },
     async saveSpeakerRegistrationDetails(context, payload) {
+       
       console.log(context);
       try {
         if (payload.abstractFile) {
@@ -95,6 +98,7 @@ export default new Vuex.Store({
       }
     },
     async saveSponsorDetails(context, payload) {
+       
       console.log(context);
       try {
         if (payload.generatedFiles.id) {
@@ -147,6 +151,7 @@ export default new Vuex.Store({
       }
     },
     async saveWorkshopDetails(context, payload) {
+       
       console.log(context);
       try {
         if (payload.generatedFiles.studentImage) {

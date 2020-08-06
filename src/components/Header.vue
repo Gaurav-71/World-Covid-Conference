@@ -79,6 +79,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/colors";
 .header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;

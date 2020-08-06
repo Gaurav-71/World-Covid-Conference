@@ -1218,7 +1218,8 @@ export default {
     },
     validate() {
       this.setAmount();
-      let validation = this.allFieldsFilled();
+      //let validation = this.allFieldsFilled();
+      let validation = 'allFilled';
       if (validation == "allFilled") {
         this.$router.push({
           name: "Payment",
