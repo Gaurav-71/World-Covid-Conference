@@ -938,16 +938,58 @@ export default {
       this.sponsorIdName = this.sponsorDetails.id.name;
     },
     allFieldsFilled() {
-      /*if(this.name == ""){
-        return false;
+      if (this.detail.name == "") {
+        return "Name";
+      } else if (this.detail.phno == "") {
+        return "Phone Number";
+      } else if (this.detail.email == "") {
+        return "Email";
+      } else if (this.detail.gender == "") {
+        return "Gender";
+      } else if (this.detail.street1 == "") {
+        return "Street 1 - Postal Address";
+      } else if (this.detail.street2 == "") {
+        return "Street 2 - Postal Address";
+      } else if (this.detail.landmark == "") {
+        return "Landmark - Postal Address";
+      } else if (this.detail.state == "") {
+        return "State - Postal Address";
+      } else if (this.detail.city == "") {
+        return "City - Postal Address";
+      } else if (this.detail.pin == "") {
+        return "Pincode - Postal Address";
+      } else if (this.detail.country == "") {
+        return "Country - Postal Address";
+      } else if (this.detail.companyName == "") {
+        return "Company Name";
+      } else if (this.detail.designation == "") {
+        return "Designation";
+      } else if (this.sponsorIdName == "") {
+        return "ID proof";
+      } else if (this.detail.locality2 == "") {
+        return "Loacality  - Second Address";
+      } else if (this.detail.landmark2 == "") {
+        return "Landmark - Second Address";
+      } else if (this.detail.state2 == "") {
+        return "State - Second Address";
+      } else if (this.detail.city2 == "") {
+        return "City - Second Address";
+      } else if (this.detail.pin2 == "") {
+        return "Pincode - Second Address";
+      } else if (this.detail.country2 == "") {
+        return "Country - Second Address";
+      } else if (this.detail.landline2 == null) {
+        return "Landline - Second Address";
+      } else if (this.detail.fee == 0) {
+        return "Sponsorship Fee";
+      } else if (this.detail.feedback == null) {
+        return "Survey";
       }
-      else if(this.phno == ""){return false;}
-      else if(this.email == ""){return false;}  
-      else if(this.gender == null){return false;}  */
-      return true;
+      return "allFilled";
     },
     validate() {
-      if (this.allFieldsFilled) {
+      let validation = this.allFieldsFilled();
+      if (validation == "allFilled") {
         this.$router.push({
           name: "Payment",
           params: {
@@ -957,7 +999,7 @@ export default {
           }
         });
       } else {
-        alert("Please fill all fields !");
+        alert(validation);
       }
     }
   }

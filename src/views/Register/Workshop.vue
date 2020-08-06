@@ -1,10 +1,10 @@
 <template>
   <div class="register">
     <div class="card header">
-      <img src="../../assets/Register/target.svg" alt="participant" />
+      <img src="../../assets/Register/workshop.svg" alt="participant" />
       <div class="title">
-        <h1>Participant Registration</h1>
-        <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
+        <h1>Workshop Registration</h1>
+        <h4>Want to get a better perspective of COVID-19 ? Attend an information packed workshop !</h4>
       </div>
     </div>
     <transition
@@ -1193,13 +1193,13 @@ export default {
       this.countryStatus = this.checkCountryStatus();
       if (this.detail.profession == "s") {
         // student
-        this.detail.amount = this.detail.country == "India" ? 5613 : 75;
+        this.detail.amount = this.detail.country == "India" ? 1500 : 22;
       } else if (this.detail.qualification == 1) {
         // teacher
-        this.detail.amount = this.detail.country == "India" ? 11225 : 150;
+        this.detail.amount = this.detail.country == "India" ? 2000 : 32;
       } else {
         // industry & other
-        this.detail.amount = this.detail.country == "India" ? 18709 : 250;
+        this.detail.amount = this.detail.country == "India" ? 3000 : 42;
       }
       switch (this.countryStatus) {
         case 1: //underdeveloped
@@ -1218,13 +1218,12 @@ export default {
     },
     validate() {
       this.setAmount();
-      //let validation = this.allFieldsFilled();
-      let validation = "allFilled";
+      let validation = this.allFieldsFilled();
       if (validation == "allFilled") {
         this.$router.push({
           name: "Payment",
           params: {
-            type: "Participant",
+            type: "Workshop",
             detail: this.detail,
             generatedFiles: this.images
           }
@@ -1236,6 +1235,7 @@ export default {
   }
 };
 </script>
+
 
 <style lang="scss" scoped>
 @import "../../scss/register";

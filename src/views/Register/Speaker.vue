@@ -396,7 +396,7 @@
           </form>
         </div>
         <div class="actions">
-        <div @click="validate" class="btn shake">Register</div>
+          <div @click="validate" class="btn shake">Register</div>
         </div>
       </div>
     </transition>
@@ -445,20 +445,57 @@ export default {
       this.abstractFile = files[0];
       this.abstractFileName = this.abstractFile.name;
     },
+    allFieldsFilled() {
+      if (this.detail.name == "") {
+        return "Name";
+      } else if (this.detail.phno == "") {
+        return "Phone Number";
+      } else if (this.detail.email == "") {
+        return "Email";
+      } else if (this.detail.affiliation == "") {
+        return "Affiliation";
+      } else if (this.detail.street1 == "") {
+        return "Street 1 - Postal Address";
+      } else if (this.detail.street2 == "") {
+        return "Street 2 - Postal Address";
+      } else if (this.detail.landmark == "") {
+        return "Landmark - Postal Address";
+      } else if (this.detail.state == "") {
+        return "State - Postal Address";
+      } else if (this.detail.city == "") {
+        return "City - Postal Address";
+      } else if (this.detail.pin == "") {
+        return "Pincode - Postal Address";
+      } else if (this.detail.country == "") {
+        return "Country - Postal Address";
+      } else if (this.detail.title == "") {
+        return "Talk Title";
+      } else if (this.detail.guestName == "") {
+        return "Guest Name";
+      } else if (this.abstractFileName == "") {
+        return "Abstract File";
+      }
+      return "allFilled";
+    },
     validate() {
-      let payload = {
-        abstractFile: this.abstractFile,
-        detail: this.detail
-      };
-      this.$store
-        .dispatch("saveSpeakerRegistrationDetails", payload)
-        .then(() => {
-          this.$router.push("/");
-          this.$store.state.navItem = 1;
-        })
-        .catch(resp => {
-          console.log(resp);
-        });
+      let validation = this.allFieldsFilled();
+      if (validation == "allFilled") {
+        let payload = {
+          abstractFile: this.abstractFile,
+          detail: this.detail
+        };
+        this.$store
+          .dispatch("saveSpeakerRegistrationDetails", payload)
+          .then(() => {
+            this.$router.push("/");
+            this.$store.state.navItem = 1;
+          })
+          .catch(resp => {
+            console.log(resp);
+          });
+      } else {
+        alert(validation);
+      }
     }
   }
 };

@@ -73,7 +73,7 @@ export default {
           this.$router.push("/register/speaker");
           break;
         case 3:
-          alert("to be made");
+          this.$router.push("/register/workshop");
           break;
         case 4:
           this.$router.push("/register/sponsor");

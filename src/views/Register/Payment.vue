@@ -20,18 +20,18 @@
             <h2>Amount to be Paid</h2>
             <div class="line"></div>
           </div>
-          <div v-if="type == 'Participant'" class="body">
+          <div v-if="type == 'Participant' || 'Workshop'" class="body">
             <div
               v-if="detail.country == 'India'"
               class="amount"
-            >Registration Fees : &#8377;{{detail.amount * 74.90}}</div>
+            >Registration Fees : &#8377;{{detail.amount}}</div>
             <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
             <div class="discount">Discount : {{detail.discount}}%</div>
             <div class="line"></div>
             <div
               v-if="detail.country == 'India'"
               class="final-amt"
-            >Final Fee : &#8377;{{detail.finalAmount * 74.90}}</div>
+            >Final Fee : &#8377;{{detail.finalAmount }}</div>
             <div v-else class="final-amt">Final Fee : ${{detail.finalAmount}}</div>
           </div>
           <div v-else-if="type == 'Sponsor'" class="body">
@@ -119,11 +119,11 @@
               <span>SBININBB 425</span>
             </p>
             <br />
-            <p v-if="type == 'Participant'">
+            <p v-if="type == 'Participant' || 'Workshop'">
               Please make a payment of
               <span
                 v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount * 74.90}}</span>
+              >&#8377;{{detail.finalAmount }}</span>
               <span v-else>${{detail.finalAmount}}</span>
             </p>
             <p v-else-if="type == 'Sponsor'">
@@ -139,11 +139,11 @@
             <div class="line"></div>
           </div>
           <div class="category">
-            <p v-if="type == 'Participant'">
+            <p v-if="type == 'Participant' || 'Workshop'">
               Please make a payment of
               <span
                 v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount * 74.90}}</span>
+              >&#8377;{{detail.finalAmount }}</span>
               <span v-else>${{detail.finalAmount}}</span>
             </p>
             <p v-else-if="type == 'Sponsor'">
@@ -163,11 +163,11 @@
             <div class="line"></div>
           </div>
           <div class="category">
-            <p v-if="type == 'Participant'">
+            <p v-if="type == 'Participant' || 'Workshop'">
               Please make a payment of
               <span
                 v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount * 74.90}}</span>
+              >&#8377;{{detail.finalAmount }}</span>
               <span v-else>${{detail.finalAmount}}</span>
             </p>
             <p v-else-if="type == 'Sponsor'">
@@ -242,7 +242,19 @@ export default {
         return require("../../assets/Register/target.svg");
       } else if (this.type == "Sponsor") {
         return require("../../assets/Register/sponsor.svg");
+      } else {
+        return require("../../assets/Register/workshop.svg");
       }
+    },
+    allFieldsFilled() {
+      if (this.transactionImgName == "") {
+        return "Transaction Proof";
+      } else if (this.detail.transactionID == "") {
+        return "Transaction ID";
+      } else if (this.detail.paymentMode == null) {
+        return "";
+      }
+      return "allFilled";
     },
     pickTransactionImage() {
       this.$refs.transactionImage.click();
@@ -255,12 +267,10 @@ export default {
       this.generatedFiles.transactionImage = files[0];
       this.transactionImgName = this.generatedFiles.transactionImage.name;
     },
-    allFieldsFilled() {
-      return true;
-    },
     validate() {
-      if (this.type == "Participant") {
-        if (this.allFieldsFilled) {
+      let validation = this.allFieldsFilled();
+      if (validation == "allFilled") {
+        if (this.type == "Participant") {
           let payload = {
             generatedFiles: this.generatedFiles,
             detail: this.detail
@@ -274,11 +284,7 @@ export default {
             .catch(resp => {
               console.log(resp);
             });
-        } else {
-          alert("Please fill all fields !");
-        }
-      } else if (this.type == "Sponsor") {
-        if (this.allFieldsFilled) {
+        } else if (this.type == "Sponsor") {
           let payload = {
             generatedFiles: this.generatedFiles,
             detail: this.detail
@@ -292,9 +298,23 @@ export default {
             .catch(resp => {
               console.log(resp);
             });
-        } else {
-          alert("Please fill all fields !");
+        } else if (this.type == "Workshop") {
+          let payload = {
+            generatedFiles: this.generatedFiles,
+            detail: this.detail
+          };
+          this.$store
+            .dispatch("saveWorkshopDetails", payload)
+            .then(() => {
+              this.$router.push("/");
+              this.$store.state.navItem = 1;
+            })
+            .catch(resp => {
+              console.log(resp);
+            });
         }
+      } else {
+        alert(validation);
       }
     }
   }

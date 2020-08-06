@@ -16,7 +16,7 @@ export default new Vuex.Store({
       try {
         if (payload.generatedFiles.studentImage) {
           await fireDatabase
-            .ref("studentIdProof")
+            .ref("studentIdProofConference")
             .push(payload.generatedFiles.studentImage)
             .then((data) => {
               let key = data.key;
@@ -26,7 +26,7 @@ export default new Vuex.Store({
               const filename = payload.generatedFiles.studentImage.name;
               const ext = filename.slice(filename.lastIndexOf("."));
               return fireStorage
-                .ref("studentIdProof/" + key + "." + ext)
+                .ref("studentIdProofConference/" + key + "." + ext)
                 .put(payload.generatedFiles.studentImage);
             })
             .then(async (filedata) => {
@@ -38,7 +38,7 @@ export default new Vuex.Store({
             });
         }
         await fireDatabase
-          .ref("participantTransactionProof")
+          .ref("participantTransactionProofConference")
           .push(payload.generatedFiles.transactionImage)
           .then((data) => {
             let key = data.key;
@@ -48,7 +48,7 @@ export default new Vuex.Store({
             const filename = payload.generatedFiles.transactionImage.name;
             const ext = filename.slice(filename.lastIndexOf("."));
             return fireStorage
-              .ref("participantTransactionProof/" + key + "." + ext)
+              .ref("participantTransactionProofConference/" + key + "." + ext)
               .put(payload.generatedFiles.transactionImage);
           })
           .then(async (filedata) => {
@@ -58,7 +58,7 @@ export default new Vuex.Store({
             });
             payload.detail.transactionProof = imageUrl;
           });
-        await db.collection("Participants").add(payload.detail);
+        await db.collection("ParticipantRegistration").add(payload.detail);
       } catch (exc) {
         console.log(exc);
       }
@@ -142,6 +142,58 @@ export default new Vuex.Store({
             payload.detail.transactionProof = imageUrl;
           });
         await db.collection("SponsorRegistration").add(payload.detail);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
+    async saveWorkshopDetails(context, payload) {
+      console.log(context);
+      try {
+        if (payload.generatedFiles.studentImage) {
+          await fireDatabase
+            .ref("studentIdProofWorkshop")
+            .push(payload.generatedFiles.studentImage)
+            .then((data) => {
+              let key = data.key;
+              return key;
+            })
+            .then((key) => {
+              const filename = payload.generatedFiles.studentImage.name;
+              const ext = filename.slice(filename.lastIndexOf("."));
+              return fireStorage
+                .ref("studentIdProofWorkshop/" + key + "." + ext)
+                .put(payload.generatedFiles.studentImage);
+            })
+            .then(async (filedata) => {
+              let imageUrl = null;
+              await filedata.ref.getDownloadURL().then((url) => {
+                imageUrl = url;
+              });
+              payload.detail.studentIdProof = imageUrl;
+            });
+        }
+        await fireDatabase
+          .ref("participantTransactionProofWorkshop")
+          .push(payload.generatedFiles.transactionImage)
+          .then((data) => {
+            let key = data.key;
+            return key;
+          })
+          .then((key) => {
+            const filename = payload.generatedFiles.transactionImage.name;
+            const ext = filename.slice(filename.lastIndexOf("."));
+            return fireStorage
+              .ref("participantTransactionProofWorkshop/" + key + "." + ext)
+              .put(payload.generatedFiles.transactionImage);
+          })
+          .then(async (filedata) => {
+            let imageUrl = null;
+            await filedata.ref.getDownloadURL().then((url) => {
+              imageUrl = url;
+            });
+            payload.detail.transactionProof = imageUrl;
+          });
+        await db.collection("WorkshopRegistration").add(payload.detail);
       } catch (exc) {
         console.log(exc);
       }
