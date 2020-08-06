@@ -205,7 +205,7 @@
                   ref="transactionImage"
                   @change="onTransactionFilePicked"
                 />
-                <div @click="pickTransactionImage" class="btn my-btn">Upload File</div>
+                <div @click="pickTransactionImage" class="btn my-btn shake">Upload File</div>
                 <p
                   class="upload-msg"
                   v-if=" !transactionImgName == ''"
@@ -216,7 +216,7 @@
           </div>
         </div>
         <div class="actions">
-          <div @click="validate()" class="btn">Register</div>
+          <div @click="validate()" class="btn shake">Register</div>
         </div>
       </div>
     </transition>

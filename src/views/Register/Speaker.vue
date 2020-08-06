@@ -369,7 +369,7 @@
           <div class="input file-type">
             <label>Speaker Abstract</label>
             <input type="file" class="student-id" ref="abstractFile" @change="onFilePicked" />
-            <div @click="pickFile" class="btn my-btn">Upload File</div>
+            <div @click="pickFile" class="btn my-btn shake">Upload File</div>
             <p
               class="upload-msg"
               v-if=" !abstractFileName == ''"
@@ -396,7 +396,7 @@
           </form>
         </div>
         <div class="actions">
-        <div @click="validate" class="btn">Register</div>
+        <div @click="validate" class="btn shake">Register</div>
         </div>
       </div>
     </transition>

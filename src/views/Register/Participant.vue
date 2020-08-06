@@ -490,7 +490,7 @@
           <div class="input file-type">
             <label>Student ID proof</label>
             <input type="file" class="student-id" ref="studentImage" @change="onStudentFilePicked" />
-            <div @click="pickStudentImage" class="btn my-btn">Upload File</div>
+            <div @click="pickStudentImage" class="btn my-btn shake">Upload File</div>
             <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
             <p class="upload-msg" v-else>No file uploaded</p>
           </div>
@@ -840,7 +840,7 @@
         </div>
       </div>
     </transition>
-    <div @click="validate" class="btn">Save & Pay</div>
+    <div @click="validate" class="btn shake">Save & Pay</div>
   </div>
 </template>
 

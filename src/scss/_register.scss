@@ -17,7 +17,7 @@
     background-position-x: 0.5rem;
     background-size: 32.5px;
     background-repeat: no-repeat;
-    text-indent: 35px;
+    text-indent: 35px;    
   }
   input::placeholder {
     color: #333333;
@@ -187,6 +187,9 @@
       @include iphone {
         flex-wrap: wrap;
       }
+      input{
+        cursor: pointer;
+      }
       .gender,
       .profession {
         margin-top: 1rem;
@@ -203,7 +206,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 0 2.1rem 0 0.3rem;
+            margin: 0 2.1rem 0 0.3rem;            
             img {
               width: 40px;
               height: 40px;
@@ -268,6 +271,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        input{
+          cursor: pointer;
+        }
         .custom-label {
           margin: 1rem 0;
           display: flex;
@@ -309,7 +315,7 @@
     background: darken(#7d62a9, 12%);
   }
   .btn:active {
-    transform: scale(0.8);
+    transform: scale(0.95);
   }
   .actions {
     display: flex;

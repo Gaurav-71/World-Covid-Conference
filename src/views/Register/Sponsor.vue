@@ -397,7 +397,7 @@
           <div class="input file-type">
             <label>Valid ID proof</label>
             <input type="file" class="student-id" ref="sponsorId" @change="onSponsorIdPicked" />
-            <div @click="pickSponsorId" class="btn my-btn">Upload File</div>
+            <div @click="pickSponsorId" class="btn my-btn shake">Upload File</div>
             <p
               class="upload-msg"
               v-if=" !sponsorIdName == ''"
@@ -830,7 +830,7 @@
         </div>
       </div>
     </transition>
-    <div @click="validate" class="btn">Save</div>
+    <div @click="validate" class="btn shake">Save</div>
   </div>
 </template>
 

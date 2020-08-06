@@ -1,40 +1,47 @@
 <template>
   <div class="register">
     <Heading :obj="headingObj" />
-    <div class="card-container">
-      <div class="card">
-        <div class="body">
-          <img src="../../assets/Register/target.svg" alt="participants" />
-          <h2>Participant</h2>
-          <h4>Interested to understand COVID-19 better ?</h4>
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated bounceInUp"
+      leave-active-class="animated bounceOutUp"      
+      appear
+    >
+      <div class="card-container">
+        <div class="card grow">
+          <div class="body">
+            <img src="../../assets/Register/target.svg" alt="participants" />
+            <h2>Participant</h2>
+            <h4>Interested to understand COVID-19 better ?</h4>
+          </div>
+          <div @click="route(1)" class="action">Register as a participant</div>
         </div>
-        <div @click="route(1)" class="action">Register as a participant</div>
-      </div>
-      <div class="card">
-        <div class="body">
-          <img src="../../assets/Register/presentation.svg" alt="speaker" />
-          <h2>Speaker</h2>
-          <h4>Submit your abstracts and join us !</h4>          
+        <div class="card grow">
+          <div class="body">
+            <img src="../../assets/Register/presentation.svg" alt="speaker" />
+            <h2>Speaker</h2>
+            <h4>Submit your abstracts and join us !</h4>
+          </div>
+          <div @click="route(2)" class="action">Register as a speaker</div>
         </div>
-        <div @click="route(2)" class="action">Register as a speaker</div>
-      </div>
-      <div class="card">
-        <div class="body">
-          <img src="../../assets/Register/workshop.svg" alt="speaker" />
-          <h2>Workshop</h2>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+        <div class="card grow">
+          <div class="body">
+            <img src="../../assets/Register/workshop.svg" alt="speaker" />
+            <h2>Workshop</h2>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          </div>
+          <div @click="route(3)" class="action">Register for Workshop</div>
         </div>
-        <div @click="route(3)" class="action">Register for Workshop</div>
-      </div>
-      <div class="card">
-        <div class="body">
-          <img src="../../assets/Register/sponsor.svg" alt="speaker" class="speaker" />
-          <h2>Sponsorship</h2>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+        <div class="card grow">
+          <div class="body">
+            <img src="../../assets/Register/sponsor.svg" alt="speaker" class="speaker" />
+            <h2>Sponsorship</h2>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          </div>
+          <div @click="route(4)" class="action">Sponsor Us</div>
         </div>
-        <div @click="route(4)" class="action">Sponsor Us</div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -126,7 +133,7 @@ export default {
           color: $primary;
           margin: 1rem 0;
         }
-        h4{
+        h4 {
           padding: 0 1rem;
         }
         img {

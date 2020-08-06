@@ -2,7 +2,7 @@
   <div class="header">
     <div class="logos">
       <img src="../assets/Header/bcg-logo.png" class="bgc" alt="logo" />
-      
+
       <div class="line"></div>
       <img src="../assets/Header/ippa-logo.png" class="ippa" alt="logo" />
     </div>
@@ -21,9 +21,17 @@
         <li @click="route(2)">Speakers</li>
         <li @click="route(3)">Organizers</li>
         <li @click="route(4)">Contact Us</li>
-        <li v-if="$store.state.navItem != 5" @click="route(5)" class="no-padding">
-          <div class="btn">Register</div>
-        </li>
+        <transition
+          name="custom-classes-transition"
+          enter-active-class="animated bounceInRight"
+          leave-active-class="animated bounceOutRight"          
+          :duration="{enter: 800,leave: 500}"
+          appear
+        >
+          <li v-if="$store.state.navItem != 5" @click="route(5)" class="no-padding">
+            <div class="btn shake">Register</div>
+          </li>
+        </transition>
       </ul>
     </nav>
   </div>
@@ -86,10 +94,10 @@ export default {
     height: 100%;
     align-items: center;
     margin-left: 1rem;
-    .ippa{
-      width: 50px;      
+    .ippa {
+      width: 50px;
     }
-    .line{
+    .line {
       height: 3.5rem;
       width: 1px;
       background: gainsboro;
@@ -150,7 +158,7 @@ export default {
         color: rgb(17, 11, 100);
       }
       li:active {
-        transform: scale(0.8);
+        transform: scale(0.95);
       }
       .no-padding {
         padding: 0;
@@ -167,7 +175,7 @@ export default {
           background: darken(#7d62a9, 12%);
         }
         .btn:active {
-          transform: scale(0.8);
+          transform: scale(0.95);
         }
       }
       .no-padding:hover {
