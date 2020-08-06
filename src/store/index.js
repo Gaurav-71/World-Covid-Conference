@@ -14,20 +14,20 @@ export default new Vuex.Store({
     async saveParticipantDetails(context, payload) {
       console.log(context);
       try {
-        if (payload.images.studentImage) {
+        if (payload.generatedFiles.studentImage) {
           await fireDatabase
-            .ref("studentimages")
-            .push(payload.images.studentImage)
+            .ref("studentIdProof")
+            .push(payload.generatedFiles.studentImage)
             .then((data) => {
               let key = data.key;
               return key;
             })
             .then((key) => {
-              const filename = payload.images.studentImage.name;
+              const filename = payload.generatedFiles.studentImage.name;
               const ext = filename.slice(filename.lastIndexOf("."));
               return fireStorage
-                .ref("studentimages/" + key + "." + ext)
-                .put(payload.images.studentImage);
+                .ref("studentIdProof/" + key + "." + ext)
+                .put(payload.generatedFiles.studentImage);
             })
             .then(async (filedata) => {
               let imageUrl = null;
@@ -38,18 +38,18 @@ export default new Vuex.Store({
             });
         }
         await fireDatabase
-          .ref("transactionimages")
-          .push(payload.images.transactionImage)
+          .ref("participantTransactionProof")
+          .push(payload.generatedFiles.transactionImage)
           .then((data) => {
             let key = data.key;
             return key;
           })
           .then((key) => {
-            const filename = payload.images.transactionImage.name;
+            const filename = payload.generatedFiles.transactionImage.name;
             const ext = filename.slice(filename.lastIndexOf("."));
             return fireStorage
-              .ref("transactionimages/" + key + "." + ext)
-              .put(payload.images.transactionImage);
+              .ref("participantTransactionProof/" + key + "." + ext)
+              .put(payload.generatedFiles.transactionImage);
           })
           .then(async (filedata) => {
             let imageUrl = null;
@@ -68,7 +68,7 @@ export default new Vuex.Store({
       try {
         if (payload.abstractFile) {
           await fireDatabase
-            .ref("speakerabstracts")
+            .ref("speakerAbstracts")
             .push(payload.abstractFile)
             .then((data) => {
               let key = data.key;
@@ -78,7 +78,7 @@ export default new Vuex.Store({
               const filename = payload.abstractFile.name;
               const ext = filename.slice(filename.lastIndexOf("."));
               return fireStorage
-                .ref("speakerabstracts/" + key + "." + ext)
+                .ref("speakerAbstracts/" + key + "." + ext)
                 .put(payload.abstractFile);
             })
             .then(async (filedata) => {
@@ -90,6 +90,58 @@ export default new Vuex.Store({
             });
         }
         await db.collection("SpeakerRegistration").add(payload.detail);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
+    async saveSponsorDetails(context, payload) {
+      console.log(context);
+      try {
+        if (payload.generatedFiles.id) {
+          await fireDatabase
+            .ref("sponsorIdProof")
+            .push(payload.generatedFiles.id)
+            .then((data) => {
+              let key = data.key;
+              return key;
+            })
+            .then((key) => {
+              const filename = payload.generatedFiles.id.name;
+              const ext = filename.slice(filename.lastIndexOf("."));
+              return fireStorage
+                .ref("sponsorIdProof/" + key + "." + ext)
+                .put(payload.generatedFiles.id);
+            })
+            .then(async (filedata) => {
+              let imageUrl = null;
+              await filedata.ref.getDownloadURL().then((url) => {
+                imageUrl = url;
+              });
+              payload.detail.sponsorIdProof = imageUrl;
+            });
+        }
+        await fireDatabase
+          .ref("sponsorTransactionProof")
+          .push(payload.generatedFiles.transactionImage)
+          .then((data) => {
+            let key = data.key;
+            return key;
+          })
+          .then((key) => {
+            const filename = payload.generatedFiles.transactionImage.name;
+            const ext = filename.slice(filename.lastIndexOf("."));
+            return fireStorage
+              .ref("sponsorTransactionProof/" + key + "." + ext)
+              .put(payload.generatedFiles.transactionImage);
+          })
+          .then(async (filedata) => {
+            let imageUrl = null;
+            await filedata.ref.getDownloadURL().then((url) => {
+              imageUrl = url;
+            });
+            payload.detail.transactionProof = imageUrl;
+          });
+        await db.collection("SponsorRegistration").add(payload.detail);
       } catch (exc) {
         console.log(exc);
       }

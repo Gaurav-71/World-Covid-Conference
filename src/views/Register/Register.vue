@@ -24,7 +24,7 @@
           <h2>Workshop</h2>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
         </div>
-        <div @click="route(2)" class="action">Register for Workshop</div>
+        <div @click="route(3)" class="action">Register for Workshop</div>
       </div>
       <div class="card">
         <div class="body">
@@ -32,7 +32,7 @@
           <h2>Sponsorship</h2>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
         </div>
-        <div @click="route(2)" class="action">Sponsor Us</div>
+        <div @click="route(4)" class="action">Sponsor Us</div>
       </div>
     </div>
   </div>
@@ -64,6 +64,12 @@ export default {
           break;
         case 2:
           this.$router.push("/register/speaker");
+          break;
+        case 3:
+          alert("to be made");
+          break;
+        case 4:
+          this.$router.push("/register/sponsor");
           break;
       }
     }

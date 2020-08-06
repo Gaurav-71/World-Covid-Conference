@@ -1,0 +1,385 @@
+@import "../../scss/colors";
+.register {
+  height: calc(100vh - 4.5rem);
+  background-image: $background-1;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 4rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    background: rgba($primary, 0.2);
+    border: 1px solid grey;
+    padding: 12px 15px;
+    margin: 0;
+    background-position-y: center;
+    background-position-x: 0.5rem;
+    background-size: 32.5px;
+    background-repeat: no-repeat;
+    text-indent: 35px;
+  }
+  input::placeholder {
+    color: #333333;
+    font-weight: bold;
+  }
+  .card {
+    margin-bottom: 2rem;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.8rem;
+    padding: 1.5rem 2rem;
+    @include iphone {
+      padding: 1.5rem;
+    }
+  }
+  .heading {
+    width: 100%;
+    h2 {
+      margin: 0;
+      color: $primary;
+      font-weight: lighter;
+      text-align: left;
+      @include iphone {
+        text-align: center;
+      }
+    }
+    .line {
+      height: 1px;
+      width: 100%;
+      background: lightgray;
+      margin: 1rem 0;
+    }
+  }
+  .header {
+    width: 80vw;
+    img {
+      width: 100px;
+      height: 100px;
+      margin-right: 1.5rem;
+      margin-left: 0.5rem;
+      @include iphone {
+        margin-right: 1rem;
+        margin-left: 0;
+      }
+    }
+    h1,
+    h4 {
+      margin: 0;
+      font-weight: lighter;
+    }
+    h1 {
+      color: $primary;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .personal-information,
+  .address,
+  .professional-details,
+  .academic-details,
+  .payment-validation,
+  .talk {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      @include iphone {
+        flex-wrap: wrap;
+      }
+      @include ipad-portrait {
+        flex-wrap: wrap;
+      }
+      .input {
+        margin-bottom: 1rem;
+        margin-right: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include iphone {
+          margin-right: 1.5rem;
+        }
+        @include ipad-portrait {
+          margin-right: 1.5rem;
+        }
+        label {
+          margin: 10px 0;
+          color: black;
+        }
+        input {
+          width: 100%;
+          @include iphone {
+            width: 90%;
+          }
+        }
+        .name {
+          background-image: url("../../assets/Register/Participant/name.svg");
+        }
+        .number {
+          background-image: url("../../assets/Register/Participant/phone.svg");
+        }
+        .email {
+          background-image: url("../../assets/Register/Participant/email.svg");
+        }
+        .country {
+          background-image: url("../../assets/Register/Participant/globe.svg");
+        }
+        .state {
+          background-image: url("../../assets/Register/Participant/state.svg");
+        }
+        .city {
+          background-image: url("../../assets/Register/Participant/city.svg");
+        }
+        .pin {
+          background-image: url("../../assets/Register/Participant/postal.svg");
+        }
+        .street {
+          background-image: url("../../assets/Register/Participant/street.svg");
+        }
+        .landmark {
+          background-image: url("../../assets/Register/Participant/landmark.svg");
+        }
+        .designation {
+          background-image: url("../../assets/Register/Participant/ceo.svg");
+        }
+        .research {
+          background-image: url("../../assets/Register/Participant/research.svg");
+        }
+        .stream {
+          background-image: url("../../assets/Register/Participant/stream.svg");
+        }
+        .college {
+          background-image: url("../../assets/Register/Participant/college.svg");
+        }
+        .transaction {
+          background-image: url("../../assets/Register/Participant/transaction.svg");
+        }
+        .title {
+          background-image: url("../../assets/Register/Speaker/title.svg");
+        }
+        .affiliation {
+          background-image: url("../../assets/Register/Speaker/user.svg");
+        }
+        .company {
+          background-image: url("../../assets/Register/Sponsor/company.svg");
+        }
+      }
+      .no-margin {
+        margin-right: 0;
+        @include iphone {
+          margin-right: 1.5rem;
+        }
+        @include ipad-portrait {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+    .flex {
+      display: flex;
+      @include iphone {
+        flex-wrap: wrap;
+      }
+      .gender,
+      .profession {
+        margin-top: 1rem;
+        label {
+          font-weight: normal;
+        }
+        form {
+          margin-top: 10px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .custom-label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 2.1rem 0 0.3rem;
+            img {
+              width: 40px;
+              height: 40px;
+              margin: 0.3rem;
+              @include ipad-portrait {
+                width: 35px;
+              }
+              @include iphone {
+                width: 30px;
+              }
+              cursor: default;
+            }
+            label {
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+      .profession {
+        margin-left: 4.5rem;
+        @include iphone {
+          margin-left: 0;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+  .academic-details {
+    form {
+      width: 100%;
+    }
+  }
+  .address {
+    form {
+      width: 100%;
+      .input {
+        .country {
+          width: 100%;
+          @include iphone {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+  .talk {
+    .default {
+      text-indent: 0;
+    }
+  }
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    .category {
+      span {
+        color: $primary;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .custom-label {
+          margin: 1rem 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 40px;
+            height: 40px;
+            margin: 0 1rem;
+            @include ipad-portrait {
+              width: 35px;
+            }
+            @include iphone {
+              width: 30px;
+            }
+            cursor: default;
+          }
+          label {
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    text-align: center;
+    width: 6rem;
+    margin: 0 1.2rem 4rem 0.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.6rem;
+    background: #7d62a9;
+    box-shadow: 10px 10px 20px rgba(grey, 0.5);
+    color: white;
+    transition: background 0.3s ease-in;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: darken(#7d62a9, 12%);
+  }
+  .btn:active {
+    transform: scale(0.8);
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+    .btn {
+      @include iphone {
+        width: 5rem;
+      }
+    }
+    .transparent {
+      background: lighten(#333, 50%);
+      color: black;
+    }
+    .transparent:hover {
+      background: darken(lighten(#333, 50%), 30%);
+      color: white;
+    }
+  }
+  .pay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    .line {
+      width: 100%;
+      height: 1px;
+      background: lightgray;
+    }
+    .amount,
+    .discount,
+    .final-amt {
+      margin: 1rem 0;
+    }
+    .body {
+      span {
+        color: $primary;
+      }
+    }
+    .payment-validation {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+  .file-type {
+    margin: 0;
+    padding: 0;
+  }
+  .my-btn {
+    box-shadow: none;
+    background: $primary;
+    margin: 0.8rem 0;
+    @include iphone {
+      margin: 0;
+    }
+  }
+  .my-btn:hover {
+    background: darken($primary, 10%);
+  }
+  .upload-msg {
+    margin: 0.8rem 0.2rem;
+    color: #333;
+  }
+  .student-id {
+    height: 0;
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+  }
+}

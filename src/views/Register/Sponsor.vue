@@ -1,10 +1,10 @@
 <template>
   <div class="register">
     <div class="card header">
-      <img src="../../assets/Register/target.svg" alt="participant" />
+      <img src="../../assets/Register/sponsor.svg" alt="participant" />
       <div class="title">
-        <h1>Participant Registration</h1>
-        <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
+        <h1>Sponsor Registration</h1>
+        <h4>Interested in supporting us monetarily ? Join us as a sponsor</h4>
       </div>
     </div>
     <transition
@@ -51,33 +51,6 @@
                 <input type="radio" id="other" name="gender" value="O" v-model="detail.gender" />
                 <div class="custom-label">
                   <img src="../../assets/Register/Participant/other.svg" alt="male" />
-                  <label for="other">Other</label>
-                </div>
-              </form>
-            </div>
-            <div class="profession">
-              <label>Profession</label>
-              <form>
-                <input
-                  type="radio"
-                  id="student"
-                  name="profession"
-                  value="s"
-                  v-model="detail.profession"
-                />
-                <div class="custom-label">
-                  <img src="../../assets/Register/Participant/student.svg" alt="student" />
-                  <label for="student">Student</label>
-                </div>
-                <input
-                  type="radio"
-                  id="other"
-                  name="profession"
-                  value="o"
-                  v-model="detail.profession"
-                />
-                <div class="custom-label">
-                  <img src="../../assets/Register/Participant/other-prof.svg" alt="other-prof" />
                   <label for="other">Other</label>
                 </div>
               </form>
@@ -396,57 +369,21 @@
             </div>
           </form>
         </div>
-        <div v-if="detail.profession == 'o'" class="card category-container">
+        <div class="card academic-details">
           <div class="heading">
-            <h2>Qualification Category</h2>
-            <div class="line"></div>
-          </div>
-          <div class="category">
-            <form>
-              <div class="custom-label">
-                <input
-                  type="radio"
-                  id="1"
-                  name="qualification"
-                  value="1"
-                  v-model="detail.qualification"
-                />
-                <img src="../../assets/Register/Participant/teacher.svg" alt="male" />
-                <label
-                  for="male"
-                >Faculty / Post-doctoral Fellow / Research Associate / Research Engineer</label>
-              </div>
-              <div class="custom-label">
-                <input
-                  type="radio"
-                  id="2"
-                  name="qualification"
-                  value="2"
-                  v-model="detail.qualification"
-                />
-                <img src="../../assets/Register/Participant/businessman.svg" alt="male" />
-                <label for="female">Industry Personnel</label>
-              </div>
-              <div class="custom-label">
-                <input
-                  type="radio"
-                  id="3"
-                  name="qualification"
-                  value="3"
-                  v-model="detail.qualification"
-                />
-                <img src="../../assets/Register/Participant/other-prof.svg" alt="male" />
-                <label for="other">Other</label>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div v-if="detail.profession == 'o'" class="card professional-details">
-          <div class="heading">
-            <h2>Professional Information</h2>
+            <h2>Professional Details</h2>
             <div class="line"></div>
           </div>
           <form>
+            <div class="input">
+              <label>Company Name</label>
+              <input
+                type="text"
+                placeholder="Enter name"
+                class="company"
+                v-model="detail.companyName"
+              />
+            </div>
             <div class="input">
               <label>Designation</label>
               <input
@@ -456,49 +393,21 @@
                 v-model="detail.designation"
               />
             </div>
-            <div class="input">
-              <label>Area of Research</label>
-              <input
-                type="text"
-                placeholder="Enter Area of Research"
-                class="research"
-                v-model="detail.research"
-              />
-            </div>
-          </form>
-        </div>
-        <div v-if="detail.profession == 's'" class="card academic-details">
-          <div class="heading">
-            <h2>Academic Details</h2>
-            <div class="line"></div>
-          </div>
-          <form>
-            <div class="input">
-              <label>University / College Name</label>
-              <input
-                type="text"
-                placeholder="Enter name"
-                class="college"
-                v-model="detail.universityName"
-              />
-            </div>
-            <div class="input">
-              <label>Stream</label>
-              <input type="text" placeholder="Enter Stream" class="stream" v-model="detail.stream" />
-            </div>
           </form>
           <div class="input file-type">
-            <label>Student ID proof</label>
-            <input type="file" class="student-id" ref="studentImage" @change="onStudentFilePicked" />
-            <div @click="pickStudentImage" class="btn my-btn">Upload File</div>
-            <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
+            <label>Valid ID proof</label>
+            <input type="file" class="student-id" ref="sponsorId" @change="onSponsorIdPicked" />
+            <div @click="pickSponsorId" class="btn my-btn">Upload File</div>
+            <p
+              class="upload-msg"
+              v-if=" !sponsorIdName == ''"
+            >Uploaded {{sponsorIdName}} succesfully !</p>
             <p class="upload-msg" v-else>No file uploaded</p>
           </div>
         </div>
-        <div v-if="detail.profession != null " class="card address">
+        <div class="card address">
           <div class="heading">
-            <h2 v-if="detail.profession == 'o'">Office Address</h2>
-            <h2 v-else>University / College Address</h2>
+            <h2>Office Address</h2>
             <div class="line"></div>
           </div>
           <form>
@@ -808,6 +717,87 @@
             </div>
           </form>
         </div>
+        <transition
+          name="custom-classes-transition"
+          enter-active-class="animated bounceInRight"
+          leave-active-class="animated bounceOutLeft"
+          mode="out-in"
+          appear
+        >
+          <div v-if="detail.country != ''" class="card category-container">
+            <div class="heading">
+              <h2>Sponsorship Fee</h2>
+              <div class="line"></div>
+            </div>
+            <div class="category">
+              <form>
+                <div class="custom-label">
+                  <input
+                    v-if="detail.country == 'India'"
+                    type="radio"
+                    id="platinum1"
+                    name="fee"
+                    value="30,000"
+                    v-model="detail.fee"
+                  />
+                  <input
+                    v-else
+                    type="radio"
+                    id="platinum2"
+                    name="fee"
+                    value="10,000"
+                    v-model="detail.fee"
+                  />
+                  <img src="../../assets/Register/Sponsor/platinum.svg" alt="sponsor" />
+                  <label v-if="detail.country == 'India'">Platinum Sponsors : &#8377;30,000</label>
+                  <label v-else>Platinum Sponsors : $10,000</label>
+                </div>
+                <div class="custom-label">
+                  <input
+                    v-if="detail.country == 'India'"
+                    type="radio"
+                    id="gold1"
+                    name="fee"
+                    value="20,000"
+                    v-model="detail.fee"
+                  />
+                  <input
+                    v-else
+                    type="radio"
+                    id="gold2"
+                    name="fee"
+                    value="5000"
+                    v-model="detail.fee"
+                  />
+                  <img src="../../assets/Register/Sponsor/gold.svg" alt="sponsor" />
+                  <label v-if="detail.country == 'India'">Gold Sponsors : &#8377;20,000</label>
+                  <label v-else>Gold Sponsors : $5000</label>
+                </div>
+                <div class="custom-label">
+                  <input
+                    v-if="detail.country == 'India'"
+                    type="radio"
+                    id="silver1"
+                    name="fee"
+                    value="10,000"
+                    v-model="detail.fee"
+                  />
+                  <input
+                    v-else
+                    type="radio"
+                    id="silver2"
+                    name="fee"
+                    value="2000"
+                    v-model="detail.fee"
+                  />
+                  <img src="../../assets/Register/Sponsor/silver.svg" alt="sponsor" />
+                  <label v-if="detail.country == 'India'">Silver Sponsors : &#8377;10,000</label>
+                  <label v-else>Silver Sponsors : $2000</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </transition>
         <div class="card category-container">
           <div class="heading">
             <h2>How did you hear about the conference ?</h2>
@@ -840,7 +830,7 @@
         </div>
       </div>
     </transition>
-    <div @click="validate" class="btn">Save & Pay</div>
+    <div @click="validate" class="btn">Save</div>
   </div>
 </template>
 
@@ -893,8 +883,8 @@ export default {
         "Switzerland"
       ],
       isDeveloped: true,
-      images: {
-        studentImage: null,
+      sponsorDetails: {
+        id: null,
         transactionImage: null
       },
       detail: {
@@ -903,7 +893,6 @@ export default {
         phno: "",
         email: "",
         gender: "",
-        profession: null,
         //postal addr
         street1: "",
         street2: "",
@@ -912,14 +901,10 @@ export default {
         city: "",
         pin: "",
         country: "",
-        //academic details
-        universityName: "",
-        stream: "",
-        studentIdProof: "", // have to model, file type
-        //profesional details
-        qualification: null,
+        //company details
+        companyName: "",
         designation: "",
-        research: "",
+        sponsorIdProof: "", // have to model, file type
         //second addr
         locality2: "",
         landmark2: "",
@@ -931,29 +916,26 @@ export default {
         //feedback
         feedback: null,
         //fee
-        amount: 0,
-        finalAmount: 0,
-        discount: 0,
+        fee: 0,
         //payment
         paymentMode: null,
         transactionID: "",
         transactionProof: "" // have to model, file type
       },
-      transactionImgName: "",
-      idImgName: ""
+      sponsorIdName: ""
     };
   },
   methods: {
-    pickStudentImage() {
-      this.$refs.studentImage.click();
+    pickSponsorId() {
+      this.$refs.sponsorId.click();
     },
-    onStudentFilePicked(event) {
+    onSponsorIdPicked(event) {
       const files = event.target.files;
       const fileReader = new FileReader();
       fileReader.addEventListener("load", () => {});
       fileReader.readAsDataURL(files[0]);
-      this.images.studentImage = files[0];
-      this.idImgName = this.images.studentImage.name;
+      this.sponsorDetails.id = files[0];
+      this.sponsorIdName = this.sponsorDetails.id.name;
     },
     allFieldsFilled() {
       /*if(this.name == ""){
@@ -966,61 +948,17 @@ export default {
     },
     validate() {
       if (this.allFieldsFilled) {
-        this.isDeveloped = this.checkDeveloped();
-        if (this.isDeveloped) {
-          this.detail.discount = 0;
-          if (this.detail.profession == "s") {
-            this.detail.amount = 75;
-            this.detail.finalAmount = 75;
-          } else {
-            if (this.detail.qualification == 1) {
-              this.detail.amount = 150;
-              this.detail.finalAmount = 150;
-            } else {
-              this.detail.amount = 250;
-              this.detail.finalAmount = 250;
-            }
-          }
-        } else {
-          this.detail.discount = 50;
-          if (this.detail.profession == "s") {
-            this.detail.amount = 75;
-            this.detail.finalAmount =
-              this.detail.amount -
-              (this.detail.amount * this.detail.discount) / 100;
-          } else {
-            if (this.detail.qualification == 1) {
-              this.detail.amount = 150;
-              this.detail.finalAmount =
-                this.detail.amount -
-                (this.detail.amount * this.detail.discount) / 100;
-            } else {
-              this.detail.amount = 250;
-              this.detail.finalAmount =
-                this.detail.amount -
-                (this.detail.amount * this.detail.discount) / 100;
-            }
-          }
-        }
         this.$router.push({
           name: "Payment",
           params: {
-            type: "Participant",
+            type: "Sponsor",
             detail: this.detail,
-            generatedFiles: this.images
+            generatedFiles: this.sponsorDetails
           }
         });
       } else {
         alert("Please fill all fields !");
       }
-    },
-    checkDeveloped() {
-      for (var i = 0; i < this.allDevelopedCountries.length; i++) {
-        if (this.allDevelopedCountries[i] == this.detail.country) {
-          return true;
-        }
-      }
-      return false;
     }
   }
 };

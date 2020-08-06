@@ -4,6 +4,8 @@ import About from "../views/About.vue";
 import Register from "../views/Register/Register.vue";
 import RegisterParticipant from "../views/Register/Participant.vue";
 import RegisterSpeaker from "../views/Register/Speaker.vue";
+import RegisterSponsor from "../views/Register/Sponsor.vue";
+import Payment from "../views/Register/Payment.vue";
 import Contacts from "../views/Contacts.vue";
 import Organizers from "../views/Organizers.vue";
 import Speakers from "../views/Speakers.vue";
@@ -32,6 +34,17 @@ const routes = [
     component: RegisterSpeaker
   },  
   {
+    path: "/register/sponsor",
+    name: "Sponsor",
+    component: RegisterSponsor
+  }, 
+  {
+    path: "/register/payment",
+    name: "Payment",
+    component: Payment,
+    props: true
+  },  
+  {
     path: "/contacts",
     name: "Contacts",
     component: Contacts
@@ -51,7 +64,16 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    var ignore;
+    ignore = to;
+    ignore = from;
+    ignore = savedPosition;
+    ignore = null;
+    console.log("Page has been routed",ignore)
+    return { x: 0, y: 0 };
+  },
 });
 
 export default router;

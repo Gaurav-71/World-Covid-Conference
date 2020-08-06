@@ -1,0 +1,306 @@
+<template>
+  <div class="register">
+    <div class="card header">
+      <img :src="getImgUrl()" alt="header" />
+      <div class="title">
+        <h1>{{type}} Registration</h1>
+        <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
+      </div>
+    </div>
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated bounceInUp"
+      leave-active-class="animated bounceOutUp"
+      mode="out-in"
+      appear
+    >
+      <div>
+        <div class="card pay-container">
+          <div class="heading">
+            <h2>Amount to be Paid</h2>
+            <div class="line"></div>
+          </div>
+          <div v-if="type == 'Participant'" class="body">
+            <div
+              v-if="detail.country == 'India'"
+              class="amount"
+            >Registration Fees : &#8377;{{detail.amount * 74.90}}</div>
+            <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
+            <div class="discount">Discount : {{detail.discount}}%</div>
+            <div class="line"></div>
+            <div
+              v-if="detail.country == 'India'"
+              class="final-amt"
+            >Final Fee : &#8377;{{detail.finalAmount * 74.90}}</div>
+            <div v-else class="final-amt">Final Fee : ${{detail.finalAmount}}</div>
+          </div>
+          <div v-else-if="type == 'Sponsor'" class="body">
+            <div v-if="detail.country == 'India'">
+              <p v-if="detail.fee == '30,000'">Sponsorship Category : Platinum</p>
+              <p v-else-if="detail.fee == '20,000'">Sponsorship Category : Gold</p>
+              <p v-else>Sponsorship Category : Silver</p>
+              <p>Sponsorship Fee : &#8377;{{detail.fee}}</p>
+            </div>
+            <div v-else>
+              <p v-if="detail.fee == '10,000'">Sponsorship Category : Platinum</p>
+              <p v-else-if="detail.fee == '5000'">Sponsorship Category : Gold</p>
+              <p v-else>Sponsorship Category : Silver</p>
+              <p>Sponsorship Fee : ${{detail.fee}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="card category-container">
+          <div class="heading">
+            <h2>Mode of Payment</h2>
+            <div class="line"></div>
+          </div>
+          <div class="category">
+            <form>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="p1"
+                  name="paymentMode"
+                  value="1"
+                  v-model="detail.paymentMode"
+                />
+                <img src="../../assets/Register/Participant/neft.svg" alt="neft" />
+                <label for="male">NEFT</label>
+              </div>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="p2"
+                  name="paymentMode"
+                  value="2"
+                  v-model="detail.paymentMode"
+                />
+                <img src="../../assets/Register/Participant/gpay.png" alt="gpay" />
+                <label for="female">Google Pay</label>
+              </div>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="p3"
+                  name="paymentMode"
+                  value="3"
+                  v-model="detail.paymentMode"
+                />
+                <img src="../../assets/Register/Participant/paypal.svg" alt="paypal" />
+                <label for="other">PayPal</label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div v-if="detail.paymentMode==1" class="card category-container">
+          <div class="heading">
+            <h2>NEFT</h2>
+            <div class="line"></div>
+          </div>
+          <div class="category">
+            <p>
+              Name :
+              <span>Bengaluru Genomics Center Pvt. Ltd.</span>
+            </p>
+            <p>
+              Bank :
+              <span>State Bank of India</span>
+            </p>
+            <p>
+              Account Number :
+              <span>35545121471</span>
+            </p>
+            <p>
+              IFSC Code :
+              <span>SBIN0005191</span>
+            </p>
+            <p>
+              SWIFT Code (BIC) :
+              <span>SBININBB 425</span>
+            </p>
+            <br />
+            <p v-if="type == 'Participant'">
+              Please make a payment of
+              <span
+                v-if="detail.country == 'India'"
+              >&#8377;{{detail.finalAmount * 74.90}}</span>
+              <span v-else>${{detail.finalAmount}}</span>
+            </p>
+            <p v-else-if="type == 'Sponsor'">
+              Please make a payment of
+              <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
+              <span v-else>${{detail.fee}}</span>
+            </p>
+          </div>
+        </div>
+        <div v-else-if="detail.paymentMode==2" class="card category-container">
+          <div class="heading">
+            <h2>Google Pay</h2>
+            <div class="line"></div>
+          </div>
+          <div class="category">
+            <p v-if="type == 'Participant'">
+              Please make a payment of
+              <span
+                v-if="detail.country == 'India'"
+              >&#8377;{{detail.finalAmount * 74.90}}</span>
+              <span v-else>${{detail.finalAmount}}</span>
+            </p>
+            <p v-else-if="type == 'Sponsor'">
+              Please make a payment of
+              <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
+              <span v-else>${{detail.fee}}</span>
+            </p>
+            <p>
+              Phone Number :
+              <span>+91-8105320806</span>
+            </p>
+          </div>
+        </div>
+        <div v-else-if="detail.paymentMode==3" class="card category-container">
+          <div class="heading">
+            <h2>PayPal</h2>
+            <div class="line"></div>
+          </div>
+          <div class="category">
+            <p v-if="type == 'Participant'">
+              Please make a payment of
+              <span
+                v-if="detail.country == 'India'"
+              >&#8377;{{detail.finalAmount * 74.90}}</span>
+              <span v-else>${{detail.finalAmount}}</span>
+            </p>
+            <p v-else-if="type == 'Sponsor'">
+              Please make a payment of
+              <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
+              <span v-else>${{detail.fee}}</span>
+            </p>
+            <p>
+              Phone Number :
+              <span>+91-8105320806</span>
+            </p>
+          </div>
+        </div>
+        <div v-if="detail.paymentMode!=null" class="card pay-container">
+          <div class="heading">
+            <h2>Payment Confirmation</h2>
+            <div class="line"></div>
+          </div>
+          <div class="payment-validation">
+            <form>
+              <div class="input">
+                <label>Transaction ID</label>
+                <input
+                  type="text"
+                  placeholder="Enter Transaction ID"
+                  class="transaction"
+                  v-model="detail.transactionID"
+                />
+              </div>
+              <div class="input file-type">
+                <label>Transaction Proof (A screenshot of the completed transaction)</label>
+                <input
+                  type="file"
+                  class="student-id"
+                  ref="transactionImage"
+                  @change="onTransactionFilePicked"
+                />
+                <div @click="pickTransactionImage" class="btn my-btn">Upload File</div>
+                <p
+                  class="upload-msg"
+                  v-if=" !transactionImgName == ''"
+                >Uploaded {{transactionImgName}} succesfully !</p>
+                <p class="upload-msg" v-else>No file uploaded</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="actions">
+          <div @click="validate()" class="btn">Register</div>
+        </div>
+      </div>
+    </transition>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Payment",
+  props: {
+    type: String,
+    detail: Object,
+    generatedFiles: Object
+  },
+  data() {
+    return {
+      transactionImgName: ""
+    };
+  },
+  methods: {
+    getImgUrl() {
+      if (this.type == "Participant") {
+        return require("../../assets/Register/target.svg");
+      } else if (this.type == "Sponsor") {
+        return require("../../assets/Register/sponsor.svg");
+      }
+    },
+    pickTransactionImage() {
+      this.$refs.transactionImage.click();
+    },
+    onTransactionFilePicked(event) {
+      const files = event.target.files;
+      const fileReader = new FileReader();
+      fileReader.addEventListener("load", () => {});
+      fileReader.readAsDataURL(files[0]);
+      this.generatedFiles.transactionImage = files[0];
+      this.transactionImgName = this.generatedFiles.transactionImage.name;
+    },
+    allFieldsFilled() {
+      return true;
+    },
+    validate() {
+      if (this.type == "Participant") {
+        if (this.allFieldsFilled) {
+          let payload = {
+            generatedFiles: this.generatedFiles,
+            detail: this.detail
+          };
+          this.$store
+            .dispatch("saveParticipantDetails", payload)
+            .then(() => {
+              this.$router.push("/");
+              this.$store.state.navItem = 1;
+            })
+            .catch(resp => {
+              console.log(resp);
+            });
+        } else {
+          alert("Please fill all fields !");
+        }
+      } else if (this.type == "Sponsor") {
+        if (this.allFieldsFilled) {
+          let payload = {
+            generatedFiles: this.generatedFiles,
+            detail: this.detail
+          };
+          this.$store
+            .dispatch("saveSponsorDetails", payload)
+            .then(() => {
+              this.$router.push("/");
+              this.$store.state.navItem = 1;
+            })
+            .catch(resp => {
+              console.log(resp);
+            });
+        } else {
+          alert("Please fill all fields !");
+        }
+      }
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "../../scss/register";
+</style>
