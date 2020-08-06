@@ -1,6 +1,6 @@
 @import "../../scss/colors";
 .register {
-  height: calc(100vh - 4.5rem);
+  min-height: calc(100vh - 4.5rem);
   background-image: $background-1;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     background-position-x: 0.5rem;
     background-size: 32.5px;
     background-repeat: no-repeat;
-    text-indent: 35px;    
+    text-indent: 35px;
   }
   input::placeholder {
     color: #333333;
@@ -165,6 +165,9 @@
         .title {
           background-image: url("../../assets/Register/Speaker/title.svg");
         }
+        .author {
+          background-image: url("../../assets/Register/author.svg");
+        }
         .affiliation {
           background-image: url("../../assets/Register/Speaker/user.svg");
         }
@@ -187,7 +190,7 @@
       @include iphone {
         flex-wrap: wrap;
       }
-      input{
+      input {
         cursor: pointer;
       }
       .gender,
@@ -206,7 +209,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 0 2.1rem 0 0.3rem;            
+            margin: 0 2.1rem 0 0.3rem;
             img {
               width: 40px;
               height: 40px;
@@ -271,7 +274,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        input{
+        input {
           cursor: pointer;
         }
         .custom-label {

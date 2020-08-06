@@ -3,25 +3,41 @@
     <transition
       name="custom-classes-transition"
       enter-active-class="animated bounceInLeft"
-      leave-active-class="animated bounceOutRight"      
+      leave-active-class="animated bounceOutRight"
       appear
     >
-    <Heading :obj="headingObj" />
+      <Heading :obj="headingObj" />
     </transition>
     <transition
       name="custom-classes-transition"
       enter-active-class="animated bounceInUp"
-      leave-active-class="animated bounceOutUp"      
+      leave-active-class="animated bounceOutUp"
       appear
     >
       <div class="card-container">
         <div class="card grow">
           <div class="body">
             <img src="../../assets/Register/target.svg" alt="participants" />
-            <h2>Participant</h2>
+            <h2>Conference</h2>
             <h4>Interested to understand COVID-19 better ?</h4>
           </div>
           <div @click="route(1)" class="action">Register as a participant</div>
+        </div>
+        <div class="card grow">
+          <div class="body">
+            <img src="../../assets/Register/abstract.svg" alt="speaker" class="speaker" />
+            <h2>Abstract</h2>
+            <h4>Submit and Stand a chance to win an award !</h4>
+          </div>
+          <div @click="route(5)" class="action">Submit Abstract</div>
+        </div>
+        <div class="card grow">
+          <div class="body">
+            <img src="../../assets/Register/workshop.svg" alt="speaker" />
+            <h2>Workshop</h2>
+            <h4>Attend an information packed workshop post conference!</h4>
+          </div>
+          <div @click="route(3)" class="action">Register for Workshop</div>
         </div>
         <div class="card grow">
           <div class="body">
@@ -30,20 +46,12 @@
             <h4>Submit your abstracts and join us !</h4>
           </div>
           <div @click="route(2)" class="action">Register as a speaker</div>
-        </div>
-        <div class="card grow">
-          <div class="body">
-            <img src="../../assets/Register/workshop.svg" alt="speaker" />
-            <h2>Workshop</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-          </div>
-          <div @click="route(3)" class="action">Register for Workshop</div>
-        </div>
+        </div>        
         <div class="card grow">
           <div class="body">
             <img src="../../assets/Register/sponsor.svg" alt="speaker" class="speaker" />
             <h2>Sponsorship</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            <h4>Interested in supporting us monetarily ?</h4>
           </div>
           <div @click="route(4)" class="action">Sponsor Us</div>
         </div>
@@ -74,7 +82,7 @@ export default {
     route(page) {
       switch (page) {
         case 1:
-          this.$router.push("/register/participant");
+          this.$router.push("/register/conference/participant");
           break;
         case 2:
           this.$router.push("/register/speaker");
@@ -85,6 +93,9 @@ export default {
         case 4:
           this.$router.push("/register/sponsor");
           break;
+        case 5:
+          this.$router.push("/register/participant/abstract");
+          break;
       }
     }
   }
@@ -94,7 +105,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../scss/colors";
 .register {
-  height: calc(100vh - 4.5rem);
+  min-height: 100vh;
   background-image: $background-1;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,12 +124,12 @@ export default {
     justify-content: center;
     align-items: center;
     @include iphone {
-      margin-top: 3rem;
+      margin-top: 1rem;
     }
     .card {
-      width: 17rem;
+      width: 18rem;
       height: 22.5rem;
-      margin: 1.5rem;
+      margin: 1.5rem 2rem;
       border-radius: 0.8rem;
       background: white;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -149,7 +160,7 @@ export default {
         }
       }
       .action {
-        width: 17rem;
+        width: 18rem;
         height: 100%;
         display: flex;
         justify-content: center;

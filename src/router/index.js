@@ -6,6 +6,7 @@ import RegisterParticipant from "../views/Register/Participant.vue";
 import RegisterSpeaker from "../views/Register/Speaker.vue";
 import RegisterSponsor from "../views/Register/Sponsor.vue";
 import RegisterWorkshop from "../views/Register/Workshop.vue";
+import RegisterAbstract from "../views/Register/Abstract.vue";
 import Payment from "../views/Register/Payment.vue";
 import Contacts from "../views/Contacts.vue";
 import Organizers from "../views/Organizers.vue";
@@ -25,9 +26,14 @@ const routes = [
     component: Register
   },  
   {
-    path: "/register/participant",
+    path: "/register/conference/participant",
     name: "Participant",
     component: RegisterParticipant
+  },  
+  {
+    path: "/register/participant/abstract",
+    name: "Abstract",
+    component: RegisterAbstract
   },  
   {
     path: "/register/speaker",

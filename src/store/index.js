@@ -13,7 +13,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {
     async saveParticipantDetails(context, payload) {
-       
       console.log(context);
       try {
         if (payload.generatedFiles.studentImage) {
@@ -66,7 +65,6 @@ export default new Vuex.Store({
       }
     },
     async saveSpeakerRegistrationDetails(context, payload) {
-       
       console.log(context);
       try {
         if (payload.abstractFile) {
@@ -98,7 +96,6 @@ export default new Vuex.Store({
       }
     },
     async saveSponsorDetails(context, payload) {
-       
       console.log(context);
       try {
         if (payload.generatedFiles.id) {
@@ -151,7 +148,6 @@ export default new Vuex.Store({
       }
     },
     async saveWorkshopDetails(context, payload) {
-       
       console.log(context);
       try {
         if (payload.generatedFiles.studentImage) {
@@ -199,6 +195,37 @@ export default new Vuex.Store({
             payload.detail.transactionProof = imageUrl;
           });
         await db.collection("WorkshopRegistration").add(payload.detail);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
+    async saveAbstractRegistrationDetails(context, payload) {
+      console.log(context);
+      try {
+        if (payload.abstractFile) {
+          await fireDatabase
+            .ref("participantAbstracts")
+            .push(payload.abstractFile)
+            .then((data) => {
+              let key = data.key;
+              return key;
+            })
+            .then((key) => {
+              const filename = payload.abstractFile.name;
+              const ext = filename.slice(filename.lastIndexOf("."));
+              return fireStorage
+                .ref("participantAbstracts/" + key + "." + ext)
+                .put(payload.abstractFile);
+            })
+            .then(async (filedata) => {
+              let imageUrl = null;
+              await filedata.ref.getDownloadURL().then((url) => {
+                imageUrl = url;
+              });
+              payload.detail.abstractFile = imageUrl;
+            });
+        }
+        await db.collection("AbstractRegistration").add(payload.detail);
       } catch (exc) {
         console.log(exc);
       }

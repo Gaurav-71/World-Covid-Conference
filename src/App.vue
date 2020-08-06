@@ -53,6 +53,6 @@ body {
   letter-spacing: 1px;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
-  margin-bottom: 2rem;
+ // margin-bottom: 2rem;
 }
 </style>

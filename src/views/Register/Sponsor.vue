@@ -836,7 +836,7 @@
 
 <script>
 export default {
-  name: "Participant",
+  name: "Sponsor",
   data() {
     return {
       allDevelopedCountries: [

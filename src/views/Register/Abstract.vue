@@ -1,17 +1,13 @@
 <template>
   <div v-if="!$store.state.isSavingForm" class="register">
     <div class="card header">
-      <img src="../../assets/Register/presentation.svg" alt="participant" />
+      <img src="../../assets/Register/abstract.svg" alt="participant" />
       <div class="title">
-        <h1>Speaker Registration</h1>
-        <h4>Want to share your knowledge on a topic ? Submit your abstracts and join us !</h4>
+        <h1>Participant Abstract Registration</h1>
+        <h4>Want to stand a chance to win an award ? Submit your abstracts and join us !</h4>
       </div>
     </div>
-    <transition
-      name="custom-classes-transition"
-      enter-active-class="animated bounceInUp"      
-      appear
-    >
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInUp" appear>
       <div class="container">
         <div class="card personal-information">
           <div class="heading">
@@ -356,7 +352,7 @@
         </div>
         <div class="card talk">
           <div class="heading">
-            <h2>The Talk</h2>
+            <h2>Abstract</h2>
             <div class="line"></div>
           </div>
           <form>
@@ -364,9 +360,18 @@
               <label>Title</label>
               <input type="text" placeholder="Enter Title" class="title" v-model="detail.title" />
             </div>
+            <div class="input">
+              <label>Authors</label>
+              <input
+                type="text"
+                placeholder="Enter Authors"
+                class="author"
+                v-model="detail.authors"
+              />
+            </div>
           </form>
           <div class="input file-type">
-            <label>Speaker Abstract</label>
+            <label>Abstract</label>
             <input type="file" class="student-id" ref="abstractFile" @change="onFilePicked" />
             <div @click="pickFile" class="btn my-btn shake">Upload File</div>
             <p
@@ -375,24 +380,6 @@
             >Uploaded {{abstractFileName}} succesfully !</p>
             <p class="upload-msg" v-else>No file uploaded</p>
           </div>
-        </div>
-        <div class="card talk">
-          <div class="heading">
-            <h2>Guest Name</h2>
-            <div class="line"></div>
-          </div>
-          <p>Registration for a speaker is free. Each speaker is allowed to have one guest</p>
-          <form>
-            <div class="input">
-              <label>Name</label>
-              <input
-                type="text"
-                placeholder="Enter Guest Name"
-                class="name"
-                v-model="detail.guestName"
-              />
-            </div>
-          </form>
         </div>
         <div class="actions">
           <div @click="validate" class="btn shake">Register</div>
@@ -416,8 +403,8 @@
 <script>
 import Loading from "../../components/Circle.vue";
 export default {
-  name: "Speaker",
-  components:{
+  name: "Abstract",
+  components: {
     Loading
   },
   data() {
@@ -438,8 +425,7 @@ export default {
         country: "",
         //talk
         title: "",
-        //guest
-        guestName: "",
+        authors: "",
         //file
         abstractFile: ""
       },
@@ -484,8 +470,8 @@ export default {
         return "Country - Postal Address";
       } else if (this.detail.title == "") {
         return "Talk Title";
-      } else if (this.detail.guestName == "") {
-        return "Guest Name";
+      } else if (this.detail.authors == "") {
+        return "Talk Title";
       } else if (this.abstractFileName == "") {
         return "Abstract File";
       }
@@ -501,7 +487,7 @@ export default {
         };
         this.$store.state.isSavingForm = true;
         this.$store
-          .dispatch("saveSpeakerRegistrationDetails", payload)
+          .dispatch("saveAbstractRegistrationDetails", payload)
           .then(() => {
             this.$store.state.isSavingForm = false;
             this.$router.push("/");
