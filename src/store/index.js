@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { auth } from "../main.js";
 import { db } from "../main.js";
 import { fireStorage } from "../main.js";
 import { fireDatabase } from "../main.js";
@@ -9,9 +10,36 @@ export default new Vuex.Store({
   state: {
     navItem: 1,
     isSavingForm: false,
+    isLoggedIn : false,
+    isLoggingIn : true
   },
-  mutations: {},
+  mutations: {
+    logIn: (state) => {      
+      state.isLoggedIn = true;      
+    },
+    logOut: (state) => {      
+      state.isLoggedIn = false;
+    },    
+  },
   actions: {
+    async logIn({ commit }, payload) {
+      this.state.isLoggingIn = false;
+      try {
+        let response = await auth.signInWithEmailAndPassword(
+          payload.email,
+          payload.password
+        );
+        commit("logIn", response.user);
+      } catch (err) {
+        this.state.isLoggingIn = true;
+        throw err;
+      }
+    },
+    async logOut(context) {
+      await auth.signOut();
+      this.state.isLoggingIn = true;
+      context.commit("logOut");
+    },
     async saveParticipantDetails(context, payload) {
       console.log(context);
       try {

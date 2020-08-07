@@ -6,34 +6,45 @@
       <div class="line"></div>
       <img src="../assets/Header/ippa-logo.png" class="ippa" alt="logo" />
     </div>
-    <nav>
-      <img v-if="!isMenuOpen" @click="showMenu" src="../assets/Header/menu.svg" alt="menu" />
-      <img v-else @click="showMenu" src="../assets/Header/close.svg" alt="close" />
-      <ul :class="{'list-nav':isMenuOpen}" class="hide">
-        <li @click="route(1,'close')">About</li>
-        <li @click="route(2,'close')">Speakers</li>
-        <li @click="route(3,'close')">Organizers</li>
-        <li @click="route(4,'close')">Contact Us</li>
-        <li @click="route(5,'close')">Register</li>
-      </ul>
-      <ul class="flex-nav">
-        <li @click="route(1)">About</li>
-        <li @click="route(2)">Speakers</li>
-        <li @click="route(3)">Organizers</li>
-        <li @click="route(4)">Contact Us</li>
-        <transition
-          name="custom-classes-transition"
-          enter-active-class="animated bounceInRight"
-          leave-active-class="animated bounceOutRight"          
-          :duration="{enter: 800,leave: 500}"
-          appear
-        >
-          <li v-if="$store.state.navItem != 5" @click="route(5)" class="no-padding">
-            <div class="btn shake">Register</div>
-          </li>
-        </transition>
-      </ul>
-    </nav>
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated bounceInLeft"
+      leave-active-class="animated bounceOutRight"
+      appear
+    >
+      <nav v-if="!$store.state.isLoggedIn">
+        <img v-if="!isMenuOpen" @click="showMenu" src="../assets/Header/menu.svg" alt="menu" />
+        <img v-else @click="showMenu" src="../assets/Header/close.svg" alt="close" />
+        <ul :class="{'list-nav':isMenuOpen}" class="hide">
+          <li @click="route(1,'close')">About</li>
+          <li @click="route(2,'close')">Speakers</li>
+          <li @click="route(3,'close')">Organizers</li>
+          <li @click="route(4,'close')">Contact Us</li>
+          <li @click="route(5,'close')">Register</li>
+        </ul>
+        <ul class="flex-nav">
+          <li @click="route(1)">About</li>
+          <li @click="route(2)">Speakers</li>
+          <li @click="route(3)">Organizers</li>
+          <li @click="route(4)">Contact Us</li>
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animated bounceInRight"
+            leave-active-class="animated bounceOutRight"
+            :duration="{enter: 800,leave: 500}"
+            appear
+          >
+            <li v-if="$store.state.navItem != 5" @click="route(5)" class="no-padding">
+              <div class="btn shake">Register</div>
+            </li>
+          </transition>
+        </ul>
+      </nav>
+      <a v-else @click="logOut" class="signout">
+        <img src="../assets/Login/signout.svg" alt="signout" />
+        <span>Sign out</span>
+      </a>
+    </transition>
   </div>
 </template>
 
@@ -71,6 +82,17 @@ export default {
     },
     showMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    logOut() {
+      this.$store
+        .dispatch("logOut")
+        .then(() => {
+          this.$store.state.isLoggedIn = false;
+          this.$router.push("/");
+        })
+        .catch(err => {
+          alert(err);
+        });
     }
   }
 };
@@ -190,6 +212,37 @@ export default {
     }
     @include ipad-portrait {
       .flex-nav {
+        display: none;
+      }
+    }
+  }
+  .signout {
+    position: fixed;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    span {
+      display: none;
+    }
+  }
+  .signout:hover {
+    background: rgba(lighten($primary, 30%), 0.3);
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    span {
+      display: block;
+      margin-left: 0.7rem;
+      text-shadow: 1px 0.5px 1px black;
+      @include iphone{
         display: none;
       }
     }

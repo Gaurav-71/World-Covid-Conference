@@ -35,7 +35,7 @@ $background: linear-gradient(
     transparent 100%
   ),
   linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
-$gradient: radial-gradient(
+$gradient-red: radial-gradient(
     circle at 68% 88%,
     hsla(193, 0%, 4%, 0.06) 0%,
     hsla(193, 0%, 4%, 0.06) 68%,
