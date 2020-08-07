@@ -1219,8 +1219,8 @@ export default {
     },
     validate() {
       this.setAmount();
-      //let validation = this.allFieldsFilled();
-      let validation = "allFilled";
+      let validation = this.allFieldsFilled();
+      //let validation = "allFilled";
       if (validation == "allFilled") {
         this.detail.timestamp = Date(Date.now());
         this.$router.push({
