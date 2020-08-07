@@ -427,7 +427,8 @@ export default {
         title: "",
         authors: "",
         //file
-        abstractFile: ""
+        abstractFile: "",
+        timestamp: null
       },
       abstractFile: null,
       abstractFileName: ""
@@ -481,6 +482,7 @@ export default {
       //let validation = this.allFieldsFilled();
       let validation = "allFilled";
       if (validation == "allFilled") {
+        this.detail.timestamp = Date(Date.now());
         let payload = {
           abstractFile: this.abstractFile,
           detail: this.detail

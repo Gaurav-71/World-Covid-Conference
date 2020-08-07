@@ -1,0 +1,78 @@
+@import "./colors";
+
+.registration{
+  padding: 0 0.7rem;
+  width: 100%;
+  text-align: center;
+  @include ipad-portrait {
+    overflow-x: scroll;
+  }
+  .heading-1 {
+    padding: 0.7rem 0 1rem 0;
+    text-align: left;
+    h1,
+    h4 {
+      margin: 0.5rem;
+      padding: 0;
+      font-weight: lighter;
+    }
+    h1 {
+      color: $primary;
+    }
+    h4 {
+      color: black;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2.5rem;
+    tr {
+      td,
+      th {
+        text-align: center;
+        padding: 0.8rem;
+        font-size: small;
+        font-weight: lighter;
+        input {
+          width: calc(100% - 5px);
+          height: 30px;
+          margin: 0.5rem 0;
+          border: 0.5px solid black;
+          background: none;
+          outline: none;
+          text-align: left;
+          text-indent: 10px;
+        }
+        ::-webkit-input-placeholder {
+          color: darkslategrey;
+        }
+        :-moz-placeholder {
+          color: darkslategrey;
+        }
+      }
+      th {
+        font-size: large;
+        font-weight: bold;
+        color: $primary;
+        padding: 1.3rem;
+      }
+    }
+    tr:nth-child(odd) {
+      background: rgba(darken($primary, 7.5%), $alpha: 0.2);
+    }
+    tr:nth-child(1) {
+      background: $gradient;
+      border-top-left-radius: 0.8rem;
+      border-top-right-radius: 0.8rem;
+      th {
+        color: white;
+      }
+    }
+  }
+}

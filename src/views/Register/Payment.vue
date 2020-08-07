@@ -321,7 +321,7 @@ export default {
 //      let validation = this.allFieldsFilled();
       let validation = 'allFilled';
       if (validation == "allFilled") {
-        this.$store.state.isSavingForm = true;
+        this.$store.state.isSavingForm = true;        
         if (this.type == "Participant") {
           let payload = {
             generatedFiles: this.generatedFiles,

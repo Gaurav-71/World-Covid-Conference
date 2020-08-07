@@ -10,16 +10,40 @@ export default new Vuex.Store({
   state: {
     navItem: 1,
     isSavingForm: false,
-    isLoggedIn : false,
-    isLoggingIn : true
+    isLoggedIn: false,
+    isLoggingIn: true,
+    participants: [],
+    abstracts: [],
+    workshop: [],
+    speakers: [],
+    sponsors: [],
+    activity: [],
   },
   mutations: {
-    logIn: (state) => {      
-      state.isLoggedIn = true;      
+    logIn: (state) => {
+      state.isLoggedIn = true;
     },
-    logOut: (state) => {      
+    logOut: (state) => {
       state.isLoggedIn = false;
-    },    
+    },
+    loadParticipants: (state, obj) => {
+      state.participants = obj;
+    },
+    loadAbstracts: (state, obj) => {
+      state.abstracts = obj;
+    },
+    loadWorkshop: (state, obj) => {
+      state.workshop = obj;
+    },
+    loadSpeakers: (state, obj) => {
+      state.speakers = obj;
+    },
+    loadSponsors: (state, obj) => {
+      state.sponsors = obj;
+    },
+    loadActivity: (state, obj) => {
+      state.activity = obj;
+    },
   },
   actions: {
     async logIn({ commit }, payload) {
@@ -88,6 +112,18 @@ export default new Vuex.Store({
             payload.detail.transactionProof = imageUrl;
           });
         await db.collection("ParticipantRegistration").add(payload.detail);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.detail.name,
+          email: payload.detail.email,
+          phno: payload.detail.phno,
+          type: "Conference",
+          time: d.toString().slice(4, 25),
+          timestamp: d,
+          finalAmount: payload.detail.finalAmount,
+          paymentMode: payload.detail.paymentMode,
+        };
+        await db.collection("Activity").add(activityData);
       } catch (exc) {
         console.log(exc);
       }
@@ -119,6 +155,16 @@ export default new Vuex.Store({
             });
         }
         await db.collection("SpeakerRegistration").add(payload.detail);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.detail.name,
+          email: payload.detail.email,
+          phno: payload.detail.phno,
+          type: "Speaker",
+          time: d.toString().slice(4, 25),
+          timestamp: d,
+        };
+        await db.collection("Activity").add(activityData);
       } catch (exc) {
         console.log(exc);
       }
@@ -171,6 +217,18 @@ export default new Vuex.Store({
             payload.detail.transactionProof = imageUrl;
           });
         await db.collection("SponsorRegistration").add(payload.detail);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.detail.name,
+          email: payload.detail.email,
+          phno: payload.detail.phno,
+          type: "Sponsor",
+          time: d.toString().slice(4, 25),
+          timestamp: d,
+          finalAmount: payload.detail.fee,
+          paymentMode: payload.detail.paymentMode,
+        };
+        await db.collection("Activity").add(activityData);
       } catch (exc) {
         console.log(exc);
       }
@@ -223,6 +281,18 @@ export default new Vuex.Store({
             payload.detail.transactionProof = imageUrl;
           });
         await db.collection("WorkshopRegistration").add(payload.detail);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.detail.name,
+          email: payload.detail.email,
+          phno: payload.detail.phno,
+          type: "Workshop",
+          time: d.toString().slice(4, 25),
+          timestamp: d,
+          finalAmount: payload.detail.finalAmount,
+          paymentMode: payload.detail.paymentMode,
+        };
+        await db.collection("Activity").add(activityData);
       } catch (exc) {
         console.log(exc);
       }
@@ -254,9 +324,136 @@ export default new Vuex.Store({
             });
         }
         await db.collection("AbstractRegistration").add(payload.detail);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.detail.name,
+          email: payload.detail.email,
+          phno: payload.detail.phno,
+          type: "Abstract",
+          time: d.toString().slice(4, 25),
+          timestamp: d,
+        };
+        await db.collection("Activity").add(activityData);
       } catch (exc) {
         console.log(exc);
       }
+    },
+    async loadParticipants(context) {
+      let response = db
+        .collection("ParticipantRegistration")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadParticipants", items);
+        });
+      return response;
+    },
+    async loadAbstracts(context) {
+      let response = db
+        .collection("AbstractRegistration")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadAbstracts", items);
+        });
+      return response;
+    },
+    async loadWorkshop(context) {
+      let response = db
+        .collection("WorkshopRegistration")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadWorkshop", items);
+        });
+      return response;
+    },
+    async loadSpeakers(context) {
+      let response = db
+        .collection("SpeakerRegistration")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadSpeakers", items);
+        });
+      return response;
+    },
+    async loadSponsors(context) {
+      let response = db
+        .collection("SponsorRegistration")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadSponsors", items);
+        });
+      return response;
+    },
+    async loadActivity(context) {
+      let response = db
+        .collection("Activity")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadActivity", items);
+        });
+      return response;
+    },
+  },
+  getters: {
+    getParticipants: (store) => {
+      return store.participants;
+    },
+    getAbstracts: (store) => {
+      return store.abstracts;
+    },
+    getWorkshop: (store) => {
+      return store.workshop;
+    },
+    getSpeakers: (store) => {
+      return store.speakers;
+    },
+    getSponsors: (store) => {
+      return store.sponsors;
+    },
+    getActivity: (store) => {
+      return store.activity;
     },
   },
   modules: {},

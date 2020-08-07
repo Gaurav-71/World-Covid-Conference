@@ -62,10 +62,7 @@ export default {
 @import "../../scss/colors";
 .registrations {
   width: 99%;
-  min-height: calc(100vh - 4.5rem);
-  background-image: $background-1;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: calc(100vh - 4.5rem);  
   display: flex;
   flex-direction: column;
   align-items: left;

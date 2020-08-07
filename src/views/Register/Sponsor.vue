@@ -920,7 +920,8 @@ export default {
         //payment
         paymentMode: null,
         transactionID: "",
-        transactionProof: "" // have to model, file type
+        transactionProof: "", // have to model, file type
+        timestamp: null
       },
       sponsorIdName: ""
     };
@@ -991,6 +992,7 @@ export default {
       //let validation = this.allFieldsFilled();
       let validation = 'allFilled';
       if (validation == "allFilled") {
+        this.detail.timestamp = Date(Date.now());
         this.$router.push({
           name: "Payment",
           params: {
