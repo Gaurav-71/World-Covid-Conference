@@ -264,12 +264,18 @@
     >
     <Loading :message="'Thank You For Registering With Us !'"/>
     </transition>
+    <div>
+    <transition name="fade" appear>
+      <Error :obj="error" :emptyStr="true" /> 
+    </transition>
+  </div>
   </div>
 </template>
 
 <script>
 
 import Loading from "../../components/Circle.vue";
+import Error from "../../components/Error.vue";
 
 export default {
   name: "Payment",
@@ -279,11 +285,19 @@ export default {
     generatedFiles: Object
   },
   components:{
-    Loading
+    Loading,
+    Error
   },
   data() {
     return {
-      transactionImgName: ""
+      transactionImgName: "",
+      error: {
+        isVisible: false,
+        message: {
+          code: "420-69/missing-information",
+          message: ""
+        }
+      }
     };
   },
   methods: {
@@ -318,8 +332,7 @@ export default {
       this.transactionImgName = this.generatedFiles.transactionImage.name;
     },
     validate() {
-//      let validation = this.allFieldsFilled();
-      let validation = 'allFilled';
+      let validation = this.allFieldsFilled();
       if (validation == "allFilled") {
         this.$store.state.isSavingForm = true;        
         if (this.type == "Participant") {
@@ -369,7 +382,8 @@ export default {
             });
         }
       } else {
-        alert(validation);
+        this.error.message.message = "Please fill the "+validation+" field";
+        this.error.isVisible = true;
       }
     }
   }

@@ -831,12 +831,22 @@
       </div>
     </transition>
     <div @click="validate" class="btn shake">Save</div>
+    <div>
+        <transition name="fade" appear>
+          <Error :obj="error" :emptyStr="true" /> 
+        </transition>
+      </div>
   </div>
 </template>
 
 <script>
+import Error from "../../components/Error.vue";
+
 export default {
   name: "Sponsor",
+  components:{
+    Error
+  },
   data() {
     return {
       allDevelopedCountries: [
@@ -923,7 +933,14 @@ export default {
         transactionProof: "", // have to model, file type
         timestamp: null
       },
-      sponsorIdName: ""
+      sponsorIdName: "",
+      error: {
+        isVisible: false,
+        message: {
+          code: "420-69/missing-information",
+          message: ""
+        }
+      }
     };
   },
   methods: {
@@ -989,8 +1006,7 @@ export default {
       return "allFilled";
     },
     validate() {
-      //let validation = this.allFieldsFilled();
-      let validation = 'allFilled';
+      let validation = this.allFieldsFilled();
       if (validation == "allFilled") {
         this.detail.timestamp = Date(Date.now());
         this.$router.push({
@@ -1002,7 +1018,8 @@ export default {
           }
         });
       } else {
-        alert(validation);
+        this.error.message.message = "Please fill the "+validation+" field";
+        this.error.isVisible = true;
       }
     }
   }

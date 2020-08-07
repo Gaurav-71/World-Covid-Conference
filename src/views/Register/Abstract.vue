@@ -386,6 +386,9 @@
         </div>
       </div>
     </transition>
+    <transition name="fade" appear>
+      <Error :obj="error" :emptyStr="true" /> 
+    </transition>
   </div>
   <div v-else class="register">
     <transition
@@ -396,15 +399,21 @@
       appear
     >
       <Loading :message="'Thank You For Registering With Us !'" />
-    </transition>
+    </transition> 
+    <transition name="fade" appear>
+      <Error :obj="error" :emptyStr="true" /> 
+    </transition> 
   </div>
 </template>
 
 <script>
 import Loading from "../../components/Circle.vue";
+import Error from "../../components/Error.vue";
+
 export default {
   name: "Abstract",
   components: {
+    Error,
     Loading
   },
   data() {
@@ -431,7 +440,14 @@ export default {
         timestamp: null
       },
       abstractFile: null,
-      abstractFileName: ""
+      abstractFileName: "",
+      error: {
+        isVisible: false,
+        message: {
+          code: "420-69/missing-information",
+          message: ""
+        }
+      }
     };
   },
   methods: {
@@ -479,8 +495,7 @@ export default {
       return "allFilled";
     },
     validate() {
-      //let validation = this.allFieldsFilled();
-      let validation = "allFilled";
+      let validation = this.allFieldsFilled();
       if (validation == "allFilled") {
         this.detail.timestamp = Date(Date.now());
         let payload = {
@@ -499,7 +514,9 @@ export default {
             console.log(resp);
           });
       } else {
-        alert(validation);
+        console.log("we are here");
+        this.error.message.message = "Please fill the "+validation+" field";
+        this.error.isVisible = true;
       }
     }
   }

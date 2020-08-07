@@ -3,18 +3,34 @@
     <div class="company">
       <div class="bgc">
         <p>Bengaluru Genomics Center</p>
-        <ul>
-            <li>Ph No. : </li>
-            <li>Email : </li>
-            <li>Socials</li>
+        <ul style="list-style-type: none;">
+            <li>
+              <i class="fa fa-phone" aria-hidden="true" style="margin:10px; color:white"></i>
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="ture" style="margin:10px; color:white"></i>
+            </li>
+            <li>
+              <a href=""> <i class="fa fa-instagram fa-2x" aria-hidden="ture" style=" margin:15px; color:white"></i></a>
+              <a href=""> <i class="fa fa-facebook fa-2x" aria-hidden="true" style=" margin:15px; color:white"></i></a>
+              <a href=""> <i class="fa fa-linkedin fa-2x" aria-hidden="ture" style=" margin:15px; color:white"></i></a>
+            </li>
         </ul>
       </div>
       <div class="happi">
         <p>High Altitude Pulmonary and Pathology Institute</p>
-        <ul>
-            <li>Ph No. : </li>
-            <li>Email : </li>
-            <li>Socials</li>
+        <ul style="list-style-type: none;">
+            <li>
+              <i class="fa fa-phone" aria-hidden="true" style="margin:10px; color:white"></i>
+            </li>
+            <li>
+              <i class="fa fa-envelope" aria-hidden="ture" style="margin:10px; color:white"></i>
+            </li>
+            <li>
+              <a href=""> <i class="fa fa-instagram fa-2x" aria-hidden="ture" style=" margin:15px; color:white"></i></a>
+              <a href=""> <i class="fa fa-facebook fa-2x" aria-hidden="true" style=" margin:15px; color:white"></i></a>
+              <a href=""> <i class="fa fa-linkedin fa-2x" aria-hidden="ture" style=" margin:15px; color:white"></i></a>
+            </li>
         </ul>
       </div>
       <div @click="route" class="admin">Admin</div>
@@ -42,6 +58,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/colors";
 footer {
+  color: white;
   margin-top: 3rem;
   width: 100%;
   padding: 1rem 0;
@@ -64,7 +81,7 @@ footer {
     .line {
       width: 100%;
       height: 1px;
-      background: black;
+      background:black;
       margin: 1rem 0;
     }
     a {

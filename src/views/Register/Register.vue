@@ -66,7 +66,7 @@ import Heading from "../../components/Heading";
 export default {
   name: "Register",
   components: {
-    Heading
+    Heading,
   },
   data() {
     return {
