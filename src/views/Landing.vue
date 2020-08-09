@@ -52,11 +52,14 @@
             </div>            
             <h3>Post Conference Workshop on Bioinformatics of Covid-19</h3>
             <div class="btn-container">                            
-              <a href="../assets/Landing/brochure.pdf" download target="_blank" class="btn">Download Brochure</a>
+              <a href="https://drive.google.com/file/d/1dcsFzlLzCPtrj1goeQGNHYC6CLIJv4n0/view?usp=sharing" target="_blank" class="btn">Download Brochure</a>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section class="pictures">
+      <h2>Check out our previous conference on Corona Viral Genomics <a href="https://www.bgc-genomics.com/ICCVG/home.html" target="_blank">here</a> </h2>
     </section>
   </main>
 </template>
@@ -119,12 +122,12 @@ export default {
     }
   }
 
-  h1 {
+  h1, h2 {
     color: $primary;
   }
 
   .about-conf,
-  .themes {
+  .themes, .pictures {
     padding: 0 2rem;
     h1 {
       margin-bottom: none;
@@ -198,6 +201,9 @@ export default {
       border-radius: 1rem;
       color: white;
       cursor: pointer;
+    }
+    .btn:active{
+      transform: scale(0.95);
     }
     a{
       color: white;

@@ -21,7 +21,7 @@
         <img src="../assets/Schedule/4.jpg" alt="schedule" />
       </div>
     </transition>
-    <a href="schedule.pdf" download target="_blank" class="btn">Download Program</a>
+    <a href="https://drive.google.com/file/d/1qbqYQJ1HPMtx5ZhUg3vocVatsvHQ8ulU/view?usp=sharing" target="_blank" class="btn">Download Program</a>
   </div>
 </template>
 
@@ -74,6 +74,9 @@ export default {
     cursor: pointer;
     margin-top: 2rem;
   }
+  .btn:active{
+      transform: scale(0.95);
+    }
   a {
     color: white;
     text-decoration: none;
