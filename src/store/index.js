@@ -341,6 +341,7 @@ export default new Vuex.Store({
     async loadParticipants(context) {
       let response = db
         .collection("ParticipantRegistration")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -357,6 +358,7 @@ export default new Vuex.Store({
     async loadAbstracts(context) {
       let response = db
         .collection("AbstractRegistration")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -373,6 +375,7 @@ export default new Vuex.Store({
     async loadWorkshop(context) {
       let response = db
         .collection("WorkshopRegistration")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -389,6 +392,7 @@ export default new Vuex.Store({
     async loadSpeakers(context) {
       let response = db
         .collection("SpeakerRegistration")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -405,6 +409,7 @@ export default new Vuex.Store({
     async loadSponsors(context) {
       let response = db
         .collection("SponsorRegistration")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -421,7 +426,7 @@ export default new Vuex.Store({
     async loadActivity(context) {
       let response = db
         .collection("Activity")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "desc")        
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {

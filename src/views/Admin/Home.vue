@@ -48,7 +48,7 @@ export default {
       this.page = page;
       switch (page) {
         case 1:
-          this.$router.push("/admin/home/");
+          this.$router.push("/admin/home");
           break;
         case 2:
           this.$router.push("/admin/registrations");

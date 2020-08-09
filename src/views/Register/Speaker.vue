@@ -399,6 +399,11 @@
         </div>
       </div>
     </transition>
+    <div>
+    <transition name="fade" appear>
+      <Error :obj="error" :emptyStr="true" /> 
+    </transition>
+  </div>
   </div>
   <div v-else class="register">
     <transition
@@ -415,9 +420,12 @@
 
 <script>
 import Loading from "../../components/Circle.vue";
+import Error from "../../components/Error.vue";
+
 export default {
   name: "Speaker",
   components:{
+    Error,
     Loading
   },
   data() {
@@ -445,7 +453,14 @@ export default {
         timestamp: null
       },
       abstractFile: null,
-      abstractFileName: ""
+      abstractFileName: "",
+      error: {
+        isVisible: false,
+        message: {
+          code: "Missing-information",
+          message: ""
+        }
+      }
     };
   },
   methods: {
@@ -493,8 +508,7 @@ export default {
       return "allFilled";
     },
     validate() {
-      //let validation = this.allFieldsFilled();
-      let validation = "allFilled";
+      let validation = this.allFieldsFilled();
       if (validation == "allFilled") {
         this.detail.timestamp = Date(Date.now());
         let payload = {
@@ -513,7 +527,8 @@ export default {
             console.log(resp);
           });
       } else {
-        alert(validation);
+        this.error.message.message = "Please fill the "+validation+" field";
+        this.error.isVisible = true;
       }
     }
   }

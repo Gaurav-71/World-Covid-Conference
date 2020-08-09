@@ -1,10 +1,7 @@
 <template>
   <div class="header">
     <div class="logos">
-      <img src="../assets/Header/bcg-logo.png" class="bgc" alt="logo" />
-
-      <div class="line"></div>
-      <img src="../assets/Header/ippa-logo.png" class="ippa" alt="logo" />
+      <!-- <img src="../assets/Landing/Earth_Covid_Virus_Without_Background.png" alt="logo">     -->
     </div>
     <transition
       name="custom-classes-transition"
@@ -16,15 +13,17 @@
         <img v-if="!isMenuOpen" @click="showMenu" src="../assets/Header/menu.svg" alt="menu" />
         <img v-else @click="showMenu" src="../assets/Header/close.svg" alt="close" />
         <ul :class="{'list-nav':isMenuOpen}" class="hide">
-          <li @click="route(1,'close')">About</li>
+          <li @click="route(1,'close')">Home</li>
           <li @click="route(2,'close')">Speakers</li>
+          <li @click="route(6,'close')">Program</li>
           <li @click="route(3,'close')">Organizers</li>
           <li @click="route(4,'close')">Contact Us</li>
           <li @click="route(5,'close')">Register</li>
         </ul>
         <ul class="flex-nav">
-          <li @click="route(1)">About</li>
+          <li @click="route(1)">Home</li>
           <li @click="route(2)">Speakers</li>
+          <li @click="route(6)">Program</li>
           <li @click="route(3)">Organizers</li>
           <li @click="route(4)">Contact Us</li>
           <transition
@@ -78,6 +77,9 @@ export default {
         case 5:
           this.$router.push("/registration");
           break;
+        case 6:
+          this.$router.push("/schedule");
+          break;
       }
     },
     showMenu() {
@@ -117,6 +119,12 @@ export default {
     height: 100%;
     align-items: center;
     margin-left: 1rem;
+    background: rgba(black, 0.5);
+    //background-image: linear-gradient(346deg, rgba(55, 55, 55,0.04) 0%, rgba(55, 55, 55,0.04) 22%,rgba(140, 140, 140,0.04) 22%, rgba(140, 140, 140,0.04) 69%,rgba(225, 225, 225,0.04) 69%, rgba(225, 225, 225,0.04) 100%),linear-gradient(31deg, rgba(55, 55, 55,0.04) 0%, rgba(55, 55, 55,0.04) 42%,rgba(140, 140, 140,0.04) 42%, rgba(140, 140, 140,0.04) 85%,rgba(225, 225, 225,0.04) 85%, rgba(225, 225, 225,0.04) 100%),linear-gradient(55deg, rgba(55, 55, 55,0.04) 0%, rgba(55, 55, 55,0.04) 13%,rgba(140, 140, 140,0.04) 13%, rgba(140, 140, 140,0.04) 72%,rgba(225, 225, 225,0.04) 72%, rgba(225, 225, 225,0.04) 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+    img {
+      width: 65px;
+      margin: 0 1rem;
+    }
     .ippa {
       width: 50px;
     }
@@ -124,7 +132,7 @@ export default {
       height: 3.5rem;
       width: 1px;
       background: gainsboro;
-      margin: 0 1rem;
+      //margin: 0 1rem;
     }
     .bgc {
       width: 140px;
@@ -179,6 +187,7 @@ export default {
       }
       li:hover {
         color: rgb(17, 11, 100);
+        color: darken($primary, 35%);
       }
       li:active {
         transform: scale(0.95);
@@ -190,12 +199,15 @@ export default {
           padding: 0.8rem 1.5rem;
           border-radius: 0.6rem;
           background: #7d62a9;
-          box-shadow: 10px 10px 20px rgba(grey, 0.5);
+          background: darken($primary, 5%);
+          border: 0.5px solid white;
+          box-shadow: 10px 10px 20px rgba(black, 0.5);
+          box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25);
           color: white;
           transition: background 0.3s ease-in;
         }
         .btn:hover {
-          background: darken(#7d62a9, 12%);
+          background: darken($primary, 15%);
         }
         .btn:active {
           transform: scale(0.95);
@@ -242,7 +254,7 @@ export default {
       display: block;
       margin-left: 0.7rem;
       text-shadow: 1px 0.5px 1px black;
-      @include iphone{
+      @include iphone {
         display: none;
       }
     }

@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import store from "../store/index.js";
-import About from "../views/About.vue";
+import About from "../views/Landing.vue";
 import Register from "../views/Register/Register.vue";
 import RegisterParticipant from "../views/Register/Participant.vue";
 import RegisterSpeaker from "../views/Register/Speaker.vue";
@@ -12,6 +12,7 @@ import Payment from "../views/Register/Payment.vue";
 import Contacts from "../views/Contacts.vue";
 import Organizers from "../views/Organizers.vue";
 import Speakers from "../views/Speakers.vue";
+import Schedule from "../views/Schedule.vue";
 import Login from "../views/Admin/Login.vue";
 import Home from "../views/Admin/Home.vue";
 import Activity from "../views/Admin/Activity.vue";
@@ -107,6 +108,11 @@ const routes = [
     path: "/registration",
     name: "Register",
     component: Register,
+  },
+  {
+    path: "/schedule",
+    name: "Schedule",
+    component: Schedule,
   },
   {
     path: "/register/conference/participant",

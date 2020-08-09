@@ -309,6 +309,7 @@
     padding: 0.8rem 2rem;
     border-radius: 0.6rem;
     background: #7d62a9;
+    background: $primary;
     box-shadow: 10px 10px 20px rgba(grey, 0.5);
     color: white;
     transition: background 0.3s ease-in;
@@ -316,6 +317,7 @@
   }
   .btn:hover {
     background: darken(#7d62a9, 12%);
+    background: darken($primary, 15%);
   }
   .btn:active {
     transform: scale(0.95);

@@ -78,10 +78,55 @@
                 />
                 <div class="custom-label">
                   <img src="../../assets/Register/Participant/other-prof.svg" alt="other-prof" />
-                  <label for="other">Other</label>
+                  <label for="other">Faculty / Industry Personnel / Other</label>
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+        <div v-if="detail.profession == 'o'" class="card category-container">
+          <div class="heading">
+            <h2>Qualification Category</h2>
+            <div class="line"></div>
+          </div>
+          <div class="category">
+            <form>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="1"
+                  name="qualification"
+                  value="1"
+                  v-model="detail.qualification"
+                />
+                <img src="../../assets/Register/Participant/teacher.svg" alt="male" />
+                <label
+                  for="male"
+                >Faculty / Post-doctoral Fellow / Research Associate / Research Engineer</label>
+              </div>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="2"
+                  name="qualification"
+                  value="2"
+                  v-model="detail.qualification"
+                />
+                <img src="../../assets/Register/Participant/businessman.svg" alt="male" />
+                <label for="female">Industry Personnel</label>
+              </div>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="3"
+                  name="qualification"
+                  value="3"
+                  v-model="detail.qualification"
+                />
+                <img src="../../assets/Register/Participant/other-prof.svg" alt="male" />
+                <label for="other">Other</label>
+              </div>
+            </form>
           </div>
         </div>
         <div class="card address">
@@ -395,51 +440,6 @@
               </datalist>
             </div>
           </form>
-        </div>
-        <div v-if="detail.profession == 'o'" class="card category-container">
-          <div class="heading">
-            <h2>Qualification Category</h2>
-            <div class="line"></div>
-          </div>
-          <div class="category">
-            <form>
-              <div class="custom-label">
-                <input
-                  type="radio"
-                  id="1"
-                  name="qualification"
-                  value="1"
-                  v-model="detail.qualification"
-                />
-                <img src="../../assets/Register/Participant/teacher.svg" alt="male" />
-                <label
-                  for="male"
-                >Faculty / Post-doctoral Fellow / Research Associate / Research Engineer</label>
-              </div>
-              <div class="custom-label">
-                <input
-                  type="radio"
-                  id="2"
-                  name="qualification"
-                  value="2"
-                  v-model="detail.qualification"
-                />
-                <img src="../../assets/Register/Participant/businessman.svg" alt="male" />
-                <label for="female">Industry Personnel</label>
-              </div>
-              <div class="custom-label">
-                <input
-                  type="radio"
-                  id="3"
-                  name="qualification"
-                  value="3"
-                  v-model="detail.qualification"
-                />
-                <img src="../../assets/Register/Participant/other-prof.svg" alt="male" />
-                <label for="other">Other</label>
-              </div>
-            </form>
-          </div>
         </div>
         <div v-if="detail.profession == 'o'" class="card professional-details">
           <div class="heading">
@@ -841,11 +841,21 @@
       </div>
     </transition>
     <div @click="validate" class="btn shake">Save & Pay</div>
+    <div>
+      <transition name="fade" appear>
+        <Error :obj="error" :emptyStr="true" />
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
+import Error from "../../components/Error.vue";
+
 export default {
+  components: {
+    Error
+  },
   name: "Participant",
   data() {
     return {
@@ -1102,7 +1112,14 @@ export default {
         timestamp: null
       },
       transactionImgName: "",
-      idImgName: ""
+      idImgName: "",
+      error: {
+        isVisible: false,
+        message: {
+          code: "Missing-information",
+          message: ""
+        }
+      }
     };
   },
   methods: {
@@ -1220,7 +1237,6 @@ export default {
     validate() {
       this.setAmount();
       let validation = this.allFieldsFilled();
-      //let validation = "allFilled";
       if (validation == "allFilled") {
         this.detail.timestamp = Date(Date.now());
         this.$router.push({
@@ -1232,7 +1248,8 @@ export default {
           }
         });
       } else {
-        alert(validation);
+        this.error.message.message = "Please fill the " + validation + " field";
+        this.error.isVisible = true;
       }
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!$store.state.isSavingForm"  class="register">
+  <div v-if="!$store.state.isSavingForm" class="register">
     <div class="card header">
       <img :src="getImgUrl()" alt="header" />
       <div class="title">
@@ -7,11 +7,10 @@
         <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
       </div>
     </div>
-    <transition
-      name="custom-classes-transition"
-      enter-active-class="animated bounceInUp"                  
-      appear
-    >
+    <transition name="fade" appear>
+      <Error :obj="error" :emptyStr="true" />
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInUp" appear>
       <div>
         <div class="card pay-container">
           <div class="heading">
@@ -258,18 +257,18 @@
     <transition
       name="custom-classes-transition"
       enter-active-class="animated fadeIn"
-      leave-active-class="animated bounceOutUp" 
-      mode="out-in"           
+      leave-active-class="animated bounceOutUp"
+      mode="out-in"
       appear
     >
-    <Loading :message="'Thank You For Registering With Us !'"/>
+      <Loading :message="'Thank You For Registering With Us !'" />
     </transition>
   </div>
 </template>
 
 <script>
-
 import Loading from "../../components/Circle.vue";
+import Error from "../../components/Error.vue";
 
 export default {
   name: "Payment",
@@ -278,12 +277,20 @@ export default {
     detail: Object,
     generatedFiles: Object
   },
-  components:{
-    Loading
+  components: {
+    Loading,
+    Error
   },
   data() {
     return {
-      transactionImgName: ""
+      transactionImgName: "",
+      error: {
+        isVisible: false,
+        message: {
+          code: "Missing-information",
+          message: ""
+        }
+      }
     };
   },
   methods: {
@@ -318,21 +325,20 @@ export default {
       this.transactionImgName = this.generatedFiles.transactionImage.name;
     },
     validate() {
-//      let validation = this.allFieldsFilled();
-      let validation = 'allFilled';
+      let validation = this.allFieldsFilled();
       if (validation == "allFilled") {
-        this.$store.state.isSavingForm = true;        
+        this.$store.state.isSavingForm = true;
         if (this.type == "Participant") {
           let payload = {
             generatedFiles: this.generatedFiles,
             detail: this.detail
-          };          
+          };
           this.$store
             .dispatch("saveParticipantDetails", payload)
             .then(() => {
               this.$store.state.isSavingForm = false;
               this.$router.push("/");
-              this.$store.state.navItem = 1;              
+              this.$store.state.navItem = 1;
             })
             .catch(resp => {
               console.log(resp);
@@ -369,7 +375,8 @@ export default {
             });
         }
       } else {
-        alert(validation);
+        this.error.message.message = "Please fill the " + validation + " field";
+        this.error.isVisible = true;
       }
     }
   }
