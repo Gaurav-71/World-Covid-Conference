@@ -18,6 +18,7 @@ export default new Vuex.Store({
     speakers: [],
     sponsors: [],
     activity: [],
+    allPromoCodes: [],
   },
   mutations: {
     logIn: (state) => {
@@ -44,6 +45,9 @@ export default new Vuex.Store({
     loadActivity: (state, obj) => {
       state.activity = obj;
     },
+    loadPromoCodes: (state, obj) => {
+      state.allPromoCodes = obj;
+    },
   },
   actions: {
     async logIn({ commit }, payload) {
@@ -63,7 +67,7 @@ export default new Vuex.Store({
       await auth.signOut();
       this.state.isLoggingIn = true;
       context.commit("logOut");
-    },
+    },    
     async saveParticipantDetails(context, payload) {
       console.log(context);
       try {
@@ -124,6 +128,10 @@ export default new Vuex.Store({
           paymentMode: payload.detail.paymentMode,
         };
         await db.collection("Activity").add(activityData);
+        await db
+          .collection("PromoCodes")
+          .doc(payload.deleteId)
+          .delete();
       } catch (exc) {
         console.log(exc);
       }
@@ -426,7 +434,7 @@ export default new Vuex.Store({
     async loadActivity(context) {
       let response = db
         .collection("Activity")
-        .orderBy("timestamp", "desc")        
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -438,6 +446,20 @@ export default new Vuex.Store({
           });
           context.commit("loadActivity", items);
         });
+      return response;
+    },
+    async loadPromoCodes(context) {
+      let response = db.collection("PromoCodes").onSnapshot((snapshot) => {
+        let items = [];
+        snapshot.forEach((doc) => {
+          let data = {
+            id: doc.id,
+            promo: doc.data(),
+          };
+          items.push(data);
+        });
+        context.commit("loadPromoCodes", items);
+      });
       return response;
     },
   },
@@ -459,6 +481,9 @@ export default new Vuex.Store({
     },
     getActivity: (store) => {
       return store.activity;
+    },
+    getPromoCodes: (store) => {
+      return store.allPromoCodes;
     },
   },
   modules: {},

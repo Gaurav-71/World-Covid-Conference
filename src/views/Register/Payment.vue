@@ -23,7 +23,25 @@
               class="amount"
             >Registration Fees : &#8377;{{detail.amount}}</div>
             <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
-            <div class="discount">Discount : {{detail.discount}}%</div>
+            <div class="discount">Discount : {{detail.discount}}%</div>            
+            <p class="promo">
+              Have a promo code ?
+              <input
+                type="radio"
+                id="yes"
+                name="promo"
+                value="y"
+                v-model="hasPromoCode"
+              />
+              <label for="promo">Yes</label>
+              <input type="radio" id="no" name="promo" value="n" v-model="hasPromoCode" />
+              <label for="no">No</label>
+            </p>
+            <div v-if="hasPromoCode == 'y'" class="promo-code">
+              <input type="text" placeholder="Enter Promo Code" v-model="promoCode" />
+              <div @click="verifyPromoCode" class="btn">Apply Code</div>
+              <h4 v-if="isCodeValid != null" class="promo-error">{{promoMessage}}</h4>              
+            </div>
             <div class="line"></div>
             <div
               v-if="detail.country == 'India'"
@@ -284,6 +302,13 @@ export default {
   data() {
     return {
       transactionImgName: "",
+      hasPromoCode: null, //radio btn
+      promoCode: "", //input box
+      additionalDiscount: null,
+      isCodeValid: null,
+      promoMessage: "",
+      deletePromoCode: null,
+      unsubscribe: null,
       error: {
         isVisible: false,
         message: {
@@ -302,6 +327,37 @@ export default {
       } else {
         return require("../../assets/Register/workshop.svg");
       }
+    },
+    verifyPromoCode() {
+      let codeVerificationResponse = false;
+      for (var i = 0; i < this.$store.getters.getPromoCodes.length; i++) {
+        console.log(this.$store.getters.getPromoCodes[i].promo.code);
+        if (this.$store.getters.getPromoCodes[i].promo.code == this.promoCode) {
+          codeVerificationResponse = true;
+          this.isCodeValid = true;
+          this.deletePromoCode = this.$store.getters.getPromoCodes[i].id;
+          this.detail.additionalDiscount = this.$store.getters.getPromoCodes[
+            i
+          ].promo.discount;
+          this.promoMessage =
+            "Additional Discount of " + this.detail.additionalDiscount + "% is applied";
+          this.detail.finalAmount =
+            this.detail.finalAmount -
+            (this.detail.finalAmount * this.detail.additionalDiscount) / 100;
+          this.detail.finalAmount = Math.floor(this.detail.finalAmount);                    
+          this.$store.getters.getPromoCodes.splice(i,1);          
+          console.log("delete id",this.deletePromoCode);
+          console.log("if true",this.isCodeValid);
+          break;
+        }
+      }
+      if (!codeVerificationResponse) {        
+        this.isCodeValid = false;
+        console.log("message",this.isCodeValid);
+        this.promoMessage =
+          "This promo code is invalid ! Please enter a valid code";
+        this.detail.additionalDiscount = 0;
+      }      
     },
     allFieldsFilled() {
       if (this.transactionImgName == "") {
@@ -331,7 +387,8 @@ export default {
         if (this.type == "Participant") {
           let payload = {
             generatedFiles: this.generatedFiles,
-            detail: this.detail
+            detail: this.detail,
+            deleteId: this.deletePromoCode
           };
           this.$store
             .dispatch("saveParticipantDetails", payload)
@@ -379,10 +436,48 @@ export default {
         this.error.isVisible = true;
       }
     }
+  },
+  mounted(){
+    this.$store
+        .dispatch("loadPromoCodes")
+        .then(resp => {
+          this.unsubscribe = resp;
+        })
+        .catch(err => {
+          console.log(err);
+        });
   }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../scss/register";
+.promo {
+  input {
+    margin: 0 0 0 1rem;
+    cursor: pointer;
+  }
+  label {
+    margin: 0 0.5rem;
+  }
+}
+
+.promo-code {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  input {
+    //width: 30%;
+    background-image: url("../../assets/Register/discount.svg");
+  }
+  .btn {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+  .promo-error {
+    color: red;
+  }
+}
 </style>
