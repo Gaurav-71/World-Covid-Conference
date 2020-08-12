@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="logos">
-      <!-- <img src="../assets/Landing/Earth_Covid_Virus_Without_Background.png" alt="logo">     -->
+      <img src="../assets/virus.png" alt="logo">    
     </div>
     <transition
       name="custom-classes-transition"
@@ -17,6 +17,7 @@
           <li @click="route(2,'close')">Speakers</li>
           <li @click="route(6,'close')">Program</li>
           <li @click="route(3,'close')">Organizers</li>
+          <li @click="route(7,'close')">Hackathon</li>
           <li @click="route(4,'close')">Contact Us</li>
           <li @click="route(5,'close')">Register</li>
         </ul>
@@ -25,6 +26,7 @@
           <li @click="route(2)">Speakers</li>
           <li @click="route(6)">Program</li>
           <li @click="route(3)">Organizers</li>
+          <li @click="route(7)">Hackathon</li>
           <li @click="route(4)">Contact Us</li>
           <transition
             name="custom-classes-transition"
@@ -79,6 +81,9 @@ export default {
           break;
         case 6:
           this.$router.push("/schedule");
+          break;
+        case 7:
+          this.$router.push("/hackathon/about");
           break;
       }
     },

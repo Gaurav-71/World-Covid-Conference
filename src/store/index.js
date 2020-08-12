@@ -346,6 +346,30 @@ export default new Vuex.Store({
         console.log(exc);
       }
     },
+    async saveHackathonRegistrationDetails(context, payload) {
+      console.log(context);
+      try {        
+        await db.collection("HackathonRegistration").add(payload);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.name,
+          email: payload.email,
+          phno: payload.phno,
+          type: "Hackathon",
+          time: d.toString().slice(4, 25),
+          timestamp: d,
+        };
+        await db.collection("Activity").add(activityData);
+        let discCode = {
+          code: payload.promoCode,
+          discount: 20
+        }
+        console.log(discCode);
+        await db.collection("PromoCodes").add(discCode);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
     async loadParticipants(context) {
       let response = db
         .collection("ParticipantRegistration")

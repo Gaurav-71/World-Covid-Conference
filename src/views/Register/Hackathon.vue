@@ -1,9 +1,9 @@
 <template>
   <div class="register">
     <div class="card header">
-      <img src="../../assets/Register/target.svg" alt="participant" />
+      <img src="../../assets/Register/hackathon.svg" alt="participant" />
       <div class="title">
-        <h1>Participant Registration</h1>
+        <h1>Hackathon Registration</h1>
         <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
       </div>
     </div>
@@ -318,27 +318,31 @@
             <div class="profession">
               <label>Profession</label>
               <form>
-                <input
-                  type="radio"
-                  id="student"
-                  name="profession"
-                  value="s"
-                  v-model="detail.profession"
-                />
-                <div class="custom-label">
-                  <img src="../../assets/Register/Participant/student.svg" alt="student" />
-                  <label for="student">Student</label>
+                <div class="wrap">
+                  <input
+                    type="radio"
+                    id="student"
+                    name="profession"
+                    value="s"
+                    v-model="detail.profession"
+                  />
+                  <div class="custom-label">
+                    <img src="../../assets/Register/Participant/student.svg" alt="student" />
+                    <label for="student">Student</label>
+                  </div>
                 </div>
-                <input
-                  type="radio"
-                  id="other"
-                  name="profession"
-                  value="o"
-                  v-model="detail.profession"
-                />
-                <div class="custom-label">
-                  <img src="../../assets/Register/Participant/other-prof.svg" alt="other-prof" />
-                  <label for="other">Faculty / Industry Personnel / Doctor / Other</label>
+                <div class="wrap">
+                  <input
+                    type="radio"
+                    id="other"
+                    name="profession"
+                    value="o"
+                    v-model="detail.profession"
+                  />
+                  <div class="custom-label">
+                    <img src="../../assets/Register/Participant/other-prof.svg" alt="other-prof" />
+                    <label for="other">Faculty / Doctor / Other</label>
+                  </div>
                 </div>
               </form>
             </div>
@@ -397,32 +401,6 @@
             </div>
           </div>
         </transition>
-        <div v-if="detail.profession == 'o'" class="card professional-details">
-          <div class="heading">
-            <h2>Professional Information</h2>
-            <div class="line"></div>
-          </div>
-          <form>
-            <div class="input">
-              <label>Designation</label>
-              <input
-                type="text"
-                placeholder="Enter Designation"
-                class="designation"
-                v-model="detail.designation"
-              />
-            </div>
-            <div class="input">
-              <label>Area of Research</label>
-              <input
-                type="text"
-                placeholder="Enter Area of Research"
-                class="research"
-                v-model="detail.research"
-              />
-            </div>
-          </form>
-        </div>
         <transition
           name="custom-classes-transition"
           enter-active-class="animated bounceInLeft"
@@ -455,18 +433,6 @@
                 />
               </div>
             </form>
-            <div class="input file-type">
-              <label>Student ID proof</label>
-              <input
-                type="file"
-                class="student-id"
-                ref="studentImage"
-                @change="onStudentFilePicked"
-              />
-              <div @click="pickStudentImage" class="btn my-btn shake">Upload File</div>
-              <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
-              <p class="upload-msg" v-else>No file uploaded</p>
-            </div>
           </div>
         </transition>
         <div class="card category-container">
@@ -501,7 +467,7 @@
         </div>
       </div>
     </transition>
-    <div @click="validate" class="btn shake">Save & Pay</div>
+    <div @click="validate" class="btn shake">Register</div>
     <div>
       <transition name="fade" appear>
         <Error :obj="error" :emptyStr="true" />
@@ -520,215 +486,7 @@ export default {
   name: "Participant",
   data() {
     return {
-      allUnderDevelopedCountries: [
-        "Angola",
-        "Benin",
-        "Burkina Faso",
-        "Burundi",
-        "Central African Republic",
-        "Chad",
-        "Comoros",
-        "Democratic Republic of the Congo",
-        "Djibouti",
-        "Eritrea",
-        "Ethiopia",
-        "Gambia",
-        "Guinea",
-        "Guinea-Bissau",
-        "Lesotho",
-        "Liberia",
-        "Madagascar",
-        "Malawi",
-        "Mali",
-        "Mauritania",
-        "Mozambique",
-        "Niger",
-        "Rwanda",
-        "São Tomé and Príncipe",
-        "Senegal",
-        "Sierra Leone",
-        "Somalia",
-        "South Sudan",
-        "Sudan",
-        "Tanzania",
-        "Togo",
-        "Uganda",
-        "Zambia",
-        "Haiti",
-        "Afghanistan",
-        "Bangladesh",
-        "Bhutan",
-        "Cambodia",
-        "East Timor",
-        "Laos",
-        "Myanmar",
-        "Nepal",
-        "Yemen",
-        "Kiribati",
-        "Solomon IslandsTuvalu",
-        "Vanuatu"
-      ],
-      allDevelopingCountries: [
-        "Afghanistan",
-        "Albania",
-        "Algeria",
-        "Angola",
-        "Antigua and Barbuda",
-        "Argentina",
-        "Armenia",
-        "Aruba",
-        "Azerbaijan",
-        "Bahamas",
-        "Bahrain",
-        "Bangladesh",
-        "Barbados",
-        "Belarus",
-        "Belize",
-        "Benin",
-        "Bhutan",
-        "Bolivia",
-        "Bosnia and Herzegovina",
-        "Botswana",
-        "Brazil",
-        "Brunei",
-        "Bulgaria",
-        "Burkina Faso",
-        "Burundi",
-        "Cambodia",
-        "Cameroon",
-        "Cape Verde",
-        "Central African Republic",
-        "Chad",
-        "China",
-        "Chile",
-        "Colombia",
-        "Comoros",
-        "Democratic Republic of the Congo",
-        "Republic of the Congo",
-        "Costa Rica",
-        "Côte d'Ivoire",
-        "Croatia",
-        "Djibouti",
-        "Dominica",
-        "Dominican Republic",
-        "Ecuador",
-        "Egypt",
-        "El Salvador",
-        "Equatorial Guinea",
-        "Eritrea",
-        "Eswatini (Swaziland)",
-        "Ethiopia",
-        "Fiji",
-        "Gabon",
-        "The Gambia",
-        "Georgia",
-        "Ghana",
-        "Grenada",
-        "Guatemala",
-        "Guinea",
-        "Guinea-Bissau",
-        "Guyana",
-        "Haiti",
-        "Honduras",
-        "Hungary",
-        "India",
-        "Indonesia",
-        "Iran",
-        "Iraq",
-        "Jamaica",
-        "Jordan",
-        "Kazakhstan",
-        "Kenya",
-        "Kiribati",
-        "Kosovo",
-        "Kuwait",
-        "Kyrgyzstan",
-        "Laos",
-        "Lebanon",
-        "Lesotho",
-        "Liberia",
-        "Libya",
-        "Madagascar",
-        "Malawi",
-        "Malaysia",
-        "Maldives",
-        "Mali",
-        "Marshall Islands",
-        "Mauritania",
-        "Mauritius",
-        "Mexico",
-        "Federated States of Micronesia",
-        "Moldova",
-        "Mongolia",
-        "Montenegro",
-        "Morocco",
-        "Mozambique",
-        "Myanmar",
-        "Namibia",
-        "Nauru",
-        "Nepal",
-        "Nicaragua",
-        "Niger",
-        "Nigeria",
-        "North Macedonia",
-        "Oman",
-        "Pakistan",
-        "Palau",
-        "Panama",
-        "Papua New Guinea",
-        "Paraguay",
-        "Peru",
-        "Philippines",
-        "Poland",
-        "Qatar",
-        "Romania",
-        "Russia",
-        "Rwanda",
-        "Saint Kitts and Nevis",
-        "Saint Lucia",
-        "Saint Vincent and the Grenadines",
-        "Samoa",
-        "São Tomé and Príncipe",
-        "Saudi Arabia",
-        "Senegal",
-        "Serbia",
-        "Seychelles",
-        "Sierra Leone",
-        "Solomon Islands",
-        "Somalia",
-        "South Africa",
-        "South Sudan",
-        "Sri Lanka",
-        "Sudan",
-        "Suriname",
-        "Syria",
-        "Tajikistan",
-        "Tanzania",
-        "Thailand",
-        "Timor-Leste",
-        "Togo",
-        "Tonga",
-        "Trinidad and Tobago",
-        "Tunisia",
-        "Turkey",
-        "Turkmenistan",
-        "Tuvalu",
-        "Uganda",
-        "Ukraine",
-        "Uruguay",
-        "Uzbekistan",
-        "Vanuatu",
-        "Venezuela",
-        "Vietnam",
-        "Yemen",
-        "Zambia",
-        "Zimbabwe"
-      ],
       countryStatus: null,
-      images: {
-        studentImage: null,
-        transactionImage: null
-      },
       detail: {
         //personal info
         name: "",
@@ -742,25 +500,13 @@ export default {
         universityName: "",
         stream: "",
         studentIdProof: "", // have to model, file type
-        //profesional details
-        qualification: null,
-        designation: "",
-        research: "",
         //feedback
         feedback: null,
-        //fee
-        amount: 0,
-        finalAmount: 0,
-        discount: 0,
-        additionalDiscount: 0,
-        //payment
-        paymentMode: null,
-        transactionID: "",
-        transactionProof: "", // have to model, file type
-        timestamp: null
+        //link
+        link:"",
+        //promo code
+        promoCode: Number
       },
-      transactionImgName: "",
-      idImgName: "",
       error: {
         isVisible: false,
         message: {
@@ -771,17 +517,6 @@ export default {
     };
   },
   methods: {
-    pickStudentImage() {
-      this.$refs.studentImage.click();
-    },
-    onStudentFilePicked(event) {
-      const files = event.target.files;
-      const fileReader = new FileReader();
-      fileReader.addEventListener("load", () => {});
-      fileReader.readAsDataURL(files[0]);
-      this.images.studentImage = files[0];
-      this.idImgName = this.images.studentImage.name;
-    },
     allFieldsFilled() {
       if (this.detail.name == "") {
         return "Name";
@@ -806,70 +541,34 @@ export default {
       } else if (this.detail.profession == "o") {
         if (this.detail.qualification == null) {
           return "Qualification";
-        } else if (this.detail.designation == "") {
-          return "Designation";
-        } else if (this.detail.research == "") {
-          return "Research";
         }
       } else if (this.detail.feedback == null) {
         return "Survey";
       }
       return "allFilled";
     },
-    checkCountryStatus() {
-      for (var i = 0; i < this.allUnderDevelopedCountries.length; i++) {
-        if (this.allUnderDevelopedCountries[i] == this.detail.country) {
-          return 1;
-        }
-      }
-      for (var j = 0; j < this.allDevelopingCountries.length; j++) {
-        if (this.allDevelopingCountries[j] == this.detail.country) {
-          return 2;
-        }
-      }
-      return 3;
-    },
-    setAmount() {
-      this.countryStatus = this.checkCountryStatus();
-      if (this.detail.profession == "s") {
-        // student
-        this.detail.amount = this.detail.country == "India" ? 500 : 75;
-      } else if (this.detail.qualification == 1) {
-        // teacher
-        this.detail.amount = this.detail.country == "India" ? 5612 : 150;
-      } else {
-        // industry & other
-        this.detail.amount = this.detail.country == "India" ? 9354 : 250;
-      }
-      switch (this.countryStatus) {
-        case 1: //underdeveloped
-          this.detail.discount = 75;
-          break;
-        case 2: //developing
-          this.detail.discount = 50;
-          break;
-        case 3: //developed
-          this.detail.discount = 0;
-          break;
-      }
-      this.detail.finalAmount =
-        this.detail.amount - (this.detail.amount * this.detail.discount) / 100;
-      this.detail.finalAmount = Math.floor(this.detail.finalAmount);
-    },
     validate() {
-      this.setAmount();
       let validation = this.allFieldsFilled();
-      //let validation = 'allFilled';
+      //let validation = "allFilled";
       if (validation == "allFilled") {
-        this.detail.timestamp = Date(Date.now());
-        this.$router.push({
-          name: "Payment",
-          params: {
-            type: "Participant",
-            detail: this.detail,
-            generatedFiles: this.images
-          }
-        });
+        this.detail.promoCode = this.detail.name + Date.now();
+        this.detail.promoCode = this.detail.promoCode.split(" ").join("")
+        console.log(this.detail.promoCode);
+        this.$store
+          .dispatch("saveHackathonRegistrationDetails", this.detail)
+          .then(() => {
+            this.$router.push({
+              name: "SuccessfulRegistration",
+              params: {
+                type: "Hackathon",
+                detail: this.detail
+              }
+            });
+            this.$store.state.navItem = 1;
+          })
+          .catch(resp => {
+            console.log(resp);
+          });
       } else {
         this.error.message.message = "Please fill the " + validation + " field";
         this.error.isVisible = true;
@@ -881,4 +580,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../scss/register";
+.abstract-2 {
+  text-indent: 0 !important;
+}
 </style>

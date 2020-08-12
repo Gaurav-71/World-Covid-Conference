@@ -8,7 +8,11 @@ import RegisterSpeaker from "../views/Register/Speaker.vue";
 import RegisterSponsor from "../views/Register/Sponsor.vue";
 import RegisterWorkshop from "../views/Register/Workshop.vue";
 import RegisterAbstract from "../views/Register/Abstract.vue";
+import RegisterHackathon from "../views/Register/Hackathon.vue";
+import HackathonSubmit from "../views/Register/HackathonSubmit.vue";
+import Hackathon from "../views/Hackathon.vue";
 import Payment from "../views/Register/Payment.vue";
+import SuccessfulRegistration from "../views/Register/SuccessfulRegistration.vue";
 import Contacts from "../views/Contacts.vue";
 import Organizers from "../views/Organizers.vue";
 import Speakers from "../views/Speakers.vue";
@@ -110,6 +114,12 @@ const routes = [
     component: Register,
   },
   {
+    path: "/successfulregistration",
+    name: "SuccessfulRegistration",
+    component: SuccessfulRegistration,
+    props: true
+  },
+  {
     path: "/schedule",
     name: "Schedule",
     component: Schedule,
@@ -138,6 +148,21 @@ const routes = [
     path: "/register/workshop",
     name: "Workshop",
     component: RegisterWorkshop,
+  },
+  {
+    path: "/register/hackathon",
+    name: "Hackathon",
+    component: RegisterHackathon,
+  },
+  {
+    path: "/hackathon/about",
+    name: "AboutHackathon",
+    component: Hackathon,
+  },
+  {
+    path: "/hackathon/submit",
+    name: "HackathonSubmit",
+    component: HackathonSubmit,
   },
   {
     path: "/register/payment",
