@@ -11,6 +11,7 @@
     <div class="pills-container">
       <div @click="route(1)" class="pill" :class="{ active: page == 1 }">Activity</div>
       <div @click="route(2)" class="pill" :class="{ active: page == 2 }">Registrations</div>
+      <div @click="route(3)" class="pill" :class="{ active: page == 3 }">Hackathon</div>
     </div>
     <transition
       name="custom-classes-transition-2"
@@ -53,6 +54,9 @@ export default {
         case 2:
           this.$router.push("/admin/registrations");
           break;
+        case 3:
+          this.$router.push("/admin/hackathon");
+          break;
       }
     }
   }
@@ -71,7 +75,7 @@ export default {
   flex-direction: column;
   align-items: left;
   .pills-container {
-    width: 36%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
     background: rgba(lighten($primary, 30%), 0.3);

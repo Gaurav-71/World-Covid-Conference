@@ -21,7 +21,7 @@
         <img src="../assets/Schedule/4.jpg" alt="schedule" />
       </div>
     </transition>
-    <a href="https://drive.google.com/file/d/1qbqYQJ1HPMtx5ZhUg3vocVatsvHQ8ulU/view?usp=sharing" target="_blank" class="btn">Download Program</a>
+    <a href="../assets/Files/schedule.pdf" download class="btn">Download Program</a>
   </div>
 </template>
 

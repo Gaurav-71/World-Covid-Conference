@@ -20,6 +20,7 @@ import Schedule from "../views/Schedule.vue";
 import Login from "../views/Admin/Login.vue";
 import Home from "../views/Admin/Home.vue";
 import Activity from "../views/Admin/Activity.vue";
+import AdminHackathon from "../views/Admin/Hackathon.vue";
 import Registrations from "../views/Admin/Registrations.vue";
 import Abstract from "../views/Admin/Registrations/Abstract.vue";
 import Conference from "../views/Admin/Registrations/Conference.vue";
@@ -105,6 +106,14 @@ const routes = [
             },
           },
         ],
+      },
+      {
+        path: "/admin/hackathon",
+        name: "AdminHackathon",
+        component: AdminHackathon,
+        meta: {
+          requiresAuth: true,
+        },
       },
     ],
   },

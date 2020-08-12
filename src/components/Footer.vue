@@ -5,6 +5,7 @@
         <div class="image-cont">
           <img src="../assets/Header/bcg-logo.png" alt="logo" />
         </div>
+        <h3>Bengaluru Genomics Centre</h3>
         <ul style="list-style-type: none;">
           <li>
             <i class="fa fa-phone" aria-hidden="true" style="margin:10px; color:white"></i> +91-6364335551
@@ -140,7 +141,9 @@ footer {
         justify-content: center;
         margin-bottom: 1rem;
         img {
-          width: 280px;
+          margin-top: 0.5rem;
+          width: 220px;
+          height: 60px;
         }
       }
     }
@@ -151,7 +154,8 @@ footer {
         justify-content: center;
         margin-bottom: 1rem;
         img{
-          width: 55px;
+          width: 65px;
+          height: 75px;
         }
       }      
     }

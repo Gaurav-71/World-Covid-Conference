@@ -19,6 +19,8 @@ export default new Vuex.Store({
     sponsors: [],
     activity: [],
     allPromoCodes: [],
+    hackathonEmails: [],
+    hackathon: []
   },
   mutations: {
     logIn: (state) => {
@@ -48,6 +50,12 @@ export default new Vuex.Store({
     loadPromoCodes: (state, obj) => {
       state.allPromoCodes = obj;
     },
+    loadHackathonEmails: (state, obj) => {
+      state.hackathonEmails = obj;
+    },
+    loadHackathon: (state,obj) =>{
+      state.hackathon = obj;
+    }
   },
   actions: {
     async logIn({ commit }, payload) {
@@ -67,7 +75,7 @@ export default new Vuex.Store({
       await auth.signOut();
       this.state.isLoggingIn = true;
       context.commit("logOut");
-    },    
+    },
     async saveParticipantDetails(context, payload) {
       console.log(context);
       try {
@@ -348,7 +356,7 @@ export default new Vuex.Store({
     },
     async saveHackathonRegistrationDetails(context, payload) {
       console.log(context);
-      try {        
+      try {
         await db.collection("HackathonRegistration").add(payload);
         let d = Date(Date.now());
         let activityData = {
@@ -362,10 +370,45 @@ export default new Vuex.Store({
         await db.collection("Activity").add(activityData);
         let discCode = {
           code: payload.promoCode,
-          discount: 20
-        }
+          discount: 20,
+        };
         console.log(discCode);
         await db.collection("PromoCodes").add(discCode);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
+    async updateHackathonFile(context, payload) {
+      console.log(context);
+      try {
+        let uploadFile = "";
+        if (payload.hackFile) {
+          await fireDatabase
+            .ref("Hackathon")
+            .push(payload.hackFile)
+            .then((data) => {
+              let key = data.key;
+              return key;
+            })
+            .then((key) => {
+              const filename = payload.hackFile.name;
+              const ext = filename.slice(filename.lastIndexOf("."));
+              return fireStorage
+                .ref("Hackathon/" + key + "." + ext)
+                .put(payload.hackFile);
+            })
+            .then(async (filedata) => {
+              let imageUrl = null;
+              await filedata.ref.getDownloadURL().then((url) => {
+                imageUrl = url;
+              });
+              uploadFile = imageUrl;
+            });
+        }
+        await db
+          .collection("HackathonRegistration")
+          .doc(payload.id)
+          .update({ file: uploadFile });
       } catch (exc) {
         console.log(exc);
       }
@@ -486,6 +529,41 @@ export default new Vuex.Store({
       });
       return response;
     },
+    async loadHackathonEmails(context) {
+      let response = db
+        .collection("HackathonRegistration")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              email: doc.data().email,
+              file: doc.data().file,
+            };
+            items.push(data);
+          });
+          context.commit("loadHackathonEmails", items);
+        });
+      return response;
+    },
+    async loadHackathon(context){
+      let response = db
+      .collection("HackathonRegistration")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        let items = [];
+        snapshot.forEach((doc) => {
+          let data = {
+            id: doc.id,
+            detail: doc.data(),            
+          };
+          items.push(data);
+        });
+        context.commit("loadHackathon", items);
+      });
+    return response;
+    }
   },
   getters: {
     getParticipants: (store) => {
@@ -509,6 +587,12 @@ export default new Vuex.Store({
     getPromoCodes: (store) => {
       return store.allPromoCodes;
     },
+    getHackathonEmails: (store) => {
+      return store.hackathonEmails;
+    },
+    getHackathon: (store) => {
+      return store.hackathon;
+    }
   },
   modules: {},
 });

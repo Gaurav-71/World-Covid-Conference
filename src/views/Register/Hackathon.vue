@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div v-if="!$store.state.isSavingForm" class="register">
     <div class="card header">
       <img src="../../assets/Register/hackathon.svg" alt="participant" />
       <div class="title">
@@ -474,14 +474,27 @@
       </transition>
     </div>
   </div>
+  <div v-else class="register">
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated bounceOutUp"
+      mode="out-in"
+      appear
+    >
+      <Loading :message="'Thank You For Registering With Us !'" />
+    </transition>
+  </div>
 </template>
 
 <script>
 import Error from "../../components/Error.vue";
+import Loading from "../../components/Circle.vue";
 
 export default {
   components: {
-    Error
+    Error,
+    Loading
   },
   name: "Participant",
   data() {
@@ -499,13 +512,13 @@ export default {
         //academic details
         universityName: "",
         stream: "",
-        studentIdProof: "", // have to model, file type
         //feedback
         feedback: null,
         //link
-        link:"",
+        file: "",
         //promo code
-        promoCode: Number
+        promoCode: Number,
+        timestamp: null
       },
       error: {
         isVisible: false,
@@ -552,11 +565,14 @@ export default {
       //let validation = "allFilled";
       if (validation == "allFilled") {
         this.detail.promoCode = this.detail.name + Date.now();
-        this.detail.promoCode = this.detail.promoCode.split(" ").join("")
+        this.detail.promoCode = this.detail.promoCode.split(" ").join("");
+        this.detail.timestamp = Date(Date.now());
         console.log(this.detail.promoCode);
+        this.$store.state.isSavingForm = true;
         this.$store
           .dispatch("saveHackathonRegistrationDetails", this.detail)
           .then(() => {
+            this.$store.state.isSavingForm = false;
             this.$router.push({
               name: "SuccessfulRegistration",
               params: {

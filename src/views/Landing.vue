@@ -52,7 +52,7 @@
             </div>            
             <h3>Post Conference Workshop on Bioinformatics of Covid-19</h3>
             <div class="btn-container">                            
-              <a href="https://drive.google.com/file/d/1dcsFzlLzCPtrj1goeQGNHYC6CLIJv4n0/view?usp=sharing" target="_blank" class="btn">Download Brochure</a>
+              <a href="../assets/File/brochure.pdf" download class="btn">Download Brochure</a>
             </div>
           </div>
         </div>

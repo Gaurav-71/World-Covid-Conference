@@ -1,6 +1,6 @@
 <template>
   <div class="loading-container">    
-    <h4 v-if="$store.state.isLoggedIn" class="h4">Saving Details</h4>
+    <h4 class="h4">Saving Details</h4>
     <div class="sk-fading-circle">
       <div class="sk-circle1 sk-circle"></div>
       <div class="sk-circle2 sk-circle"></div>

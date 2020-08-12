@@ -14,91 +14,91 @@
       leave-active-class="animated bounceOutUp"
       appear
     >
-    <div class="hackathon">
-      <div class="section1">
-        <div class="left">
-          <img src="../assets/Hackathon/idea.svg" alt="virus" />
+      <div class="hackathon">
+        <div class="section1">
+          <div class="left">
+            <img src="../assets/Hackathon/idea.svg" alt="virus" />
+          </div>
+          <div class="right">
+            <h1>Combat Covid-19</h1>
+            <p>An opportunity for the young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
+            <div class="btn-container">
+              <div @click="route(1)" class="btn transparent">Submit</div>
+              <div @click="route(2)" class="btn">Register</div>
+            </div>
+            <div class="detail">
+              <img src="../assets/Hackathon/test.svg" alt="time" class="test" />
+              <p>25th August 2020 6pm, Screening of Hackathon</p>
+            </div>
+            <div class="detail">
+              <img src="../assets/Hackathon/time.svg" alt="time" />
+              <p>23rd August 2020, Last date for concept registration & submission</p>
+            </div>
+            <div class="detail">
+              <img src="../assets/Hackathon/diploma.svg" alt="time" />
+              <p>E-certificates for all participants</p>
+            </div>
+          </div>
         </div>
-        <div class="right">
-          <h1>Combat Covid-19</h1>
-          <p>An opportunity for the young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
-          <div class="btn-container">
-            <div @click="route(1)" class="btn transparent">Submit</div>
-            <div @click="route(2)" class="btn">Register</div>
-          </div>
-          <div class="detail">
-            <img src="../assets/Hackathon/test.svg" alt="time" class="test" />
-            <p>25th August 2020 6pm, Screening of Hackathon</p>
-          </div>
-          <div class="detail">
-            <img src="../assets/Hackathon/time.svg" alt="time" />
-            <p>23rd August 2020, Last date for concept registration & submission</p>
-          </div>
-          <div class="detail">
-            <img src="../assets/Hackathon/diploma.svg" alt="time" />
-            <p>E-certificates for all participants</p>
-          </div>
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="themes">
-        <div class="left">
-          <div class="heading">
-            <img src="../assets/Hackathon/theme.svg" alt="themes" />
-            <h2>Themes</h2>
-          </div>
-          <ul>
-            <li>Public Health, Pathophysiology and Pathology of COVID-19</li>
-            <li>Pandemic Testing</li>
-            <li>Advances in COVID-19</li>
-            <li>Prevention Strategies</li>
-            <li>ICU Strategies</li>
-            <li>Drug Designing pertaining to COVID-19</li>
-            <li>Repurposing of Drugs and Vaccines</li>
-            <li>AYUSH (Ayurveda, Yoga, Unani, Siddha, Homeopathy)</li>
-            <li>COVID-19 Management & Treatment</li>
-            <li>Alternative Medicine</li>
-            <li>Nutrition</li>
-            <li>Traditional Medicine</li>
-            <li>Integrated Medicine</li>
-            <li>Bioinformatics & Genomics</li>
-            <li>Information Technology</li>
-          </ul>
-        </div>
-        <div class="right">
-          <div class="specs">
+        <div class="line"></div>
+        <div class="themes">
+          <div class="left">
             <div class="heading">
-              <img src="../assets/Hackathon/gift.svg" alt="themes" />
-              <h2>Benefits</h2>
+              <img src="../assets/Hackathon/theme.svg" alt="themes" />
+              <h2>Themes</h2>
             </div>
             <ul>
-              <li>E-Certificates for participation</li>
-              <li>Free access to the conference for the top 3 winners</li>
-              <li>Discounted conference registration for all participants</li>
-              <li>Global Networking with your ideas and products</li>
-              <li>Contribute to ideas to solve COVID-19 pandemic</li>
+              <li>Public Health, Pathophysiology and Pathology of COVID-19</li>
+              <li>Pandemic Testing</li>
+              <li>Advances in COVID-19</li>
+              <li>Prevention Strategies</li>
+              <li>ICU Strategies</li>
+              <li>Drug Designing pertaining to COVID-19</li>
+              <li>Repurposing of Drugs and Vaccines</li>
+              <li>AYUSH (Ayurveda, Yoga, Unani, Siddha, Homeopathy)</li>
+              <li>COVID-19 Management & Treatment</li>
+              <li>Alternative Medicine</li>
+              <li>Nutrition</li>
+              <li>Traditional Medicine</li>
+              <li>Integrated Medicine</li>
+              <li>Bioinformatics & Genomics</li>
+              <li>Information Technology</li>
             </ul>
           </div>
-          <div class="specs">
-            <div class="heading">
-              <img src="../assets/Hackathon/rules.svg" alt="themes" />
-              <h2>Specifications</h2>
+          <div class="right">
+            <div class="specs">
+              <div class="heading">
+                <img src="../assets/Hackathon/gift.svg" alt="themes" />
+                <h2>Benefits</h2>
+              </div>
+              <ul>
+                <li>E-Certificates for participation</li>
+                <li>Free access to the conference for the top 3 winners</li>
+                <li>Discounted conference registration for all participants</li>
+                <li>Global Networking with your ideas and products</li>
+                <li>Contribute to ideas to solve COVID-19 pandemic</li>
+              </ul>
             </div>
-            <ul>
-              <li>Concept / Idea should be of 2 pages</li>
-              <li>Last day for submission is 23rd Aug 2020 6pm IST</li>
-              <li>Concept file should either be in PDF or Word format</li>
-              <li>Winners will be announced at the Conference</li>
-            </ul>
+            <div class="specs">
+              <div class="heading">
+                <img src="../assets/Hackathon/rules.svg" alt="themes" />
+                <h2>Specifications</h2>
+              </div>
+              <ul>
+                <li>Concept / Idea should be of 2 pages</li>
+                <li>Last day for submission is 23rd Aug 2020 6pm IST</li>
+                <li>Concept file should either be in PDF or Word format</li>
+                <li>Winners will be announced at the Conference</li>
+              </ul>
+            </div>
           </div>
         </div>
+        <div class="line"></div>
+        <div class="download-container">
+          <a href="../assets/Files/hackathon.png" download class="btn download">Download Brochure</a>
+          <span>Registrations for Hackathon is free and has no registration fee</span>
+        </div>
       </div>
-      <div class="line"></div>
-      <div class="download-container">
-        <a class="btn download">Download Brochure</a>
-        <span>Registrations for Hackathon is free and has no registration fee</span>
-      </div>
-    </div>
     </transition>
   </div>
 </template>
@@ -115,20 +115,20 @@ export default {
         h1: "Hackathon",
         h4: "Register and Stand a chance to present at the conference !",
         src: "hackathon.svg"
-      }
+      },      
     };
   },
   methods: {
     route(page) {
-      switch(page){
+      switch (page) {
         case 1:
-          this.$router.push("/hackathon/submit");           
+          this.$router.push("/hackathon/submit");
           break;
         case 2:
-          this.$router.push("/register/hackathon"); 
+          this.$router.push("/register/hackathon");
           break;
       }
-    }
+    },    
   }
 };
 </script>
