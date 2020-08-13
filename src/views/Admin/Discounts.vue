@@ -1,11 +1,12 @@
 <template>
   <div class="discounts">
+    <newPromoCode v-if="$store.state.createNewPromoCode" />
     <div class="heading-container">
       <div class="heading-1">
         <h1>Active Promotion Codes</h1>
         <h4>Promotion codes are automatically generated during hackathon & speaker registration</h4>
       </div>
-      <img src="../../assets/Login/plus.svg" alt="add" class="grow">
+      <img src="../../assets/Login/plus.svg" alt="add" class="grow" @click="openCreatePromoCode" />
     </div>
     <div class="line"></div>
     <div class="card-container">
@@ -18,16 +19,21 @@
 </template>
 
 <script>
+import newPromoCode from "../../components/AddCode";
 export default {
   name: "Discounts",
+  components: {
+    newPromoCode
+  },
   data() {
     return {
       unsubscribe: null
     };
   },
   methods: {
-    getImgUrl(src) {
-      return require("../../assets/Register/" + src);
+    openCreatePromoCode() {
+      this.$store.state.createNewPromoCode = !this.$store.state
+        .createNewPromoCode;
     }
   },
   mounted() {
@@ -73,45 +79,55 @@ export default {
         color: black;
       }
     }
-    img{
-        width: 40px;
-        height: 40px;
-        margin: 1.5rem 4.5rem 0 0; 
-        cursor: pointer;
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 1.5rem 4.5rem 0 0;
+      cursor: pointer;
     }
-    img:active{
-        transform: scale(0.95);
+    img:active {
+      transform: scale(0.95);
+    }
+    @media print {
+      display: none;
     }
   }
-  .line{
-      width: 100%;
-      height: 1px;
-      background: lightgrey;
+  .line {
+    width: 100%;
+    height: 1px;
+    background: lightgrey;
+    @media print {
+      display: none;
+    }
   }
   .card-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 1rem;
     .card {
+      width: max-content;
       margin: 0.8rem;
-      width: 23rem;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 0.5 1rem;
+      padding: 0.2rem 2rem;
       background: white;
       border-radius: 0.8rem;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
       p {
-        color: $primary;        
+        color: $primary;
+        margin-left: 2rem;
       }
       h3 {
         font-weight: lighter;
-        color:gray;
+        color: gray;
       }
+    }
+    @media print {
+      display: none;
     }
   }
 }

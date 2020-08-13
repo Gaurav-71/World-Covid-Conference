@@ -12,6 +12,7 @@ export default new Vuex.Store({
     isSavingForm: false,
     isLoggedIn: false,
     isLoggingIn: true,
+    createNewPromoCode: false,
     participants: [],
     abstracts: [],
     workshop: [],
@@ -21,6 +22,7 @@ export default new Vuex.Store({
     allPromoCodes: [],
     hackathonEmails: [],
     hackathon: [],
+    messages: [],
   },
   mutations: {
     logIn: (state) => {
@@ -55,6 +57,9 @@ export default new Vuex.Store({
     },
     loadHackathon: (state, obj) => {
       state.hackathon = obj;
+    },
+    loadMessages: (state, obj) => {
+      state.messages = obj;
     },
   },
   actions: {
@@ -426,6 +431,44 @@ export default new Vuex.Store({
         console.log(exc);
       }
     },
+    async addNewPromoCode(context, payload) {
+      console.log(context);
+      try {
+        for (var write = 0; write < payload.quantity; write++) {
+          await db.collection("PromoCodes").add(payload.data);
+        }
+        let d = Date(Date.now());
+        let activityData = {
+          name: "PromoCode",
+          email: payload.data.code,
+          phno: "",
+          type: "Admin",
+          time: d.toString().slice(4, 16),
+          timestamp: d,
+        };
+        await db.collection("Activity").add(activityData);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
+    async sendMessage(context, payload) {
+      console.log(context);
+      try {
+        await db.collection("Messages").add(payload);
+        let d = Date(Date.now());
+        let activityData = {
+          name: payload.name,
+          email: payload.email,
+          phno: "",
+          type: "Message",
+          time: d.toString().slice(4, 16),
+          timestamp: d,
+        };
+        await db.collection("Activity").add(activityData);
+      } catch (exc) {
+        console.log(exc);
+      }
+    },
     async loadParticipants(context) {
       let response = db
         .collection("ParticipantRegistration")
@@ -577,6 +620,23 @@ export default new Vuex.Store({
         });
       return response;
     },
+    async loadMessages(context) {
+      let response = db
+        .collection("Messages")
+        .orderBy("timestamp", "asc")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadMessages", items);
+        });
+      return response;
+    },
   },
   getters: {
     getParticipants: (store) => {
@@ -605,6 +665,9 @@ export default new Vuex.Store({
     },
     getHackathon: (store) => {
       return store.hackathon;
+    },
+    getMessages: (store) => {
+      return store.messages;
     },
   },
   modules: {},

@@ -70,6 +70,11 @@
             <li>Prof. Benedito Honorio Machado (Brazil)</li>
             <li>Prof. Jan Marino Ramirez (USA)</li>
             <li>Dr. Roberto Accinelli (Peru)</li>
+            <li>Prof. Ivan Solarte Rodriguez (Colombia)</li>
+            <li>Prof. Hamid Mobasheri (Iran)</li>
+            <li>Michael Moretti (USA)</li>
+            <li>Prof. L. Gabriel Navar (USA)</li>
+            <li>Dr. Alan Hughes (USA)</li>
           </ul>
         </div>
         <h1>Organizing Institutions</h1>

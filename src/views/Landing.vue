@@ -52,7 +52,7 @@
             </div>            
             <h3>Post Conference Workshop on Bioinformatics of Covid-19</h3>
             <div class="btn-container">                            
-              <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FCOVID_Conference_Banner_12Aug.pdf?alt=media&token=33160390-3119-404f-b926-8a4a05258c23" target="_blank" class="btn">Download Brochure</a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FConference.jpeg?alt=media&token=3f6cd53e-eee4-4d1c-a36d-c654eb97ded3" target="_blank" class="btn">Download Brochure</a>
             </div>
           </div>
         </div>

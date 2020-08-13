@@ -15,7 +15,7 @@
         <div @click="route(3)" class="pill" :class="{ active: page == 3 }">Discounts</div>
         <div @click="route(4)" class="pill" :class="{ active: page == 4 }">Queries</div>
       </div>
-      <div @click="download" class="download shake">Download</div>
+      <div v-if="page == 2" @click="download" class="download shake">Download</div>
     </div>
     <transition
       name="custom-classes-transition-2"
@@ -60,6 +60,9 @@ export default {
           break;
         case 3:
           this.$router.push("/admin/discounts");
+          break;
+        case 4:
+          this.$router.push("/admin/queries");
           break;
       }
     },

@@ -20,6 +20,7 @@ import Schedule from "../views/Schedule.vue";
 import Login from "../views/Admin/Login.vue";
 import Home from "../views/Admin/Home.vue";
 import Activity from "../views/Admin/Activity.vue";
+import Queries from "../views/Admin/Queries.vue";
 import AdminHackathon from "../views/Admin/Hackathon.vue";
 import Discounts from "../views/Admin/Discounts.vue";
 import Registrations from "../views/Admin/Registrations.vue";
@@ -120,6 +121,14 @@ const routes = [
         path: "/admin/discounts",
         name: "Discounts",
         component: Discounts,
+        meta: {
+          requiresAuth: true,
+        },
+      },
+      {
+        path: "/admin/queries",
+        name: "Queries",
+        component: Queries,
         meta: {
           requiresAuth: true,
         },

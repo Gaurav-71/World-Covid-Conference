@@ -33,6 +33,12 @@
             src="../../assets/Register/hackathon.svg"
             alt="type"
           />
+          <img
+            v-else-if="detail.detail.type == 'Message'"
+            src="../../assets/Heading/questions.svg"
+            alt="type"
+          />
+          <img v-else-if="detail.detail.type == 'Admin'" src="../../assets/Heading/admin.svg" alt="admin" />
         </div>
         <div class="card-item">
           <div>{{detail.detail.type}}</div>
