@@ -1,16 +1,16 @@
 <template>
   <div class="registration">
     <div class="heading-1">
-      <h1>Abstract Submission</h1>
-      <h4>Personal information provided by the participants with their abstracts</h4>
+      <h1>Poster Submission</h1>
+      <h4>Personal information provided by the participants with their poster</h4>
     </div>
     <table>
       <tr>
         <th>Name</th>        
         <th>Email</th>
         <th>Phone Number</th>
-        <th>Affiliation</th>
-        <th>Postal Address</th>
+        <th>Affiliation</th>  
+        <th>Country</th>      
         <th>Title</th>
         <th>Authors</th>
         <th>Abstract Submission</th>
@@ -20,7 +20,7 @@
         <td>{{detail.detail.email}}</td>
         <td>{{detail.detail.phno}}</td>
         <td>{{detail.detail.affiliation}}</td>        
-        <td>{{detail.detail.street1}},{{detail.detail.street2}},{{detail.detail.landmark}},{{detail.detail.state}},{{detail.detail.city}},{{detail.detail.pin}},{{detail.detail.country}}</td>
+        <td>{{detail.detail.country}}</td>
         <td>{{detail.detail.title}}</td>
         <td>{{detail.detail.authors}}</td>
         <td>

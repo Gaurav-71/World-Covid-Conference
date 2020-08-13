@@ -21,7 +21,7 @@
         <img src="../assets/Schedule/4.jpg" alt="schedule" />
       </div>
     </transition>
-    <a href="../assets/Files/schedule.pdf" download class="btn">Download Program</a>
+    <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fconference_schedule_without_time.pdf?alt=media&token=cd5c621a-8728-4810-8d8f-e6b1857dceee" target="_blank" class="btn">Download Program</a>
   </div>
 </template>
 

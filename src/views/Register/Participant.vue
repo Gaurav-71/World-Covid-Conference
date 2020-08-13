@@ -832,8 +832,8 @@ export default {
     setAmount() {
       this.countryStatus = this.checkCountryStatus();
       if (this.detail.profession == "s") {
-        // student
-        this.detail.amount = this.detail.country == "India" ? 500 : 75;
+        // student        
+        this.detail.amount = this.detail.country == "India" ? 1000 : 75;
       } else if (this.detail.qualification == 1) {
         // teacher
         this.detail.amount = this.detail.country == "India" ? 5612 : 150;

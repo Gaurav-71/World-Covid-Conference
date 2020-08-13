@@ -95,8 +95,8 @@
         </div>
         <div class="line"></div>
         <div class="download-container">
-          <a href="../assets/Files/hackathon.png" download class="btn download">Download Brochure</a>
-          <span>Registrations for Hackathon is free and has no registration fee</span>
+          <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fhackathon%20%20(1).pdf?alt=media&token=2218912d-2e99-45f2-b41a-1b77ae4b0299" target="_blank" class="btn download">Download Brochure</a>
+          <span>Registrations for Hackathon is free</span>
         </div>
       </div>
     </transition>

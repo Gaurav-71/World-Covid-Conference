@@ -2,8 +2,9 @@
   <div class="registrations">
     <div class="pills-container">
       <div @click="route(1)" class="pill" :class="{ active: page == 1 }">Conference</div>
-      <div @click="route(2)" class="pill" :class="{ active: page == 2 }">Abstract</div>
+      <div @click="route(6)" class="pill" :class="{ active: page == 6 }">Hackathon</div>
       <div @click="route(3)" class="pill" :class="{ active: page == 3 }">Workshop</div>
+      <div @click="route(2)" class="pill" :class="{ active: page == 2 }">Posters</div>
       <div @click="route(4)" class="pill" :class="{ active: page == 4 }">Speakers</div>
       <div @click="route(5)" class="pill" :class="{ active: page == 5 }">Sponsors</div>
     </div>
@@ -52,6 +53,9 @@ export default {
         case 5:
           this.$router.push("/admin/registrations/sponsors");
           break;
+        case 6:
+          this.$router.push("/admin/registrations/hackathon");
+          break;
       }
     }
   }
@@ -62,7 +66,7 @@ export default {
 @import "../../scss/colors";
 .registrations {
   width: 99%;
-  min-height: calc(100vh - 4.5rem);  
+  min-height: calc(100vh - 4.5rem);
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -75,6 +79,9 @@ export default {
     margin: 0 0.5rem;
     margin-bottom: 1rem;
     border-radius: 0.8rem;
+    @media print {
+      display: none;
+    }
     .pill {
       width: 12rem;
       text-align: center;

@@ -7,11 +7,7 @@
         <h4>Want to share your knowledge on a topic ? Submit your abstracts and join us !</h4>
       </div>
     </div>
-    <transition
-      name="custom-classes-transition"
-      enter-active-class="animated bounceInUp"      
-      appear
-    >
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInUp" appear>
       <div class="container">
         <div class="card personal-information">
           <div class="heading">
@@ -39,55 +35,6 @@
                 class="affiliation"
                 v-model="detail.affiliation"
               />
-            </div>
-          </form>
-        </div>
-        <div class="card address">
-          <div class="heading">
-            <h2>Postal Address</h2>
-            <div class="line"></div>
-          </div>
-          <form>
-            <div class="input">
-              <label>Street 1</label>
-              <input
-                type="text"
-                placeholder="Enter Street 1"
-                class="street"
-                v-model="detail.street1"
-              />
-            </div>
-            <div class="input">
-              <label>Street 2</label>
-              <input
-                type="text"
-                placeholder="Enter Street 2"
-                class="street"
-                v-model="detail.street2"
-              />
-            </div>
-            <div class="input">
-              <label>Landmark</label>
-              <input
-                type="text"
-                placeholder="Enter Landmark"
-                class="landmark"
-                v-model="detail.landmark"
-              />
-            </div>
-          </form>
-          <form>
-            <div class="input">
-              <label>State</label>
-              <input type="text" placeholder="Enter State" class="state" v-model="detail.state" />
-            </div>
-            <div class="input">
-              <label>City</label>
-              <input type="text" placeholder="Enter City" class="city" v-model="detail.city" />
-            </div>
-            <div class="input">
-              <label>Pincode</label>
-              <input type="text" placeholder="Enter Pincode" class="pin" v-model="detail.pin" />
             </div>
           </form>
           <form>
@@ -376,34 +323,16 @@
             <p class="upload-msg" v-else>No file uploaded</p>
           </div>
         </div>
-        <div class="card talk">
-          <div class="heading">
-            <h2>Guest Name</h2>
-            <div class="line"></div>
-          </div>
-          <p>Registration for a speaker is free. Each speaker is allowed to have one guest</p>
-          <form>
-            <div class="input">
-              <label>Name</label>
-              <input
-                type="text"
-                placeholder="Enter Guest Name"
-                class="name"
-                v-model="detail.guestName"
-              />
-            </div>
-          </form>
-        </div>
         <div class="actions">
           <div @click="validate" class="btn shake">Register</div>
         </div>
       </div>
     </transition>
     <div>
-    <transition name="fade" appear>
-      <Error :obj="error" :emptyStr="true" /> 
-    </transition>
-  </div>
+      <transition name="fade" appear>
+        <Error :obj="error" :emptyStr="true" />
+      </transition>
+    </div>
   </div>
   <div v-else class="register">
     <transition
@@ -424,7 +353,7 @@ import Error from "../../components/Error.vue";
 
 export default {
   name: "Speaker",
-  components:{
+  components: {
     Error,
     Loading
   },
@@ -436,21 +365,14 @@ export default {
         phno: "",
         email: "",
         affiliation: "",
-        //postal addr
-        street1: "",
-        street2: "",
-        landmark: "",
-        state: "",
-        city: "",
-        pin: "",
         country: "",
         //talk
         title: "",
-        //guest
-        guestName: "",
         //file
         abstractFile: "",
-        timestamp: null
+        timestamp: null,
+        //promo
+        promoCode: ""
       },
       abstractFile: null,
       abstractFileName: "",
@@ -484,32 +406,21 @@ export default {
         return "Email";
       } else if (this.detail.affiliation == "") {
         return "Affiliation";
-      } else if (this.detail.street1 == "") {
-        return "Street 1 - Postal Address";
-      } else if (this.detail.street2 == "") {
-        return "Street 2 - Postal Address";
-      } else if (this.detail.landmark == "") {
-        return "Landmark - Postal Address";
-      } else if (this.detail.state == "") {
-        return "State - Postal Address";
-      } else if (this.detail.city == "") {
-        return "City - Postal Address";
-      } else if (this.detail.pin == "") {
-        return "Pincode - Postal Address";
       } else if (this.detail.country == "") {
-        return "Country - Postal Address";
+        return "Country";
       } else if (this.detail.title == "") {
         return "Talk Title";
-      } else if (this.detail.guestName == "") {
-        return "Guest Name";
       } else if (this.abstractFileName == "") {
         return "Abstract File";
       }
       return "allFilled";
     },
     validate() {
-      let validation = this.allFieldsFilled();
+      //let validation = this.allFieldsFilled();
+      let validation = "allFilled";
       if (validation == "allFilled") {
+        this.detail.promoCode = this.detail.name + Date.now();
+        this.detail.promoCode = this.detail.promoCode.split(" ").join("");
         this.detail.timestamp = Date(Date.now());
         let payload = {
           abstractFile: this.abstractFile,
@@ -520,14 +431,20 @@ export default {
           .dispatch("saveSpeakerRegistrationDetails", payload)
           .then(() => {
             this.$store.state.isSavingForm = false;
-            this.$router.push("/");
+            this.$router.push({
+              name: "SuccessfulRegistration",
+              params: {
+                type: "Speaker",
+                detail: this.detail
+              }
+            });
             this.$store.state.navItem = 1;
           })
           .catch(resp => {
             console.log(resp);
           });
       } else {
-        this.error.message.message = "Please fill the "+validation+" field";
+        this.error.message.message = "Please fill the " + validation + " field";
         this.error.isVisible = true;
       }
     }

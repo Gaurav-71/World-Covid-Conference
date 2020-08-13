@@ -35,41 +35,7 @@
           <a :href="detail.detail.transactionProof" target="_blank">Download</a>
         </td>
       </tr>
-    </table>
-    <div class="heading-1">
-      <h1>Personal & Contact Details</h1>
-      <h4>Personal information provided by the participants</h4>
-    </div>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Email</th>
-        <th>Phone Number</th>
-        <th>Profession</th>
-        <th>Postal Address</th>
-        <th>University / Office Address</th>
-      </tr>
-      <tr v-for="detail in $store.getters.getWorkshop" :key="detail.id">
-        <td>{{detail.detail.name}}</td>
-        <td>{{detail.detail.gender}}</td>
-        <td>{{detail.detail.email}}</td>
-        <td>{{detail.detail.phno}}</td>
-        <td v-if="detail.detail.profession == 's'">Student</td>
-        <td v-else>
-          <span v-if="detail.detail.qualification == 1">Faculty/Researcher</span>
-          <span v-else-if="detail.detail.qualification == 2">Industry Personnel</span>
-          <span v-else>Other</span>
-        </td>
-        <td>{{detail.detail.street1}},{{detail.detail.street2}},{{detail.detail.landmark}},{{detail.detail.state}},{{detail.detail.city}},{{detail.detail.pin}},{{detail.detail.country}}</td>
-        <td
-          v-if="detail.detail.profession == 's'"
-        >{{detail.detail.locality2}},{{detail.detail.landmark2}},{{detail.detail.state2}},{{detail.detail.city2}},{{detail.detail.pin2}},{{detail.detail.country2}}</td>
-        <td
-          v-else
-        >{{detail.detail.landline2}},{{detail.detail.locality2}},{{detail.detail.landmark2}},{{detail.detail.state2}},{{detail.detail.city2}},{{detail.detail.pin2}},{{detail.detail.country2}}</td>
-      </tr>
-    </table>
+    </table>    
     <div class="heading-1">
       <h1>Student Details</h1>
       <h4>All student participants information</h4>

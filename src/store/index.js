@@ -20,7 +20,7 @@ export default new Vuex.Store({
     activity: [],
     allPromoCodes: [],
     hackathonEmails: [],
-    hackathon: []
+    hackathon: [],
   },
   mutations: {
     logIn: (state) => {
@@ -53,9 +53,9 @@ export default new Vuex.Store({
     loadHackathonEmails: (state, obj) => {
       state.hackathonEmails = obj;
     },
-    loadHackathon: (state,obj) =>{
+    loadHackathon: (state, obj) => {
       state.hackathon = obj;
-    }
+    },
   },
   actions: {
     async logIn({ commit }, payload) {
@@ -102,27 +102,31 @@ export default new Vuex.Store({
               payload.detail.studentIdProof = imageUrl;
             });
         }
-        await fireDatabase
-          .ref("participantTransactionProofConference")
-          .push(payload.generatedFiles.transactionImage)
-          .then((data) => {
-            let key = data.key;
-            return key;
-          })
-          .then((key) => {
-            const filename = payload.generatedFiles.transactionImage.name;
-            const ext = filename.slice(filename.lastIndexOf("."));
-            return fireStorage
-              .ref("participantTransactionProofConference/" + key + "." + ext)
-              .put(payload.generatedFiles.transactionImage);
-          })
-          .then(async (filedata) => {
-            let imageUrl = null;
-            await filedata.ref.getDownloadURL().then((url) => {
-              imageUrl = url;
+        if (payload.generatedFiles.transactionImage) {
+          await fireDatabase
+            .ref("participantTransactionProofConference")
+            .push(payload.generatedFiles.transactionImage)
+            .then((data) => {
+              let key = data.key;
+              return key;
+            })
+            .then((key) => {
+              const filename = payload.generatedFiles.transactionImage.name;
+              const ext = filename.slice(filename.lastIndexOf("."));
+              return fireStorage
+                .ref("participantTransactionProofConference/" + key + "." + ext)
+                .put(payload.generatedFiles.transactionImage);
+            })
+            .then(async (filedata) => {
+              let imageUrl = null;
+              await filedata.ref.getDownloadURL().then((url) => {
+                imageUrl = url;
+              });
+              payload.detail.transactionProof = imageUrl;
             });
-            payload.detail.transactionProof = imageUrl;
-          });
+        } else {
+          payload.generatedFiles.transactionImage = "None";
+        }
         await db.collection("ParticipantRegistration").add(payload.detail);
         let d = Date(Date.now());
         let activityData = {
@@ -130,7 +134,7 @@ export default new Vuex.Store({
           email: payload.detail.email,
           phno: payload.detail.phno,
           type: "Conference",
-          time: d.toString().slice(4, 25),
+          time: d.toString().slice(4, 16),
           timestamp: d,
           finalAmount: payload.detail.finalAmount,
           paymentMode: payload.detail.paymentMode,
@@ -177,10 +181,19 @@ export default new Vuex.Store({
           email: payload.detail.email,
           phno: payload.detail.phno,
           type: "Speaker",
-          time: d.toString().slice(4, 25),
+          time: d.toString().slice(4, 16),
           timestamp: d,
         };
         await db.collection("Activity").add(activityData);
+        let discCode = {
+          code: payload.detail.promoCode,
+          discount: 100,
+        };
+        console.log(discCode);
+        for (var i = 0; i < 5; i++) {
+          await db.collection("PromoCodes").add(discCode);
+          console.log("writing code", i);
+        }
       } catch (exc) {
         console.log(exc);
       }
@@ -239,7 +252,7 @@ export default new Vuex.Store({
           email: payload.detail.email,
           phno: payload.detail.phno,
           type: "Sponsor",
-          time: d.toString().slice(4, 25),
+          time: d.toString().slice(4, 16),
           timestamp: d,
           finalAmount: payload.detail.fee,
           paymentMode: payload.detail.paymentMode,
@@ -303,7 +316,7 @@ export default new Vuex.Store({
           email: payload.detail.email,
           phno: payload.detail.phno,
           type: "Workshop",
-          time: d.toString().slice(4, 25),
+          time: d.toString().slice(4, 16),
           timestamp: d,
           finalAmount: payload.detail.finalAmount,
           paymentMode: payload.detail.paymentMode,
@@ -346,7 +359,7 @@ export default new Vuex.Store({
           email: payload.detail.email,
           phno: payload.detail.phno,
           type: "Abstract",
-          time: d.toString().slice(4, 25),
+          time: d.toString().slice(4, 16),
           timestamp: d,
         };
         await db.collection("Activity").add(activityData);
@@ -364,7 +377,7 @@ export default new Vuex.Store({
           email: payload.email,
           phno: payload.phno,
           type: "Hackathon",
-          time: d.toString().slice(4, 25),
+          time: d.toString().slice(4, 16),
           timestamp: d,
         };
         await db.collection("Activity").add(activityData);
@@ -416,7 +429,7 @@ export default new Vuex.Store({
     async loadParticipants(context) {
       let response = db
         .collection("ParticipantRegistration")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -433,7 +446,7 @@ export default new Vuex.Store({
     async loadAbstracts(context) {
       let response = db
         .collection("AbstractRegistration")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -450,7 +463,7 @@ export default new Vuex.Store({
     async loadWorkshop(context) {
       let response = db
         .collection("WorkshopRegistration")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -467,7 +480,7 @@ export default new Vuex.Store({
     async loadSpeakers(context) {
       let response = db
         .collection("SpeakerRegistration")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -484,7 +497,7 @@ export default new Vuex.Store({
     async loadSponsors(context) {
       let response = db
         .collection("SponsorRegistration")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -501,7 +514,7 @@ export default new Vuex.Store({
     async loadActivity(context) {
       let response = db
         .collection("Activity")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -532,7 +545,7 @@ export default new Vuex.Store({
     async loadHackathonEmails(context) {
       let response = db
         .collection("HackathonRegistration")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -547,23 +560,23 @@ export default new Vuex.Store({
         });
       return response;
     },
-    async loadHackathon(context){
+    async loadHackathon(context) {
       let response = db
-      .collection("HackathonRegistration")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) => {
-        let items = [];
-        snapshot.forEach((doc) => {
-          let data = {
-            id: doc.id,
-            detail: doc.data(),            
-          };
-          items.push(data);
+        .collection("HackathonRegistration")
+        .orderBy("timestamp", "asc")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            let data = {
+              id: doc.id,
+              detail: doc.data(),
+            };
+            items.push(data);
+          });
+          context.commit("loadHackathon", items);
         });
-        context.commit("loadHackathon", items);
-      });
-    return response;
-    }
+      return response;
+    },
   },
   getters: {
     getParticipants: (store) => {
@@ -592,7 +605,7 @@ export default new Vuex.Store({
     },
     getHackathon: (store) => {
       return store.hackathon;
-    }
+    },
   },
   modules: {},
 });

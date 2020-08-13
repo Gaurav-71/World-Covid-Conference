@@ -23,7 +23,16 @@
             src="../../assets/Register/presentation.svg"
             alt="type"
           />
-          <img v-else src="../../assets/Register/sponsor.svg" alt="type" />
+          <img
+            v-else-if="detail.detail.type == 'Sponsor'"
+            src="../../assets/Register/sponsor.svg"
+            alt="type"
+          />
+          <img
+            v-else-if="detail.detail.type == 'Hackathon'"
+            src="../../assets/Register/hackathon.svg"
+            alt="type"
+          />
         </div>
         <div class="card-item">
           <div>{{detail.detail.type}}</div>
@@ -91,7 +100,7 @@ export default {
       justify-content: center;
       img {
         width: 60px;
-        height: 60px;        
+        height: 60px;
       }
     }
     .card-item {

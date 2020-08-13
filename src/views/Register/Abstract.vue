@@ -3,8 +3,8 @@
     <div class="card header">
       <img src="../../assets/Register/abstract.svg" alt="participant" />
       <div class="title">
-        <h1>Participant Abstract Registration</h1>
-        <h4>Want to stand a chance to win an award ? Submit your abstracts and join us !</h4>
+        <h1>Poster Submissions</h1>
+        <h4>Want to stand a chance to win an award ? Submit your posters and join us !</h4>
       </div>
     </div>
     <transition name="custom-classes-transition" enter-active-class="animated bounceInUp" appear>
@@ -35,55 +35,6 @@
                 class="affiliation"
                 v-model="detail.affiliation"
               />
-            </div>
-          </form>
-        </div>
-        <div class="card address">
-          <div class="heading">
-            <h2>Postal Address</h2>
-            <div class="line"></div>
-          </div>
-          <form>
-            <div class="input">
-              <label>Street 1</label>
-              <input
-                type="text"
-                placeholder="Enter Street 1"
-                class="street"
-                v-model="detail.street1"
-              />
-            </div>
-            <div class="input">
-              <label>Street 2</label>
-              <input
-                type="text"
-                placeholder="Enter Street 2"
-                class="street"
-                v-model="detail.street2"
-              />
-            </div>
-            <div class="input">
-              <label>Landmark</label>
-              <input
-                type="text"
-                placeholder="Enter Landmark"
-                class="landmark"
-                v-model="detail.landmark"
-              />
-            </div>
-          </form>
-          <form>
-            <div class="input">
-              <label>State</label>
-              <input type="text" placeholder="Enter State" class="state" v-model="detail.state" />
-            </div>
-            <div class="input">
-              <label>City</label>
-              <input type="text" placeholder="Enter City" class="city" v-model="detail.city" />
-            </div>
-            <div class="input">
-              <label>Pincode</label>
-              <input type="text" placeholder="Enter Pincode" class="pin" v-model="detail.pin" />
             </div>
           </form>
           <form>
@@ -361,7 +312,7 @@
               <input type="text" placeholder="Enter Title" class="title" v-model="detail.title" />
             </div>
             <div class="input">
-              <label>Authors</label>
+              <label>Presenting Author</label>
               <input
                 type="text"
                 placeholder="Enter Authors"
@@ -387,7 +338,7 @@
       </div>
     </transition>
     <transition name="fade" appear>
-      <Error :obj="error" :emptyStr="true" /> 
+      <Error :obj="error" :emptyStr="true" />
     </transition>
   </div>
   <div v-else class="register">
@@ -399,10 +350,10 @@
       appear
     >
       <Loading :message="'Thank You For Registering With Us !'" />
-    </transition> 
+    </transition>
     <transition name="fade" appear>
-      <Error :obj="error" :emptyStr="true" /> 
-    </transition> 
+      <Error :obj="error" :emptyStr="true" />
+    </transition>
   </div>
 </template>
 
@@ -424,13 +375,6 @@ export default {
         phno: "",
         email: "",
         affiliation: "",
-        //postal addr
-        street1: "",
-        street2: "",
-        landmark: "",
-        state: "",
-        city: "",
-        pin: "",
         country: "",
         //talk
         title: "",
@@ -471,18 +415,6 @@ export default {
         return "Email";
       } else if (this.detail.affiliation == "") {
         return "Affiliation";
-      } else if (this.detail.street1 == "") {
-        return "Street 1 - Postal Address";
-      } else if (this.detail.street2 == "") {
-        return "Street 2 - Postal Address";
-      } else if (this.detail.landmark == "") {
-        return "Landmark - Postal Address";
-      } else if (this.detail.state == "") {
-        return "State - Postal Address";
-      } else if (this.detail.city == "") {
-        return "City - Postal Address";
-      } else if (this.detail.pin == "") {
-        return "Pincode - Postal Address";
       } else if (this.detail.country == "") {
         return "Country - Postal Address";
       } else if (this.detail.title == "") {
@@ -515,7 +447,7 @@ export default {
           });
       } else {
         console.log("we are here");
-        this.error.message.message = "Please fill the "+validation+" field";
+        this.error.message.message = "Please fill the " + validation + " field";
         this.error.isVisible = true;
       }
     }

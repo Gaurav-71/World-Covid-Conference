@@ -23,7 +23,7 @@
               class="amount"
             >Registration Fees : &#8377;{{detail.amount}}</div>
             <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
-            <div class="discount">Discount : {{detail.discount}}%</div>            
+            <div class="discount">Discount : {{detail.discount}}%</div>
             <p class="promo">
               Have a promo code ?
               <input
@@ -40,7 +40,7 @@
             <div v-if="hasPromoCode == 'y'" class="promo-code">
               <input type="text" placeholder="Enter Promo Code" v-model="promoCode" />
               <div @click="verifyPromoCode" class="btn">Apply Code</div>
-              <h4 v-if="isCodeValid != null" class="promo-error">{{promoMessage}}</h4>              
+              <h4 v-if="isCodeValid != null" class="promo-error">{{promoMessage}}</h4>
             </div>
             <div class="line"></div>
             <div
@@ -78,7 +78,7 @@
             </div>
           </div>
         </div>
-        <div class="card category-container">
+        <div v-if="detail.finalAmount > 0" class="card category-container">
           <div class="heading">
             <h2>Mode of Payment</h2>
             <div class="line"></div>
@@ -141,7 +141,7 @@
             </p>
             <p>
               IFSC Code :
-              <span>SBIN0005191</span>
+              <span>SBIN0041203</span>
             </p>
             <p>
               SWIFT Code (BIC) :
@@ -340,32 +340,39 @@ export default {
             i
           ].promo.discount;
           this.promoMessage =
-            "Additional Discount of " + this.detail.additionalDiscount + "% is applied";
+            "Additional Discount of " +
+            this.detail.additionalDiscount +
+            "% is applied";
           this.detail.finalAmount =
             this.detail.finalAmount -
             (this.detail.finalAmount * this.detail.additionalDiscount) / 100;
-          this.detail.finalAmount = Math.floor(this.detail.finalAmount);                    
-          this.$store.getters.getPromoCodes.splice(i,1);          
-          console.log("delete id",this.deletePromoCode);
-          console.log("if true",this.isCodeValid);
+          this.detail.finalAmount = Math.floor(this.detail.finalAmount);
+          this.$store.getters.getPromoCodes.splice(i, 1);
+          console.log("delete id", this.deletePromoCode);
+          console.log("if true", this.isCodeValid);
           break;
         }
       }
-      if (!codeVerificationResponse) {        
+      if (!codeVerificationResponse) {
         this.isCodeValid = false;
-        console.log("message",this.isCodeValid);
+        console.log("message", this.isCodeValid);
         this.promoMessage =
           "This promo code is invalid ! Please enter a valid code";
         this.detail.additionalDiscount = 0;
-      }      
+      }
     },
     allFieldsFilled() {
-      if (this.transactionImgName == "") {
-        return "Transaction Proof";
-      } else if (this.detail.transactionID == "") {
-        return "Transaction ID";
-      } else if (this.detail.paymentMode == null) {
-        return "";
+      if (this.detail.finalAmount != 0) {
+        if (this.transactionImgName == "") {
+          return "Transaction Proof";
+        } else if (this.detail.transactionID == "") {
+          return "Transaction ID";
+        } else if (this.detail.paymentMode == null) {
+          return "";
+        }
+      } else {
+        this.detail.transactionID = "Speaker Promotion Code";
+        this.generatedFiles.transactionImage = null;
       }
       return "allFilled";
     },
@@ -394,7 +401,13 @@ export default {
             .dispatch("saveParticipantDetails", payload)
             .then(() => {
               this.$store.state.isSavingForm = false;
-              this.$router.push("/");
+              this.$router.push({
+                name: "SuccessfulRegistration",
+                params: {
+                  type: "Participant",
+                  detail: this.detail
+                }
+              });
               this.$store.state.navItem = 1;
             })
             .catch(resp => {
@@ -409,7 +422,13 @@ export default {
             .dispatch("saveSponsorDetails", payload)
             .then(() => {
               this.$store.state.isSavingForm = false;
-              this.$router.push("/");
+              this.$router.push({
+                name: "SuccessfulRegistration",
+                params: {
+                  type: "Participant",
+                  detail: this.detail
+                }
+              });
               this.$store.state.navItem = 1;
             })
             .catch(resp => {
@@ -437,15 +456,15 @@ export default {
       }
     }
   },
-  mounted(){
+  mounted() {
     this.$store
-        .dispatch("loadPromoCodes")
-        .then(resp => {
-          this.unsubscribe = resp;
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      .dispatch("loadPromoCodes")
+      .then(resp => {
+        this.unsubscribe = resp;
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 };
 </script>

@@ -8,10 +8,14 @@
     >
       <Heading :obj="headingObj" />
     </transition>
-    <div class="pills-container">
-      <div @click="route(1)" class="pill" :class="{ active: page == 1 }">Activity</div>
-      <div @click="route(2)" class="pill" :class="{ active: page == 2 }">Registrations</div>
-      <div @click="route(3)" class="pill" :class="{ active: page == 3 }">Hackathon</div>
+    <div class="pill-wrapper">
+      <div class="pills-container">
+        <div @click="route(1)" class="pill" :class="{ active: page == 1 }">Activity</div>
+        <div @click="route(2)" class="pill" :class="{ active: page == 2 }">Registrations</div>
+        <div @click="route(3)" class="pill" :class="{ active: page == 3 }">Discounts</div>
+        <div @click="route(4)" class="pill" :class="{ active: page == 4 }">Queries</div>
+      </div>
+      <div @click="download" class="download shake">Download</div>
     </div>
     <transition
       name="custom-classes-transition-2"
@@ -55,9 +59,12 @@ export default {
           this.$router.push("/admin/registrations");
           break;
         case 3:
-          this.$router.push("/admin/hackathon");
+          this.$router.push("/admin/discounts");
           break;
       }
+    },
+    download() {
+      window.print();
     }
   }
 };
@@ -74,41 +81,65 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: left;
-  .pills-container {
-    width: 50%;
+  .pill-wrapper {
     display: flex;
-    justify-content: space-around;
-    background: rgba(lighten($primary, 30%), 0.3);
-    padding: 1rem 0;
-    margin: 0 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 0.8rem;
-    @include ipad-portrait {
-      width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    @media print {
+      display: none;
     }
-    .pill {
-      width: 12rem;
-      text-align: center;
-      padding: 0.8rem 0;
-      border-radius: 0.5rem;
+    .download {
+      background: lighten($color: $primary, $amount: 5%);
+      padding: 1.25rem 3rem;
+      border-radius: 0.8rem;
+      color: white;
       cursor: pointer;
-      transition: all 0.3s ease-in;
+      transition: all 0.4s ease-in;
+    }
+    .download:hover {
+      background: darken($primary, 10%);
+      background-image: $gradient;
+    }
+    .download:active {
+      transform: scale(0.95);
+    }
+    .pills-container {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+      background: rgba(lighten($primary, 30%), 0.3);
+      padding: 1rem 0;
+      margin: 0 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0.8rem;
       @include ipad-portrait {
-        width: auto;
-        padding: 0.8rem 2rem;
+        width: 100%;
+        flex-wrap: wrap;
       }
-    }
-    .pill:hover {
-      background: rgba($primary, 0.2);
-    }
-    .active {
-      background: $primary;
-      color: white;
-      box-shadow: 5px 8px 7px rgba(0, 0, 0, 0.25);
-    }
-    .active:hover {
-      background: $primary;
-      color: white;
+      .pill {
+        width: 12rem;
+        text-align: center;
+        padding: 0.8rem 0;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        @include ipad-portrait {
+          width: auto;
+          padding: 0.8rem 2rem;
+        }
+      }
+      .pill:hover {
+        background: rgba($primary, 0.2);
+      }
+      .active {
+        background: $primary;
+        color: white;
+        box-shadow: 5px 8px 7px rgba(0, 0, 0, 0.25);
+      }
+      .active:hover {
+        background: $primary;
+        color: white;
+      }
     }
   }
 }

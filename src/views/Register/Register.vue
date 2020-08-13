@@ -27,7 +27,7 @@
           <div class="body">
             <img src="../../assets/Register/hackathon.svg" alt="speaker" class="speaker" />
             <h2>Hackathon</h2>
-            <h4>Register and Stand a chance to present at the conference !</h4>
+            <h4>Register and stand a chance to present at the conference !</h4>
           </div>
           <div @click="route(6)" class="action">Register for Hackathon</div>
         </div>
@@ -42,10 +42,10 @@
         <div class="card grow">
           <div class="body">
             <img src="../../assets/Register/abstract.svg" alt="speaker" class="speaker" />
-            <h2>Abstract</h2>
-            <h4>Submit and Stand a chance to win an award !</h4>
+            <h2>Poster</h2>
+            <h4>Submit and stand a chance to win an award !</h4>
           </div>
-          <div @click="route(5)" class="action">Submit Abstract</div>
+          <div @click="route(5)" class="action">Submit poster</div>
         </div>
         <div class="card grow">
           <div class="body">

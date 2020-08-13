@@ -72,5 +72,57 @@
         color: white;
       }
     }
+    @media print {
+      width: 100%;
+      border-radius: none;
+      overflow: visible;
+      background: white;
+      color: black;
+      box-shadow: none;
+      font-size: small;
+      tr {
+        td,
+        th {
+          text-align: center;
+          padding: 0rem;
+          font-size: small;
+          font-weight: lighter;
+          color: black;
+        }
+        th {
+          font-size: large;
+          font-weight: bold;
+          color: black;
+          padding: 0rem;
+        }
+      }
+      tr:nth-child(odd) {
+        background: white;
+        color: black;
+      }
+      tr:nth-child(1) {
+        background: white;
+        color: black;
+        th {
+          color: black;
+        }
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black !important;
+        border-collapse: collapse;
+        color: black;
+      }
+      .break {
+        border: none !important;
+      }
+      .top {
+        border-top: 1px solid black !important;
+      }
+      .bottom {
+        border-bottom: 1px solid black !important;
+      }
+    }
   }
 }

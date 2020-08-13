@@ -199,7 +199,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/Speakers/ivan.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">

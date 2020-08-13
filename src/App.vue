@@ -48,6 +48,9 @@ export default {
 
 .spacer {
   margin-top: 4rem;
+  @media print {
+    display: none;
+  }
 }
 
 body {

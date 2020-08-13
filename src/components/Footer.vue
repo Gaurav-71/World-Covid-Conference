@@ -192,5 +192,8 @@ footer {
       color: white;
     }
   }
+  @media print {
+    display: none;
+  }
 }
 </style>

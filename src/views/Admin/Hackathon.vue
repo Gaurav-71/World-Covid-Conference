@@ -1,8 +1,8 @@
 <template>
   <div class="registration">
     <div class="heading-1">
-      <h1>Abstract Submission</h1>
-      <h4>Personal information provided by the participants with their abstracts</h4>
+      <h1>Concept / Idea Submission</h1>
+      <h4>Personal information provided by the participants with their idea submissions</h4>
     </div>
     <table>
       <tr>
