@@ -4,7 +4,7 @@
       <img src="../../assets/Register/abstract.svg" alt="participant" />
       <div class="title">
         <h1>Poster Submissions</h1>
-        <h4>Want to stand a chance to win an award ? Submit your posters and join us !</h4>
+        <h4>Want to win an award ? Submit your posters and join us !</h4>
       </div>
     </div>
     <transition name="custom-classes-transition" enter-active-class="animated bounceInUp" appear>

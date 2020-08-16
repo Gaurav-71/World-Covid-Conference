@@ -1,10 +1,10 @@
 <template>
-  <div v-if="!$store.state.isSavingForm"  class="register">
+  <div v-if="!$store.state.isSavingForm" class="register">
     <div class="card header">
       <img src="../../assets/Register/hackathon.svg" alt="participant" />
       <div class="title">
         <h1>Hackathon Submission</h1>
-        <h4>Ready with your concept / idea ? Submit right away and stand a chance to present at the conference</h4>
+        <h4>Ready with your concept / idea ? Submit right away and get to present at the conference</h4>
       </div>
     </div>
     <transition

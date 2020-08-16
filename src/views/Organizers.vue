@@ -1,5 +1,5 @@
 <template>
-  <div class="organizers">
+  <div class="organizers-container">
     <transition
       name="custom-classes-transition"
       enter-active-class="animated bounceInLeft"
@@ -14,88 +14,254 @@
       leave-active-class="animated bounceOutUp"
       appear
     >
-      <div class="organizer-container">
-        <h1>Conference Directors</h1>
-        <div class="directors-container">
-          <div class="director">
-            <img src="../assets/Speakers/Prof. Gustavo Zubieta-Calleja.jpg" alt />
-            <div class="detail">
-              <h2>Prof. Dr. Gustavo Zubieta– Calleja</h2>
-              <p>
-                Prof. Dr. Gustavo Zubieta– Calleja
-                Director, High Altitude Pulmonary and Pathology Institute, (HAPPI-IPPA),
-                La Paz, Bolivia, South America
-              </p>
+      <div class="organizers-wrapper">
+        <div class="organizers">
+          <section class="section">
+            <div class="title">
+              <h1>Conference Directors</h1>
+              <div class="small-line"></div>
             </div>
-          </div>
-          <div class="director">
-            <img src="../assets/Speakers/Prof. Malali Gowda.jpg" alt />
-            <div class="detail">
-              <h2>Prof. Malali Gowda</h2>
-              <p>Director, Bengaluru Genomics Center, (BGC) Bengaluru, India</p>
+            <div class="flex-main">
+              <div class="organizer">
+                <img src="../assets/organizers/org-6.jpg" alt="organizer" />
+                <h3>Prof. Malali Gowda</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Bengaluru Genomics Center</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-9.jpg" alt="organizer" />
+                <h3>Prof. Dr. Gustavo Zubieta</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>High Altitude Pulmonary and Pathology Institute</h4>
+              </div>
             </div>
-          </div>
+          </section>
+          <div class="line-main"></div>
+          <section class="section">
+            <div class="title">
+              <h1>Conference Convenors</h1>
+              <div class="small-line"></div>
+            </div>
+            <div class="flex-main">
+              <div class="organizer">
+                <img src="../assets/organizers/org-22.jpg" alt="organizer" />
+                <h3>Dr. Pruthvi Chakravarthi</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Bengaluru Genomics Center</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-23.jpeg" alt="organizer" />
+                <h3>Dr. Natalia Zubieta</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>High Altitude Pulmonary and Pathology Institute</h4>
+              </div>
+            </div>
+          </section>
         </div>
-        <h1>Conference Convenors</h1>
-        <div class="convenor-container">
-          <div class="convenor">
-            <h2>Dr Pruthvi Chakravarthi T</h2>
-            <p>
-              Chief Executive Officer,
-              Bengaluru Genomics Center, (BGC) , Bengaluru, India
-            </p>
-          </div>
-          <div class="convenor">
-            <h2>Dr. Natalia Zubieta-DeUrioste</h2>
-            <p>
-              High Altitude Pulmonary and Pathology Institute, (HAPPI-IPPA),
-              La Paz, Bolivia, South America
-            </p>
-          </div>
+        <div class="line"></div>
+        <div class="organizers">
+          <section class="section">
+            <div class="title">
+              <h1>Organizing Committe</h1>
+              <div class="small-line"></div>
+            </div>
+            <div class="flex">
+              <div class="organizer">
+                <img src="../assets/organizers/org-10.jpg" alt="organizer" />
+                <h3>Oscar Murillo</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>St. Lukes University Hospital</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-18.jpg" alt="organizer" />
+                <h3>Prof. Ivan Solarte Rodriguez</h3>
+                <div class="country">
+                  <img src="../assets/Flags/colombia.png" alt="country" />
+                  <h4>Colombia</h4>
+                </div>
+                <h4>Neumología Hospital Universitario</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-21.jpg" alt="organizer" />
+                <h3>Dr. Alan Hargens</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>University of California</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-20.jpg" alt="organizer" />
+                <h3>Prof. Frantisek Kolar</h3>
+                <div class="country">
+                  <img src="../assets/Flags/czech.png" alt="country" />
+                  <h4>Czech Republic</h4>
+                </div>
+                <h4>Institute of Physiology Academy of Sciences</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-7.jpg" alt="organizer" />
+                <h3>Dr. Benedito Honorio Machado</h3>
+                <div class="country">
+                  <img src="../assets/Flags/brazil.png" alt="country" />
+                  <h4>Brazil</h4>
+                </div>
+                <h4>Universidade de São Paulo</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-1.jpg" alt="organizer" />
+                <h3>Dr. L. Gabriel Navar</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>Tulane University School of Medicine</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-19.jpg" alt="organizer" />
+                <h3>Dr. Byron Canelos-Estrella</h3>
+                <div class="country">
+                  <img src="../assets/Flags/ecuador.png" alt="country" />
+                  <h4>Ecuador</h4>
+                </div>
+                <h4>
+                  UCE
+                  Hospital Metropolitano Quito
+                </h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-11.jpg" alt="organizer" />
+                <h3>Dr. Roberto Accinelli</h3>
+                <div class="country">
+                  <img src="../assets/Flags/peru.png" alt="country" />
+                  <h4>Peru</h4>
+                </div>
+                <h4>Universidad Cayetano Heredia</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-8.jpg" alt="organizer" />
+                <h3>Prof. Thuppil Venkatesh</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Foundation for Quality India</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-15.jpg" alt="organizer" />
+                <h3>Prof. Hamid Mobasheri</h3>
+                <div class="country">
+                  <img src="../assets/Flags/iran.png" alt="country" />
+                  <h4>Iran</h4>
+                </div>
+                <h4>University of Tehran</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-16.jpg" alt="organizer" />
+                <h3>Dr. Jose Antonio Carmona</h3>
+                <div class="country">
+                  <img src="../assets/Flags/mexico.png" alt="country" />
+                  <h4>Mexico</h4>
+                </div>
+                <h4>Hospital Juarez</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-4.jpg" alt="organizer" />
+                <h3>Prof. Augusto Ittig</h3>
+                <div class="country">
+                  <img src="../assets/Flags/argentina.png" alt="country" />
+                  <h4>Argentina</h4>
+                </div>
+                <h4>Iberoamerican Network of Digital Health</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-14.jpg" alt="organizer" />
+                <h3>Prof. Jan Marino Ramirez</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>Seattle Children’s Research Institute</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-12.jpg" alt="organizer" />
+                <h3>Prof. Kushal Das</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>BLDE</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-17.jpg" alt="organizer" />
+                <h3>Prof. Jorge Soliz</h3>
+                <div class="country">
+                  <img src="../assets/Flags/canada.png" alt="country" />
+                  <h4>Canada</h4>
+                </div>
+                <h4>Québec Université</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-13.jpg" alt="organizer" />
+                <h3>Dr. Matthias Dutschman</h3>
+                <div class="country">
+                  <img src="../assets/Flags/australia.png" alt="country" />
+                  <h4>Australia</h4>
+                </div>
+                <h4>The University of Melbourne Melbourne Neuroscience Institute</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-3.jpg" alt="organizer" />
+                <h3>Dr. Caroline Dalton</h3>
+                <div class="country">
+                  <img src="../assets/Flags/sa.png" alt="country" />
+                  <h4>South Africa</h4>
+                </div>
+                <h4>University of Cape Town</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-5.jpg" alt="organizer" />
+                <h3>Michael Moretti</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>Anthropologist Washington</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-2.jpg" alt="organizer" />
+                <h3>Dr. Giuseppe Miserocchi</h3>
+                <div class="country">
+                  <img src="../assets/Flags/italy.png" alt="country" />
+                  <h4>Italy</h4>
+                </div>
+                <h4>Università Milano Bicocca</h4>
+              </div>
+            </div>
+          </section>
         </div>
-        <h1>Organizing Committee</h1>
-        <div class="committee-container">
-          <ul>
-            <li>Prof. Thuppil Venkatesh (India)</li>
-            <li>Prof. Kushal Das (India)</li>
-            <li>Prof. Augusto Ittig (Argentina)</li>
-            <li>Dr. Giuseppe Miserocchi (Italy)</li>
-            <li>Prof. Jorge Soliz (Canada)</li>
-            <li>Dr. Mathias Dutschmann(Australia)</li>
-            <li>Dr. Oscar Murillo (USA)</li>
-            <li>Dr. Jose Antonio Carmona (Mexico)</li>
-            <li>Dr. Caroline Dalton (South Africa)</li>
-            <li>Prof. Frantisek Kolar (Czech Republic)</li>
-            <li>Dr. Byron Canelos-Estrella (Ecuador)</li>
-            <li>Prof. Benedito Honorio Machado (Brazil)</li>
-            <li>Prof. Jan Marino Ramirez (USA)</li>
-            <li>Dr. Roberto Accinelli (Peru)</li>
-            <li>Prof. Ivan Solarte Rodriguez (Colombia)</li>
-            <li>Prof. Hamid Mobasheri (Iran)</li>
-            <li>Michael Moretti (USA)</li>
-            <li>Prof. L. Gabriel Navar (USA)</li>
-            <li>Dr. Alan Hughes (USA)</li>
-          </ul>
-        </div>
-        <h1>Organizing Institutions</h1>
-        <div class="institute">
-          <div class="name">
-            <img src="../assets/organizers/bcg.png" alt="logo" />
+        <div class="line"></div>
+        <div class="institutions">
+          <div class="title">
+            <h1>Organizing Institutions</h1>
+            <div class="small-line"></div>
           </div>
-          <p>
-            Bengaluru Genomics Center (BGC) is built on high quality science base for active collaborations/alliances with right partners, who have passion in the areas of genomics. We contribute to growth of life science and genomics science by providing genomic services for academia & industry and assist them in their ongoing investigations. We are proud to harbor game-changing technology, Genomics by transforming biological research in India and beyond.
-            Bengaluru Genomics Center (BGC) is aiming to transform COVID research, medicine, health-care, life science and agriculture research through Genomics and functional genomics approaches. And to reduce the gap between academic research and technology innovation through partnership and alliances.
-          </p>
-        </div>
-        <div class="institute">
-          <div class="name">
-            <img src="../assets/organizers/ippa.jpg" alt="logo" class="ippa" />
-          </div>
-          <p>
-            The High Altitude Pulmonary and Pathology Institute (HAPPI - IPPA’s) mission is to provide the best quality health care services to high altitude visitors and residents, and worldwide training on hypoxia understanding and handling.
-            We are interested in developing continuous research and training on the pathophysiology and the management of sportsmen, aerospace medicine, diving, acute, intermittent or chronic hypoxia diseases, as well as any other circumstance where hypoxia comes into place.
-            Currently, our aim is to improve COVID-19’s understanding on it’s hypoxic impact and the proposal of several treatments.
-          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus assumenda consequatur voluptatem? Aliquid, labore velit rem incidunt nulla maxime eveniet vel neque dolor quae architecto alias similique doloremque laborum hic?</p>
         </div>
       </div>
     </transition>
@@ -122,78 +288,134 @@ export default {
 
 <style lang="scss" scoped>
 @import "../scss/colors";
-.organizers {
+.organizers-container {
   min-height: 100vh;
   background-image: $background-1;
   background-position: center;
   background-repeat: no-repeat;
   padding: 0.5rem 1rem;
-  .organizer-container {
-    padding: 0 1rem;
-    h1 {
-      color: $primary;
-      font-weight: lighter;
-    }
-    h2 {
-      color: darken($primary, 20%);
-      font-weight: lighter;
-    }
-    .directors-container {
+  .organizers-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .organizers {
       width: 100%;
       display: flex;
-      justify-content: space-around;
-      @include iphone{
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .director {
-        //width: 50%;
-        margin-top: 1rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-basis: 45%;
-        @include iphone{
-          flex-basis: 100%;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        img {
-          width: 12rem;
-          height: 12rem;
-          border-radius: 50%;
-          margin: 0 2rem 0 0;
-        }
-      }
-    }
-    .convenor-container {
-      margin-left: 2rem;
-      h2 {
-        margin-bottom: 0rem;
-      }
-    }
-    .institute {
-      display: grid;
-      grid-template-columns: 15% 85%;
-      margin-bottom: 1rem;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      @include iphone{
+      .line-main {
+        @include iphone {
+          width: 100%;
+          height: 1px;
+          background: gray;
+        }
+      }
+      @include iphone {
+        flex-wrap: wrap;
+      }
+      .section {
+        width: 100%;
+        text-align: center;
+        .title {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h1 {
+            font-size: xx-large;
+            color: #333;
+            font-weight: lighter;
+            margin-bottom: 0;
+          }
+          .small-line {
+            width: 8%;
+            height: 3px;
+            background: $primary;
+            margin: 1.2rem 0 2.5rem 0;
+            text-align: center;
+          }
+        }
+        .flex,
+        .flex-main {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap;
+          //margin-top: 2rem;
+          .organizer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            height: 22rem;
+            // background-image: $gradient;
+            text-align: center;
+            h3,
+            h4 {
+              margin: 0;
+            }
+            h3 {
+              color: darken($primary, 10%);
+              margin: 0.5rem 0;
+            }
+            h4 {
+              font-weight: lighter;
+            }
+            img {
+              width: 210px;
+              height: 210px;
+              border-radius: 0.5rem;
+              margin-bottom: 0.8rem;
+              box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
+            }
+            .country {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0 0 0.5rem 0;
+              img {
+                width: 30px;
+                height: 20px;
+                border-radius: 0;
+                margin-right: 0.5rem;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .flex-main {
+          justify-content: center;
+        }
+      }
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background: gray;
+      margin: 1rem 0;
+    }
+    .institutions {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
-      p {
-        margin-top: 0;
-      }
-      .name {
-        display: flex;
-        justify-content: center;
-        img {
-          width: 200px;
+        h1 {
+          font-size: xx-large;
+          color: #333;
+          font-weight: lighter;
+          margin-bottom: 0;
         }
-        .ippa {
-          width: 120px;
+        .small-line {
+          width: 8%;
+          height: 3px;
+          background: $primary;
+          margin: 1.2rem 0 2.5rem 0;
+          text-align: center;
         }
       }
     }

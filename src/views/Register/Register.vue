@@ -27,7 +27,7 @@
           <div class="body">
             <img src="../../assets/Register/hackathon.svg" alt="speaker" class="speaker" />
             <h2>Hackathon</h2>
-            <h4>Register and stand a chance to present at the conference !</h4>
+            <h4>Register and get a chance to present at the conference !</h4>
           </div>
           <div @click="route(6)" class="action">Register for Hackathon</div>
         </div>
@@ -43,7 +43,7 @@
           <div class="body">
             <img src="../../assets/Register/abstract.svg" alt="speaker" class="speaker" />
             <h2>Poster</h2>
-            <h4>Submit and stand a chance to win an award !</h4>
+            <h4>Submit and get a chance to win an award !</h4>
           </div>
           <div @click="route(5)" class="action">Submit poster</div>
         </div>
@@ -54,7 +54,7 @@
             <h4>Submit your abstracts and join us !</h4>
           </div>
           <div @click="route(2)" class="action">Register as a speaker</div>
-        </div>        
+        </div>
         <div class="card grow">
           <div class="body">
             <img src="../../assets/Register/sponsor.svg" alt="speaker" class="speaker" />
@@ -74,7 +74,7 @@ import Heading from "../../components/Heading";
 export default {
   name: "Register",
   components: {
-    Heading,
+    Heading
   },
   data() {
     return {

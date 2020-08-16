@@ -17,7 +17,7 @@
       <div class="speaker-container">
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/Prof. Venkatesh Thuppil.jpg" alt="mg" />
+            <img src="../assets/organizers/org-8.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -30,7 +30,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/Prof. Gustavo Zubieta-Calleja.jpg" alt="mg" />
+            <img src="../assets/organizers/org-9.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -43,7 +43,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/Dr. Augusto Ittig1.jpg" alt="mg" />
+            <img src="../assets/organizers/org-4.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -56,7 +56,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/Prof. Malali Gowda1.jpg" alt="mg" />
+            <img src="../assets/organizers/org-6.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -69,20 +69,20 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/kushal.jpg" alt="mg" />
+            <img src="../assets/organizers/org-12.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
               <img src="../assets/Flags/india.png" alt="flag" />
               <span>India</span>
             </div>
-            <h3>Prof. Kushal Das </h3>
-            <h4>BLDE, UNESCO Academic Leader & Coordinator </h4>
+            <h3>Prof. Kushal Das</h3>
+            <h4>BLDE, UNESCO Academic Leader & Coordinator</h4>
           </div>
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/Dr. Giuseppe Miserocchi1.jpg" alt="mg" />
+            <img src="../assets/organizers/org-2.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -95,7 +95,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/oscar.png" alt="mg" />
+            <img src="../assets/organizers/org-10.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -108,7 +108,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-17.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -121,20 +121,20 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-13.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
               <img src="../assets/Flags/australia.png" alt="flag" />
               <span>Australia</span>
             </div>
-            <h3>Dr. Mathias Dutschmann </h3>
+            <h3>Dr. Mathias Dutschmann</h3>
             <h4></h4>
           </div>
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-16.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -147,7 +147,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-3.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -160,33 +160,33 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-19.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
               <img src="../assets/Flags/ecuador.png" alt="flag" />
               <span>Ecuador</span>
             </div>
-            <h3>Dr. Byron Canelos-Estrella </h3>
+            <h3>Dr. Byron Canelos-Estrella</h3>
             <h4></h4>
           </div>
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-14.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
               <img src="../assets/Flags/usa.png" alt="flag" />
               <span>USA</span>
             </div>
-            <h3>Prof. Jan Marino Ramirez </h3>
+            <h3>Prof. Jan Marino Ramirez</h3>
             <h4></h4>
           </div>
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-11.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -199,7 +199,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Speakers/ivan.jpg" alt="mg" />
+            <img src="../assets/organizers/org-18.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -212,7 +212,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-15.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -287,10 +287,10 @@ export default {
     flex-wrap: wrap;
     .card {
       width: 16rem;
-      height: 26rem;
+      height: 24rem;
       margin: 1.5rem;
       display: grid;
-      grid-template-rows: 70% 30%;
+      grid-template-rows: 16rem 8rem;
       border-radius: 0.8rem;
       background: white;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -303,7 +303,8 @@ export default {
         justify-content: center;
         align-items: center;
         img {
-          width: 100%;
+          width: 16rem;
+          height: 16rem;
         }
         .svg {
           width: 120px;

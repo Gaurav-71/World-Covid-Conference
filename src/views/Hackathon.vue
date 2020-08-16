@@ -21,14 +21,14 @@
           </div>
           <div class="right">
             <h1>Combat Covid-19</h1>
-            <p>An opportunity for the young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
+            <p>An opportunity for young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
             <div class="btn-container">
               <div @click="route(1)" class="btn transparent">Submit</div>
               <div @click="route(2)" class="btn">Register</div>
             </div>
             <div class="detail">
               <img src="../assets/Hackathon/test.svg" alt="time" class="test" />
-              <p>25th August 2020 6pm, Screening of Hackathon</p>
+              <p>24th August 2020 6pm, Screening of Hackathon</p>
             </div>
             <div class="detail">
               <img src="../assets/Hackathon/time.svg" alt="time" />
@@ -48,7 +48,8 @@
               <h2>Themes</h2>
             </div>
             <ul>
-              <li>Public Health, Pathophysiology and Pathology of COVID-19</li>
+              <li>Public Health</li>
+              <li>Pathophysiology and Pathology of COVID-19</li>
               <li>Pandemic Testing</li>
               <li>Advances in COVID-19</li>
               <li>Prevention Strategies</li>
@@ -95,7 +96,11 @@
         </div>
         <div class="line"></div>
         <div class="download-container">
-          <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHackathon.jpeg?alt=media&token=278b7a03-a38d-4337-bcec-a64f2d53b987" target="_blank" class="btn download">Download Brochure</a>
+          <a
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHackathon.jpeg?alt=media&token=278b7a03-a38d-4337-bcec-a64f2d53b987"
+            target="_blank"
+            class="btn download"
+          >Download Brochure</a>
           <span>Registrations for Hackathon is free</span>
         </div>
       </div>
@@ -113,9 +118,9 @@ export default {
     return {
       headingObj: {
         h1: "Hackathon",
-        h4: "Register and Stand a chance to present at the conference !",
+        h4: "Register and get a chance to present at the conference !",
         src: "hackathon.svg"
-      },      
+      }
     };
   },
   methods: {
@@ -128,7 +133,7 @@ export default {
           this.$router.push("/register/hackathon");
           break;
       }
-    },    
+    }
   }
 };
 </script>

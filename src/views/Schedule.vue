@@ -7,7 +7,7 @@
       appear
     >
       <Heading :obj="headingObj" />
-    </transition>    
+    </transition>
     <transition
       name="custom-classes-transition"
       enter-active-class="animated bounceInUp"
@@ -15,13 +15,22 @@
       appear
     >
       <div class="schedule-container">
-        <img src="../assets/Schedule/1.jpg" alt="schedule" />
-        <img src="../assets/Schedule/2.jpg" alt="schedule" />
-        <img src="../assets/Schedule/3.jpg" alt="schedule" />
-        <img src="../assets/Schedule/4.jpg" alt="schedule" />
+        <div class="download-container">
+          <a
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FSchedule.xlsx?alt=media&token=49d2dd9a-ee28-4396-a8fb-0b71ccd733ca"
+            target="_blank"
+            class="btn"
+          >Download Program</a>
+          <p>
+            <b>Note :</b> All timings listed are in Indian Standard Time
+          </p>
+        </div>
+        <img src="../assets/Schedule/1.png" alt="schedule" />
+        <img src="../assets/Schedule/2.png" alt="schedule" />
+        <img src="../assets/Schedule/3.png" alt="schedule" />
+        <img src="../assets/Schedule/4.png" alt="schedule" />
       </div>
     </transition>
-    <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fconference_schedule_without_time.pdf?alt=media&token=cd5c621a-8728-4810-8d8f-e6b1857dceee" target="_blank" class="btn">Download Program</a>
   </div>
 </template>
 
@@ -57,8 +66,16 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    .download-container {
+      width: 100%;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     img {
-      width: 40%;
+      width: 100%;
+      height: 100%;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
       margin: 1.5rem;
       @include iphone {
@@ -74,9 +91,9 @@ export default {
     cursor: pointer;
     margin-top: 2rem;
   }
-  .btn:active{
-      transform: scale(0.95);
-    }
+  .btn:active {
+    transform: scale(0.95);
+  }
   a {
     color: white;
     text-decoration: none;

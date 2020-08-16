@@ -49,18 +49,49 @@
                 <div class="d2">India : 7am-11am & 4pm-9pm</div>
                 <div class="d3">Bolivia : 9:30am-1:30pm & 6:30am-11:30am</div>
               </div>
-            </div>            
-            <h3>Post Conference Workshop on Bioinformatics of Covid-19</h3>
-            <div class="btn-container">                            
-              <a href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FConference.jpeg?alt=media&token=3f6cd53e-eee4-4d1c-a36d-c654eb97ded3" target="_blank" class="btn">Download Brochure</a>
             </div>
+            <h3>Post Conference Workshop on Bioinformatics of Covid-19</h3>
           </div>
         </div>
       </div>
     </section>
     <section class="pictures">
-      <h2>Check out our previous conference on Corona Viral Genomics <a href="https://www.bgc-genomics.com/ICCVG/home.html" target="_blank">here</a> </h2>
+      <h2>
+        Check out our previous conference on Corona Viral Genomics
+        <a
+          href="https://www.bgc-genomics.com/ICCVG/home.html"
+          target="_blank"
+        >here</a>
+      </h2>
     </section>
+    <div class="download-container">
+      <div class="btn-container">
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FConference.JPG?alt=media&token=d7768470-f6a3-4c8b-a256-d8ce41cd10d5"
+          download
+          target="_blank"
+          class="btn"
+        >Download Conference Brochure</a>
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHackathon.jpeg?alt=media&token=278b7a03-a38d-4337-bcec-a64f2d53b987"
+          download
+          target="_blank"
+          class="btn"
+        >Download Hackathon Brochure</a>
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FWorkshop.JPG?alt=media&token=60dc560e-a152-46a9-b89f-85a7e1bf1b58"
+          download
+          target="_blank"
+          class="btn"
+        >Download Workshop Brochure</a>
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FSchedule.xlsx?alt=media&token=49d2dd9a-ee28-4396-a8fb-0b71ccd733ca"
+          download
+          target="_blank"
+          class="btn"
+        >Download Schedule/Program</a>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -122,12 +153,14 @@ export default {
     }
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     color: $primary;
   }
 
   .about-conf,
-  .themes, .pictures {
+  .themes,
+  .pictures {
     padding: 0 2rem;
     h1 {
       margin-bottom: none;
@@ -152,7 +185,7 @@ export default {
     //justify-content: flex-start;
     align-items: flex-start;
     //margin: 0rem 0 1rem 0;
-    @include iphone{
+    @include iphone {
       margin-top: 1.5rem;
     }
     .dtl {
@@ -185,8 +218,8 @@ export default {
     h3 {
       text-align: center;
       margin: 1rem 0;
-      color: darken($primary,10%);
-      @include iphone{
+      color: darken($primary, 10%);
+      @include iphone {
         margin: 1.5rem 0;
       }
     }
@@ -195,17 +228,24 @@ export default {
     width: 100%;
     display: flex;
     justify-content: center;
+    @include ipad-portrait {
+      flex-wrap: wrap;
+    }
+    @include iphone {
+      flex-wrap: wrap;
+    }
     .btn {
+      margin: 1rem;
       padding: 1rem 2rem;
       background: $gradient;
       border-radius: 1rem;
       color: white;
       cursor: pointer;
     }
-    .btn:active{
+    .btn:active {
       transform: scale(0.95);
     }
-    a{
+    a {
       color: white;
       text-decoration: none;
     }
