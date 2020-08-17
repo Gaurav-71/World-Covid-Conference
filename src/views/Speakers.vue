@@ -69,19 +69,6 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/organizers/org-14.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/usa.png" alt="flag" />
-              <span>USA</span>
-            </div>
-            <h3>Prof. Jan Marino Ramirez</h3>
-            <h4>Director, Seattle Children’s Research Institute</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
             <img src="../assets/organizers/org-11.jpg" alt="mg" />
           </div>
           <div class="body">
@@ -91,19 +78,6 @@
             </div>
             <h3>Dr. Roberto Accinelli</h3>
             <h4>Director, Universidad Cayetano Heredia</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-18.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/colombia.png" alt="flag" />
-              <span>Colombia</span>
-            </div>
-            <h3>Prof. Ivan Solarte Rodriguez</h3>
-            <h4>Professor Titular, Neumología Hospital Universitario</h4>
           </div>
         </div>
         <div class="card">
@@ -278,19 +252,7 @@
             <h4>Universita Milano Biccoca</h4>
           </div>
         </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-13.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/australia.png" alt="flag" />
-              <span>Australia</span>
-            </div>
-            <h3>Dr. Matthias Dutschmann</h3>
-            <h4>The University of Melbourne Neuroscience Institute</h4>
-          </div>
-        </div>
+
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-16.jpg" alt="mg" />
@@ -328,6 +290,19 @@
             </div>
             <h3>Dr. Byron Canelos-Estrella</h3>
             <h4>Hospital Metropolitano Quito</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-29.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Imtaiyaz Hassan</h3>
+            <h4>Jamia Millia Islamia</h4>
           </div>
         </div>
         <div class="card">

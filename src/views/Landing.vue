@@ -58,7 +58,7 @@
     </section>
     <div class="download-container">
       <div class="btn-container">
-        <div class="btn">Register For Conference Now</div>
+        <div @click="route(1)" class="btn">Register For Conference Now</div>
       </div>
       <p
         style="text-align: center;"

@@ -21,7 +21,9 @@
           </div>
           <div class="right">
             <h1>Combat Covid-19</h1>
-            <p>An opportunity for young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
+            <p
+              style="line-height: 1.5rem;"
+            >An opportunity for young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
             <div class="btn-container">
               <div @click="route(1)" class="btn transparent">Submit</div>
               <div @click="route(2)" class="btn">Register</div>
@@ -86,10 +88,12 @@
                 <h2>Specifications</h2>
               </div>
               <ul>
+                <li>Individual or Team participation is allowed</li>
                 <li>Concept / Idea should be of 2 pages</li>
                 <li>Last day for submission is 23rd Aug 2020 6pm IST</li>
                 <li>Concept file should either be in PDF or Word format</li>
                 <li>Winners will be announced at the Conference</li>
+                <li>Max 5 participants in one team, To register as a team please contact us</li>
               </ul>
             </div>
           </div>

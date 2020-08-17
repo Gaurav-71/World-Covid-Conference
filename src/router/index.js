@@ -11,6 +11,7 @@ import RegisterAbstract from "../views/Register/Abstract.vue";
 import RegisterHackathon from "../views/Register/Hackathon.vue";
 import HackathonSubmit from "../views/Register/HackathonSubmit.vue";
 import Hackathon from "../views/Hackathon.vue";
+import AboutWorkshop from "../views/Workshop.vue";
 import Payment from "../views/Register/Payment.vue";
 import SuccessfulRegistration from "../views/Register/SuccessfulRegistration.vue";
 import Contacts from "../views/Contacts.vue";
@@ -150,6 +151,11 @@ const routes = [
     path: "/schedule",
     name: "Schedule",
     component: Schedule,
+  },
+  {
+    path: "/workshop",
+    name: "AboutWorkshop",
+    component: AboutWorkshop,
   },
   {
     path: "/register/conference/participant",
