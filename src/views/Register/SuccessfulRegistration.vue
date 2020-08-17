@@ -13,7 +13,7 @@
         </div>
         <div class="right">
           <h1>Admit One - {{detail.name}}</h1>
-          <h4>You have been succesfully registered as a participant for 2nd World Conference On Advances In COVID-19</h4>          
+          <h4>You have been succesfully registered as a participant for 2nd World Conference On Advances In COVID-19</h4>
           <ul>
             <li>Top 3 Winners will get a chance to present their idea at the conference</li>
             <li>Screening Of Hackathon on 25th August 2020, 6pm IST</li>
@@ -124,7 +124,7 @@ export default {
   align-items: center;
   justify-content: center;
   color: black;
-  background-image: $background-1;  
+  background-image: $background-1;
   .card {
     border-radius: 0.8rem;
     background: white;
@@ -252,8 +252,8 @@ export default {
     @media print {
       display: none;
     }
-    @include iphone{
-      flex-wrap:wrap-reverse;
+    @include iphone {
+      flex-wrap: wrap-reverse;
     }
     .btn {
       text-align: center;
@@ -265,7 +265,7 @@ export default {
       border-radius: 0.8rem;
       transition: all 0.3s ease-in;
       cursor: pointer;
-      @include iphone{
+      @include iphone {
         margin: 0.8rem 0;
       }
     }

@@ -7,10 +7,11 @@
     </section>
     <section class="about-conf">
       <h1>Welcome</h1>
-      <p>This conference will gather the most brilliant minds with their extensive experience in diagnosis, studying, treating, understanding the COVID-19 pandemic threat to the world. As in times of war, it is fundamental to join neurons from around the globe to face it. It requires intelligence, as it is the most valuable tool that will come up eventually with solutions in the multiple compromises of this uncontrollable disease. Let us all stand together, be creative, be daring to propose new treatments and to learn from ancient wisdom, interlaced with current high tech scientific knowledge.</p>
-      <p>
-        COVID19 virus is spreading in rapid ways.All health workers, researchers and public participation across the world is the important factor to tackle the pandemic. COVID19 virus has controlled the world today, so humanity must join together to win the war against the invisible virus.
-        This conference is creating an opportunity for the world to join together to exchange ideas, management practices and mitigation of COVID19 spread. We will have speakers from various countries who will present work done on the COVID pandemic.
+      <p style="line-height: 1.5rem;">
+        Current pandemic times, unveil all continents’ unpreparedness and worldwide sorrow.
+        In this unique conference, we, as a multidisciplinary independent group, gather numerous international personalities directly involved in testing, preventing, treating, and striving to find a cure for COVID-19 pandemic.
+        This global platform provides an extraordinary opportunity for diverse groups of people to attend and learn about the virus characteristics and potential ways of fighting it.
+        We, scientists, from India’s “Bengaluru Genomics Center (BGC)” and Bolivia’s “High Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)”, accompanied by extraordinary worldwide profesional individuals, aim to encourage the world to unite and to restore humanity, together.
       </p>
     </section>
     <section class="themes">
@@ -55,6 +56,14 @@
         </div>
       </div>
     </section>
+    <div class="download-container">
+      <div class="btn-container">
+        <div class="btn">Register For Conference Now</div>
+      </div>
+      <p
+        style="text-align: center;"
+      >Disclaimer : All funds collected as registration fee go to COVID-19 research and education</p>
+    </div>
     <section class="pictures">
       <h2>
         Check out our previous conference on Corona Viral Genomics

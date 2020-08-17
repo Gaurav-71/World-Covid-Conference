@@ -446,17 +446,17 @@
                 />
               </div>
               <div class="input">
-                <label>Stream</label>
+                <label>Field of Study</label>
                 <input
                   type="text"
-                  placeholder="Enter Stream"
+                  placeholder="Enter Field of Study"
                   class="stream"
                   v-model="detail.stream"
                 />
               </div>
             </form>
-            <div class="input file-type">
-              <label>Student ID proof</label>
+            <div class="input file-type" style="margin-top: 1rem;">
+              <label>Student Verification : Please upload a document which proves you are a student (ID proof, College Fee Receipt, Library Card etc)</label>
               <input
                 type="file"
                 class="student-id"
@@ -832,11 +832,21 @@ export default {
     setAmount() {
       this.countryStatus = this.checkCountryStatus();
       if (this.detail.profession == "s") {
-        // student        
-        this.detail.amount = this.detail.country == "India" ? 1000 : 75;
+        // student
+        this.detail.amount =
+          this.detail.country == "India"
+            ? 1000
+            : this.detail.country == "Bolivia"
+            ? 30
+            : 75;
       } else if (this.detail.qualification == 1) {
         // teacher
-        this.detail.amount = this.detail.country == "India" ? 5612 : 150;
+        this.detail.amount =
+          this.detail.country == "India"
+            ? 5612
+            : this.detail.country == "Bolivia"
+            ? 50
+            : 150;
       } else {
         // industry & other
         this.detail.amount = this.detail.country == "India" ? 9354 : 250;

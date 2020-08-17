@@ -79,13 +79,13 @@
             </div>
             <div class="flex">
               <div class="organizer">
-                <img src="../assets/organizers/org-10.jpg" alt="organizer" />
-                <h3>Oscar Murillo</h3>
+                <img src="../assets/organizers/org-12.jpg" alt="organizer" />
+                <h3>Prof. Kushal Das</h3>
                 <div class="country">
-                  <img src="../assets/Flags/usa.png" alt="country" />
-                  <h4>USA</h4>
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
                 </div>
-                <h4>St. Lukes University Hospital</h4>
+                <h4>BLDE, UNESCO Academic Leader & Coordinator</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-18.jpg" alt="organizer" />
@@ -94,7 +94,7 @@
                   <img src="../assets/Flags/colombia.png" alt="country" />
                   <h4>Colombia</h4>
                 </div>
-                <h4>Neumología Hospital Universitario</h4>
+                <h4>Professor Titular, Neumología Hospital Universitario</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-21.jpg" alt="organizer" />
@@ -103,7 +103,7 @@
                   <img src="../assets/Flags/usa.png" alt="country" />
                   <h4>USA</h4>
                 </div>
-                <h4>University of California</h4>
+                <h4>Professor and Director, Orthopaedic Lab at the University of California</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-20.jpg" alt="organizer" />
@@ -112,7 +112,7 @@
                   <img src="../assets/Flags/czech.png" alt="country" />
                   <h4>Czech Republic</h4>
                 </div>
-                <h4>Institute of Physiology Academy of Sciences</h4>
+                <h4>Head Institute of Physiology Academy of Sciences</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-7.jpg" alt="organizer" />
@@ -121,7 +121,7 @@
                   <img src="../assets/Flags/brazil.png" alt="country" />
                   <h4>Brazil</h4>
                 </div>
-                <h4>Universidade de São Paulo</h4>
+                <h4>Professor of Physiology, Universidade de São Paulo</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-1.jpg" alt="organizer" />
@@ -130,19 +130,7 @@
                   <img src="../assets/Flags/usa.png" alt="country" />
                   <h4>USA</h4>
                 </div>
-                <h4>Tulane University School of Medicine</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/org-19.jpg" alt="organizer" />
-                <h3>Dr. Byron Canelos-Estrella</h3>
-                <div class="country">
-                  <img src="../assets/Flags/ecuador.png" alt="country" />
-                  <h4>Ecuador</h4>
-                </div>
-                <h4>
-                  UCE
-                  Hospital Metropolitano Quito
-                </h4>
+                <h4>Professor & Chair, Tulane University School of Medicine</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-11.jpg" alt="organizer" />
@@ -151,7 +139,54 @@
                   <img src="../assets/Flags/peru.png" alt="country" />
                   <h4>Peru</h4>
                 </div>
-                <h4>Universidad Cayetano Heredia</h4>
+                <h4>Director, Universidad Cayetano Heredia</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-14.jpg" alt="organizer" />
+                <h3>Prof. Jan Marino Ramirez</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>Director, Seattle Children’s Research Institute</h4>
+              </div>
+
+              <div class="organizer">
+                <img src="../assets/organizers/org-15.jpg" alt="organizer" />
+                <h3>Prof. Hamid Mobasheri</h3>
+                <div class="country">
+                  <img src="../assets/Flags/iran.png" alt="country" />
+                  <h4>Iran</h4>
+                </div>
+                <h4>Head of Lab Membrane Biophysics & Macromolecule, University of Tehran</h4>
+              </div>
+
+              <div class="organizer">
+                <img src="../assets/organizers/org-4.jpg" alt="organizer" />
+                <h3>Prof. Augusto Ittig</h3>
+                <div class="country">
+                  <img src="../assets/Flags/argentina.png" alt="country" />
+                  <h4>Argentina</h4>
+                </div>
+                <h4>Director, Iberoamerican Network of Digital Health</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-13.jpg" alt="organizer" />
+                <h3>Dr. Matthias Dutschman</h3>
+                <div class="country">
+                  <img src="../assets/Flags/australia.png" alt="country" />
+                  <h4>Australia</h4>
+                </div>
+                <h4>The University of Melbourne Melbourne Neuroscience Institute</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-10.jpg" alt="organizer" />
+                <h3>Oscar Murillo</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>St. Lukes University Hospital</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-8.jpg" alt="organizer" />
@@ -163,13 +198,22 @@
                 <h4>Foundation for Quality India</h4>
               </div>
               <div class="organizer">
-                <img src="../assets/organizers/org-15.jpg" alt="organizer" />
-                <h3>Prof. Hamid Mobasheri</h3>
+                <img src="../assets/organizers/org-19.jpg" alt="organizer" />
+                <h3>Dr. Byron Canelos-Estrella</h3>
                 <div class="country">
-                  <img src="../assets/Flags/iran.png" alt="country" />
-                  <h4>Iran</h4>
+                  <img src="../assets/Flags/ecuador.png" alt="country" />
+                  <h4>Ecuador</h4>
                 </div>
-                <h4>University of Tehran</h4>
+                <h4>Hospital Metropolitano Quito</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-17.jpg" alt="organizer" />
+                <h3>Prof. Jorge Soliz</h3>
+                <div class="country">
+                  <img src="../assets/Flags/canada.png" alt="country" />
+                  <h4>Canada</h4>
+                </div>
+                <h4>Assistant Professor, Laval University</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-16.jpg" alt="organizer" />
@@ -179,51 +223,6 @@
                   <h4>Mexico</h4>
                 </div>
                 <h4>Hospital Juarez</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/org-4.jpg" alt="organizer" />
-                <h3>Prof. Augusto Ittig</h3>
-                <div class="country">
-                  <img src="../assets/Flags/argentina.png" alt="country" />
-                  <h4>Argentina</h4>
-                </div>
-                <h4>Iberoamerican Network of Digital Health</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/org-14.jpg" alt="organizer" />
-                <h3>Prof. Jan Marino Ramirez</h3>
-                <div class="country">
-                  <img src="../assets/Flags/usa.png" alt="country" />
-                  <h4>USA</h4>
-                </div>
-                <h4>Seattle Children’s Research Institute</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/org-12.jpg" alt="organizer" />
-                <h3>Prof. Kushal Das</h3>
-                <div class="country">
-                  <img src="../assets/Flags/india.png" alt="country" />
-                  <h4>India</h4>
-                </div>
-                <h4>BLDE</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/org-17.jpg" alt="organizer" />
-                <h3>Prof. Jorge Soliz</h3>
-                <div class="country">
-                  <img src="../assets/Flags/canada.png" alt="country" />
-                  <h4>Canada</h4>
-                </div>
-                <h4>Québec Université</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/org-13.jpg" alt="organizer" />
-                <h3>Dr. Matthias Dutschman</h3>
-                <div class="country">
-                  <img src="../assets/Flags/australia.png" alt="country" />
-                  <h4>Australia</h4>
-                </div>
-                <h4>The University of Melbourne Melbourne Neuroscience Institute</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/org-3.jpg" alt="organizer" />
@@ -250,7 +249,7 @@
                   <img src="../assets/Flags/italy.png" alt="country" />
                   <h4>Italy</h4>
                 </div>
-                <h4>Università Milano Bicocca</h4>
+                <h4>Department of Medicine and Surgery, Università Milano Bicocca</h4>
               </div>
             </div>
           </section>
@@ -261,7 +260,14 @@
             <h1>Organizing Institutions</h1>
             <div class="small-line"></div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus assumenda consequatur voluptatem? Aliquid, labore velit rem incidunt nulla maxime eveniet vel neque dolor quae architecto alias similique doloremque laborum hic?</p>
+          <div class="institute">
+            <img src="../assets/organizers/bcg-1.png" alt="logo" />
+            <p>Bengaluru Genomics Center (BGC) is built on high quality science base for active collaborations/alliances with right partners, who have passion in the areas of genomics. We contribute to growth of life science and genomics science by providing genomic services for academia & industry and assist them in their ongoing investigations. We are proud to harbor game-changing technology, Genomics by transforming biological research in India and beyond. Bengaluru Genomics Center (BGC) is aiming to transform COVID research, medicine, health-care, life science and agriculture research through Genomics and functional genomics approaches. And to reduce the gap between academic research and technology innovation through partnership and alliances.</p>
+          </div>
+          <div class="institute">
+            <img src="../assets/organizers/ippa-1.png" alt="logo" />
+            <p>The High Altitude Pulmonary and Pathology Institute (HAPPI - IPPA’s) mission is to provide the best quality health care services to high altitude visitors and residents, and worldwide training on hypoxia understanding and handling. We are interested in developing continuous research and training on the pathophysiology and the management of sportsmen, aerospace medicine, diving, acute, intermittent or chronic hypoxia diseases, as well as any other circumstance where hypoxia comes into place. Currently, our aim is to improve COVID-19’s understanding on it’s hypoxic impact and the proposal of several treatments.</p>
+          </div>
         </div>
       </div>
     </transition>
@@ -409,6 +415,9 @@ export default {
           color: #333;
           font-weight: lighter;
           margin-bottom: 0;
+          @include iphone {
+            font-size: x-large;
+          }
         }
         .small-line {
           width: 8%;
@@ -416,6 +425,24 @@ export default {
           background: $primary;
           margin: 1.2rem 0 2.5rem 0;
           text-align: center;
+        }
+      }
+      .institute {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1rem;
+        @include iphone {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        img {
+          width: 200px;
+          height: 200px;
+        }
+        p {
+          padding: 0.5rem 2rem;
+          line-height: 1.8rem;
         }
       }
     }

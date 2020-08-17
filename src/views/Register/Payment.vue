@@ -94,7 +94,7 @@
                   v-model="detail.paymentMode"
                 />
                 <img src="../../assets/Register/Participant/neft.svg" alt="neft" />
-                <label for="male">NEFT</label>
+                <label for="male">NEFT / Net Banking</label>
               </div>
               <div class="custom-label">
                 <input
@@ -117,6 +117,17 @@
                 />
                 <img src="../../assets/Register/Participant/paypal.svg" alt="paypal" />
                 <label for="other">PayPal</label>
+              </div>
+              <div class="custom-label">
+                <input
+                  type="radio"
+                  id="p4"
+                  name="paymentMode"
+                  value="4"
+                  v-model="detail.paymentMode"
+                />
+                <img src="../../assets/Heading/questions.svg" alt="questions" />
+                <label for="other">None of the above, Please Contact Us to complete payment</label>
               </div>
             </form>
           </div>
@@ -231,7 +242,10 @@
             </p>
           </div>
         </div>
-        <div v-if="detail.paymentMode!=null" class="card pay-container">
+        <div
+          v-if="detail.paymentMode == 1 || detail.paymentMode == 2 || detail.paymentMode == 3"
+          class="card pay-container"
+        >
           <div class="heading">
             <h2>Payment Confirmation</h2>
             <div class="line"></div>
@@ -265,8 +279,11 @@
             </form>
           </div>
         </div>
-        <div class="actions">
+        <div v-if="detail.paymentMode != 4" class="actions">
           <div @click="validate()" class="btn shake">Register</div>
+        </div>
+        <div v-else class="actions">
+          <div @click="route()" class="btn shake">Contact Us</div>
         </div>
       </div>
     </transition>
@@ -454,6 +471,9 @@ export default {
         this.error.message.message = "Please fill the " + validation + " field";
         this.error.isVisible = true;
       }
+    },
+    route() {
+      this.$router.push("/contacts");
     }
   },
   mounted() {

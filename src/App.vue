@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <Header />
     <div class="spacer"></div>
     <router-view />
@@ -15,7 +18,8 @@ import Footer from "./components/Footer";
 
 export default {
   components: {
-    Header, Footer
+    Header,
+    Footer
   }
 };
 </script>
@@ -59,6 +63,6 @@ body {
   letter-spacing: 1px;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
- // margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 }
 </style>
