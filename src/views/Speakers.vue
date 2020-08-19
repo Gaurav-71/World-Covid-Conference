@@ -17,32 +17,6 @@
       <div class="speaker-container">
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/organizers/org-9.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/bolivia.png" alt="flag" />
-              <span>Bolivia</span>
-            </div>
-            <h3>Prof. Gustavo Zubieta</h3>
-            <h4>Head, High Altitude Pulmonary and Pathology Institute</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-6.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/india.png" alt="flag" />
-              <span>India</span>
-            </div>
-            <h3>Prof. Malali Gowda</h3>
-            <h4>Head, Bengaluru Genomics Center</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
             <img src="../assets/organizers/org-24.jpg" alt="mg" />
           </div>
           <div class="body">
@@ -52,19 +26,6 @@
             </div>
             <h3>Dr. Murray Epstein</h3>
             <h4>Professor of Medicine, University of Miami Miller School of Medicine</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-20.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/czech.png" alt="flag" />
-              <span>Czech Republic</span>
-            </div>
-            <h3>Prof. Frantisek Kolar</h3>
-            <h4>Institute of Physiology Academy of Sciences</h4>
           </div>
         </div>
         <div class="card">
@@ -93,33 +54,7 @@
             <h4>Head of Lab Membrane Biophysics & Macromolecule, University of Tehran</h4>
           </div>
         </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-7.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/brazil.png" alt="flag" />
-              <span>Brazil</span>
-            </div>
-            <h3>Dr. Benedito Honorio Machado</h3>
-            <h4>Universidade de São Paulo</h4>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-1.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/usa.png" alt="flag" />
-              <span>USA</span>
-            </div>
-            <h3>Dr. L. Gabriel Navar</h3>
-            <h4>Professor & Chair, Tulane University School of Medicine</h4>
-          </div>
-        </div>
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-25.jpg" alt="mg" />
@@ -144,19 +79,6 @@
             </div>
             <h3>Dr. Gaurav Sharma</h3>
             <h4>Institute of Bioinformatics and Applied Biotechnology</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-21.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/usa.png" alt="flag" />
-              <span>USA</span>
-            </div>
-            <h3>Alan Hargens</h3>
-            <h4>Professor and Director, Orthopaedic Lab at the University of California</h4>
           </div>
         </div>
 
@@ -189,17 +111,31 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/organizers/org-17.jpg" alt="mg" />
+            <img src="../assets/organizers/org-9.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
-              <img src="../assets/Flags/canada.png" alt="flag" />
-              <span>Canada</span>
+              <img src="../assets/Flags/bolivia.png" alt="flag" />
+              <span>Bolivia</span>
             </div>
-            <h3>Prof. Jorge Soliz</h3>
-            <h4>Assistant Professor, Laval University</h4>
+            <h3>Prof. Gustavo Zubieta</h3>
+            <h4>Head, High Altitude Pulmonary and Pathology Institute</h4>
           </div>
         </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-6.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Prof. Malali Gowda</h3>
+            <h4>Head, Bengaluru Genomics Center</h4>
+          </div>
+        </div>
+
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-27.jpg" alt="mg" />
@@ -266,32 +202,7 @@
             <h4>Hospital Juarez</h4>
           </div>
         </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-3.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/sa.png" alt="flag" />
-              <span>South Africa</span>
-            </div>
-            <h3>Dr. Caroline Dalton</h3>
-            <h4>University of Cape Town</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-19.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/ecuador.png" alt="flag" />
-              <span>Ecuador</span>
-            </div>
-            <h3>Dr. Byron Canelos-Estrella</h3>
-            <h4>Hospital Metropolitano Quito</h4>
-          </div>
-        </div>
+
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-29.jpg" alt="mg" />
@@ -320,7 +231,7 @@
         </div>
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+            <img src="../assets/organizers/org-30.jpg" alt="mg" />
           </div>
           <div class="body">
             <div class="country">
@@ -342,6 +253,97 @@
             </div>
             <h3>Prof. Sudhir Krishna</h3>
             <h4>NCBS, TIFR</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-32.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/canada.png" alt="flag" />
+              <span>Canada</span>
+            </div>
+            <h3>Prof. Jim Russel</h3>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/Heading/presentation.svg" class="svg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/usa.png" alt="flag" />
+              <span>USA</span>
+            </div>
+            <h3>Dr. Robert Gallo</h3>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-31.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/uk.png" alt="flag" />
+              <span>UK</span>
+            </div>
+            <h3>Andrew Pollard</h3>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-34.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <!--<img src="../assets/Flags/uk.png" alt="flag" />
+              <span>UK</span>-->
+            </div>
+            <h3>Paolo Pelosi</h3>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-35.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/colombia.png" alt="flag" />
+              <span>Colombia</span>
+            </div>
+            <h3>Dr. Milena Garcia</h3>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-36.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/bolivia.png" alt="flag" />
+              <span>Bolivia</span>
+            </div>
+            <h3>Antonio Viruez</h3>
+            <h4></h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-33.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/peru.png" alt="flag" />
+              <span>Peru</span>
+            </div>
+            <h3>Walter Calderon</h3>
+            <h4></h4>
           </div>
         </div>
       </div>

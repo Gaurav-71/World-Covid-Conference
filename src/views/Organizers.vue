@@ -79,6 +79,15 @@
             </div>
             <div class="flex">
               <div class="organizer">
+                <img src="../assets/organizers/org-24.jpg" alt="organizer" />
+                <h3>Dr. Murray Epstein</h3>
+                <div class="country">
+                  <img src="../assets/Flags/usa.png" alt="country" />
+                  <h4>USA</h4>
+                </div>
+                <h4>Professor of Medicine, University of Miami Miller School of Medicine</h4>
+              </div>
+              <div class="organizer">
                 <img src="../assets/organizers/org-12.jpg" alt="organizer" />
                 <h3>Prof. Kushal Das</h3>
                 <div class="country">
@@ -355,6 +364,7 @@ export default {
             width: 300px;
             height: 22rem;
             // background-image: $gradient;
+            margin: 1rem 0;
             text-align: center;
             h3,
             h4 {

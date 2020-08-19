@@ -460,7 +460,13 @@ export default {
             .dispatch("saveWorkshopDetails", payload)
             .then(() => {
               this.$store.state.isSavingForm = false;
-              this.$router.push("/");
+              this.$router.push({
+                name: "SuccessfulRegistration",
+                params: {
+                  type: "Workshop",
+                  detail: this.detail
+                }
+              });
               this.$store.state.navItem = 1;
             })
             .catch(resp => {

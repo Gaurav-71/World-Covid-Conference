@@ -1,7 +1,7 @@
 <template>
   <div class="registration">
     <div class="heading-1">
-      <h1>Transaction Details</h1>
+      <h1>Transaction Details | {{$store.getters.getParticipants.length}}</h1>
       <h4>All participants fee and transaction details</h4>
     </div>
     <table>

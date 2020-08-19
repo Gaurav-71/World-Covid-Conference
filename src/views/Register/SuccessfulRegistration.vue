@@ -16,7 +16,7 @@
           <h4>You have been succesfully registered as a participant for 2nd World Conference On Advances In COVID-19</h4>
           <ul>
             <li>Top 3 Winners will get a chance to present their idea at the conference</li>
-            <li>Screening Of Hackathon on 25th August 2020, 6pm IST</li>
+            <li>Screening Of Hackathon on 24th August 2020, 6pm IST</li>
             <li>Winners will be announced at Conference held between 27th-30th August 2020</li>
             <li>Winners get free acces to the conference</li>
             <li>All participants will receive E-certificate</li>
@@ -60,6 +60,36 @@
             {{detail.promoCode}}
           </div>
           <p>Every speaker is allowed to bring 5 guests for the conference for free. Just share the promotion code with your guests to avail this offer</p>
+        </div>
+      </div>
+      <div v-else-if="type == 'Workshop'" class="card hackathon">
+        <div class="left">
+          <img src="../../assets/Heading/workshop.svg" alt="logo" />
+          <h1>Workshop</h1>
+        </div>
+        <div class="right">
+          <h1>Admit One - {{detail.name}}</h1>
+          <h4>You have been succesfully registered as a participant for the Workshop</h4>
+          <ul>
+            <li>Date: 31st August 2020</li>
+            <li>All participants will receive E-certificate</li>
+            <li>Thank you for contributing towards research & education for COVID-19</li>
+          </ul>
+        </div>
+      </div>
+      <div v-else-if="type == 'Poster'" class="card hackathon">
+        <div class="left">
+          <img src="../../assets/Register/abstract.svg" alt="logo" />
+          <h1>Poster</h1>
+        </div>
+        <div class="right">
+          <h1>Admit One - {{detail.name}}</h1>
+          <h4>You have succesfully submitted your poster</h4>
+          <ul>
+            <li>Results will be announced by e-mail</li>
+            <li>All participants will receive E-certificate</li>
+            <li>Thank you for contributing towards research & education for COVID-19</li>
+          </ul>
         </div>
       </div>
     </transition>

@@ -1,7 +1,7 @@
 <template>
   <div class="registration">
     <div class="heading-1">
-      <h1>Transaction Details</h1>
+      <h1>Transaction Details | {{$store.getters.getSponsors.length}}</h1>
       <h4>All sponsors fee and transaction details</h4>
     </div>
     <table>
@@ -47,18 +47,18 @@
         <th>ID</th>
       </tr>
       <tr v-for="detail in $store.getters.getSponsors" :key="detail.id">
-        <td>{{detail.detail.name}}</td>        
+        <td>{{detail.detail.name}}</td>
         <td>{{detail.detail.email}}</td>
         <td>{{detail.detail.phno}}</td>
         <td>{{detail.detail.landline2}}</td>
         <td>{{detail.detail.company}}</td>
-        <td>{{detail.detail.designation}}</td>        
+        <td>{{detail.detail.designation}}</td>
         <td>{{detail.detail.locality2}},{{detail.detail.landmark2}},{{detail.detail.state2}},{{detail.detail.city2}},{{detail.detail.pin2}},{{detail.detail.country2}}</td>
         <td>
           <a :href="detail.detail.sponsorIdProof" target="_blank">Download</a>
         </td>
       </tr>
-    </table>      
+    </table>
   </div>
 </template>
 

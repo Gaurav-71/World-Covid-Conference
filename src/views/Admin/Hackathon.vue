@@ -1,7 +1,7 @@
 <template>
   <div class="registration">
     <div class="heading-1">
-      <h1>Concept / Idea Submission</h1>
+      <h1>Concept / Idea Submission | {{$store.getters.getHackathon.length}}</h1>
       <h4>Personal information provided by the participants with their idea submissions</h4>
     </div>
     <table>
@@ -31,7 +31,8 @@ export default {
   name: "AdminHackathon",
   data() {
     return {
-      unsubscribe: null
+      unsubscribe: null,
+      length: null
     };
   },
   mounted() {

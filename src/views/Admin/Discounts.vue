@@ -3,7 +3,7 @@
     <newPromoCode v-if="$store.state.createNewPromoCode" />
     <div class="heading-container">
       <div class="heading-1">
-        <h1>Active Promotion Codes</h1>
+        <h1>Active Promotion Codes | {{$store.getters.getPromoCodes.length}}</h1>
         <h4>Promotion codes are automatically generated during hackathon & speaker registration</h4>
       </div>
       <img src="../../assets/Login/plus.svg" alt="add" class="grow" @click="openCreatePromoCode" />

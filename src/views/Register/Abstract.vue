@@ -439,7 +439,13 @@ export default {
           .dispatch("saveAbstractRegistrationDetails", payload)
           .then(() => {
             this.$store.state.isSavingForm = false;
-            this.$router.push("/");
+            this.$router.push({
+              name: "SuccessfulRegistration",
+              params: {
+                type: "Poster",
+                detail: this.detail
+              }
+            });
             this.$store.state.navItem = 1;
           })
           .catch(resp => {
