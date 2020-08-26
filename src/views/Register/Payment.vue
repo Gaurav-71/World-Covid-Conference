@@ -236,10 +236,10 @@
               <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
               <span v-else>${{detail.fee}}</span>
             </p>
-            <p>
-              Phone Number :
-              <span>+91-8105320806</span>
-            </p>
+            <a
+              href="https://paypal.me/worldcovidconference?locale.x=en_GB"
+              target="_blank"
+            >Click Here to pay, Please pay on paypal and return here to complete registration</a>
           </div>
         </div>
         <div
@@ -296,7 +296,7 @@
       mode="out-in"
       appear
     >
-      <Loading :message="'Thank You For Registering With Us !'" />
+      <Loading :heading="'Saving Details'" :message="'Thank You For Registering With Us !'" />
     </transition>
   </div>
 </template>

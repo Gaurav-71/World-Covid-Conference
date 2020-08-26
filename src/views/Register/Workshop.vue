@@ -876,13 +876,13 @@ export default {
       this.countryStatus = this.checkCountryStatus();
       if (this.detail.profession == "s") {
         // student
-        this.detail.amount = this.detail.country == "India" ? 1500 : 22;
+        this.detail.amount = this.detail.country == "India" ? 1000 : 20;
       } else if (this.detail.qualification == 1) {
         // teacher
-        this.detail.amount = this.detail.country == "India" ? 2000 : 32;
+        this.detail.amount = this.detail.country == "India" ? 1500 : 50;
       } else {
         // industry & other
-        this.detail.amount = this.detail.country == "India" ? 3000 : 42;
+        this.detail.amount = this.detail.country == "India" ? 2000 : 100;
       }
       switch (this.countryStatus) {
         case 1: //underdeveloped
@@ -892,7 +892,7 @@ export default {
           this.detail.discount = 50;
           break;
         case 3: //developed
-          this.detail.discount = 0;
+          this.detail.discount = 30;
           break;
       }
       this.detail.finalAmount =

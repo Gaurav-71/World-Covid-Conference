@@ -13,7 +13,8 @@
         <th>Country</th>
         <th>Title</th>
         <th>Authors</th>
-        <th>Abstract Submission</th>
+        <th>Poster</th>
+        <th>Abstract</th>
       </tr>
       <tr v-for="detail in $store.getters.getAbstracts" :key="detail.id">
         <td>{{detail.detail.name}}</td>
@@ -23,6 +24,9 @@
         <td>{{detail.detail.country}}</td>
         <td>{{detail.detail.title}}</td>
         <td>{{detail.detail.authors}}</td>
+        <td>
+          <a :href="detail.detail.posterFile" target="_blank">Download</a>
+        </td>
         <td>
           <a :href="detail.detail.abstractFile" target="_blank">Download</a>
         </td>

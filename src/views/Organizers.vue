@@ -260,6 +260,24 @@
                 </div>
                 <h4>Department of Medicine and Surgery, Università Milano Bicocca</h4>
               </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-41.jpg" alt="organizer" />
+                <h3>Dr. Rosayda Zubieta</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>Director, IBESE Mental Health Institute Bolivia</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-39.jpg" alt="organizer" />
+                <h3>Lucrecia De Urioste</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>High Altitude Pulmonary and Pathology Institute</h4>
+              </div>
             </div>
           </section>
         </div>

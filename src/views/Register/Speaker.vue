@@ -342,7 +342,7 @@
       mode="out-in"
       appear
     >
-      <Loading :message="'Thank You For Registering With Us !'" />
+      <Loading :heading="'Saving Details'" :message="'Thank You For Registering With Us !'" />
     </transition>
   </div>
 </template>

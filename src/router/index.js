@@ -30,6 +30,7 @@ import Conference from "../views/Admin/Registrations/Conference.vue";
 import RegistrationSpeakers from "../views/Admin/Registrations/Speakers.vue";
 import Sponsor from "../views/Admin/Registrations/Sponsors.vue";
 import Workshop from "../views/Admin/Registrations/Workshop.vue";
+import Pricing from "../views/Pricing.vue";
 
 Vue.use(VueRouter);
 
@@ -140,6 +141,11 @@ const routes = [
     path: "/registration",
     name: "Register",
     component: Register,
+  },
+  {
+    path: "/Pricing",
+    name: "Pricing",
+    component: Pricing,
   },
   {
     path: "/successfulregistration",

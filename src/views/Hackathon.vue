@@ -34,7 +34,7 @@
             </div>
             <div class="detail">
               <img src="../assets/Hackathon/time.svg" alt="time" />
-              <p>23rd August 2020, Last date for concept registration & submission</p>
+              <p>23rd August 2020, Last date for registration & submission</p>
             </div>
             <div class="detail">
               <img src="../assets/Hackathon/diploma.svg" alt="time" />

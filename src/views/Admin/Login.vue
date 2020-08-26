@@ -21,13 +21,14 @@
         />
         <div v-if="$store.state.isLoggingIn" @click="logIn" class="btn">Log In</div>
         <Loading
+          :heading="''"
           :message="'Logging In'"
           v-if="!$store.state.isLoggingIn"
           style="margin-top: 2.5rem;"
         />
         <p class="iphones">To access administrator controls please use a laptop or tablet</p>
       </div>
-    </transition>    
+    </transition>
   </div>
 </template>
 
@@ -165,9 +166,9 @@ export default {
     .btn:active {
       transform: scale(0.95);
     }
-    p{
-      display:none;
-      @include iphone{
+    p {
+      display: none;
+      @include iphone {
         display: block;
         padding: 1rem;
         text-align: center;

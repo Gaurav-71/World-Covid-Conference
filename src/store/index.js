@@ -334,20 +334,20 @@ export default new Vuex.Store({
     async saveAbstractRegistrationDetails(context, payload) {
       console.log(context);
       try {
-        if (payload.abstractFile) {
+        if (payload.allFiles.abstractFile) {
           await fireDatabase
             .ref("participantAbstracts")
-            .push(payload.abstractFile)
+            .push(payload.allFiles.abstractFile)
             .then((data) => {
               let key = data.key;
               return key;
             })
             .then((key) => {
-              const filename = payload.abstractFile.name;
+              const filename = payload.allFiles.abstractFile.name;
               const ext = filename.slice(filename.lastIndexOf("."));
               return fireStorage
                 .ref("participantAbstracts/" + key + "." + ext)
-                .put(payload.abstractFile);
+                .put(payload.allFiles.abstractFile);
             })
             .then(async (filedata) => {
               let imageUrl = null;
@@ -355,6 +355,29 @@ export default new Vuex.Store({
                 imageUrl = url;
               });
               payload.detail.abstractFile = imageUrl;
+            });
+        }
+        if (payload.allFiles.posterFile) {
+          await fireDatabase
+            .ref("participantAbstracts")
+            .push(payload.allFiles.posterFile)
+            .then((data) => {
+              let key = data.key;
+              return key;
+            })
+            .then((key) => {
+              const filename = payload.allFiles.posterFile.name;
+              const ext = filename.slice(filename.lastIndexOf("."));
+              return fireStorage
+                .ref("participantAbstracts/" + key + "." + ext)
+                .put(payload.allFiles.posterFile);
+            })
+            .then(async (filedata) => {
+              let imageUrl = null;
+              await filedata.ref.getDownloadURL().then((url) => {
+                imageUrl = url;
+              });
+              payload.detail.posterFile = imageUrl;
             });
         }
         await db.collection("AbstractRegistration").add(payload.detail);
@@ -557,7 +580,7 @@ export default new Vuex.Store({
     async loadActivity(context) {
       let response = db
         .collection("Activity")
-        .orderBy("timestamp", "asc")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {
@@ -606,7 +629,7 @@ export default new Vuex.Store({
     async loadHackathon(context) {
       let response = db
         .collection("HackathonRegistration")
-        .orderBy("timestamp", "asc")
+        .orderBy("file", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {

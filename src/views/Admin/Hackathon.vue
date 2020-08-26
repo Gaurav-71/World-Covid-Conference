@@ -1,7 +1,7 @@
 <template>
   <div class="registration">
     <div class="heading-1">
-      <h1>Concept / Idea Submission | {{$store.getters.getHackathon.length}}</h1>
+      <h1>Idea Submission | Registered : {{$store.getters.getHackathon.length}}, Submitted : {{submittedParticipants}}</h1>
       <h4>Personal information provided by the participants with their idea submissions</h4>
     </div>
     <table>
@@ -32,8 +32,13 @@ export default {
   data() {
     return {
       unsubscribe: null,
-      length: null
+      submitted: 0
     };
+  },
+  methods: {
+    incrementSubmissions() {
+      this.submitted += 1;
+    }
   },
   mounted() {
     this.$store
@@ -44,6 +49,18 @@ export default {
       .catch(err => {
         alert(err);
       });
+  },
+  computed: {
+    submittedParticipants: function() {
+      for (var i = 0; i < this.$store.getters.getHackathon.length; i++) {
+        if (this.$store.getters.getHackathon[i].detail.file.length > 2) {
+          this.incrementSubmissions();
+        } else {
+          break;
+        }
+      }
+      return this.submitted / 2;
+    }
   }
 };
 </script>

@@ -849,7 +849,7 @@ export default {
             : 150;
       } else {
         // industry & other
-        this.detail.amount = this.detail.country == "India" ? 9354 : 250;
+        this.detail.amount = this.detail.country == "India" ? 5612 : 250;
       }
       switch (this.countryStatus) {
         case 1: //underdeveloped
@@ -859,7 +859,7 @@ export default {
           this.detail.discount = 50;
           break;
         case 3: //developed
-          this.detail.discount = 0;
+          this.detail.discount = 50;
           break;
       }
       this.detail.finalAmount =

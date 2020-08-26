@@ -303,7 +303,39 @@
         </div>
         <div class="card talk">
           <div class="heading">
+            <h2>Poster</h2>
+            <div class="line"></div>
+          </div>
+          <form>
+            <div class="input">
+              <label>Title</label>
+              <input type="text" placeholder="Enter Title" class="title" v-model="detail.title1" />
+            </div>
+            <div class="input">
+              <label>Presenting Author</label>
+              <input
+                type="text"
+                placeholder="Enter Authors"
+                class="author"
+                v-model="detail.authors1"
+              />
+            </div>
+          </form>
+          <div class="input file-type">
+            <label>Poster</label>
+            <input type="file" class="student-id" ref="posterFile" @change="onPosterPicked" />
+            <div @click="pickPoster" class="btn my-btn shake">Upload File</div>
+            <p
+              class="upload-msg"
+              v-if=" !posterFileName == ''"
+            >Uploaded {{posterFileName}} succesfully !</p>
+            <p class="upload-msg" v-else>No file uploaded</p>
+          </div>
+        </div>
+        <div class="card talk">
+          <div class="heading">
             <h2>Abstract</h2>
+            <h4 style="margin:0; font-weight:lighter;">Leave empty if there is no abstract to submit</h4>
             <div class="line"></div>
           </div>
           <form>
@@ -349,7 +381,7 @@
       mode="out-in"
       appear
     >
-      <Loading :message="'Thank You For Registering With Us !'" />
+      <Loading :heading="'Saving Details'" :message="'Thank You For Registering With Us !'" />
     </transition>
     <transition name="fade" appear>
       <Error :obj="error" :emptyStr="true" />
@@ -379,12 +411,17 @@ export default {
         //talk
         title: "",
         authors: "",
+        title1: "",
+        authors1: "",
         //file
         abstractFile: "",
+        posterFile: "",
         timestamp: null
       },
       abstractFile: null,
       abstractFileName: "",
+      posterFile: null,
+      posterFileName: "",
       error: {
         isVisible: false,
         message: {
@@ -398,6 +435,9 @@ export default {
     pickFile() {
       this.$refs.abstractFile.click();
     },
+    pickPoster() {
+      this.$refs.posterFile.click();
+    },
     onFilePicked(event) {
       const files = event.target.files;
       const fileReader = new FileReader();
@@ -405,6 +445,14 @@ export default {
       fileReader.readAsDataURL(files[0]);
       this.abstractFile = files[0];
       this.abstractFileName = this.abstractFile.name;
+    },
+    onPosterPicked(event) {
+      const files = event.target.files;
+      const fileReader = new FileReader();
+      fileReader.addEventListener("load", () => {});
+      fileReader.readAsDataURL(files[0]);
+      this.posterFile = files[0];
+      this.posterFileName = this.posterFile.name;
     },
     allFieldsFilled() {
       if (this.detail.name == "") {
@@ -417,21 +465,19 @@ export default {
         return "Affiliation";
       } else if (this.detail.country == "") {
         return "Country - Postal Address";
-      } else if (this.detail.title == "") {
-        return "Talk Title";
-      } else if (this.detail.authors == "") {
-        return "Talk Title";
-      } else if (this.abstractFileName == "") {
-        return "Abstract File";
       }
       return "allFilled";
     },
     validate() {
       let validation = this.allFieldsFilled();
+      let allFiles = {
+        abstractFile: this.abstractFile,
+        posterFile: this.posterFile
+      };
       if (validation == "allFilled") {
         this.detail.timestamp = Date(Date.now());
         let payload = {
-          abstractFile: this.abstractFile,
+          allFiles: allFiles,
           detail: this.detail
         };
         this.$store.state.isSavingForm = true;

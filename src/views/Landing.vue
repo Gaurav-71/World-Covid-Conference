@@ -1,260 +1,3 @@
-<!---<template>
-  <main class="abou">
-    <section class="landing">
-      <div class="home-wrap">
-        <div class="home-inner"></div>
-      </div>
-    </section>
-    <section class="about-conf">
-      <h1>Welcome</h1>
-      <p style="line-height: 1.5rem;">
-        Current pandemic times, unveil all continents’ unpreparedness and worldwide sorrow.
-        In this unique conference, we, as a multidisciplinary independent group, gather numerous international personalities directly involved in testing, preventing, treating, and striving to find a cure for COVID-19 pandemic.
-        This global platform provides an extraordinary opportunity for diverse groups of people to attend and learn about the virus characteristics and potential ways of fighting it.
-        We, scientists, from India’s “Bengaluru Genomics Center (BGC)” and Bolivia’s “High Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)”, accompanied by extraordinary worldwide profesional individuals, aim to encourage the world to unite and to restore humanity, together.
-      </p>
-    </section>
-    <section class="themes">
-      <h1>Theme of the Conference</h1>
-      <div class="themes-container">
-        <ul>
-          
-        </ul>
-        <div class="date">
-          <div class="dtl-container">
-            <div class="dtl mr">
-              <img src="../assets/Landing/calendar.svg" alt="date" />
-              <div class="data">
-                <div class="d1">Date</div>
-                <div class="d2">August 27-30, 2020</div>
-                <div class="d3">Thursday to Saturday</div>
-              </div>
-            </div>
-            <div class="dtl">
-              <img src="../assets/Landing/time.svg" alt="time" />
-              <div class="data">
-                <div class="d1">Time</div>
-                <div class="d2">India : 7am-11am & 4pm-9pm</div>
-                <div class="d3">Bolivia : 9:30am-1:30pm & 6:30am-11:30am</div>
-              </div>
-            </div>
-            <h3>Post Conference Workshop on Bioinformatics of Covid-19</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="download-container">
-      <div class="btn-container">
-        <div @click="route(1)" class="btn">Register For Conference Now</div>
-      </div>
-      <p
-        style="text-align: center;"
-      >Disclaimer : All funds collected as registration fee go to COVID-19 research and education</p>
-    </div>
-    <section class="pictures">
-      <h2>
-        Check out our previous conference on Corona Viral Genomics
-        <a
-          href="https://www.bgc-genomics.com/ICCVG/home.html"
-          target="_blank"
-        >here</a>
-      </h2>
-    </section>
-    <div class="download-container">
-      <div class="btn-container">
-        <a
-          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FConference.JPG?alt=media&token=d7768470-f6a3-4c8b-a256-d8ce41cd10d5"
-          download
-          target="_blank"
-          class="btn"
-        >Download Conference Brochure</a>
-        <a
-          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHackathon.jpeg?alt=media&token=278b7a03-a38d-4337-bcec-a64f2d53b987"
-          download
-          target="_blank"
-          class="btn"
-        >Download Hackathon Brochure</a>
-        <a
-          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FWorkshop.JPG?alt=media&token=60dc560e-a152-46a9-b89f-85a7e1bf1b58"
-          download
-          target="_blank"
-          class="btn"
-        >Download Workshop Brochure</a>
-        <a
-          href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FSchedule.xlsx?alt=media&token=d5964feb-9a72-4a96-a57d-5a862567e041"
-          download
-          target="_blank"
-          class="btn"
-        >Download Schedule/Program</a>
-      </div>
-    </div>
-  </main>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0
-    };
-  },
-  methods: {
-    route(page) {
-      switch (page) {
-        case 1:
-          this.$store.state.navItem = 5;
-          this.$router.push("/registration");
-          break;
-      }
-    }
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-@import "../scss/colors";
-.abou {
-  .landing {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: table;
-    z-index: 0;
-  }
-  .home-wrap {
-    clip: rect(0, auto, auto, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .home-inner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/Landing/desktop3.png");
-    background-size: cover;
-    background-position: center center;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    will-change: transform;
-    @include iphone {
-      background-image: url("../assets/Landing/iphone7.png");
-    }
-  }
-
-  h1,
-  h2 {
-    color: $primary;
-  }
-
-  .about-conf,
-  .themes,
-  .pictures {
-    padding: 0 2rem;
-    h1 {
-      margin-bottom: none;
-    }
-  }
-
-  .themes-container {
-    display: flex;
-    justify-content: space-between;
-    @include iphone {
-      flex-wrap: wrap;
-    }
-    ul {
-      margin-top: 0;
-    }
-  }
-
-  .dtl-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    //justify-content: flex-start;
-    align-items: flex-start;
-    //margin: 0rem 0 1rem 0;
-    @include iphone {
-      margin-top: 1.5rem;
-    }
-    .dtl {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      img {
-        width: 70px;
-        height: 70px;
-      }
-      .data {
-        margin-left: 1rem;
-        .d1 {
-          font-weight: bolder;
-          color: $primary;
-          font-size: large;
-          margin-bottom: 0.1rem;
-        }
-        .d2,
-        .d3 {
-          font-size: medium;
-          font-weight: lighter;
-        }
-        .d2 {
-          margin-bottom: 0.1rem;
-        }
-      }
-    }
-    h3 {
-      text-align: center;
-      margin: 1rem 0;
-      color: darken($primary, 10%);
-      @include iphone {
-        margin: 1.5rem 0;
-      }
-    }
-  }
-  .btn-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    @include ipad-portrait {
-      flex-wrap: wrap;
-    }
-    @include iphone {
-      flex-wrap: wrap;
-    }
-    .btn {
-      margin: 1rem;
-      padding: 1rem 2rem;
-      background: $gradient;
-      border-radius: 1rem;
-      color: white;
-      cursor: pointer;
-    }
-    .btn:active {
-      transform: scale(0.95);
-    }
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
-  @media all and (max-width: 330px) {
-    .home-inner {
-      max-width: 100vw;
-    }
-  }
-}
-</style> --->
-
 <template>
   <div class="landing-page">
     <section class="landing">
@@ -271,7 +14,15 @@ export default {
             <h4 @click="route(2)">View Schedule</h4>
           </div>
         </div>
-        <div @click="route(5)" class="btn">Register Now</div>
+        <div class="date">
+          <div class="data data-2">
+            <div @click="route(5)" class="btn flashy">Register Now</div>
+            <h3 style="text-align:center;" @click="route(10)">
+              Exciting prices & discounts,
+              <span style="color:#e4335c;">Click here</span>
+            </h3>
+          </div>
+        </div>
       </div>
       <div class="circle days">
         <h1>{{days}}</h1>
@@ -292,7 +43,7 @@ export default {
     </section>
     <section class="welcome">
       <div class="heading">
-        <h1>Welcome</h1>
+        <h1>COVID-19: One Problem, One World</h1>
         <div class="small-line"></div>
       </div>
       <p>
@@ -364,9 +115,43 @@ export default {
           <img src="../assets/Landing/dna.svg" alt="testing" />
           <p>Bioinformatics & Genomics</p>
         </div>
+        <div class="item">
+          <img src="../assets/Landing/heartbeat.svg" alt="testing" />
+          <p>Public Health</p>
+        </div>
+        <div class="item">
+          <img src="../assets/Landing/it.svg" alt="testing" />
+          <p>Information Technology</p>
+        </div>
+        <div class="item">
+          <img src="../assets/Landing/insight.svg" alt="testing" />
+          <p>Industry Products and Solutions</p>
+        </div>
       </div>
     </section>
     <section class="registrations">
+      <div class="heading">
+        <h1>Registration Benefits</h1>
+        <div class="small-line"></div>
+      </div>
+      <div class="benefits">
+        <div class="benefit">
+          <img src="../assets/Landing/webinar.svg" alt />
+          <h4>Live Conference Zoom Access</h4>
+        </div>
+        <div class="benefit">
+          <img src="../assets/Landing/meeting.svg" alt />
+          <h4>Open discussions after each presentation</h4>
+        </div>
+        <div class="benefit">
+          <img src="../assets/Hackathon/diploma.svg" alt />
+          <h4>E-Certificates</h4>
+        </div>
+        <div class="benefit">
+          <img src="../assets/Landing/record.svg" alt />
+          <h4>Conference Recordings Access, uploaded within one week after the Congress (For further details, please contact us)</h4>
+        </div>
+      </div>
       <div class="heading">
         <h1>Registration</h1>
         <div class="small-line"></div>
@@ -380,7 +165,7 @@ export default {
             <img src="../assets/Register/target.svg" alt="participants" />
             <h2>Conference</h2>
             <ul>
-              <li>Accessible Prices</li>
+              <li class="link">Last minute deals, Hurry now and register !</li>
               <li>Special Discounts For Students</li>
               <li>75% Dicount for residents of underdeveloped countries</li>
               <li>50% Discount for residents of devoloping countries</li>
@@ -423,6 +208,13 @@ export default {
           <div @click="route(7)" class="action">Register for Workshop</div>
         </div>
       </div>
+      <h4
+        @click="route(10)"
+        style="width: 100%; text-align: center;padding: 0 1rem; margin:0 0 1rem 0;"
+      >
+        For more details about pricing,
+        <span class="link">Click here</span>
+      </h4>
     </section>
     <section class="rolling-speakers">
       <div class="heading">
@@ -431,6 +223,10 @@ export default {
       </div>
       <div class="speakers-containers">
         <div class="speakers">
+          <div class="speaker">
+            <img src="../assets/Heading/presentation.svg" alt="mg" />
+            <h3>Speakers</h3>
+          </div>
           <div class="speaker">
             <img src="../assets/organizers/org-9.jpg" alt />
             <h3>Dr. Gustavo Zubieta</h3>
@@ -444,16 +240,20 @@ export default {
             <h3>Dr. Oscar Murillo</h3>
           </div>
           <div class="speaker">
+            <img src="../assets/organizers/org-37.jpg" alt />
+            <h3>Dr. Robert Gallo</h3>
+          </div>
+          <div class="speaker">
             <img src="../assets/organizers/org-24.jpg" alt />
             <h3>Dr. Murray Epstein</h3>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-31.jpg" alt />
-            <h3>Andrew Pollard</h3>
+            <h3>Prof. Andrew Pollard</h3>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-34.jpg" alt />
-            <h3>Paolo Pelosi</h3>
+            <h3>Prof. Paolo Pelosi</h3>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-26.jpg" alt />
@@ -520,7 +320,7 @@ export default {
     <section class="videos">
       <div class="heading">
         <h1>A message from the organizers</h1>
-        <div class="small-line"></div>
+        <div class="small-line" style="margin-top: 1.25rem; "></div>
       </div>
       <div class="video-container">
         <iframe
@@ -534,6 +334,35 @@ export default {
           src="https://www.youtube.com/embed/xLaOdzSPBCA"
           frameborder="0"
           class="margin"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="margin"
+          src="https://www.youtube.com/embed/ETU5SvXysGU"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="margin"
+          src="https://www.youtube.com/embed/zxGU_cGBpMc"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="margin"
+          src="https://www.youtube.com/embed/PkgP23cuQ7w"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <iframe
+          class="margin"
+          src="https://www.youtube.com/embed/Bhrpf0hmuic"
+          frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
@@ -658,7 +487,7 @@ export default {
     <div class="brochures">
       <div class="heading">
         <h1>Brochures</h1>
-        <div class="small-line"></div>
+        <div class="small-line" style="margin-bottom: 1.3rem;"></div>
       </div>
       <div class="download-container">
         <div class="card grow">
@@ -667,7 +496,7 @@ export default {
             <h2>Conference</h2>
           </div>
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FConference.JPG?alt=media&token=d7768470-f6a3-4c8b-a256-d8ce41cd10d5"
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fconference.pdf?alt=media&token=dffd0e0d-6ecd-4561-9e5a-93df2dc627d4"
             download
             target="_blank"
             class="btn"
@@ -703,22 +532,36 @@ export default {
             <h2>Program/Schedule</h2>
           </div>
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FSchedule.xlsx?alt=media&token=d5964feb-9a72-4a96-a57d-5a862567e041"
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fschedule.xlsx?alt=media&token=18eb2d0e-1426-4a43-894f-08590a800849"
             download
             target="_blank"
             class="btn"
           >Download</a>
         </div>
       </div>
+      <h3 style="width: 100%; text-align: center;">
+        Check out our previous conference on Corona Viral Genomics
+        <a
+          href="https://www.bgc-genomics.com/ICCVG/home.html"
+          target="_blank"
+          class="link"
+        >here</a>
+      </h3>
     </div>
-    <h3 style="width: 100%; text-align: center;">
-      Check out our previous conference on Corona Viral Genomics
-      <a
-        href="https://www.bgc-genomics.com/ICCVG/home.html"
-        target="_blank"
-        class="link"
-      >here</a>
-    </h3>
+    <div class="condolence">
+      <div class="heading">
+        <h1>Condolences</h1>
+        <div class="small-line"></div>
+      </div>
+      <p>We deeply regret to inform the sad demise of Dr. M Manoharan who was a victim to COVID-19. He was a great source of inspiration to many and we acknowledge his services to the research community</p>
+      <iframe
+        class="cond"
+        src="https://www.youtube.com/embed/WL9lwnycDcQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
 </template>
 
@@ -789,6 +632,9 @@ export default {
           break;
         case 9:
           this.$router.push("/organizers");
+          break;
+        case 10:
+          this.$router.push("/pricing");
           break;
       }
     },
@@ -886,7 +732,8 @@ export default {
           width: 55px;
           height: 55px;
         }
-        .data {
+        .data,
+        .data-2 {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -906,6 +753,13 @@ export default {
             color: darken(#e4335c, 10%);
           }
         }
+        .data-2 {
+          align-items: center;
+          h3 {
+            color: #2a176d;
+            margin: 0.8rem 0;
+          }
+        }
         margin-bottom: 1rem;
       }
       .btn {
@@ -922,6 +776,16 @@ export default {
       }
       .btn:active {
         transform: scale(0.9);
+      }
+      .flashy {
+        background-image: $gradient-red;
+        animation: shake-btn 1s linear infinite;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+      .flashy:hover {
+        background-image: $gradient-red;
       }
     }
     .circle {
@@ -1105,6 +969,37 @@ export default {
         }
       }
     }
+    .benefits {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      overflow: hidden;
+      @include iphone {
+        flex-wrap: wrap;
+        padding: 1rem 0;
+      }
+      .benefit {
+        width: 22.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include iphone {
+          margin: 1rem 0;
+          width: 100%;
+        }
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        h4 {
+          text-align: center;
+          font-weight: lighter;
+          padding: auto 0.5rem;
+        }
+      }
+    }
   }
   .rolling-speakers {
     width: 100%;
@@ -1191,7 +1086,8 @@ export default {
   }
   .videos,
   .gallery,
-  .brochures {
+  .brochures,
+  .condolence {
     width: 100%;
     margin: 0.7rem 0;
     padding: 0.5rem 0;
@@ -1203,8 +1099,9 @@ export default {
     .video-container {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       margin: 2rem 0;
       @include ipad-portrait {
         flex-wrap: wrap;
@@ -1212,6 +1109,7 @@ export default {
       .margin {
         width: 560px;
         height: 315px;
+        margin: 1.25rem;
         @include ipad-portrait {
           margin: 1rem 0;
         }
@@ -1314,6 +1212,27 @@ export default {
       }
     }
   }
+  .condolence {
+    background-image: $background-1;
+    background-position: center;
+    background-repeat: no-repeat;
+    .cond {
+      width: 560px;
+      height: 315px;
+      @include ipad-portrait {
+        margin: 1rem 0;
+      }
+      @include iphone {
+        width: 320px;
+        height: 220px;
+      }
+    }
+    p {
+      padding: 0.5rem 3rem;
+      line-height: 2rem;
+      text-align: center;
+    }
+  }
   .link {
     color: #e4335c;
     cursor: pointer;
@@ -1329,6 +1248,18 @@ export default {
   }
   100% {
     transform: translateX(-400%);
+  }
+}
+
+@keyframes shake-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 </style>

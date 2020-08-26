@@ -93,8 +93,13 @@ $gradient-red: radial-gradient(
     rgba(230, 230, 230, 0.05) 100%
   ),
   linear-gradient(90deg, rgb(73, 88, 224), rgb(187, 114, 141));*/
-  $gradient: linear-gradient(90deg, rgb(79, 30, 218) 0%,rgb(104, 100, 218) 33%,rgb(35, 219, 162) 100%);
-  $gradient-3: radial-gradient(
+$gradient: linear-gradient(
+  90deg,
+  rgb(79, 30, 218) 0%,
+  rgb(104, 100, 218) 33%,
+  rgb(35, 219, 162) 100%
+);
+$gradient-3: radial-gradient(
     circle at 58% 50%,
     hsla(89, 0%, 28%, 0.1) 0%,
     hsla(89, 0%, 28%, 0.1) 60%,
@@ -269,7 +274,7 @@ $background-1: radial-gradient(
   linear-gradient(90deg, hsla(245, 0%, 100%, 1), hsla(230, 0%, 100%, 1));
 //$primary: #6164cb;
 //$primary: #d7385e;
-$primary: darken(#3eabb8,3%);
+$primary: darken(#3eabb8, 3%);
 $button: radial-gradient(
     circle at 79% 30%,
     rgba(230, 230, 230, 0.04) 0%,

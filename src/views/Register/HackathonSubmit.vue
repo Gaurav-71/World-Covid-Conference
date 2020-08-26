@@ -14,7 +14,7 @@
       mode="out-in"
       appear
     >
-      <div>
+      <div v-if="hasLoaded">
         <div class="card personal-information">
           <div class="heading">
             <h2>Verification</h2>
@@ -54,6 +54,7 @@
           </div>
         </transition>
       </div>
+      <Loading v-else :heading="'Loading'" :message="'Fetching all participants'" />
     </transition>
     <div v-if="participantExists" @click="validate" class="btn shake">Submit</div>
     <div>
@@ -70,7 +71,7 @@
       mode="out-in"
       appear
     >
-      <Loading :message="'Thank You For Registering With Us !'" />
+      <Loading :heading="'Saving Details'" :message="'Thank You For Registering With Us !'" />
     </transition>
   </div>
 </template>
@@ -87,6 +88,7 @@ export default {
   name: "Participant",
   data() {
     return {
+      hasLoaded: false,
       countryStatus: null,
       hackFile: null,
       hackFileName: "",
@@ -120,39 +122,27 @@ export default {
       this.message = "";
       this.participantExists = false;
       let hasUploaded = false;
-      this.$store
-        .dispatch("loadHackathonEmails", this.detail)
-        .then(resp => {
-          this.unsubscribe = resp;
-          for (
-            var i = 0;
-            i < this.$store.getters.getHackathonEmails.length;
-            i++
-          ) {
-            if (this.$store.getters.getHackathonEmails[i].email == this.email) {
-              if (this.$store.getters.getHackathonEmails[i].file.length <= 2) {
-                this.participantExists = true;
-                this.id = this.$store.getters.getHackathonEmails[i].id;
-              } else {
-                hasUploaded = true;
-              }
-              break;
-            }
+      for (var i = 0; i < this.$store.getters.getHackathonEmails.length; i++) {
+        if (this.$store.getters.getHackathonEmails[i].email == this.email) {
+          if (this.$store.getters.getHackathonEmails[i].file.length <= 2) {
+            this.participantExists = true;
+            this.id = this.$store.getters.getHackathonEmails[i].id;
+          } else {
+            hasUploaded = true;
           }
-          if (!this.participantExists) {
-            if (hasUploaded) {
-              this.message =
-                "You have already made a submision, multiple submissions aren't allowed !";
-            } else {
-              this.message =
-                "This participant doesn't exist, please register to make a submission";
-              this.participantExists = false;
-            }
-          }
-        })
-        .catch(resp => {
-          console.log(resp);
-        });
+          break;
+        }
+      }
+      if (!this.participantExists) {
+        if (hasUploaded) {
+          this.message =
+            "You have already made a submision, multiple submissions aren't allowed !";
+        } else {
+          this.message =
+            "This participant doesn't exist, please register to make a submission";
+          this.participantExists = false;
+        }
+      }
     },
     allFieldsFilled() {
       if (this.hackFileName == "") {
@@ -184,6 +174,17 @@ export default {
         this.error.isVisible = true;
       }
     }
+  },
+  mounted() {
+    this.$store
+      .dispatch("loadHackathonEmails", this.detail)
+      .then(resp => {
+        this.unsubscribe = resp;
+        this.hasLoaded = true;
+      })
+      .catch(resp => {
+        console.log(resp);
+      });
   }
 };
 </script>

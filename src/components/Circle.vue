@@ -1,6 +1,6 @@
 <template>
-  <div class="loading-container">    
-    <h4 class="h4">Saving Details</h4>
+  <div class="loading-container">
+    <h4 class="h4">{{heading}}</h4>
     <div class="sk-fading-circle">
       <div class="sk-circle1 sk-circle"></div>
       <div class="sk-circle2 sk-circle"></div>
@@ -22,7 +22,8 @@
 <script>
 export default {
   props: {
-    message: String
+    message: String,
+    heading: String
   }
 };
 </script>
@@ -30,7 +31,7 @@ export default {
 <style lang="scss">
 @import "../scss/colors";
 
-.loading-container{
+.loading-container {
   height: 78%;
   display: flex;
   justify-content: center;
@@ -40,12 +41,12 @@ export default {
 
 .h4 {
   color: grey;
-  font-weight: lighter;  
+  font-weight: lighter;
   text-align: center;
   margin: 2rem 0;
 }
 
-.sk-fading-circle {  
+.sk-fading-circle {
   width: 100px;
   height: 100px;
   position: relative;
@@ -65,7 +66,7 @@ export default {
   margin: 0 auto;
   width: 15%;
   height: 15%;
-  background-color: $primary; 
+  background-color: $primary;
   -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
   animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
 }

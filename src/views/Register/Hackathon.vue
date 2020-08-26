@@ -1,4 +1,5 @@
 <template>
+  <!---
   <div v-if="!$store.state.isSavingForm" class="register">
     <div class="card header">
       <img src="../../assets/Register/hackathon.svg" alt="participant" />
@@ -482,19 +483,20 @@
       mode="out-in"
       appear
     >
-      <Loading :message="'Thank You For Registering With Us !'" />
+      <Loading :heading="'Saving Details'" :message="'Thank You For Registering With Us !'" />
     </transition>
-  </div>
+  </div>  --->
+  <div class="register">Registrations Are Closed</div>
 </template>
 
 <script>
-import Error from "../../components/Error.vue";
-import Loading from "../../components/Circle.vue";
+//import Error from "../../components/Error.vue";
+//import Loading from "../../components/Circle.vue";
 
 export default {
   components: {
-    Error,
-    Loading
+    //Error
+    //  Loading
   },
   name: "Participant",
   data() {
