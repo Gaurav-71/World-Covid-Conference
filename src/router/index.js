@@ -31,6 +31,7 @@ import RegistrationSpeakers from "../views/Admin/Registrations/Speakers.vue";
 import Sponsor from "../views/Admin/Registrations/Sponsors.vue";
 import Workshop from "../views/Admin/Registrations/Workshop.vue";
 import Pricing from "../views/Pricing.vue";
+import SpeakerAbstracts from "../views/Abstracts.vue";
 
 Vue.use(VueRouter);
 
@@ -151,6 +152,12 @@ const routes = [
     path: "/successfulregistration",
     name: "SuccessfulRegistration",
     component: SuccessfulRegistration,
+    props: true,
+  },
+  {
+    path: "/SpeakerAbstracts",
+    name: "SpeakerAbstracts",
+    component: SpeakerAbstracts,
     props: true,
   },
   {

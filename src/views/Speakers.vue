@@ -15,34 +15,7 @@
       appear
     >
       <div class="speaker-container">
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-43.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/australia.png" alt="flag" />
-              <span>Australia</span>
-            </div>
-            <h3>Dr. Lindsay Brown</h3>
-            <h4>University of Southern Queesland Toowoomba</h4>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-59.jpeg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/austria.png" alt="flag" />
-              <span>Austria</span>
-            </div>
-            <h3>Prof. Thomas Binder,</h3>
-            <h4>Cardiologist Vienna General Hospital</h4>
-          </div>
-        </div>
-        <div class="card">
+        <div @click="expandAbstract(1)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-4.jpg" alt="mg" />
           </div>
@@ -55,7 +28,33 @@
             <h4>Director, Iberoamerican Network of Digital health</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(2)" class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-43.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/australia.png" alt="flag" />
+              <span>Australia</span>
+            </div>
+            <h3>Dr. Lindsay Brown</h3>
+            <h4>University of Southern Queensland Toowoomba</h4>
+          </div>
+        </div>
+        <div @click="expandAbstract(3)" class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-59.jpeg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/austria.png" alt="flag" />
+              <span>Austria</span>
+            </div>
+            <h3>Prof. Thomas Binder,</h3>
+            <h4>Cardiologist Vienna General Hospital</h4>
+          </div>
+        </div>
+        <div @click="expandAbstract(4)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-9.jpg" alt="mg" />
           </div>
@@ -68,7 +67,7 @@
             <h4>Head, High Altitude Pulmonary and Pathology Institute</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(5)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-62.jpg" alt="mg" />
           </div>
@@ -81,7 +80,7 @@
             <h4>Hospital Agramont, El Alto</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(6)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-36.jpg" alt="mg" />
           </div>
@@ -94,7 +93,7 @@
             <h4>Hospital Del Norte, El Alto</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(7)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-32.jpg" alt="mg" />
           </div>
@@ -107,7 +106,7 @@
             <h4>Prof. of Med., University of British Columbia</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(8)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-28.jpg" alt="mg" />
           </div>
@@ -120,7 +119,7 @@
             <h4>Institut Universitaire de Cardiologie, Université Laval</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(9)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-52.jpg" alt="mg" />
           </div>
@@ -133,7 +132,7 @@
             <h4>Head NeuroICU INDISA Clinic</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(10)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-35.jpg" alt="mg" />
           </div>
@@ -146,7 +145,7 @@
             <h4>Pneumology Epidemiology Hospital, Universidad Javeriana</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(11)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-19.jpg" alt="mg" />
           </div>
@@ -159,7 +158,7 @@
             <h4>Pulmonologist, Hospital Metropolitano</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(12)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-44.jpg" alt="mg" />
           </div>
@@ -169,10 +168,10 @@
               <span>Ethiopia</span>
             </div>
             <h3>Dr. Girma Ababi</h3>
-            <h4>LIYANA Healthcare, Vice President for the National Ethiopian Private health sector</h4>
+            <h4>LIYANA Healthcare, Vice President for the National Ethiopian Private Health Sector</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(13)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-61.jpeg" alt="mg" />
           </div>
@@ -185,7 +184,7 @@
             <h4>Max Planck Institute for Experimental Medicine</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(14)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-6.jpg" alt="mg" />
           </div>
@@ -198,7 +197,7 @@
             <h4>Head, Bengaluru Genomics Center</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(15)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-63.jpeg" alt="mg" />
           </div>
@@ -207,11 +206,11 @@
               <img src="../assets/Flags/india.png" alt="flag" />
               <span>India</span>
             </div>
-            <h3>Dr. Prachi Parvatikar,</h3>
+            <h3>Dr. Prachi Parvatikar</h3>
             <h4>Dept of Physiology, BLDE University</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(16)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-60.jpeg" alt="mg" />
           </div>
@@ -221,11 +220,10 @@
               <span>India</span>
             </div>
             <h3>V. Ravi</h3>
-            <h4>National Institute od Mental Health and Neuro-Science</h4>
+            <h4>National Institute of Mental Health and Neuro-Science</h4>
           </div>
         </div>
-
-        <div class="card">
+        <div @click="expandAbstract(17)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-57.jpg" alt="mg" />
           </div>
@@ -238,7 +236,7 @@
             <h4>Indian Institute of Science</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(18)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-48.jpg" alt="mg" />
           </div>
@@ -251,7 +249,7 @@
             <h4>State Level Virus Research & Diagnostic Laboratory</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(19)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-45.jpg" alt="mg" />
           </div>
@@ -264,7 +262,7 @@
             <h4>National Institute of Mental Health and Neuro-Sciences</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(20)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-8.jpg" alt="mg" />
           </div>
@@ -277,7 +275,7 @@
             <h4>Foundation for Quality India</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(21)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-26.jpg" alt="mg" />
           </div>
@@ -290,7 +288,7 @@
             <h4>Institute of Bioinformatics and Applied Biotechnology</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(22)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-54.jpg" alt="mg" />
           </div>
@@ -303,7 +301,7 @@
             <h4>Research Director, Amrita School of Ayurveda, Kollam, Kerala</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(23)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-55.jpg" alt="mg" />
           </div>
@@ -313,11 +311,10 @@
               <span>India</span>
             </div>
             <h3>Sanjay Jain</h3>
-            <h4>Dept. of Orthopaedics and traumatology</h4>
+            <h4>Dept. of Orthopaedics and Traumatology</h4>
           </div>
         </div>
-
-        <div class="card">
+        <div @click="expandAbstract(24)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-12.jpg" alt="mg" />
           </div>
@@ -330,7 +327,7 @@
             <h4>BLDE, UNESCO Academic Leader & Coordinator</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(25)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-53.jpg" alt="mg" />
           </div>
@@ -343,7 +340,7 @@
             <h4>BAMS. MD team dhanvantari, shreehareeyam ayurveda</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(26)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-29.jpg" alt="mg" />
           </div>
@@ -356,7 +353,7 @@
             <h4>Assistant Professor, Centre for Interdisciplinary Research in Basic Sciences</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(27)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-56.jpg" alt="mg" />
           </div>
@@ -369,7 +366,7 @@
             <h4>NCBS, TIFR</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(28)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-15.jpg" alt="mg" />
           </div>
@@ -379,10 +376,10 @@
               <span>Iran</span>
             </div>
             <h3>Prof. Hamid Mobasheri</h3>
-            <h4>Head of Lab Membrane Biophysics & Macromolecule, University of Tehran</h4>
+            <h4>Institute of Biochemistry and Biophysics, University of Tehran, Iran, UNESCO Intetacadrmic Partnership (AP)</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(29)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-2.jpg" alt="mg" />
           </div>
@@ -395,7 +392,7 @@
             <h4>Universita Milano Biccoca</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(30)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-34.jpg" alt="mg" />
           </div>
@@ -408,7 +405,7 @@
             <h4>University of Genoa</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(31)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-50.jpg" alt="mg" />
           </div>
@@ -418,10 +415,10 @@
               <span>Malaysia</span>
             </div>
             <h3>Su Datt Lam</h3>
-            <h4>Department of Applied Physics, Faculty of Science and Technolog</h4>
+            <h4>Department of Applied Physics, Faculty of Science and Technology</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(32)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-16.jpg" alt="mg" />
           </div>
@@ -434,7 +431,7 @@
             <h4>Hospital Juarez</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(33)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-40.jpg" alt="mg" />
           </div>
@@ -444,10 +441,10 @@
               <span>Mexico</span>
             </div>
             <h3>Dr. Alberto Lopez</h3>
-            <h4>Hospital Juarez Mexico</h4>
+            <h4>Hospital Juarez</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(34)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-30.jpg" alt="mg" />
           </div>
@@ -460,7 +457,7 @@
             <h4>Intensivist, Hospital General de Ecatepec Las Americas</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(35)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-11.jpg" alt="mg" />
           </div>
@@ -473,7 +470,7 @@
             <h4>Director, Universidad Cayetano Heredia</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(36)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-33.jpg" alt="mg" />
           </div>
@@ -486,7 +483,7 @@
             <h4>Intensivist, Seguro Social, Huancayo</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(37)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-27.jpg" alt="mg" />
           </div>
@@ -499,7 +496,7 @@
             <h4>Associate Professor, University of Cape Town, and WildMedix</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(38)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-46.jpg" alt="mg" />
           </div>
@@ -509,10 +506,10 @@
               <span>South Africa</span>
             </div>
             <h3>Dr. Clint Hendrikse</h3>
-            <h4>Lecturer and Joint staff , Division of Emergency Medicine, University of Cape Town</h4>
+            <h4>Lecturer and Joint staff, Division of Emergency Medicine, University of Cape Town</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(39)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-25.jpg" alt="mg" />
           </div>
@@ -525,7 +522,7 @@
             <h4>Head of Tygerberg Hospital ICU</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(40)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-31.jpg" alt="mg" />
           </div>
@@ -538,8 +535,7 @@
             <h4>Oxford University</h4>
           </div>
         </div>
-
-        <div class="card">
+        <div @click="expandAbstract(41)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-24.jpg" alt="mg" />
           </div>
@@ -552,7 +548,7 @@
             <h4>Professor of Medicine, University of Miami Miller School of Medicine</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(42)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-10.jpg" alt="mg" />
           </div>
@@ -565,7 +561,7 @@
             <h4>St. Lukes University</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(43)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-47.jpg" alt="mg" />
           </div>
@@ -578,7 +574,7 @@
             <h4>Associate Professor of Clinical Medicine</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(44)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-37.jpg" alt="mg" />
           </div>
@@ -591,8 +587,7 @@
             <h4>Director of the Institute of Human Virology</h4>
           </div>
         </div>
-
-        <div class="card">
+        <div @click="expandAbstract(45)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-49.jpg" alt="mg" />
           </div>
@@ -601,11 +596,11 @@
               <img src="../assets/Flags/usa.png" alt="flag" />
               <span>USA</span>
             </div>
-            <h3>Dr.Christine Ebert-Santos</h3>
+            <h3>Dr. Christine Ebert-Santos</h3>
             <h4>Head, Ebert Family Clinic</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(46)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-58.jpg" alt="mg" />
           </div>
@@ -618,7 +613,7 @@
             <h4>Family Medicine Physician</h4>
           </div>
         </div>
-        <div class="card">
+        <div @click="expandAbstract(47)" class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-51.jpg" alt="mg" />
           </div>
@@ -651,6 +646,18 @@ export default {
         src: "presentation.svg"
       }
     };
+  },
+  methods: {
+    expandAbstract(speaker) {
+      console.log(speaker);
+      /*
+      this.$router.push({
+        name: "SpeakerAbstracts",
+        params: {
+          speaker: speaker
+        }
+      });*/
+    }
   }
 };
 </script>

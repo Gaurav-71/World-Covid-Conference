@@ -43,7 +43,10 @@
             <b>Time :</b> 7am - 11am & 4pm - 9pm IST
           </p>
           <p>
-            <b>Location :</b> Online, A Zoom invite will be sent by email
+            <b>Join Now :</b>
+            <a
+              href="https://zoom.us/j/92054569175?pwd=TDYzb2dDZW44TkxKTFBiOHI1SzJhUT09"
+            >https://zoom.us/j/92054569175?pwd=TDYzb2dDZW44TkxKTFBiOHI1SzJhUT09</a>
           </p>
         </div>
       </div>

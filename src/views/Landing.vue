@@ -149,7 +149,7 @@
         </div>
         <div class="benefit">
           <img src="../assets/Landing/record.svg" alt />
-          <h4>Conference Recordings Access, uploaded within one week after the Congress (For further details, please contact us)</h4>
+          <h4>Conference Recordings Access, uploaded within two weeks after the Congress (For further details, please contact us)</h4>
         </div>
       </div>
       <div class="heading">

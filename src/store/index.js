@@ -646,7 +646,7 @@ export default new Vuex.Store({
     async loadMessages(context) {
       let response = db
         .collection("Messages")
-        .orderBy("timestamp", "asc")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           let items = [];
           snapshot.forEach((doc) => {

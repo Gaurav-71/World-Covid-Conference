@@ -40,11 +40,17 @@
               <div class="data">
                 <h2>Opening Ceremony</h2>
                 <h4></h4>
-                <p>
-                  7:00-7:50am IST, 9:30-10:20pm
-                  EST, 2:30-3:20 am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">7:00am-7:50am IST,</div>
+                  <div class="est">
+                    9:30pm-10:20pm
+                    EST,
+                  </div>
+                  <div class="bst">
+                    2:30am-3:20 am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -61,7 +67,11 @@
                     Canada
                   </span>
                 </div>
-                <p>8:00-8:30am IST, 10:30-11:00pm EST, 3:30-4:00am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:00am-8:30am IST,</div>
+                  <div class="est">10:30pm-11:00pm EST,</div>
+                  <div class="bst">3:30am-4:00am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -69,10 +79,14 @@
               <div class="data">
                 <h2>Karnataka Scenario epidemology of covid-19</h2>
                 <div class="speaker">
-                  <h4>V.Ravi,</h4>
+                  <h4>V. Ravi,</h4>
                   <span>NIMHANS</span>
                 </div>
-                <p>8:30-9:00am IST, 11:00-11:30pm EST, 4:00-4:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:30am-9:00am IST,</div>
+                  <div class="est">11:00pm-11:30pm EST,</div>
+                  <div class="bst">4:00am-4:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -83,11 +97,17 @@
                   <h4>Dr. Milena Garcia</h4>
                   <span>Pneumology Epidemiology Hospital San Ignacio - Universidad Javeriana</span>
                 </div>
-                <p>
-                  9:00-9:30am IST, 11:30-12:00am
-                  EST, 4:30-5:00 am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">9:00am-9:30am IST,</div>
+                  <div class="est">
+                    11:30pm-12:00am
+                    EST,
+                  </div>
+                  <div class="bst">
+                    4:30am-5:00 am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -98,7 +118,11 @@
                   <h4>Dr. Walter Calderon,</h4>
                   <span>Intensivist, Seguro Social, Huancayo</span>
                 </div>
-                <p>9:30am-10:00am IST, 12:00-00:30am EST, 5:00-5:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">9:30am-10:00am IST,</div>
+                  <div class="est">12:00am-00:30am EST,</div>
+                  <div class="bst">5:00am-5:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -107,23 +131,32 @@
             <div class="event">
               <img src="../assets/organizers/org-58.jpg" alt />
               <div class="data">
-                <h2>"Statistical analysis of COVID-19 and development of prediction formulas</h2>
+                <h2>Statistical analysis of COVID-19 and development of a prediction formula</h2>
                 <div class="speaker">
-                  <h4>Dr. Bob Kuhnhenn</h4>
+                  <h4>Dr. Robert Kuhnhenn,</h4>
+                  <span>Family Medicine Physician</span>
                 </div>
-                <p>10:10-10:40am IST, 00:40-1:10am EST, 5:40-6:10am GMT</p>
+                <div class="timezones">
+                  <div class="ist">10:10am-10:40am IST,</div>
+                  <div class="est">00:40am-1:10am EST,</div>
+                  <div class="bst">5:40am-6:10am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <img src="../assets/organizers/org-44.jpg" alt />
 
               <div class="data">
-                <h2>Epidemiology in Africa</h2>
-                <div class="speaker">
+                <h2>Epidemiology</h2>
+                <!-- <div class="speaker">
                   <h4>Dr. Girma Ababi,</h4>
                   <span>Etiopia</span>
+                </div>-->
+                <div class="timezones">
+                  <div class="ist">10:40am-11:10am IST,</div>
+                  <div class="est">1:10am-1:40am EST,</div>
+                  <div class="bst">6:10am-6:40am BST</div>
                 </div>
-                <p>10:40-11:10am IST, 1:10-1:40am EST, 6:10-6:40am GMT</p>
               </div>
             </div>
             <div class="sub-heading">
@@ -138,31 +171,41 @@
                   <h4>Dr. Augusto Ittig,</h4>
                   <span>Director, Iberoamerican Network of Digital health</span>
                 </div>
-                <p>4:00-4:30pm IST, 6:30-7:00am EST, 11:30-12:00pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">4:00pm-4:30pm IST,</div>
+                  <div class="est">6:30am-7:00am EST,</div>
+                  <div class="bst">11:30pm-12:00pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <div class="data">
-                <h2>Accupunture and homeopathy</h2>
-                <!--
+                <h2>Accupunture for COVID-19</h2>
                 <div class="speaker">
-                  <h4>Prof. Robert C. Gallo,</h4>
-                  <span>Director of the Institute of Human Virology (IHV), University of Maryland School of Medicine, Baltimore, Maryland</span>
-                </div>-->
-                <p>4:30-5:00pm IST, 7:00-7:30am EST, 12:00-12:30pm GMT</p>
+                  <h4>ADr. A. Shaji Bharath,</h4>
+                  <span>M.Ac., MD (Acu)., PhD Senior Acupuncturist Founder of Dr. Bharath’s Acu Heal</span>
+                </div>
+                <div class="timezones">
+                  <div class="ist">4:30pm-5:00pm IST,</div>
+                  <div class="est">7:00am-7:30am EST,</div>
+                  <div class="bst">12:00pm-12:30pm BST</div>
+                </div>
               </div>
             </div>
-            <div class="event">
+            <!--<div class="event">
               <div class="data">
-                <h2>Dharavi</h2>
-                <!--
+                <h2>Dharavi</h2>                
                 <div class="speaker">
                   <h4>Prof. Robert C. Gallo,</h4>
                   <span>Director of the Institute of Human Virology (IHV), University of Maryland School of Medicine, Baltimore, Maryland</span>
-                </div>-->
-                <p>5:00-5:30pm IST, 7:30-8:00am EST, 12:30-1:00pm GMT</p>
+                </div>
+                <div class="timezones">
+                  <div class="ist">5:00pm-5:30pm IST,</div>
+                  <div class="est">7:30am-8:00am EST,</div>
+                  <div class="bst">12:30pm-1:00pm BST</div>
+                </div>
               </div>
-            </div>
+            </div> --->
             <div class="event">
               <img src="../assets/organizers/org-6.jpg" alt />
               <div class="data">
@@ -171,7 +214,11 @@
                   <h4>Prof. Malali Gowda,</h4>
                   <span>Bengaluru Genomics Center, Bengaluru</span>
                 </div>
-                <p>5:30-6:00pm IST, 8:00-8:30am EST, 1:00-1:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">5:30pm-6:00pm IST,</div>
+                  <div class="est">8:00am-8:30am EST,</div>
+                  <div class="bst">1:00pm-1:30pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -182,7 +229,11 @@
                   <h4>Prof. Gordon Dickinson,</h4>
                   <span>University of Miami Miller school of Medicine</span>
                 </div>
-                <p>6:00-6:30pm IST, 8:30-9:00am EST, 1:30-2:00pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:00pm-6:30pm IST,</div>
+                  <div class="est">8:30am-9:00am EST,</div>
+                  <div class="bst">1:30pm-2:00pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -196,7 +247,11 @@
                   <h4>Utpal Tatu</h4>
                   <span>Indian Institute of Science</span>
                 </div>
-                <p>6:40-7:10pm IST, 9:10-9:40am EST, 2:10-2:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:40pm-7:10pm IST,</div>
+                  <div class="est">9:10am-9:40am EST,</div>
+                  <div class="bst">2:10pm-2:40pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -207,13 +262,21 @@
                   <h4>Gaurav Sharma,</h4>
                   <span>Indian Institute of Science</span>
                 </div>
-                <p>7:10-7:40pm IST, 9:40-10:10am EST, 2:40-3:10pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:10pm-7:40pm IST,</div>
+                  <div class="est">9:40am-10:10am EST,</div>
+                  <div class="bst">2:40pm-3:10pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <div class="data">
                 <h2>Industry Session</h2>
-                <p>7:40-8:10pm IST, 10:10-10:40am EST, 3:10-3:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:40pm-8:10pm IST,</div>
+                  <div class="est">10:10am-10:40am EST,</div>
+                  <div class="bst">3:10pm-3:40pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -227,7 +290,11 @@
                     University of Maryland School of Medicine
                   </span>
                 </div>
-                <p>8:10-8:35pm IST, 10:40-11:05am EST, 3:40-4:05pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:10-8:35pm IST,</div>
+                  <div class="est">10:40am-11:05am EST,</div>
+                  <div class="bst">3:40pm-4:05pm BST</div>
+                </div>
               </div>
             </div>
           </div>
@@ -244,22 +311,32 @@
                   <h4>Chitra Phatabiraman,</h4>
                   <span>National Institute of Mental Health and Neuro-Sciences</span>
                 </div>
-                <p>
-                  7:00-7:30am IST, 9:30-10:00pm
-                  EST, 2:30-3:00am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">7:00am-7:30am IST,</div>
+                  <div class="est">
+                    9:30pm-10:00pm
+                    EST,
+                  </div>
+                  <div class="bst">
+                    2:30am-3:00am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
               <img src="../assets/organizers/org-15.jpg" alt />
               <div class="data">
-                <h2>SARS-Cov2 biophysics characteristics</h2>
+                <h2>SARS-Cov2 biophysical nature of Coronavirus, means of its stability and susceptibility</h2>
                 <div class="speaker">
                   <h4>Dr. Hamid Mobasheri,</h4>
                   <span>UNESCO, University of Tehran</span>
                 </div>
-                <p>7:30-8:00am IST, 10:00-10:30pm EST, 3:00-3:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:30am-8:00am IST,</div>
+                  <div class="est">10:00pm-10:30pm EST,</div>
+                  <div class="bst">3:00am-3:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -270,7 +347,11 @@
                   <h4>Dr. Roberto Accinelli,</h4>
                   <span>Universidad Cayetano Heredia</span>
                 </div>
-                <p>8:00-8:30am IST, 10:30-11:00pm EST, 3:30-4:00am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:00am-8:30am IST,</div>
+                  <div class="est">10:30pm-11:00pm EST,</div>
+                  <div class="bst">3:30am-4:00am BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -284,7 +365,11 @@
                   <h4>Dr. Giuseppe Miserocchi,</h4>
                   <span>Department of Medicine and Surgery, Università Milano Bicocca, Milan</span>
                 </div>
-                <p>8:40-9:10am IST, 11:10-11:40pm EST, 4:10-4:40am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:40am-9:10am IST,</div>
+                  <div class="est">11:10pm-11:40pm EST,</div>
+                  <div class="bst">4:10am-4:40am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -295,7 +380,11 @@
                   <h4>Prof. Dr. Gustavo Zubieta-Calleja,</h4>
                   <span>High Altitude Pulmonary and Pathology Institute (IPPA-HAPPI),</span>
                 </div>
-                <p>9:10-10:10am IST, 11:40-00:40am EST, 4:40-5:40am GMT</p>
+                <div class="timezones">
+                  <div class="ist">9:10am-10:10am IST,</div>
+                  <div class="est">11:40pm-00:40am EST,</div>
+                  <div class="bst">4:40am-5:40am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -306,11 +395,17 @@
                   <h4>Martin Begemann,</h4>
                   <span>Max Planck Institute for Experimental Medicine</span>
                 </div>
-                <p>
-                  10:10-10:40am IST, 00:40-1:10am
-                  EST, 5:40-6:10 am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">10:10am-10:40am IST,</div>
+                  <div class="est">
+                    00:40am-1:10am
+                    EST,
+                  </div>
+                  <div class="bst">
+                    5:40am-6:10 am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -321,7 +416,11 @@
                   <h4>Dr. Thuppil Venkatesh,</h4>
                   <span>Foundation for Quality</span>
                 </div>
-                <p>10:40am-11:10am IST, 1:10-1:40am EST, 6:10-6:40am GMT</p>
+                <div class="timezones">
+                  <div class="ist">10:40am-11:10am IST,</div>
+                  <div class="est">1:10am-1:40am EST,</div>
+                  <div class="bst">6:10am-6:40am BST</div>
+                </div>
               </div>
             </div>
             <div class="sub-heading">
@@ -330,43 +429,59 @@
             </div>
             <div class="event">
               <div class="data">
-                <h2>Antigen based diagnostic methodology for COVID 19</h2>
+                <h2>Cancer treatment in covid times Medical Oncologist</h2>
                 <div class="speaker">
-                  <h4></h4>
+                  <h4>Dr Harish</h4>
                   <span></span>
                 </div>
-                <p>4:00-5:00pm IST, 6:30-7:30am EST, 11:30-12:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">4:00pm-4:30pm IST,</div>
+                  <div class="est">6:30am-7:00am EST,</div>
+                  <div class="bst">11:30pm-12:00pm BST</div>
+                </div>
               </div>
             </div>
-            <div class="event">
+            <!---            <div class="event">
               <div class="data">
                 <h2>Microbiome</h2>
                 <div class="speaker">
                   <h4></h4>
                   <span></span>
                 </div>
-                <p>5:00-5:30pm IST, 7:30-8:00am EST, 12:30-1:00pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">5:00pm-5:30pm IST,</div>
+                  <div class="est">7:30am-8:00am EST,</div>
+                  <div class="bst">12:30pm-1:00pm BST</div>
+                </div>
               </div>
-            </div>
+            </div>-->
             <div class="event">
-              <img src="../assets/organizers/org-48.jpg" alt />
+              <!-- <img src="../assets/organizers/org-48.jpg" alt /> --->
               <div class="data">
                 <h2>PCR and CBNAAT based diagnostic methodology for COVID 19) Diagnosis of COVID-19 Laboratory Perspectives</h2>
                 <div class="speaker">
-                  <h4>Dr. Sathyanarayan M.S.</h4>
+                  <h4>Dr. Manjunath</h4>
                   <span>State Level Virus Research & Diagnostic Laboratory</span>
                 </div>
-                <p>5:30-6:00pm IST, 8:00-8:30am EST, 1:00-1:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">5:30pm-6:00pm IST,</div>
+                  <div class="est">8:00am-8:30am EST,</div>
+                  <div class="bst">1:00pm-1:30pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <div class="data">
                 <h2>Lab parameters and COVID (CBC, CRP, Ferritin, D dimer, ABG interpretation, ETC.,)</h2>
                 <div class="speaker">
-                  <h4></h4>
+                  <h4>Dr. Asha Kiran</h4>
                   <span></span>
                 </div>
-                <p>6:00-6:30pm IST, 8:30-9:00am EST, 1:30-1:00pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:00pm-6:30pm IST,</div>
+                  <div class="est">8:30am-9:00am EST,</div>
+                  <div class="bst">1:30pm-1:00pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -375,12 +490,16 @@
             <div class="event">
               <img src="../assets/organizers/org-62.jpg" alt />
               <div class="data">
-                <h2>Thorax tomography in COVID-19 at very high altitude</h2>
+                <h2>Chest CT findings in COVID -19 at very high altitude</h2>
                 <div class="speaker">
-                  <h4>Dr. Gabriela Elva Urquieta</h4>
+                  <h4>Dr. Gabriela Urquieta</h4>
                   <span>Hospital Agramont, El Alto</span>
                 </div>
-                <p>6:40-7:10pm IST, 9:10-9:40am EST, 2:10-2:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:40pm-7:10pm IST,</div>
+                  <div class="est">9:10am-9:40am EST,</div>
+                  <div class="bst">2:10pm-2:40pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -391,13 +510,21 @@
                   <h4>Prof. Kusal Das</h4>
                   <span>UNESCO / BLDE University</span>
                 </div>
-                <p>7:10-7:40pm IST, 9:40-10:10am EST, 2:40-3:10pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:10pm-7:40pm IST,</div>
+                  <div class="est">9:40am-10:10am EST,</div>
+                  <div class="bst">2:40pm-3:10pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <div class="data">
                 <h2>Poster Presentation</h2>
-                <p>7:40-8:10pm IST, 10:10-10:40am EST, 3:10-3:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:40pm-8:10pm IST,</div>
+                  <div class="est">10:10am-10:40am EST,</div>
+                  <div class="bst">3:10pm-3:40pm BST</div>
+                </div>
               </div>
             </div>
           </div>
@@ -414,11 +541,17 @@
                   <h4>Su Datt Lam,</h4>
                   <span>Department of Applied Physics, Faculty of Science and Technology, Universiti Kebangsaan Malaysia, Bangi, Selangor, 43600, Malaysia</span>
                 </div>
-                <p>
-                  7:00-7:30am IST, 9:30-10:00pm
-                  EST, 2:30-3:00am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">7:00am-7:30am IST,</div>
+                  <div class="est">
+                    9:30pm-10:00pm
+                    EST,
+                  </div>
+                  <div class="bst">
+                    2:30am-3:00am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -432,7 +565,11 @@
                     USA
                   </span>
                 </div>
-                <p>7:30-8:00am IST, 10:00-10:30pm EST, 3:00-3:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:30am-8:00am IST,</div>
+                  <div class="est">10:00pm-10:30pm EST,</div>
+                  <div class="bst">3:00am-3:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -440,14 +577,18 @@
               <div class="data">
                 <h2>Host Response Mediators in COVID-19 infection - Is there a protective effect of angiotensin II</h2>
                 <div class="speaker">
-                  <h4>Prof. Jim Russel,</h4>
+                  <h4>Prof. Jim Russell,</h4>
                   <span>
                     Prof. of Med.,
                     University of British Columbia. Principal investigator,
                     Centre for Heart Lung Innovation,
                   </span>
                 </div>
-                <p>8:00-8:30am IST, 10:30-11:00pm EST, 3:30-4:00am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:00am-8:30am IST,</div>
+                  <div class="est">10:30pm-11:00pm EST,</div>
+                  <div class="bst">3:30am-4:00am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -458,7 +599,11 @@
                   <h4>Dr. Byron Canelos-Estrella</h4>
                   <span>Ecuador</span>
                 </div>
-                <p>8:30-9:00am IST, 11:00-11:30pm EST, 4:00-4:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:30am-9:00am IST,</div>
+                  <div class="est">11:00pm-11:30pm EST,</div>
+                  <div class="bst">4:00am-4:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -478,7 +623,11 @@
                     Bolivia
                   </span>
                 </div>
-                <p>9:10-9:40am IST, 11:40-00:10pm EST, 4:40-5:10am GMT</p>
+                <div class="timezones">
+                  <div class="ist">9:10am-9:40am IST,</div>
+                  <div class="est">11:40pm-00:10am EST,</div>
+                  <div class="bst">4:40am-5:10am BST</div>
+                </div>
               </div>
             </div>
             <!---
@@ -490,7 +639,7 @@
                   <h4>Dr. Milena Garcia</h4>
                   <span>University of Southern Queensland Toowoomba</span>
                 </div>
-                <p>9:40-10:10am IST, 00:40-1:10am EST, 4:40-5:10am GMT</p>
+                <div class="timezones"><div class="ist">9:40-10:10am IST, </div><div class="est"> 00:40-1:10am EST, </div><div class="bst"> 4:40-5:10am BST</div></div>
               </div>
             </div> --->
             <div class="event">
@@ -504,11 +653,17 @@
                     Australia
                   </span>
                 </div>
-                <p>
-                  10:10-10:40am IST, 00:40-1:10am
-                  EST, 5:40-6:10 am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">10:10am-10:40am IST,</div>
+                  <div class="est">
+                    00:40am-1:10am
+                    EST,
+                  </div>
+                  <div class="bst">
+                    5:40am-6:10 am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -523,7 +678,11 @@
                     University of Genoa, Italy
                   </span>
                 </div>
-                <p>10:40am-11:10am IST, 1:10-1:40am EST, 6:10-6:40am GMT</p>
+                <div class="timezones">
+                  <div class="ist">10:40am-11:10am IST,</div>
+                  <div class="est">1:10am-1:40am EST,</div>
+                  <div class="bst">6:10am-6:40am BST</div>
+                </div>
               </div>
             </div>
             <div class="sub-heading">
@@ -538,7 +697,11 @@
                   <h4>Prof. Thomas Binder,</h4>
                   <span>Cardiologist Vienna General Hospital</span>
                 </div>
-                <p>4:00-4:30pm IST, 6:30-7:30am EST, 11:30-12:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">4:00pm-4:30pm IST,</div>
+                  <div class="est">6:30am-7:30am EST,</div>
+                  <div class="bst">11:30pm-12:30pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -553,7 +716,11 @@
                     Chile
                   </span>
                 </div>
-                <p>4:30-5:00pm IST, 7:00-7:30am EST, 12:00-12:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">4:30pm-5:00pm IST,</div>
+                  <div class="est">7:00am-7:30am EST,</div>
+                  <div class="bst">12:0pm0-12:30pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -564,7 +731,11 @@
                   <h4>Vaidya P. Rammanohar</h4>
                   <span>Research Director, Amrita School of Ayurveda, Kollam, Kerala</span>
                 </div>
-                <p>5:00-5:30pm IST, 7:30-8:00am EST, 12:30-1:00pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">5:00pm-5:30pm IST,</div>
+                  <div class="est">7:30am-8:00am EST,</div>
+                  <div class="bst">12:30pm-1:00pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -575,7 +746,11 @@
                   <h4>Dr. Meera Sudheer</h4>
                   <span>Team Dhanvantari, Sreehareeyam Ayurveda</span>
                 </div>
-                <p>5:30-6:00pm IST, 8:00-8:30am EST, 1:00-1:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">5:30pm-6:00pm IST,</div>
+                  <div class="est">8:00am-8:30am EST,</div>
+                  <div class="bst">1:00pm-1:30pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -589,7 +764,11 @@
                   <h4>Dr. Antonio Viruez,</h4>
                   <span>Head of Critical Care Department, Hospital del Norte</span>
                 </div>
-                <p>6:10-6:40pm IST, 8:40-9:10am EST, 1:40-2:10pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:10pm-6:40pm IST,</div>
+                  <div class="est">8:40am-9:10am EST,</div>
+                  <div class="bst">1:40pm-2:10pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -600,7 +779,11 @@
                   <h4>Sanjay Jain,</h4>
                   <span>Dept. of Orthopaedics and traumatology</span>
                 </div>
-                <p>6:40-7:10pm IST, 9:10-9:40am EST, 2:10-2:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:40pm-7:10pm IST,</div>
+                  <div class="est">9:10am-9:40am EST,</div>
+                  <div class="bst">2:10pm-2:40pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -611,13 +794,21 @@
                   <h4>Dr.Christine Evert-Santos,</h4>
                   <span>USA</span>
                 </div>
-                <p>7:10-7:40pm IST, 9:40-10:10am EST, 2:40-3:10pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:10pm-7:40pm IST,</div>
+                  <div class="est">9:40am-10:10am EST,</div>
+                  <div class="bst">2:40pm-3:10pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <div class="data">
                 <h2>Hackathon Winners Presentation</h2>
-                <p>7:40-8:40pm IST, 10:10-11:10am EST, 3:10-4:10pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:40pm-8:40pm IST,</div>
+                  <div class="est">10:10am-11:10am EST,</div>
+                  <div class="bst">3:10pm-4:10pm BST</div>
+                </div>
               </div>
             </div>
           </div>
@@ -634,11 +825,17 @@
                   <h4>Dr. Prachi Parvatikar,</h4>
                   <span>Dept of Physiology, BLDE University</span>
                 </div>
-                <p>
-                  7:00-7:30am IST, 9:30-10:00pm
-                  EST, 2:30-3:00am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">7:00am-7:30am IST,</div>
+                  <div class="est">
+                    9:30pm-10:00pm
+                    EST,
+                  </div>
+                  <div class="bst">
+                    2:30am-3:00am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -652,7 +849,11 @@
                     Mexico
                   </span>
                 </div>
-                <p>7:30-8:00am IST, 10:00-10:30pm EST, 3:00-3:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:30am-8:00am IST,</div>
+                  <div class="est">10:00pm-10:30pm EST,</div>
+                  <div class="bst">3:00am-3:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -666,13 +867,17 @@
                     Hospital General de Ecatepec Las Americas
                   </span>
                 </div>
-                <p>8:00-8:30am IST, 10:30-11:00pm EST, 3:30-4:00am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:00am-8:30am IST,</div>
+                  <div class="est">10:30pm-11:00pm EST,</div>
+                  <div class="bst">3:30am-4:00am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <img src="../assets/organizers/org-16.jpg" alt />
               <div class="data">
-                <h2>My concerns of Mexico - COVID</h2>
+                <h2>Machiavelli and Rousseau as Judges of the COVID-19 Neurological Publications</h2>
                 <div class="speaker">
                   <h4>Dr. José Antonio Carmona,</h4>
                   <span>
@@ -681,7 +886,11 @@
                     Mexico
                   </span>
                 </div>
-                <p>8:30-9:00am IST, 11:00-11:30pm EST, 4:00-4:30am GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:30am-9:00am IST,</div>
+                  <div class="est">11:00pm-11:30pm EST,</div>
+                  <div class="bst">4:00am-4:30am BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -695,7 +904,11 @@
                   <h4>Dr. Oscar Murillo,</h4>
                   <span>St. Luke’s University Hospital, Bethlehem, PA</span>
                 </div>
-                <p>9:10-9:40am IST, 11:40-00:10pm EST, 4:40-5:10am GMT</p>
+                <div class="timezones">
+                  <div class="ist">9:10am-9:40am IST,</div>
+                  <div class="est">11:40pm-00:10am EST,</div>
+                  <div class="bst">4:40am-5:10am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -706,7 +919,11 @@
                   <h4>Dr. Usha Lalla</h4>
                   <span>MBChB , MRCP(UK) , FCP (SA), MMed (Int)</span>
                 </div>
-                <p>9:40-10:10am IST, 00:40-1:10am EST, 4:40-5:10am GMT</p>
+                <div class="timezones">
+                  <div class="ist">9:40am-10:10am IST,</div>
+                  <div class="est">00:40am-1:10am EST,</div>
+                  <div class="bst">4:40am-5:10am BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -717,11 +934,17 @@
                   <h4>Assoc. Prof. Ross Hofmeyr,</h4>
                   <span>MBChB (Stell), DipPEC, DA (SA), MMed (Anaes) (UCT), FCA (SA), FAWM (WMS)</span>
                 </div>
-                <p>
-                  10:10-10:40am IST, 00:40-1:10am
-                  EST, 5:40-6:10 am
-                  GMT
-                </p>
+                <div class="timezones">
+                  <div class="ist">10:10am-10:40am IST,</div>
+                  <div class="est">
+                    00:40am-1:10am
+                    EST,
+                  </div>
+                  <div class="bst">
+                    5:40am-6:10 am
+                    BST
+                  </div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -736,7 +959,11 @@
                     South Africa
                   </span>
                 </div>
-                <p>10:40am-11:10am IST, 1:10-1:40am EST, 6:10-6:40am GMT</p>
+                <div class="timezones">
+                  <div class="ist">10:40am-11:10am IST,</div>
+                  <div class="est">1:10am-1:40am EST,</div>
+                  <div class="bst">6:10am-6:40am BST</div>
+                </div>
               </div>
             </div>
             <div class="sub-heading">
@@ -751,9 +978,14 @@
                   <h4>Dr. Imtiyaz Hassan</h4>
                   <span>Assistant Professor (Structural Biology) Centre for Interdisciplinay Research in Basic Sciences, Jamia Millia Islamia</span>
                 </div>
-                <p>4:00-4:30pm IST, 6:30-7:30am EST, 11:30-12:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">4:00pm-4:30pm IST,</div>
+                  <div class="est">6:30am-7:30am EST,</div>
+                  <div class="bst">11:30pm-12:30pm BST</div>
+                </div>
               </div>
             </div>
+            <!---
             <div class="event">
               <div class="data">
                 <h2>Carcinoma and Covid</h2>
@@ -761,9 +993,13 @@
                   <h4>Dr. Ram Prasad</h4>
                   <span>HOD Oncology, Cyte Care Hosppital</span>
                 </div>
-                <p>4:30-5:00pm IST, 7:00-7:30am EST, 12:00-12:30pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">4:30pm-5:00pm IST,</div>
+                  <div class="est">7:00am-7:30am EST,</div>
+                  <div class="bst">12:00pm-12:30pm BST</div>
+                </div>
               </div>
-            </div>
+            </div>  --->
             <div class="event">
               <img src="../assets/organizers/org-31.jpg" alt />
               <div class="data">
@@ -772,7 +1008,11 @@
                   <h4>Prof. Andrew Pollard,</h4>
                   <span>Oxford University</span>
                 </div>
-                <p>5:00-5:30pm IST, 7:30-8:00am EST, 12:30-1:00pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">5:00pm-5:30pm IST,</div>
+                  <div class="est">7:30am-8:00am EST,</div>
+                  <div class="bst">12:30pm-1:00pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event break">
@@ -786,7 +1026,11 @@
                   <h4>Dr. Sudhir Krishna</h4>
                   <span>NCBS, TIFR, Bengaluru</span>
                 </div>
-                <p>6:10-6:40pm IST, 8:40-9:10am EST, 1:40-2:10pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:10pm-6:40pm IST,</div>
+                  <div class="est">8:40am-9:10am EST,</div>
+                  <div class="bst">1:40pm-2:10pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -796,7 +1040,11 @@
                   <h4></h4>
                   <span></span>
                 </div>
-                <p>6:40-7:10pm IST, 9:10-9:40am EST, 2:10-2:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">6:40pm-7:10pm IST,</div>
+                  <div class="est">9:10am-9:40am EST,</div>
+                  <div class="bst">2:10pm-2:40pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
@@ -806,13 +1054,21 @@
                   <h4></h4>
                   <span></span>
                 </div>
-                <p>7:10-8:10pm IST, 9:40-10:40am EST, 2:40-3:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">7:10pm-8:10pm IST,</div>
+                  <div class="est">9:40am-10:40am EST,</div>
+                  <div class="bst">2:40pm-3:40pm BST</div>
+                </div>
               </div>
             </div>
             <div class="event">
               <div class="data">
                 <h2>Closing Ceremony</h2>
-                <p>8:10-9:10pm IST, 10:40-11:40am EST, 3:40-4:40pm GMT</p>
+                <div class="timezones">
+                  <div class="ist">8:10pm-9:10pm IST,</div>
+                  <div class="est">10:40am-11:40am EST,</div>
+                  <div class="bst">3:40pm-4:40pm BST</div>
+                </div>
               </div>
             </div>
           </div>
@@ -956,6 +1212,7 @@ export default {
         box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
       }
       .data {
+        width: 100%;
         padding: 0 0.5rem 0 2rem;
         h2 {
           color: darken($primary, 15%);
@@ -966,6 +1223,33 @@ export default {
           h4 {
             margin: 0;
             margin-right: 0.4rem;
+          }
+        }
+        .timezones {
+          width: 100%;
+          margin: 1.5rem 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          @include iphone {
+            flex-wrap: wrap;
+          }
+          .bst,
+          .est,
+          .ist {
+            margin-right: 0.7rem;
+            @include iphone {
+              margin: 0.5rem 0;
+            }
+          }
+          .ist {
+            color: darken(red, 5%);
+          }
+          .est {
+            color: #1c8d76;
+          }
+          .bst {
+            color: midnightblue;
           }
         }
       }
