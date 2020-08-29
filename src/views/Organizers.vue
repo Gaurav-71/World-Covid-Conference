@@ -261,6 +261,15 @@
                 <h4>Department of Medicine and Surgery, Università Milano Bicocca</h4>
               </div>
               <div class="organizer">
+                <img src="../assets/organizers/org-39.jpg" alt="organizer" />
+                <h3>Lucrecia De Urioste</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>High Altitude Pulmonary and Pathology Institute</h4>
+              </div>
+              <div class="organizer">
                 <img src="../assets/organizers/org-41.jpg" alt="organizer" />
                 <h3>Dr. Rosayda Zubieta</h3>
                 <div class="country">
@@ -269,14 +278,133 @@
                 </div>
                 <h4>Director, IBESE Mental Health Institute Bolivia</h4>
               </div>
+            </div>
+          </section>
+        </div>
+        <div class="line"></div>
+        <div class="organizers">
+          <section class="section">
+            <div class="title">
+              <h1>Executive Team</h1>
+              <div class="small-line"></div>
+            </div>
+            <div class="flex">
               <div class="organizer">
-                <img src="../assets/organizers/org-39.jpg" alt="organizer" />
-                <h3>Lucrecia De Urioste</h3>
+                <img src="../assets/organizers/org-65.jpg" alt="organizer" />
+                <h3>Gaurav V</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Website Designer & Developer</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-66.jpg" alt="organizer" />
+                <h3>Mahesh Kumar</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Hosting, Schedule & Speakers co-ordinator</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-67.jpeg" alt="organizer" />
+                <h3>Pranesh Rangarajan</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Hackathon Co-ordinator</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-68.jpg" alt="organizer" />
+                <h3>Yeshua Pena Lilo</h3>
                 <div class="country">
                   <img src="../assets/Flags/bolivia.png" alt="country" />
                   <h4>Bolivia</h4>
                 </div>
-                <h4>High Altitude Pulmonary and Pathology Institute</h4>
+                <h4>Ads & Social Media Manager</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-69.jpg" alt="organizer" />
+                <h3>Beatriz Pineiro Pinelo and Team "Colectivo Marketero"</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>Digital Marketing</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Fatima Tuz Zehra</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Secretariat, Communications, Social Media and Streaming co-ordinator</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Rafaela Zubieta-DeUrioste</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>Recordings and Video Editing</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>M. O. Farooque</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Event Hosting</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Dr. Ajeet Kumar</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer Social Media, Hackathon</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Dr. Shadma Shaheen</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Hackathon</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Abhinaya</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Hackathon</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Faba Susan Santosh</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Invitations, Hackathon</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
+                <h3>Pribin K Benny</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Invitations, Hackathon</h4>
               </div>
             </div>
           </section>
@@ -384,6 +512,9 @@ export default {
             // background-image: $gradient;
             margin: 1rem 0;
             text-align: center;
+            .no-shadow {
+              box-shadow: none;
+            }
             h3,
             h4 {
               margin: 0;

@@ -18,7 +18,24 @@
         <th>Transaction Proof</th>
       </tr>
       <tr v-for="detail in $store.getters.getParticipants" :key="detail.id">
+        <td>{{detail.detail.timestamp}}</td>
+        <td>{{detail.detail.name}}</td>
         <td>{{detail.detail.email}}</td>
+        <td>{{detail.detail.phno}}</td>
+        <td v-if="detail.detail.profession == 's'">Student</td>
+        <td v-else>
+          <span v-if="detail.detail.qualification == 1">Faculty/Researcher</span>
+          <span v-else-if="detail.detail.qualification == 2">Industry Personnel</span>
+          <span v-else>Other</span>
+        </td>
+        <td>{{detail.detail.country}}</td>
+        <td>{{detail.detail.discount}}%</td>
+        <td v-if="detail.detail.country == 'India'">&#8377;{{detail.detail.finalAmount}}</td>
+        <td v-else>${{detail.detail.finalAmount}}</td>
+        <td>{{detail.detail.transactionID}}</td>
+        <td>
+          <a :href="detail.detail.transactionProof" target="_blank">Download</a>
+        </td>
       </tr>
     </table>
     <div class="heading-1">

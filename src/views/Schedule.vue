@@ -23,6 +23,14 @@
             <div @click="route(4)" class="pill" :class="{ active: page == 4 }">Aug 30th</div>
           </div>
         </div>
+        <div class="legend">
+          <div class="div" style="color: red;">IST : Indian Standard Time,</div>
+          <div class="div" style="color: #1c8d76;">EST : Eastern Standard Time w.r.t Bolivia,</div>
+          <div
+            class="div"
+            style="color: midnightblue;"
+          >BST : British Standard Time w.r.t United Kingdom,</div>
+        </div>
         <transition
           name="custom-classes-transition-2"
           enter-active-class="animated fadeInLeft"
@@ -33,7 +41,7 @@
         >
           <div v-if="page==1" class="day" key="1">
             <div class="sub-heading">
-              <h2>Morning Session</h2>
+              <h2>First Session</h2>
               <div class="small-line"></div>
             </div>
             <div class="event">
@@ -160,7 +168,7 @@
               </div>
             </div>
             <div class="sub-heading">
-              <h2>Afternoon Session</h2>
+              <h2>Second Session</h2>
               <div class="small-line"></div>
             </div>
             <div class="event">
@@ -300,16 +308,17 @@
           </div>
           <div v-else-if="page==2" class="day" key="2">
             <div class="sub-heading">
-              <h2>Morning Session</h2>
+              <h2>Third Session</h2>
               <div class="small-line"></div>
             </div>
+
             <div class="event">
-              <img src="../assets/organizers/org-45.jpg" alt />
+              <img src="../assets/organizers/org-64.jpeg" alt />
               <div class="data">
-                <h2>Varied SARS-COV-2 strains globally</h2>
+                <h2>Sex differences in the mortality by COVID-19</h2>
                 <div class="speaker">
-                  <h4>Chitra Phatabiraman,</h4>
-                  <span>National Institute of Mental Health and Neuro-Sciences</span>
+                  <h4>Danuzia A. Marquez,</h4>
+                  <span>Institute Universitaire de Cardiologie et de Pneumologie (IUCPQ), Faculty of Medicine, Université Laval, Québec, Canada</span>
                 </div>
                 <div class="timezones">
                   <div class="ist">7:00am-7:30am IST,</div>
@@ -324,6 +333,7 @@
                 </div>
               </div>
             </div>
+
             <div class="event">
               <img src="../assets/organizers/org-15.jpg" alt />
               <div class="data">
@@ -424,7 +434,7 @@
               </div>
             </div>
             <div class="sub-heading">
-              <h2>Afternoon Session</h2>
+              <h2>Fourth Session</h2>
               <div class="small-line"></div>
             </div>
             <div class="event">
@@ -530,7 +540,7 @@
           </div>
           <div v-else-if="page==3" class="day" key="3">
             <div class="sub-heading">
-              <h2>Morning Session</h2>
+              <h2>Sixth Session</h2>
               <div class="small-line"></div>
             </div>
             <div class="event">
@@ -545,7 +555,7 @@
                   <div class="ist">7:00am-7:30am IST,</div>
                   <div class="est">
                     9:30pm-10:00pm
-                    EST,
+                    EST (Aug 28th in Bolivia),
                   </div>
                   <div class="bst">
                     2:30am-3:00am
@@ -567,7 +577,7 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">7:30am-8:00am IST,</div>
-                  <div class="est">10:00pm-10:30pm EST,</div>
+                  <div class="est">10:00pm-10:30pm EST (Aug 28th in Bolivia),</div>
                   <div class="bst">3:00am-3:30am BST</div>
                 </div>
               </div>
@@ -586,7 +596,7 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">8:00am-8:30am IST,</div>
-                  <div class="est">10:30pm-11:00pm EST,</div>
+                  <div class="est">10:30pm-11:00pm EST (Aug 28th in Bolivia),</div>
                   <div class="bst">3:30am-4:00am BST</div>
                 </div>
               </div>
@@ -601,7 +611,7 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">8:30am-9:00am IST,</div>
-                  <div class="est">11:00pm-11:30pm EST,</div>
+                  <div class="est">11:00pm-11:30pm EST (Aug 28th in Bolivia),</div>
                   <div class="bst">4:00am-4:30am BST</div>
                 </div>
               </div>
@@ -630,18 +640,7 @@
                 </div>
               </div>
             </div>
-            <!---
-            <div class="event">
-              <img src="../assets/organizers/org-35.jpg" alt />
-              <div class="data">
-                <h2>Clinician Pneumology</h2>
-                <div class="speaker">
-                  <h4>Dr. Milena Garcia</h4>
-                  <span>University of Southern Queensland Toowoomba</span>
-                </div>
-                <div class="timezones"><div class="ist">9:40-10:10am IST, </div><div class="est"> 00:40-1:10am EST, </div><div class="bst"> 4:40-5:10am BST</div></div>
-              </div>
-            </div> --->
+
             <div class="event">
               <img src="../assets/organizers/org-43.jpg" alt />
               <div class="data">
@@ -652,6 +651,20 @@
                     University of Southern Queesland Toowoomba
                     Australia
                   </span>
+                </div>
+                <div class="timezones">
+                  <div class="ist">9:40-10:10am IST,</div>
+                  <div class="est">00:40-1:10am EST,</div>
+                  <div class="bst">4:40-5:10am BST</div>
+                </div>
+              </div>
+            </div>
+            <div class="event">
+              <div class="data">
+                <h2>PCR and CBNAAT based diagnostic method for COVID-19 Laboratory Perspectives</h2>
+                <div class="speaker">
+                  <h4>Dr. Manjunath,</h4>
+                  <span>NIMHANS</span>
                 </div>
                 <div class="timezones">
                   <div class="ist">10:10am-10:40am IST,</div>
@@ -686,16 +699,15 @@
               </div>
             </div>
             <div class="sub-heading">
-              <h2>Afternoon Session</h2>
+              <h2>Sixth Session</h2>
               <div class="small-line"></div>
             </div>
             <div class="event">
-              <img src="../assets/organizers/org-59.jpeg" alt />
               <div class="data">
-                <h2>Echocardiography in COVID-19</h2>
+                <h2></h2>
                 <div class="speaker">
-                  <h4>Prof. Thomas Binder,</h4>
-                  <span>Cardiologist Vienna General Hospital</span>
+                  <h4>Dr. Farooque Motiwala</h4>
+                  <span></span>
                 </div>
                 <div class="timezones">
                   <div class="ist">4:00pm-4:30pm IST,</div>
@@ -739,12 +751,11 @@
               </div>
             </div>
             <div class="event">
-              <img src="../assets/organizers/org-53.jpg" alt />
               <div class="data">
-                <h2>Recovery from hypoxia through Re-purposed ayurveda medicine Dr. Meera Sudheer BAMS. MD team dhanvantari, sreehareeyam ayurveda India</h2>
+                <h2>Recovery from hypoxia through Re-purposed ayurveda medicine</h2>
                 <div class="speaker">
-                  <h4>Dr. Meera Sudheer</h4>
-                  <span>Team Dhanvantari, Sreehareeyam Ayurveda</span>
+                  <h4>Dr.Sudheer Ayyappan</h4>
+                  <span>BAMS. MD Team Dhanvantari, Sreehareeyam Ayurveda</span>
                 </div>
                 <div class="timezones">
                   <div class="ist">5:30pm-6:00pm IST,</div>
@@ -814,22 +825,21 @@
           </div>
           <div v-else-if="page==4" class="day" key="4">
             <div class="sub-heading">
-              <h2>Morning Session</h2>
+              <h2>Seventh Session</h2>
               <div class="small-line"></div>
             </div>
             <div class="event">
-              <img src="../assets/organizers/org-63.jpeg" alt />
               <div class="data">
                 <h2>Drug discovery</h2>
                 <div class="speaker">
-                  <h4>Dr. Prachi Parvatikar,</h4>
-                  <span>Dept of Physiology, BLDE University</span>
+                  <h4></h4>
+                  <span></span>
                 </div>
                 <div class="timezones">
                   <div class="ist">7:00am-7:30am IST,</div>
                   <div class="est">
                     9:30pm-10:00pm
-                    EST,
+                    EST (Aug 29th in Bolivia),
                   </div>
                   <div class="bst">
                     2:30am-3:00am
@@ -841,7 +851,7 @@
             <div class="event">
               <img src="../assets/organizers/org-40.jpg" alt="mg" />
               <div class="data">
-                <h2>New Technologies of recent application to face COVID</h2>
+                <h2>New Technologies of recent application in COVID</h2>
                 <div class="speaker">
                   <h4>Dr. Alberto Lopez,</h4>
                   <span>
@@ -851,7 +861,7 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">7:30am-8:00am IST,</div>
-                  <div class="est">10:00pm-10:30pm EST,</div>
+                  <div class="est">10:00pm-10:30pm EST (Aug 29th in Bolivia),</div>
                   <div class="bst">3:00am-3:30am BST</div>
                 </div>
               </div>
@@ -869,7 +879,7 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">8:00am-8:30am IST,</div>
-                  <div class="est">10:30pm-11:00pm EST,</div>
+                  <div class="est">10:30pm-11:00pm EST (Aug 29th in Bolivia),</div>
                   <div class="bst">3:30am-4:00am BST</div>
                 </div>
               </div>
@@ -877,7 +887,7 @@
             <div class="event">
               <img src="../assets/organizers/org-16.jpg" alt />
               <div class="data">
-                <h2>Machiavelli and Rousseau as Judges of the COVID-19 Neurological Publications</h2>
+                <h2>My concerns of Mexico - Covid</h2>
                 <div class="speaker">
                   <h4>Dr. José Antonio Carmona,</h4>
                   <span>
@@ -888,7 +898,7 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">8:30am-9:00am IST,</div>
-                  <div class="est">11:00pm-11:30pm EST,</div>
+                  <div class="est">11:00pm-11:30pm EST (Aug 29th in Bolivia),</div>
                   <div class="bst">4:00am-4:30am BST</div>
                 </div>
               </div>
@@ -967,9 +977,10 @@
               </div>
             </div>
             <div class="sub-heading">
-              <h2>Afternoon Session</h2>
+              <h2>Eight Session</h2>
               <div class="small-line"></div>
             </div>
+            <!---
             <div class="event">
               <img src="../assets/organizers/org-42.jpg" alt />
               <div class="data">
@@ -980,18 +991,19 @@
                 </div>
                 <div class="timezones">
                   <div class="ist">4:00pm-4:30pm IST,</div>
-                  <div class="est">6:30am-7:30am EST,</div>
+                  <div class="est">6:30am-7:00am EST,</div>
                   <div class="bst">11:30pm-12:30pm BST</div>
                 </div>
               </div>
-            </div>
-            <!---
+            </div> --->
+
             <div class="event">
+              <img src="../assets/organizers/org-35.jpg" alt />
               <div class="data">
-                <h2>Carcinoma and Covid</h2>
+                <h2>Covid in Colombia</h2>
                 <div class="speaker">
-                  <h4>Dr. Ram Prasad</h4>
-                  <span>HOD Oncology, Cyte Care Hosppital</span>
+                  <h4>Dr. Milena Garcia</h4>
+                  <span>Pneumology Epidemiology, Hospital San Ignacio</span>
                 </div>
                 <div class="timezones">
                   <div class="ist">4:30pm-5:00pm IST,</div>
@@ -999,7 +1011,7 @@
                   <div class="bst">12:00pm-12:30pm BST</div>
                 </div>
               </div>
-            </div>  --->
+            </div>
             <div class="event">
               <img src="../assets/organizers/org-31.jpg" alt />
               <div class="data">
@@ -1075,7 +1087,7 @@
         </transition>
         <div class="download-container">
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fschedule.xlsx?alt=media&token=18eb2d0e-1426-4a43-894f-08590a800849"
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2F28th%20.xlsx?alt=media&token=12c75109-610e-41e8-a117-6ecb72003887"
             target="_blank"
             class="btn"
           >Download Program</a>
@@ -1093,10 +1105,11 @@ export default {
   },
   data() {
     return {
-      page: 1,
+      page: 3,
       headingObj: {
         h1: "Schedule / Program List",
-        h4: "Note : This is a tentative schedule and can change in the future",
+        h4:
+          "All date & time mentioned below are with respect to Indian Standard Time. Video recordings of all talks will be listed on the website for participants",
         src: "calendar.svg"
       }
     };
@@ -1270,6 +1283,20 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    .legend {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @include iphone {
+        flex-wrap: wrap;
+        margin: 0.5rem;
+      }
+      div {
+        margin: 1.8rem 0.3rem;
+        margin-bottom: 0;
+      }
     }
   }
   .btn {

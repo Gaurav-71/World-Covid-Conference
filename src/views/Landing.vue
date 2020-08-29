@@ -156,7 +156,7 @@
         <h1>Registration</h1>
         <div class="small-line"></div>
         <h4
-          style="color:#e4335c; width: 100%; text-align: center;padding: 0 1rem;"
+          style="color:#e4335c; width: 100%; text-align: center;padding: 0 0.1rem;"
         >All funds collected as registration fee go to COVID-19 research and education</h4>
       </div>
       <div class="card-container">
@@ -210,7 +210,7 @@
       </div>
       <h4
         @click="route(10)"
-        style="width: 100%; text-align: center;padding: 0 1rem; margin:0 0 1rem 0;"
+        style="width: 100%; text-align: center;padding: 0 0.1rem; margin:0 0 1rem 0;"
       >
         For more details about pricing,
         <span class="link">Click here</span>
@@ -228,56 +228,104 @@
             <h3>Speakers</h3>
           </div>
           <div class="speaker">
-            <img src="../assets/organizers/org-9.jpg" alt />
-            <h3>Dr. Gustavo Zubieta</h3>
-          </div>
-          <div class="speaker">
             <img src="../assets/organizers/org-6.jpg" alt />
             <h3>Prof. Malali Gowda</h3>
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-10.jpg" alt />
             <h3>Dr. Oscar Murillo</h3>
+            <div class="country">
+              <img src="../assets/Flags/usa.png" alt="flag" />
+              <span>USA</span>
+            </div>
+          </div>
+          <div class="speaker">
+            <img src="../assets/organizers/org-9.jpg" alt />
+            <h3>Dr. Gustavo Zubieta</h3>
+            <div class="country">
+              <img src="../assets/Flags/bolivia.png" alt="flag" />
+              <span>Bolivia</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-37.jpg" alt />
             <h3>Dr. Robert Gallo</h3>
-          </div>
-          <div class="speaker">
-            <img src="../assets/organizers/org-24.jpg" alt />
-            <h3>Dr. Murray Epstein</h3>
-          </div>
-          <div class="speaker">
-            <img src="../assets/organizers/org-31.jpg" alt />
-            <h3>Prof. Andrew Pollard</h3>
-          </div>
-          <div class="speaker">
-            <img src="../assets/organizers/org-34.jpg" alt />
-            <h3>Prof. Paolo Pelosi</h3>
+            <div class="country">
+              <img src="../assets/Flags/usa.png" alt="flag" />
+              <span>USA</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-26.jpg" alt />
             <h3>Dr. Gaurav Sharma</h3>
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+          </div>
+          <div class="speaker">
+            <img src="../assets/organizers/org-24.jpg" alt />
+            <h3>Dr. Murray Epstein</h3>
+            <div class="country">
+              <img src="../assets/Flags/usa.png" alt="flag" />
+              <span>USA</span>
+            </div>
+          </div>
+          <div class="speaker">
+            <img src="../assets/organizers/org-31.jpg" alt />
+            <h3>Prof. Andrew Pollard</h3>
+            <div class="country">
+              <img src="../assets/Flags/uk.png" alt="flag" />
+              <span>UK</span>
+            </div>
+          </div>
+          <div class="speaker">
+            <img src="../assets/organizers/org-34.jpg" alt />
+            <h3>Prof. Paolo Pelosi</h3>
+            <div class="country">
+              <img src="../assets/Flags/italy.png" alt="flag" />
+              <span>Italy</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-35.jpg" alt />
             <h3>Dr. Milena Garcia</h3>
+            <div class="country">
+              <img src="../assets/Flags/bolivia.png" alt="flag" />
+              <span>Bolivia</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-32.jpg" alt />
             <h3>Prof. Jim Russel</h3>
+            <div class="country">
+              <img src="../assets/Flags/sa.png" alt="flag" />
+              <span>South Africa</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-16.jpg" alt />
             <h3>Dr. Jose Antonio</h3>
+            <div class="country">
+              <img src="../assets/Flags/mexico.png" alt="flag" />
+              <span>Mexico</span>
+            </div>
           </div>
           <div class="speaker">
             <img src="../assets/organizers/org-11.jpg" alt />
             <h3>Dr. Roberto Accinelli</h3>
+            <div class="country">
+              <img src="../assets/Flags/peru.png" alt="flag" />
+              <span>Peru</span>
+            </div>
           </div>
         </div>
       </div>
-      <p style="width: 100%; text-align: center;padding: 0 1rem;">
+      <p style="width: 100%; text-align: center;padding: 0 0.1rem; overflow: hidden;">
         To see the full speaker list with abstracts,
         <span @click="route(8)" class="link">Click Here</span>
       </p>
@@ -532,7 +580,7 @@
             <h2>Program/Schedule</h2>
           </div>
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2Fschedule.xlsx?alt=media&token=18eb2d0e-1426-4a43-894f-08590a800849"
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2F28th%20.xlsx?alt=media&token=12c75109-610e-41e8-a117-6ecb72003887"
             download
             target="_blank"
             class="btn"
@@ -1009,6 +1057,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     .speakers-containers {
       margin-top: 1rem;
       width: 95%;
@@ -1024,7 +1073,10 @@ export default {
           align-items: center;
           justify-content: center;
           margin: 0 2.5rem;
-          animation: marquee 25s linear infinite;
+          animation: marquee 28s linear infinite;
+          @include iphone {
+            animation: marquee-phone 50s linear infinite;
+          }
           img {
             width: 210px;
             height: 210px;
@@ -1032,8 +1084,23 @@ export default {
             box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
           }
           h3 {
-            margin: 1.5rem 0;
+            margin: 1.5rem 0 0.7rem 0;
             color: darken($primary, 15%);
+          }
+          .country {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 30px;
+              height: 18px;
+              border-radius: 0;
+            }
+            span {
+              margin: 0 0.5rem;
+              color: black;
+              font-size: small;
+            }
           }
         }
       }
@@ -1244,10 +1311,19 @@ export default {
 
 @keyframes marquee {
   0% {
-    transform: translateX(400%);
+    transform: translateX(600%);
   }
   100% {
-    transform: translateX(-400%);
+    transform: translateX(-600%);
+  }
+}
+
+@keyframes marquee-phone {
+  0% {
+    transform: translateX(900%);
+  }
+  100% {
+    transform: translateX(-900%);
   }
 }
 

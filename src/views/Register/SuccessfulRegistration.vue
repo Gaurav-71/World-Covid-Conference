@@ -45,8 +45,8 @@
           <p>
             <b>Join Now :</b>
             <a
-              href="https://zoom.us/j/92054569175?pwd=TDYzb2dDZW44TkxKTFBiOHI1SzJhUT09"
-            >https://zoom.us/j/92054569175?pwd=TDYzb2dDZW44TkxKTFBiOHI1SzJhUT09</a>
+              href="https://zoom.us/j/96603054694?pwd=RFZKWFR1Q01ZVDFRbkRVYXppSVJOUT09"
+            >https://zoom.us/j/96603054694?pwd=RFZKWFR1Q01ZVDFRbkRVYXppSVJOUT09</a>
           </p>
         </div>
       </div>

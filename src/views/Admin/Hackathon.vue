@@ -17,7 +17,7 @@
         <td>{{detail.detail.email}}</td>
         <td>{{detail.detail.phno}}</td>
         <td>{{detail.detail.profession}}</td>
-        <td v-if="detail.detail.file.length <= 2">Yet to submit</td>
+        <td v-if="detail.detail.file.length <= 2">No submission</td>
         <td v-else>
           <a :href="detail.detail.file" target="_blank">Download</a>
         </td>
