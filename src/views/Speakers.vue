@@ -436,6 +436,139 @@
         </div>
         <div class="card">
           <div class="img-cont">
+            <img src="../assets/organizers/org-79.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Prof. Darshan Shankar</h3>
+            <h4>the Vice Chancellor of University of Trans Disciplinary Health Sciences and Technology</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-82.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Prof Tahir Pillay</h3>
+            <h4>Department of Chemical Pathology and the Division of Clinical Pathology, University of Pretoria</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-76.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>DR. HARISH P</h3>
+            <h4>
+              Medical Oncologist
+              Cytecare Hospital
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-80.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Shubham Shree</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-83.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Ashakiran. S</h3>
+            <h4>
+              Professor & Head
+              Department of Biochemistry
+              Sapthagiri Institute of Medical Sciences &
+              Research Centre
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-78.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Manjunath</h3>
+            <h4>
+              Assistant Professor,
+              Department of Neurovirology, NIMHANS
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-81.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Farooq Fakhruddin Motiwala</h3>
+            <h4>
+              Motiwala Homoeopathic Medical
+              College & Hospital
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-75.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Sudheer Ayyappan BAMS</h3>
+            <h4>Team Dhanvantari, Sreehareeyam Ayurveda</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
+            <img src="../assets/organizers/org-77.jpg" alt="mg" />
+          </div>
+          <div class="body">
+            <div class="country">
+              <img src="../assets/Flags/india.png" alt="flag" />
+              <span>India</span>
+            </div>
+            <h3>Dr. Sumanta Goswami</h3>
+            <h4>
+              Associate Professor of Structural Biology at
+              Albert Einstein College of Medicine, NY, USA
+            </h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-cont">
             <img src="../assets/organizers/org-15.jpg" alt="mg" />
           </div>
           <div class="body">

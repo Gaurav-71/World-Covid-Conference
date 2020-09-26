@@ -31,7 +31,8 @@ import RegistrationSpeakers from "../views/Admin/Registrations/Speakers.vue";
 import Sponsor from "../views/Admin/Registrations/Sponsors.vue";
 import Workshop from "../views/Admin/Registrations/Workshop.vue";
 import Pricing from "../views/Pricing.vue";
-import SpeakerAbstracts from "../views/Abstracts.vue";
+import RecordingLogin from "../views/RecordingLogin.vue";
+import Research from "../views/Research.vue";
 
 Vue.use(VueRouter);
 
@@ -155,12 +156,6 @@ const routes = [
     props: true,
   },
   {
-    path: "/SpeakerAbstracts",
-    name: "SpeakerAbstracts",
-    component: SpeakerAbstracts,
-    props: true,
-  },
-  {
     path: "/schedule",
     name: "Schedule",
     component: Schedule,
@@ -230,6 +225,17 @@ const routes = [
     path: "/speakers",
     name: "Speakers",
     component: Speakers,
+  },
+  {
+    path: "/recordings/login",
+    name: "RecordingLogin",
+    component: RecordingLogin,
+  },
+
+  {
+    path: "/research-papers",
+    name: "Research",
+    component: Research,
   },
 ];
 

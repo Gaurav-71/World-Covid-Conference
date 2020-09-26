@@ -5,42 +5,6 @@
         <div class="home-inner"></div>
       </div>
     </section>
-    <section class="countdown-container">
-      <div class="date-time">
-        <div class="date">
-          <img src="../assets/Landing/calendar.svg" alt />
-          <div class="data">
-            <h3>August 27th-30th</h3>
-            <h4 @click="route(2)">View Schedule</h4>
-          </div>
-        </div>
-        <div class="date">
-          <div class="data data-2">
-            <div @click="route(5)" class="btn flashy">Register Now</div>
-            <h3 style="text-align:center;" @click="route(10)">
-              Exciting prices & discounts,
-              <span style="color:#e4335c;">Click here</span>
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="circle days">
-        <h1>{{days}}</h1>
-        <h1>Days</h1>
-      </div>
-      <div class="circle hours">
-        <h1>{{hours}}</h1>
-        <h1>Hours</h1>
-      </div>
-      <div class="circle mins">
-        <h1>{{minutes}}</h1>
-        <h1>Minutes</h1>
-      </div>
-      <div class="circle secs">
-        <h1>{{seconds}}</h1>
-        <h1>Seconds</h1>
-      </div>
-    </section>
     <section class="welcome">
       <div class="heading">
         <h1>COVID-19: One Problem, One World</h1>
@@ -131,90 +95,64 @@
     </section>
     <section class="registrations">
       <div class="heading">
-        <h1>Registration Benefits</h1>
+        <h1>Opening Speech</h1>
         <div class="small-line"></div>
       </div>
-      <div class="benefits">
-        <div class="benefit">
-          <img src="../assets/Landing/webinar.svg" alt />
-          <h4>Live Conference Zoom Access</h4>
-        </div>
-        <div class="benefit">
-          <img src="../assets/Landing/meeting.svg" alt />
-          <h4>Open discussions after each presentation</h4>
-        </div>
-        <div class="benefit">
-          <img src="../assets/Hackathon/diploma.svg" alt />
-          <h4>E-Certificates</h4>
-        </div>
-        <div class="benefit">
-          <img src="../assets/Landing/record.svg" alt />
-          <h4>Conference Recordings Access, uploaded within two weeks after the Congress (For further details, please contact us)</h4>
-        </div>
-      </div>
-      <div class="heading">
-        <h1>Registration</h1>
-        <div class="small-line"></div>
-        <h4
-          style="color:#e4335c; width: 100%; text-align: center;padding: 0 0.1rem;"
-        >All funds collected as registration fee go to COVID-19 research and education</h4>
-      </div>
-      <div class="card-container">
-        <div class="card grow">
-          <div class="body">
-            <img src="../assets/Register/target.svg" alt="participants" />
-            <h2>Conference</h2>
-            <ul>
-              <li class="link">Last minute deals, Hurry now and register !</li>
-              <li>Special Discounts For Students</li>
-              <li>75% Dicount for residents of underdeveloped countries</li>
-              <li>50% Discount for residents of devoloping countries</li>
-            </ul>
-          </div>
-          <div @click="route(5)" class="action">Register as a participant</div>
-        </div>
-        <div class="card grow">
-          <div class="body">
-            <img src="../assets/Register/hackathon.svg" alt="speaker" class="speaker" />
-            <h2>Hackathon</h2>
-            <ul>
-              <li>Free Registration</li>
-              <li>Free access to the conference for the top 3 winners</li>
-              <li>All participants will be awarded E-Certificates</li>
-              <li>
-                Want more details ?
-                <br />
-                <span class="link" @click="route(3)">Click Here</span>
-              </li>
-            </ul>
-          </div>
-          <div @click="route(6)" class="action">Register for Hackathon</div>
-        </div>
-        <div class="card grow">
-          <div class="body">
-            <img src="../assets/Register/workshop.svg" alt="speaker" />
-            <h2>Workshop</h2>
-            <ul>
-              <li>Accessible Prices</li>
-              <li>75% Dicount for residents of underdeveloped countries</li>
-              <li>50% Discount for residents of devoloping countries</li>
-              <li>
-                Want more details ?
-                <br />
-                <span class="link" @click="route(4)">Click Here</span>
-              </li>
-            </ul>
-          </div>
-          <div @click="route(7)" class="action">Register for Workshop</div>
-        </div>
-      </div>
-      <h4
-        @click="route(10)"
-        style="width: 100%; text-align: center;padding: 0 0.1rem; margin:0 0 1rem 0;"
-      >
-        For more details about pricing,
-        <span class="link">Click here</span>
-      </h4>
+      <h3 style="padding: 0 2rem; line-height:2rem;">
+        Prof. Dr. Gustavo Zubieta-Calleja
+        <br />Head
+        <br />High Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)
+      </h3>
+      <p style="padding: 0 2rem; line-height:2rem;">
+        Life is a gift of nature around our planet.
+        It is precious beyond anything else in the universe.
+        It results from a cosmic miracle.
+        And it depends on many fundamental elements,
+        being one of the most important, oxygen.
+        This coronavirus 2, attacks many parts of our body.
+        The most dramatic, is his attack on the lungs,
+        the fundamental organ where oxygen is captured,
+        So by destroying the cells in our lungs (Pneumolysis)
+        it gradually takes our lives,
+        in the most dramatic way, asphyxia.
+        This means we are suddenly choked to death.
+        it does not matter if you are from the north or the south
+        from the east from the west, if you are male or female,
+        if you are young or old with variations of course of incidence.
+        I am a High Altitude Medicine specialist,
+        I have dealt with Hypoxia all my life,
+        and it is this knowledge gathered in 50 years of experience,
+        that becomes a treasure under these circumstances.
+        At high altitude, I have seen patients suffer from very low oxygen levels,
+        being able to survive.
+        These same oxygen saturation values at sea level, cannot be tolerated and
+        are very feared.
+        I am a specialist, in adaptation to High Altitude.
+        We have developed formulas of adaptation and tolerance to Hypoxia.
+        They become extremely important and we have been
+        working hard to give this knowledge to the world.
+        We have joined hands with Professor Malali Gowda, Dr. Pruthvi Chakravarthi, Natalia
+        Zubieta-DeUrioste (my daughter) and a wonderful team to make this conference
+        a reality.
+        We are driven only by the intention to help the people from all
+        around the world, and to do good with science.
+        Because those are the fundamental principles that have driven our life
+        “Science, Honor and Truth” written in a medal that we award to
+        2 people every 2 years during the Chronic Hypoxia Symposiums.
+        We have in this conference 3 previous awardees, Professor Thuppil Venkatesh,
+        Professor Kusal Das, and Professor Andrew Pollard, Director of the Oxford
+        Vaccine.
+        We have as a speaker, the outstanding Robert Gallo, the man who has discovered HIV.
+        And all the other extraordinary speakers that honor us with their knowledge and Wisdom.
+        The world has the unique opportunity to learn from them.
+        We salute the world,
+        We tell every beating heart that we will continue in the struggle
+        And I have no doubt we will overcome it and adapt,
+        reducing the Coronavirus to a lower level of importance in our lives
+        And those hearts should rest assured, should base their objective
+        in life, to provide love to all their loved ones,
+        to all the animals, to all the plants, and to the sun and we must always express our gratitude to existence.
+      </p>
     </section>
     <section class="rolling-speakers">
       <div class="heading">
@@ -434,7 +372,7 @@
           >
             <img
               v-if="carouselCount==1"
-              src="../assets/Gallery/carousel-1.jpg"
+              src="../assets/Gallery/carousel-1.png"
               alt="carousel"
               key="1"
             />
@@ -580,7 +518,7 @@
             <h2>Program/Schedule</h2>
           </div>
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2F28th%20.xlsx?alt=media&token=12c75109-610e-41e8-a117-6ecb72003887"
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2F28th%20%20(1).xlsx?alt=media&token=084c2efa-62ff-45bf-b6b2-35708195337d"
             download
             target="_blank"
             class="btn"
@@ -596,6 +534,34 @@
         >here</a>
       </h3>
     </div>
+    <section class="gallery">
+      <div class="heading">
+        <h1>A Beautiful Poem by Mahesh Kumar</h1>
+        <div class="small-line"></div>
+      </div>
+      <div class="carousel-container">
+        <img src="../assets/Gallery/left.svg" alt="left" @click="decrementPoem()" class="arrow" />
+        <div class="carousel">
+          <transition
+            name="custom-classes-transition"
+            enter-active-class="animated slideInRight"
+            leave-active-class="animated slideOutLeft"
+            duration="500"
+            mode="out-in"
+            appear
+          >
+            <img v-if="poemCount==1" src="../assets/Poem/poem (1).png" alt="carousel" key="1" />
+            <img v-else-if="poemCount==2" src="../assets/Poem/poem (2).png" alt="carousel" key="2" />
+            <img v-else-if="poemCount==3" src="../assets/Poem/poem (3).png" alt="carousel" key="3" />
+            <img v-else-if="poemCount==4" src="../assets/Poem/poem (4).png" alt="carousel" key="4" />
+            <img v-else-if="poemCount==5" src="../assets/Poem/poem (5).png" alt="carousel" key="5" />
+            <img v-else-if="poemCount==6" src="../assets/Poem/poem (6).png" alt="carousel" key="6" />
+            <img v-else-if="poemCount==7" src="../assets/Poem/poem (7).png" alt="carousel" key="7" />
+          </transition>
+        </div>
+        <img src="../assets/Gallery/right.svg" alt="right" @click="incrementPoem()" class="arrow" />
+      </div>
+    </section>
     <div class="condolence">
       <div class="heading">
         <h1>Condolences</h1>
@@ -618,39 +584,10 @@ export default {
   data() {
     return {
       carouselCount: 1,
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0
+      poemCount: 1
     };
   },
   methods: {
-    countdown() {
-      let end = new Date("2020-08-27");
-      let start = new Date();
-      let remTime = end.getTime() - start.getTime();
-      let mm = Math.floor(remTime / (1000 * 60));
-      let hh = Math.floor(mm / 60);
-      let dd = Math.floor(hh / 24);
-      let ss = Math.floor(remTime / 1000);
-      hh %= 24;
-      mm %= 60;
-      ss %= 60;
-      hh = hh < 0 ? "0" : hh < 10 ? "0" + hh : hh;
-      mm = mm < 0 ? "0" : mm < 10 ? "0" + mm : mm;
-      ss = ss < 0 ? "0" : ss < 10 ? "0" + ss : ss;
-      this.days = dd;
-      this.hours = hh;
-      this.minutes = mm;
-      this.seconds = ss;
-      if (start >= end) {
-        this.days = 0;
-        this.hours = 0;
-        this.minutes = 0;
-        this.seconds = 0;
-      }
-      setTimeout(this.countdown, 1000);
-    },
     route(page) {
       switch (page) {
         case 1:
@@ -701,10 +638,23 @@ export default {
         this.carouselCount--;
       }
       console.log(this.carouselCount);
+    },
+    incrementPoem() {
+      if (this.poemCount >= 7) {
+        this.poemCount = 1;
+      } else {
+        this.poemCount++;
+      }
+      console.log(this.poemCount);
+    },
+    decrementPoem() {
+      if (this.poemCount <= 1) {
+        this.poemCount = 7;
+      } else {
+        this.poemCount--;
+      }
+      console.log(this.poemCount);
     }
-  },
-  mounted() {
-    this.countdown();
   }
 };
 </script>
@@ -722,30 +672,9 @@ export default {
     height: 100vh;
     display: table;
     z-index: 0;
-    .home-wrap {
-      clip: rect(0, auto, auto, 0);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      .home-inner {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../assets/Landing/desktop3.png");
-        background-size: cover;
-        background-position: center center;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        will-change: transform;
-        @include iphone {
-          background-image: url("../assets/Landing/iphone7.png");
-        }
-      }
-    }
+    background-image: url("../assets/Landing/desktop3.png");
+    background-size: cover;
+    background-position: center;
   }
   .countdown-container {
     margin: 0.7rem 0;

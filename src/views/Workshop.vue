@@ -45,9 +45,8 @@
               <a
                 href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FWorkshop.JPG?alt=media&token=60dc560e-a152-46a9-b89f-85a7e1bf1b58"
                 target="_blank"
-                class="btn transparent"
+                class="btn"
               >Download Brochure</a>
-              <div @click="route(2)" class="btn">Register</div>
             </div>
           </div>
         </div>

@@ -317,7 +317,7 @@
                 <h4>Volunteer - Hackathon Co-ordinator</h4>
               </div>
               <div class="organizer">
-                <img src="../assets/organizers/org-68.jpg" alt="organizer" />
+                <img src="../assets/organizers/org-74.jpeg" alt="organizer" />
                 <h3>Yeshua Pena Lilo</h3>
                 <div class="country">
                   <img src="../assets/Flags/bolivia.png" alt="country" />
@@ -334,6 +334,45 @@
                 </div>
                 <h4>Digital Marketing</h4>
               </div>
+
+              <div class="organizer">
+                <img src="../assets/organizers/org-73.jpeg" alt="organizer" />
+                <h3>Rafaela Zubieta-DeUrioste</h3>
+                <div class="country">
+                  <img src="../assets/Flags/bolivia.png" alt="country" />
+                  <h4>Bolivia</h4>
+                </div>
+                <h4>Recordings and Video Editing</h4>
+              </div>
+
+              <div class="organizer">
+                <img src="../assets/organizers/org-71.jpeg" alt="organizer" />
+                <h3>Dr. Ajeet Kumar</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer Social Media, Hackathon</h4>
+              </div>
+              <div class="organizer">
+                <img src="../assets/organizers/org-70.jpeg" alt="organizer" />
+                <h3>Dr. Shadma Shahin</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Hackathon</h4>
+              </div>
+
+              <div class="organizer">
+                <img src="../assets/organizers/org-72.jpeg" alt="organizer" />
+                <h3>Pribin K Benny</h3>
+                <div class="country">
+                  <img src="../assets/Flags/india.png" alt="country" />
+                  <h4>India</h4>
+                </div>
+                <h4>Volunteer - Invitations, Hackathon</h4>
+              </div>
               <div class="organizer">
                 <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
                 <h3>Fatima Tuz Zehra</h3>
@@ -345,39 +384,12 @@
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
-                <h3>Rafaela Zubieta-DeUrioste</h3>
-                <div class="country">
-                  <img src="../assets/Flags/bolivia.png" alt="country" />
-                  <h4>Bolivia</h4>
-                </div>
-                <h4>Recordings and Video Editing</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
                 <h3>M. O. Farooque</h3>
                 <div class="country">
                   <img src="../assets/Flags/india.png" alt="country" />
                   <h4>India</h4>
                 </div>
                 <h4>Event Hosting</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
-                <h3>Dr. Ajeet Kumar</h3>
-                <div class="country">
-                  <img src="../assets/Flags/india.png" alt="country" />
-                  <h4>India</h4>
-                </div>
-                <h4>Volunteer Social Media, Hackathon</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
-                <h3>Dr. Shadma Shaheen</h3>
-                <div class="country">
-                  <img src="../assets/Flags/india.png" alt="country" />
-                  <h4>India</h4>
-                </div>
-                <h4>Volunteer - Hackathon</h4>
               </div>
               <div class="organizer">
                 <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
@@ -391,15 +403,6 @@
               <div class="organizer">
                 <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
                 <h3>Faba Susan Santosh</h3>
-                <div class="country">
-                  <img src="../assets/Flags/india.png" alt="country" />
-                  <h4>India</h4>
-                </div>
-                <h4>Volunteer - Invitations, Hackathon</h4>
-              </div>
-              <div class="organizer">
-                <img src="../assets/organizers/people.svg" class="no-shadow" alt="organizer" />
-                <h3>Pribin K Benny</h3>
                 <div class="country">
                   <img src="../assets/Flags/india.png" alt="country" />
                   <h4>India</h4>

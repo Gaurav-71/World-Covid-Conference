@@ -14,33 +14,21 @@
         <img v-else @click="showMenu" src="../assets/Header/close.svg" alt="close" />
         <ul :class="{'list-nav':isMenuOpen}" class="hide">
           <li @click="route(1,'close')">Home</li>
-          <li @click="route(2,'close')">Speakers</li>
+          <li @click="route(5,'close')">Research Papers</li>
           <li @click="route(3,'close')">Organizers</li>
-          <li @click="route(6,'close')">Program</li>
+          <li @click="route(2,'close')">Speakers</li>
           <li @click="route(7,'close')">Hackathon</li>
           <li @click="route(8,'close')">Workshop</li>
           <li @click="route(4,'close')">Contact Us</li>
-          <li @click="route(5,'close')">Register</li>
         </ul>
         <ul class="flex-nav">
           <li @click="route(1)">Home</li>
-          <li @click="route(2)">Speakers</li>
+          <li @click="route(5)">Research Papers</li>
           <li @click="route(3)">Organizers</li>
-          <li @click="route(6)">Program</li>
+          <li @click="route(2)">Speakers</li>
           <li @click="route(7)">Hackathon</li>
           <li @click="route(8)">Workshop</li>
           <li @click="route(4)">Contact Us</li>
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated bounceInRight"
-            leave-active-class="animated bounceOutRight"
-            :duration="{enter: 800,leave: 500}"
-            appear
-          >
-            <li v-if="$store.state.navItem != 5" @click="route(5)" class="no-padding">
-              <div class="btn shake">Register</div>
-            </li>
-          </transition>
         </ul>
       </nav>
       <a v-else @click="logOut" class="signout">
@@ -79,10 +67,10 @@ export default {
           this.$router.push("/contacts");
           break;
         case 5:
-          this.$router.push("/registration");
+          this.$router.push("/research-papers");
           break;
         case 6:
-          this.$router.push("/schedule");
+          this.$router.push("/highlights");
           break;
         case 7:
           this.$router.push("/hackathon/about");

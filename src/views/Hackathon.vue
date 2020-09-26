@@ -24,10 +24,7 @@
             <p
               style="line-height: 1.5rem;"
             >An opportunity for young minds where in they come up with an idea/solution for the current pandemic for which they have to write a short concept of their idea in the word or pdf format of about 2 pages</p>
-            <div class="btn-container">
-              <div @click="route(1)" class="btn transparent">Submit</div>
-              <div @click="route(2)" class="btn">Register</div>
-            </div>
+
             <div class="detail">
               <img src="../assets/Hackathon/test.svg" alt="time" class="test" />
               <p>24th August 2020 6pm, Screening of Hackathon</p>
@@ -105,7 +102,6 @@
             target="_blank"
             class="btn download"
           >Download Brochure</a>
-          <span>Registrations for Hackathon is free</span>
         </div>
       </div>
     </transition>

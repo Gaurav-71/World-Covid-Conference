@@ -29,7 +29,7 @@
           <div
             class="div"
             style="color: midnightblue;"
-          >BST : British Standard Time w.r.t United Kingdom,</div>
+          >BST : British Summer Time w.r.t United Kingdom,</div>
         </div>
         <transition
           name="custom-classes-transition-2"
@@ -830,11 +830,7 @@
             </div>
             <div class="event">
               <div class="data">
-                <h2>Drug discovery</h2>
-                <div class="speaker">
-                  <h4></h4>
-                  <span></span>
-                </div>
+                <h2>Hackathon Winners Presentation</h2>
                 <div class="timezones">
                   <div class="ist">7:00am-7:30am IST,</div>
                   <div class="est">
@@ -980,23 +976,6 @@
               <h2>Eight Session</h2>
               <div class="small-line"></div>
             </div>
-            <!---
-            <div class="event">
-              <img src="../assets/organizers/org-42.jpg" alt />
-              <div class="data">
-                <h2>Identification of high-affinity inhibitors of SARS-CoV-2 main protease: Towards the development of effective COVID-19 therapy</h2>
-                <div class="speaker">
-                  <h4>Dr. Imtiyaz Hassan</h4>
-                  <span>Assistant Professor (Structural Biology) Centre for Interdisciplinay Research in Basic Sciences, Jamia Millia Islamia</span>
-                </div>
-                <div class="timezones">
-                  <div class="ist">4:00pm-4:30pm IST,</div>
-                  <div class="est">6:30am-7:00am EST,</div>
-                  <div class="bst">11:30pm-12:30pm BST</div>
-                </div>
-              </div>
-            </div> --->
-
             <div class="event">
               <img src="../assets/organizers/org-35.jpg" alt />
               <div class="data">
@@ -1005,6 +984,21 @@
                   <h4>Dr. Milena Garcia</h4>
                   <span>Pneumology Epidemiology, Hospital San Ignacio</span>
                 </div>
+
+                <div class="timezones">
+                  <div class="ist">4:00pm-4:30pm IST,</div>
+                  <div class="est">6:30am-7:00am EST,</div>
+                  <div class="bst">11:30pm-12:30pm BST</div>
+                </div>
+              </div>
+            </div>
+            <div class="event">
+              <div class="data">
+                <h2>New Diagnostic tests for COVID-19</h2>
+                <div class="speaker">
+                  <h4>Dr. Sumanta Goswami</h4>
+                  <span>Associate Professor of Structural Biology at Albert Einstein College of Medicine</span>
+                </div>
                 <div class="timezones">
                   <div class="ist">4:30pm-5:00pm IST,</div>
                   <div class="est">7:00am-7:30am EST,</div>
@@ -1012,6 +1006,7 @@
                 </div>
               </div>
             </div>
+
             <div class="event">
               <img src="../assets/organizers/org-31.jpg" alt />
               <div class="data">
@@ -1059,17 +1054,33 @@
                 </div>
               </div>
             </div>
+            <div class="sub-heading">
+              <h2>Special Session</h2>
+              <div class="small-line"></div>
+            </div>
+            <div class="event-special">
+              <div class="new-data">
+                <img src="../assets/organizers/special1.jpeg" alt="special" />
+                <img src="../assets/organizers/special2.jpeg" alt="special" />
+                <div class="deets">
+                  <h1>Contention, Mitigation, Recovery and Post-Lockdown plans in response to COVID in Bolivia</h1>
+                  <h4 style="margin-bottom: 0.3rem;">Dr. Eidy Roca De Sangueza</h4>
+                  <span style="margin-top:0;">Minister of Health, Bolivia</span>
+                </div>
+              </div>
+              <div class="timezones">
+                <div class="ist">7:10pm-7:40pm IST,</div>
+                <div class="est">9:40am-10:10am EST,</div>
+                <div class="bst">2:40pm-3:10pm BST</div>
+              </div>
+            </div>
             <div class="event">
               <div class="data">
-                <h2>Representatives from different countries…</h2>
-                <div class="speaker">
-                  <h4></h4>
-                  <span></span>
-                </div>
+                <h2>Brainstorming Session</h2>
                 <div class="timezones">
-                  <div class="ist">7:10pm-8:10pm IST,</div>
-                  <div class="est">9:40am-10:40am EST,</div>
-                  <div class="bst">2:40pm-3:40pm BST</div>
+                  <div class="ist">7:40pm-8:10pm IST,</div>
+                  <div class="est">10:10am-10:40am EST,</div>
+                  <div class="bst">3:10pm-3:40pm BST</div>
                 </div>
               </div>
             </div>
@@ -1087,7 +1098,7 @@
         </transition>
         <div class="download-container">
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2F28th%20.xlsx?alt=media&token=12c75109-610e-41e8-a117-6ecb72003887"
+            href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2F28th%20%20(1).xlsx?alt=media&token=084c2efa-62ff-45bf-b6b2-35708195337d"
             target="_blank"
             class="btn"
           >Download Program</a>
@@ -1105,7 +1116,7 @@ export default {
   },
   data() {
     return {
-      page: 3,
+      page: 4,
       headingObj: {
         h1: "Schedule / Program List",
         h4:
@@ -1264,6 +1275,79 @@ export default {
           .bst {
             color: midnightblue;
           }
+        }
+      }
+    }
+    .event-special {
+      margin: 0.6rem 0;
+      width: 98%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: rgba($primary, 0.2);
+      padding: 0.5rem 2rem;
+      border-radius: 0.8rem;
+      @include iphone {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .new-data {
+        width: 98%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include ipad {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        @include iphone {
+          flex-wrap: wrap-reverse;
+          justify-content: center;
+          padding: 0.5rem;
+        }
+        img {
+          width: 21rem;
+          height: 17rem;
+          margin: 1rem 2rem 1rem 0;
+          @include iphone {
+            margin: 1rem 0;
+            width: 17rem;
+            height: 13rem;
+          }
+        }
+        .deets {
+          h1 {
+            color: darken($primary, 15%);
+          }
+        }
+      }
+      .timezones {
+        width: 100%;
+        margin: 1.5rem 0 1.5rem 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include iphone {
+          flex-wrap: wrap;
+          margin: 1.5rem 0;
+        }
+        .bst,
+        .est,
+        .ist {
+          margin-right: 0.7rem;
+          @include iphone {
+            margin: 0.5rem 0;
+          }
+        }
+        .ist {
+          color: darken(red, 5%);
+        }
+        .est {
+          color: #1c8d76;
+        }
+        .bst {
+          color: midnightblue;
         }
       }
     }
