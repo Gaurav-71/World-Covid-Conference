@@ -44,19 +44,6 @@
 
         <div class="card">
           <div class="img-cont">
-            <img src="../assets/organizers/org-59.jpeg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/austria.png" alt="flag" />
-              <span>Austria</span>
-            </div>
-            <h3>Prof. Thomas Binder,</h3>
-            <h4>Cardiologist Vienna General Hospital</h4>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-cont">
             <img src="../assets/organizers/org-9.jpg" alt="mg" />
           </div>
           <div class="body">
@@ -70,7 +57,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FProf.%20Gustavo%20Abstract.docx?alt=media&token=4b6aaece-e377-436d-b7bf-5b0a92d49cd3"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -113,7 +101,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Frussel%20abstract.docx?alt=media&token=b7e64290-5eea-4cfe-81d6-487bf0ff3460"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -143,7 +132,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FAbstract_Arias_Reyes.docx?alt=media&token=e12723a1-10eb-4c0a-a83f-6708ff4c285f"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -184,19 +174,7 @@
             <h4>Pulmonologist, Hospital Metropolitano</h4>
           </div>
         </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-44.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/ethiopia.png" alt="flag" />
-              <span>Ethiopia</span>
-            </div>
-            <h3>Dr. Girma Ababi</h3>
-            <h4>LIYANA Healthcare, Vice President for the National Ethiopian Private Health Sector</h4>
-          </div>
-        </div>
+
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-61.jpeg" alt="mg" />
@@ -212,7 +190,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fmartin%20abstract.docx?alt=media&token=a0ee1bff-f8d8-4b7f-a38a-af17834e639c"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -227,19 +206,7 @@
             <h4>Head, Bengaluru Genomics Center</h4>
           </div>
         </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-63.jpeg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/india.png" alt="flag" />
-              <span>India</span>
-            </div>
-            <h3>Dr. Prachi Parvatikar</h3>
-            <h4>Dept of Physiology, BLDE University</h4>
-          </div>
-        </div>
+
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-60.jpeg" alt="mg" />
@@ -269,7 +236,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Futpal%20tatu%20abstract.docx?alt=media&token=0458f662-c9f9-41fb-995e-24670e3bbee8"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -312,7 +280,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fthuppil%20ventakesh%20abstarct.docx?alt=media&token=5216f147-f537-4cb6-bee9-29f323962096"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -329,7 +298,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fgourav%20sharma%20abstract.pdf?alt=media&token=19629fb3-3d17-4675-8e99-d6a3d8977858"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -341,12 +311,15 @@
               <span>India</span>
             </div>
             <h3>Vaidya P. Rammanohar</h3>
-            <h4>Research Director, Amrita School of Ayurveda, Kollam, Kerala</h4>
+            <h4>
+              Research Director, Amrita School of Ayurveda, Kollam, Kerala
+            </h4>
           </div>
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fram%20monohar%20abstract.docx?alt=media&token=5c03e9cf-679d-46b0-a7ce-e92a2d529e3a"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -363,7 +336,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fabstract%20sanjay%20jain.docx?alt=media&token=217e1759-624f-4c19-be2c-023b8cdf781a"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
 
         <div class="card">
@@ -381,7 +355,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FDr.%20kusal%20Das.ABSTRACT.docx?alt=media&token=213c21ff-999b-40bf-8145-00e85289e5b2"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -398,7 +373,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fmeera%20abstract.JPG?alt=media&token=43c07d90-13c7-42c7-bae5-37f99d12ebdf"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -409,13 +385,17 @@
               <img src="../assets/Flags/india.png" alt="flag" />
               <span>India</span>
             </div>
-            <h3>Dr. Imtiyaz Hassan</h3>
-            <h4>Assistant Professor, Centre for Interdisciplinary Research in Basic Sciences</h4>
+            <h3>Dr. Imtaiyaz Hassan</h3>
+            <h4>
+              Assistant Professor, Centre for Interdisciplinary Research in
+              Basic Sciences
+            </h4>
           </div>
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fimtiyaz%20ali%20abstract.pptx?alt=media&token=2a816ec0-9afb-466b-bd74-e75a103cae07"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -432,7 +412,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fsudhir%20abstract.docx?alt=media&token=02f71406-5812-437c-a526-d724d5df03be"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -444,7 +425,10 @@
               <span>India</span>
             </div>
             <h3>Prof. Darshan Shankar</h3>
-            <h4>the Vice Chancellor of University of Trans Disciplinary Health Sciences and Technology</h4>
+            <h4>
+              the Vice Chancellor of University of Trans Disciplinary Health
+              Sciences and Technology
+            </h4>
           </div>
         </div>
         <div class="card">
@@ -457,7 +441,10 @@
               <span>India</span>
             </div>
             <h3>Prof Tahir Pillay</h3>
-            <h4>Department of Chemical Pathology and the Division of Clinical Pathology, University of Pretoria</h4>
+            <h4>
+              Department of Chemical Pathology and the Division of Clinical
+              Pathology, University of Pretoria
+            </h4>
           </div>
         </div>
         <div class="card">
@@ -471,8 +458,7 @@
             </div>
             <h3>DR. HARISH P</h3>
             <h4>
-              Medical Oncologist
-              Cytecare Hospital
+              Medical Oncologist Cytecare Hospital
             </h4>
           </div>
         </div>
@@ -499,10 +485,8 @@
             </div>
             <h3>Dr. Ashakiran. S</h3>
             <h4>
-              Professor & Head
-              Department of Biochemistry
-              Sapthagiri Institute of Medical Sciences &
-              Research Centre
+              Professor & Head Department of Biochemistry Sapthagiri Institute
+              of Medical Sciences & Research Centre
             </h4>
           </div>
         </div>
@@ -517,8 +501,7 @@
             </div>
             <h3>Dr. Manjunath</h3>
             <h4>
-              Assistant Professor,
-              Department of Neurovirology, NIMHANS
+              Assistant Professor, Department of Neurovirology, NIMHANS
             </h4>
           </div>
         </div>
@@ -533,8 +516,7 @@
             </div>
             <h3>Dr. Farooq Fakhruddin Motiwala</h3>
             <h4>
-              Motiwala Homoeopathic Medical
-              College & Hospital
+              Motiwala Homoeopathic Medical College & Hospital
             </h4>
           </div>
         </div>
@@ -562,8 +544,8 @@
             </div>
             <h3>Dr. Sumanta Goswami</h3>
             <h4>
-              Associate Professor of Structural Biology at
-              Albert Einstein College of Medicine, NY, USA
+              Associate Professor of Structural Biology at Albert Einstein
+              College of Medicine, NY, USA
             </h4>
           </div>
         </div>
@@ -577,12 +559,16 @@
               <span>Iran</span>
             </div>
             <h3>Prof. Hamid Mobasheri</h3>
-            <h4>Institute of Biochemistry and Biophysics, University of Tehran, Iran, UNESCO Intetacadrmic Partnership (AP)</h4>
+            <h4>
+              Institute of Biochemistry and Biophysics, University of Tehran,
+              Iran, UNESCO Intetacadrmic Partnership (AP)
+            </h4>
           </div>
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FH.%20Mobasheri%20(Abstract%20for%202nd%20World%20Conference%20on%20Advances%20in%20Covid-19%2C%20Aug.%2027-30%2C%202020).docx?alt=media&token=9e0228e7-9c99-4d01-b639-91e99617034b"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -612,7 +598,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fpelosi%20abstract.docx?alt=media&token=ea5816de-af95-40bb-b311-80165759e9b1"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -624,12 +611,15 @@
               <span>Malaysia</span>
             </div>
             <h3>Su Datt Lam</h3>
-            <h4>Department of Applied Physics, Faculty of Science and Technology</h4>
+            <h4>
+              Department of Applied Physics, Faculty of Science and Technology
+            </h4>
           </div>
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Flam%20abstract.JPG?alt=media&token=78ced7de-9030-462a-a9b8-3a6fee524956"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -712,7 +702,8 @@
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FAbstract%20Assoc.%20Prof.%20Ross%20Hofmeyr.pdf?alt=media&token=ee61a342-60a8-4ee6-99a5-08188d5ae357"
             target="_blank"
             class="abstract"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -724,12 +715,16 @@
               <span>South Africa</span>
             </div>
             <h3>Dr. Clint Hendrikse</h3>
-            <h4>Lecturer and Joint staff, Division of Emergency Medicine, University of Cape Town</h4>
+            <h4>
+              Lecturer and Joint staff, Division of Emergency Medicine,
+              University of Cape Town
+            </h4>
           </div>
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fclint%20hendrikse%20abstract.pdf?alt=media&token=7d096f63-87c2-4c2e-b761-5ecdf4e05bd9"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -746,7 +741,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FBiosketch_Lalla.pdf?alt=media&token=ade2a772-7d7f-48f2-8622-09c1c2b9d113"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -763,7 +759,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fandrew%20pollard%20abstract.docx?alt=media&token=bac8fb3a-d548-4022-ac33-c2bf5df5a380"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
 
         <div class="card">
@@ -776,12 +773,16 @@
               <span>USA</span>
             </div>
             <h3>Dr. Murray Epstein</h3>
-            <h4>Professor of Medicine, University of Miami Miller School of Medicine</h4>
+            <h4>
+              Professor of Medicine, University of Miami Miller School of
+              Medicine
+            </h4>
           </div>
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fmurray%20Abstract.docx?alt=media&token=9fdae49e-9451-424f-836a-57387c26c90f"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -796,19 +797,7 @@
             <h4>St. Lukes University</h4>
           </div>
         </div>
-        <div class="card">
-          <div class="img-cont">
-            <img src="../assets/organizers/org-47.jpg" alt="mg" />
-          </div>
-          <div class="body">
-            <div class="country">
-              <img src="../assets/Flags/usa.png" alt="flag" />
-              <span>USA</span>
-            </div>
-            <h3>Prof. Susanne Doblecki-Lewis</h3>
-            <h4>Associate Professor of Clinical Medicine</h4>
-          </div>
-        </div>
+
         <div class="card">
           <div class="img-cont">
             <img src="../assets/organizers/org-37.jpg" alt="mg" />
@@ -824,7 +813,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fgallo%20abstract.JPG?alt=media&token=1e401094-9e3d-4ada-bab7-da7f0c77b1b9"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
 
         <div class="card">
@@ -842,7 +832,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fchristine%20ebert%20santos%20abstract.docx?alt=media&token=e6f2552d-14d2-42ec-a853-9ba879587ab9"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -859,7 +850,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2FStatistical%20Analysis%20of%20COVID-19.pdf?alt=media&token=438c5284-184d-47e9-9287-5c8af56695d5"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
         <div class="card">
           <div class="img-cont">
@@ -876,7 +868,8 @@
           <a
             href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Abstracts%2Fdickinson%20abstract.docx?alt=media&token=1bc8c5c4-f9b5-4bed-ad68-2f8db22b6e90"
             target="_blank"
-          >View Abstract</a>
+            >View Abstract</a
+          >
         </div>
       </div>
     </transition>

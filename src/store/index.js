@@ -13,6 +13,7 @@ export default new Vuex.Store({
     isLoggedIn: false,
     isLoggingIn: true,
     createNewPromoCode: false,
+    validUser: false,
     participants: [],
     abstracts: [],
     workshop: [],
@@ -23,6 +24,7 @@ export default new Vuex.Store({
     hackathonEmails: [],
     hackathon: [],
     messages: [],
+    recordingUsers: [],
   },
   mutations: {
     logIn: (state) => {
@@ -60,6 +62,9 @@ export default new Vuex.Store({
     },
     loadMessages: (state, obj) => {
       state.messages = obj;
+    },
+    loadRecordingsUsers: (state, obj) => {
+      state.recordingUsers = obj;
     },
   },
   actions: {
@@ -145,10 +150,6 @@ export default new Vuex.Store({
           paymentMode: payload.detail.paymentMode,
         };
         await db.collection("Activity").add(activityData);
-        await db
-          .collection("PromoCodes")
-          .doc(payload.deleteId)
-          .delete();
       } catch (exc) {
         console.log(exc);
       }
@@ -660,6 +661,19 @@ export default new Vuex.Store({
         });
       return response;
     },
+    async loadRecordingsUsers(context) {
+      let response = db
+        .collection("ParticipantRegistration")
+        .orderBy("timestamp", "asc")
+        .onSnapshot((snapshot) => {
+          let items = [];
+          snapshot.forEach((doc) => {
+            items.push(doc.data().email);
+          });
+          context.commit("loadRecordingsUsers", items);
+        });
+      return response;
+    },
   },
   getters: {
     getParticipants: (store) => {
@@ -691,6 +705,9 @@ export default new Vuex.Store({
     },
     getMessages: (store) => {
       return store.messages;
+    },
+    getRecordingsUsers: (store) => {
+      return store.recordingUsers;
     },
   },
   modules: {},

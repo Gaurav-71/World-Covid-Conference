@@ -10,20 +10,32 @@
       appear
     >
       <nav v-if="!$store.state.isLoggedIn">
-        <img v-if="!isMenuOpen" @click="showMenu" src="../assets/Header/menu.svg" alt="menu" />
-        <img v-else @click="showMenu" src="../assets/Header/close.svg" alt="close" />
-        <ul :class="{'list-nav':isMenuOpen}" class="hide">
-          <li @click="route(1,'close')">Home</li>
-          <li @click="route(5,'close')">Research Papers</li>
-          <li @click="route(3,'close')">Organizers</li>
-          <li @click="route(2,'close')">Speakers</li>
-          <li @click="route(7,'close')">Hackathon</li>
-          <li @click="route(8,'close')">Workshop</li>
-          <li @click="route(4,'close')">Contact Us</li>
+        <img
+          v-if="!isMenuOpen"
+          @click="showMenu"
+          src="../assets/Header/menu.svg"
+          alt="menu"
+        />
+        <img
+          v-else
+          @click="showMenu"
+          src="../assets/Header/close.svg"
+          alt="close"
+        />
+        <ul :class="{ 'list-nav': isMenuOpen }" class="hide">
+          <li @click="route(1, 'close')">Home</li>
+          <li @click="route(5, 'close')">Research Papers</li>
+          <li @click="route(9, 'close')">Recordings</li>
+          <li @click="route(3, 'close')">Organizers</li>
+          <li @click="route(2, 'close')">Speakers</li>
+          <li @click="route(7, 'close')">Hackathon</li>
+          <li @click="route(8, 'close')">Workshop</li>
+          <li @click="route(4, 'close')">Contact Us</li>
         </ul>
         <ul class="flex-nav">
           <li @click="route(1)">Home</li>
           <li @click="route(5)">Research Papers</li>
+          <li @click="route(9)">Recordings</li>
           <li @click="route(3)">Organizers</li>
           <li @click="route(2)">Speakers</li>
           <li @click="route(7)">Hackathon</li>
@@ -44,12 +56,14 @@ export default {
   name: "Header",
   data() {
     return {
-      isMenuOpen: false
+      isMenuOpen: false,
+      unsubscribe: null
     };
   },
   methods: {
     route(page, menuAction = "ignore") {
       this.$store.state.navItem = page;
+      this.$store.state.validUser = false;
       if (menuAction == "close") {
         this.showMenu();
       }
@@ -78,6 +92,9 @@ export default {
         case 8:
           this.$router.push("/workshop");
           break;
+        case 9:
+          this.$router.push("/recordings/login");
+          break;
       }
     },
     showMenu() {
@@ -94,6 +111,16 @@ export default {
           alert(err);
         });
     }
+  },
+  mounted() {
+    this.$store
+      .dispatch("loadRecordingsUsers")
+      .then(resp => {
+        this.unsubscribe = resp;
+      })
+      .catch(err => {
+        alert(err);
+      });
   }
 };
 </script>

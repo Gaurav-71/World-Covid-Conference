@@ -4,7 +4,10 @@
       <img src="../../assets/Register/target.svg" alt="participant" />
       <div class="title">
         <h1>Participant Registration</h1>
-        <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
+        <h4>
+          Interested to understand COVID-19 better ? Register to view recorded
+          videos !
+        </h4>
       </div>
     </div>
     <transition
@@ -23,15 +26,30 @@
           <form>
             <div class="input">
               <label>Name</label>
-              <input type="text" placeholder="Enter name" class="name" v-model="detail.name" />
+              <input
+                type="text"
+                placeholder="Enter name"
+                class="name"
+                v-model="detail.name"
+              />
             </div>
             <div class="input">
               <label>Phone Number</label>
-              <input type="text" placeholder="Enter number" class="number" v-model="detail.phno" />
+              <input
+                type="text"
+                placeholder="Enter number"
+                class="number"
+                v-model="detail.phno"
+              />
             </div>
             <div class="input">
               <label>Email</label>
-              <input type="text" placeholder="Enter email" class="email" v-model="detail.email" />
+              <input
+                type="text"
+                placeholder="Enter email"
+                class="email"
+                v-model="detail.email"
+              />
             </div>
             <div class="input no-margin">
               <label>Country</label>
@@ -298,19 +316,46 @@
             <div class="gender">
               <label>Gender</label>
               <form>
-                <input type="radio" id="male" name="gender" value="M" v-model="detail.gender" />
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="M"
+                  v-model="detail.gender"
+                />
                 <div class="custom-label">
-                  <img src="../../assets/Register/Participant/male.svg" alt="male" />
+                  <img
+                    src="../../assets/Register/Participant/male.svg"
+                    alt="male"
+                  />
                   <label for="male">Male</label>
                 </div>
-                <input type="radio" id="female" name="gender" value="F" v-model="detail.gender" />
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="F"
+                  v-model="detail.gender"
+                />
                 <div class="custom-label">
-                  <img src="../../assets/Register/Participant/female.svg" alt="male" />
+                  <img
+                    src="../../assets/Register/Participant/female.svg"
+                    alt="male"
+                  />
                   <label for="female">Female</label>
                 </div>
-                <input type="radio" id="other" name="gender" value="O" v-model="detail.gender" />
+                <input
+                  type="radio"
+                  id="other"
+                  name="gender"
+                  value="O"
+                  v-model="detail.gender"
+                />
                 <div class="custom-label">
-                  <img src="../../assets/Register/Participant/other.svg" alt="male" />
+                  <img
+                    src="../../assets/Register/Participant/other.svg"
+                    alt="male"
+                  />
                   <label for="other">Other</label>
                 </div>
               </form>
@@ -326,7 +371,10 @@
                   v-model="detail.profession"
                 />
                 <div class="custom-label">
-                  <img src="../../assets/Register/Participant/student.svg" alt="student" />
+                  <img
+                    src="../../assets/Register/Participant/student.svg"
+                    alt="student"
+                  />
                   <label for="student">Student</label>
                 </div>
                 <input
@@ -337,8 +385,13 @@
                   v-model="detail.profession"
                 />
                 <div class="custom-label">
-                  <img src="../../assets/Register/Participant/other-prof.svg" alt="other-prof" />
-                  <label for="other">Faculty / Industry Personnel / Doctor / Other</label>
+                  <img
+                    src="../../assets/Register/Participant/other-prof.svg"
+                    alt="other-prof"
+                  />
+                  <label for="other"
+                    >Faculty / Industry Personnel / Doctor / Other</label
+                  >
                 </div>
               </form>
             </div>
@@ -366,10 +419,14 @@
                     value="1"
                     v-model="detail.qualification"
                   />
-                  <img src="../../assets/Register/Participant/teacher.svg" alt="male" />
-                  <label
-                    for="male"
-                  >Faculty / Post-doctoral Fellow / Research Associate / Research Engineer</label>
+                  <img
+                    src="../../assets/Register/Participant/teacher.svg"
+                    alt="male"
+                  />
+                  <label for="male"
+                    >Faculty / Post-doctoral Fellow / Research Associate /
+                    Research Engineer</label
+                  >
                 </div>
                 <div class="custom-label">
                   <input
@@ -379,7 +436,10 @@
                     value="2"
                     v-model="detail.qualification"
                   />
-                  <img src="../../assets/Register/Participant/businessman.svg" alt="male" />
+                  <img
+                    src="../../assets/Register/Participant/businessman.svg"
+                    alt="male"
+                  />
                   <label for="female">Industry Personnel</label>
                 </div>
                 <div class="custom-label">
@@ -390,7 +450,10 @@
                     value="3"
                     v-model="detail.qualification"
                   />
-                  <img src="../../assets/Register/Participant/other-prof.svg" alt="male" />
+                  <img
+                    src="../../assets/Register/Participant/other-prof.svg"
+                    alt="male"
+                  />
                   <label for="other">Other</label>
                 </div>
               </form>
@@ -456,15 +519,23 @@
               </div>
             </form>
             <div class="input file-type" style="margin-top: 1rem;">
-              <label>Student Verification : Please upload a document which proves you are a student (ID proof, College Fee Receipt, Library Card etc)</label>
+              <label
+                >Student Verification : Please upload a document which proves
+                you are a student (ID proof, College Fee Receipt, Library Card
+                etc)</label
+              >
               <input
                 type="file"
                 class="student-id"
                 ref="studentImage"
                 @change="onStudentFilePicked"
               />
-              <div @click="pickStudentImage" class="btn my-btn shake">Upload File</div>
-              <p class="upload-msg" v-if=" !idImgName == ''">Uploaded {{idImgName}} succesfully !</p>
+              <div @click="pickStudentImage" class="btn my-btn shake">
+                Upload File
+              </div>
+              <p class="upload-msg" v-if="!idImgName == ''">
+                Uploaded {{ idImgName }} succesfully !
+              </p>
               <p class="upload-msg" v-else>No file uploaded</p>
             </div>
           </div>
@@ -477,23 +548,59 @@
           <div class="category">
             <form>
               <div class="custom-label">
-                <input type="radio" id="f1" name="feedback" value="f1" v-model="detail.feedback" />
-                <img src="../../assets/Register/Participant/friends.svg" alt="male" />
+                <input
+                  type="radio"
+                  id="f1"
+                  name="feedback"
+                  value="f1"
+                  v-model="detail.feedback"
+                />
+                <img
+                  src="../../assets/Register/Participant/friends.svg"
+                  alt="male"
+                />
                 <label for="male">Friends / Colleagues</label>
               </div>
               <div class="custom-label">
-                <input type="radio" id="f2" name="feedback" value="f2" v-model="detail.feedback" />
-                <img src="../../assets/Register/Participant/social.svg" alt="male" />
+                <input
+                  type="radio"
+                  id="f2"
+                  name="feedback"
+                  value="f2"
+                  v-model="detail.feedback"
+                />
+                <img
+                  src="../../assets/Register/Participant/social.svg"
+                  alt="male"
+                />
                 <label for="female">Social Media</label>
               </div>
               <div class="custom-label">
-                <input type="radio" id="f3" name="feedback" value="f3" v-model="detail.feedback" />
-                <img src="../../assets/Register/Participant/search.svg" alt="male" />
+                <input
+                  type="radio"
+                  id="f3"
+                  name="feedback"
+                  value="f3"
+                  v-model="detail.feedback"
+                />
+                <img
+                  src="../../assets/Register/Participant/search.svg"
+                  alt="male"
+                />
                 <label for="other">Search Engine</label>
               </div>
               <div class="custom-label">
-                <input type="radio" id="f4" name="feedback" value="f4" v-model="detail.feedback" />
-                <img src="../../assets/Register/Participant/other-feedback.svg" alt="male" />
+                <input
+                  type="radio"
+                  id="f4"
+                  name="feedback"
+                  value="f4"
+                  v-model="detail.feedback"
+                />
+                <img
+                  src="../../assets/Register/Participant/other-feedback.svg"
+                  alt="male"
+                />
                 <label for="other">Other</label>
               </div>
             </form>
@@ -830,38 +937,8 @@ export default {
       return 3;
     },
     setAmount() {
-      this.countryStatus = this.checkCountryStatus();
-      if (this.detail.profession == "s") {
-        // student
-        this.detail.amount =
-          this.detail.country == "India"
-            ? 1000
-            : this.detail.country == "Bolivia"
-            ? 30
-            : 75;
-      } else if (this.detail.qualification == 1) {
-        // teacher
-        this.detail.amount =
-          this.detail.country == "India"
-            ? 5612
-            : this.detail.country == "Bolivia"
-            ? 50
-            : 150;
-      } else {
-        // industry & other
-        this.detail.amount = this.detail.country == "India" ? 5612 : 250;
-      }
-      switch (this.countryStatus) {
-        case 1: //underdeveloped
-          this.detail.discount = 75;
-          break;
-        case 2: //developing
-          this.detail.discount = 50;
-          break;
-        case 3: //developed
-          this.detail.discount = 50;
-          break;
-      }
+      this.detail.amount = this.detail.country == "India" ? 750 : 10;
+      this.detail.discount = 0;
       this.detail.finalAmount =
         this.detail.amount - (this.detail.amount * this.detail.discount) / 100;
       this.detail.finalAmount = Math.floor(this.detail.finalAmount);

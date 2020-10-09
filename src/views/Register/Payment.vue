@@ -3,14 +3,21 @@
     <div class="card header">
       <img :src="getImgUrl()" alt="header" />
       <div class="title">
-        <h1>{{type}} Registration</h1>
-        <h4>Interested to understand COVID-19 better ? Join us for an information packed conference !</h4>
+        <h1>{{ type }} Registration</h1>
+        <h4>
+          Interested to understand COVID-19 better ? Join us for an information
+          packed conference !
+        </h4>
       </div>
     </div>
     <transition name="fade" appear>
       <Error :obj="error" :emptyStr="true" />
     </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated bounceInUp" appear>
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated bounceInUp"
+      appear
+    >
       <div>
         <div class="card pay-container">
           <div class="heading">
@@ -18,12 +25,13 @@
             <div class="line"></div>
           </div>
           <div v-if="type == 'Participant'" class="body">
-            <div
-              v-if="detail.country == 'India'"
-              class="amount"
-            >Registration Fees : &#8377;{{detail.amount}}</div>
-            <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
-            <div class="discount">Discount : {{detail.discount}}%</div>
+            <div v-if="detail.country == 'India'" class="amount">
+              Registration Fees : &#8377;{{ detail.amount }}
+            </div>
+            <div v-else class="amount">
+              Registration Fees : ${{ detail.amount }}
+            </div>
+            <div class="discount">Discount : {{ detail.discount }}%</div>
             <p class="promo">
               Have a promo code ?
               <input
@@ -34,47 +42,70 @@
                 v-model="hasPromoCode"
               />
               <label for="promo">Yes</label>
-              <input type="radio" id="no" name="promo" value="n" v-model="hasPromoCode" />
+              <input
+                type="radio"
+                id="no"
+                name="promo"
+                value="n"
+                v-model="hasPromoCode"
+              />
               <label for="no">No</label>
             </p>
             <div v-if="hasPromoCode == 'y'" class="promo-code">
-              <input type="text" placeholder="Enter Promo Code" v-model="promoCode" />
+              <input
+                type="text"
+                placeholder="Enter Promo Code"
+                v-model="promoCode"
+              />
               <div @click="verifyPromoCode" class="btn">Apply Code</div>
-              <h4 v-if="isCodeValid != null" class="promo-error">{{promoMessage}}</h4>
+              <h4 v-if="isCodeValid != null" class="promo-error">
+                {{ promoMessage }}
+              </h4>
             </div>
             <div class="line"></div>
-            <div
-              v-if="detail.country == 'India'"
-              class="final-amt"
-            >Final Fee : &#8377;{{detail.finalAmount }}</div>
-            <div v-else class="final-amt">Final Fee : ${{detail.finalAmount}}</div>
+            <div v-if="detail.country == 'India'" class="final-amt">
+              Final Fee : &#8377;{{ detail.finalAmount }}
+            </div>
+            <div v-else class="final-amt">
+              Final Fee : ${{ detail.finalAmount }}
+            </div>
           </div>
           <div v-else-if="type == 'Workshop'" class="body">
-            <div
-              v-if="detail.country == 'India'"
-              class="amount"
-            >Registration Fees : &#8377;{{detail.amount}}</div>
-            <div v-else class="amount">Registration Fees : ${{detail.amount}}</div>
-            <div class="discount">Discount : {{detail.discount}}%</div>
+            <div v-if="detail.country == 'India'" class="amount">
+              Registration Fees : &#8377;{{ detail.amount }}
+            </div>
+            <div v-else class="amount">
+              Registration Fees : ${{ detail.amount }}
+            </div>
+            <div class="discount">Discount : {{ detail.discount }}%</div>
             <div class="line"></div>
-            <div
-              v-if="detail.country == 'India'"
-              class="final-amt"
-            >Final Fee : &#8377;{{detail.finalAmount }}</div>
-            <div v-else class="final-amt">Final Fee : ${{detail.finalAmount}}</div>
+            <div v-if="detail.country == 'India'" class="final-amt">
+              Final Fee : &#8377;{{ detail.finalAmount }}
+            </div>
+            <div v-else class="final-amt">
+              Final Fee : ${{ detail.finalAmount }}
+            </div>
           </div>
           <div v-else-if="type == 'Sponsor'" class="body">
             <div v-if="detail.country == 'India'">
-              <p v-if="detail.fee == '30,000'">Sponsorship Category : Platinum</p>
-              <p v-else-if="detail.fee == '20,000'">Sponsorship Category : Gold</p>
+              <p v-if="detail.fee == '30,000'">
+                Sponsorship Category : Platinum
+              </p>
+              <p v-else-if="detail.fee == '20,000'">
+                Sponsorship Category : Gold
+              </p>
               <p v-else>Sponsorship Category : Silver</p>
-              <p>Sponsorship Fee : &#8377;{{detail.fee}}</p>
+              <p>Sponsorship Fee : &#8377;{{ detail.fee }}</p>
             </div>
             <div v-else>
-              <p v-if="detail.fee == '10,000'">Sponsorship Category : Platinum</p>
-              <p v-else-if="detail.fee == '5000'">Sponsorship Category : Gold</p>
+              <p v-if="detail.fee == '10,000'">
+                Sponsorship Category : Platinum
+              </p>
+              <p v-else-if="detail.fee == '5000'">
+                Sponsorship Category : Gold
+              </p>
               <p v-else>Sponsorship Category : Silver</p>
-              <p>Sponsorship Fee : ${{detail.fee}}</p>
+              <p>Sponsorship Fee : ${{ detail.fee }}</p>
             </div>
           </div>
         </div>
@@ -93,7 +124,10 @@
                   value="1"
                   v-model="detail.paymentMode"
                 />
-                <img src="../../assets/Register/Participant/neft.svg" alt="neft" />
+                <img
+                  src="../../assets/Register/Participant/neft.svg"
+                  alt="neft"
+                />
                 <label for="male">NEFT / Net Banking</label>
               </div>
               <div class="custom-label">
@@ -104,7 +138,10 @@
                   value="2"
                   v-model="detail.paymentMode"
                 />
-                <img src="../../assets/Register/Participant/gpay.png" alt="gpay" />
+                <img
+                  src="../../assets/Register/Participant/gpay.png"
+                  alt="gpay"
+                />
                 <label for="female">Google Pay</label>
               </div>
               <div class="custom-label">
@@ -115,7 +152,10 @@
                   value="3"
                   v-model="detail.paymentMode"
                 />
-                <img src="../../assets/Register/Participant/paypal.svg" alt="paypal" />
+                <img
+                  src="../../assets/Register/Participant/paypal.svg"
+                  alt="paypal"
+                />
                 <label for="other">PayPal</label>
               </div>
               <div class="custom-label">
@@ -127,12 +167,15 @@
                   v-model="detail.paymentMode"
                 />
                 <img src="../../assets/Heading/questions.svg" alt="questions" />
-                <label for="other">None of the above, Please Contact Us to complete payment</label>
+                <label for="other"
+                  >None of the above, Please Contact Us to complete
+                  payment</label
+                >
               </div>
             </form>
           </div>
         </div>
-        <div v-if="detail.paymentMode==1" class="card category-container">
+        <div v-if="detail.paymentMode == 1" class="card category-container">
           <div class="heading">
             <h2>NEFT</h2>
             <div class="line"></div>
@@ -161,26 +204,31 @@
             <br />
             <p v-if="type == 'Participant'">
               Please make a payment of
-              <span
-                v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount }}</span>
-              <span v-else>${{detail.finalAmount}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.finalAmount }}</span
+              >
+              <span v-else>${{ detail.finalAmount }}</span>
             </p>
             <p v-else-if="type == 'Workshop'">
               Please make a payment of
-              <span
-                v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount }}</span>
-              <span v-else>${{detail.finalAmount}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.finalAmount }}</span
+              >
+              <span v-else>${{ detail.finalAmount }}</span>
             </p>
             <p v-else-if="type == 'Sponsor'">
               Please make a payment of
-              <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
-              <span v-else>${{detail.fee}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.fee }}</span
+              >
+              <span v-else>${{ detail.fee }}</span>
             </p>
           </div>
         </div>
-        <div v-else-if="detail.paymentMode==2" class="card category-container">
+        <div
+          v-else-if="detail.paymentMode == 2"
+          class="card category-container"
+        >
           <div class="heading">
             <h2>Google Pay</h2>
             <div class="line"></div>
@@ -188,22 +236,24 @@
           <div class="category">
             <p v-if="type == 'Participant'">
               Please make a payment of
-              <span
-                v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount }}</span>
-              <span v-else>${{detail.finalAmount}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.finalAmount }}</span
+              >
+              <span v-else>${{ detail.finalAmount }}</span>
             </p>
             <p v-else-if="type == 'Workshop'">
               Please make a payment of
-              <span
-                v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount }}</span>
-              <span v-else>${{detail.finalAmount}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.finalAmount }}</span
+              >
+              <span v-else>${{ detail.finalAmount }}</span>
             </p>
             <p v-else-if="type == 'Sponsor'">
               Please make a payment of
-              <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
-              <span v-else>${{detail.fee}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.fee }}</span
+              >
+              <span v-else>${{ detail.fee }}</span>
             </p>
             <p>
               Phone Number :
@@ -211,7 +261,10 @@
             </p>
           </div>
         </div>
-        <div v-else-if="detail.paymentMode==3" class="card category-container">
+        <div
+          v-else-if="detail.paymentMode == 3"
+          class="card category-container"
+        >
           <div class="heading">
             <h2>PayPal</h2>
             <div class="line"></div>
@@ -219,31 +272,39 @@
           <div class="category">
             <p v-if="type == 'Participant'">
               Please make a payment of
-              <span
-                v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount }}</span>
-              <span v-else>${{detail.finalAmount}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.finalAmount }}</span
+              >
+              <span v-else>${{ detail.finalAmount }}</span>
             </p>
             <p v-else-if="type == 'Workshop'">
               Please make a payment of
-              <span
-                v-if="detail.country == 'India'"
-              >&#8377;{{detail.finalAmount }}</span>
-              <span v-else>${{detail.finalAmount}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.finalAmount }}</span
+              >
+              <span v-else>${{ detail.finalAmount }}</span>
             </p>
             <p v-else-if="type == 'Sponsor'">
               Please make a payment of
-              <span v-if="detail.country == 'India'">&#8377;{{detail.fee}}</span>
-              <span v-else>${{detail.fee}}</span>
+              <span v-if="detail.country == 'India'"
+                >&#8377;{{ detail.fee }}</span
+              >
+              <span v-else>${{ detail.fee }}</span>
             </p>
             <a
               href="https://paypal.me/worldcovidconference?locale.x=en_GB"
               target="_blank"
-            >Click Here to pay, Please pay on paypal and return here to complete registration</a>
+              >Click Here to pay, Please pay on paypal and return here to
+              complete registration</a
+            >
           </div>
         </div>
         <div
-          v-if="detail.paymentMode == 1 || detail.paymentMode == 2 || detail.paymentMode == 3"
+          v-if="
+            detail.paymentMode == 1 ||
+              detail.paymentMode == 2 ||
+              detail.paymentMode == 3
+          "
           class="card pay-container"
         >
           <div class="heading">
@@ -262,18 +323,22 @@
                 />
               </div>
               <div class="input file-type">
-                <label>Transaction Proof (A screenshot of the completed transaction)</label>
+                <label
+                  >Transaction Proof (A screenshot of the completed
+                  transaction)</label
+                >
                 <input
                   type="file"
                   class="student-id"
                   ref="transactionImage"
                   @change="onTransactionFilePicked"
                 />
-                <div @click="pickTransactionImage" class="btn my-btn shake">Upload File</div>
-                <p
-                  class="upload-msg"
-                  v-if=" !transactionImgName == ''"
-                >Uploaded {{transactionImgName}} succesfully !</p>
+                <div @click="pickTransactionImage" class="btn my-btn shake">
+                  Upload File
+                </div>
+                <p class="upload-msg" v-if="!transactionImgName == ''">
+                  Uploaded {{ transactionImgName }} succesfully !
+                </p>
                 <p class="upload-msg" v-else>No file uploaded</p>
               </div>
             </form>
@@ -296,7 +361,10 @@
       mode="out-in"
       appear
     >
-      <Loading :heading="'Saving Details'" :message="'Thank You For Registering With Us !'" />
+      <Loading
+        :heading="'Saving Details'"
+        :message="'Thank You For Registering With Us !'"
+      />
     </transition>
   </div>
 </template>
@@ -346,37 +414,10 @@ export default {
       }
     },
     verifyPromoCode() {
-      let codeVerificationResponse = false;
-      for (var i = 0; i < this.$store.getters.getPromoCodes.length; i++) {
-        console.log(this.$store.getters.getPromoCodes[i].promo.code);
-        if (this.$store.getters.getPromoCodes[i].promo.code == this.promoCode) {
-          codeVerificationResponse = true;
-          this.isCodeValid = true;
-          this.deletePromoCode = this.$store.getters.getPromoCodes[i].id;
-          this.detail.additionalDiscount = this.$store.getters.getPromoCodes[
-            i
-          ].promo.discount;
-          this.promoMessage =
-            "Additional Discount of " +
-            this.detail.additionalDiscount +
-            "% is applied";
-          this.detail.finalAmount =
-            this.detail.finalAmount -
-            (this.detail.finalAmount * this.detail.additionalDiscount) / 100;
-          this.detail.finalAmount = Math.floor(this.detail.finalAmount);
-          this.$store.getters.getPromoCodes.splice(i, 1);
-          console.log("delete id", this.deletePromoCode);
-          console.log("if true", this.isCodeValid);
-          break;
-        }
-      }
-      if (!codeVerificationResponse) {
-        this.isCodeValid = false;
-        console.log("message", this.isCodeValid);
-        this.promoMessage =
-          "This promo code is invalid ! Please enter a valid code";
-        this.detail.additionalDiscount = 0;
-      }
+      this.isCodeValid = false;
+
+      this.promoMessage = "This promo code is invalid !";
+      this.detail.additionalDiscount = 0;
     },
     allFieldsFilled() {
       if (this.detail.finalAmount != 0) {
@@ -411,20 +452,14 @@ export default {
         if (this.type == "Participant") {
           let payload = {
             generatedFiles: this.generatedFiles,
-            detail: this.detail,
-            deleteId: this.deletePromoCode
+            detail: this.detail
           };
           this.$store
             .dispatch("saveParticipantDetails", payload)
             .then(() => {
               this.$store.state.isSavingForm = false;
-              this.$router.push({
-                name: "SuccessfulRegistration",
-                params: {
-                  type: "Participant",
-                  detail: this.detail
-                }
-              });
+              this.$store.state.validUser = true;
+              this.$router.push("/recordings");
               this.$store.state.navItem = 1;
             })
             .catch(resp => {

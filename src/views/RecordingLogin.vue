@@ -14,11 +14,13 @@
         </div>
         <input
           v-if="$store.state.isLoggingIn"
-          type="password"
+          type="email"
           placeholder="Enter Registered email"
-          v-model="password"
+          v-model="email"
         />
-        <div v-if="$store.state.isLoggingIn" @click="logIn" class="btn">Log In</div>
+        <div v-if="$store.state.isLoggingIn" @click="logIn" class="btn">
+          Log In
+        </div>
         <Loading
           :heading="''"
           :message="'Logging In'"
@@ -39,8 +41,8 @@ export default {
   },
   data() {
     return {
-      email: "admin@worldcovidconf.com",
-      password: "",
+      email: "",
+
       error: {
         isVisible: false,
         message: ""
@@ -49,20 +51,14 @@ export default {
   },
   methods: {
     logIn() {
-      let data = { email: this.email, password: this.password };
-      this.$store
-        .dispatch("logIn", data)
-        .then(() => {
-          //this.password = "";
-          this.$router.push("/admin/home");
-        })
-        .catch(err => {
-          /*
-          this.error.message = err;
-          this.error.isVisible = true;*/
-          alert(err);
-          this.password = "";
-        });
+      if (
+        this.$store.getters.getRecordingsUsers.find(user => user == this.email)
+      ) {
+        this.$store.state.validUser = true;
+        this.$router.push("/recordings");
+      } else {
+        this.$router.push("/register/conference/participant");
+      }
     }
   }
 };

@@ -11,10 +11,17 @@
         <div class="small-line"></div>
       </div>
       <p>
-        Current pandemic times, unveil all continents’ unpreparedness and worldwide sorrow.
-        In this unique conference, we, as a multidisciplinary independent group, gather numerous international personalities directly involved in testing, preventing, treating, and striving to find a cure for COVID-19 pandemic.
-        This global platform provides an extraordinary opportunity for diverse groups of people to attend and learn about the virus characteristics and potential ways of fighting it.
-        We, scientists, from India’s “Bengaluru Genomics Center (BGC)” and Bolivia’s “High Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)”, accompanied by extraordinary worldwide profesional individuals, aim to encourage the world to unite and to restore humanity, together.
+        Current pandemic times, unveil all continents’ unpreparedness and
+        worldwide sorrow. In this unique conference, we, as a multidisciplinary
+        independent group, gather numerous international personalities directly
+        involved in testing, preventing, treating, and striving to find a cure
+        for COVID-19 pandemic. This global platform provides an extraordinary
+        opportunity for diverse groups of people to attend and learn about the
+        virus characteristics and potential ways of fighting it. We, scientists,
+        from India’s “Bengaluru Genomics Center (BGC)” and Bolivia’s “High
+        Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)”, accompanied by
+        extraordinary worldwide profesional individuals, aim to encourage the
+        world to unite and to restore humanity, together.
       </p>
     </section>
     <section class="themes">
@@ -100,58 +107,54 @@
       </div>
       <h3 style="padding: 0 2rem; line-height:2rem;">
         Prof. Dr. Gustavo Zubieta-Calleja
-        <br />Head
-        <br />High Altitude Pulmonary and Pathology Institute (HAPPI-IPPA)
+        <br />Head <br />High Altitude Pulmonary and Pathology Institute
+        (HAPPI-IPPA)
+
+        <h5 style="margin:0; padding:0;">
+          <span @click="route(12)" style="color: red;margin-right: 0.5rem;"
+            >Click Here,</span
+          >to read more about Dr. Gustavo Zubieta-Calleja
+        </h5>
       </h3>
       <p style="padding: 0 2rem; line-height:2rem;">
-        Life is a gift of nature around our planet.
-        It is precious beyond anything else in the universe.
-        It results from a cosmic miracle.
-        And it depends on many fundamental elements,
-        being one of the most important, oxygen.
-        This coronavirus 2, attacks many parts of our body.
-        The most dramatic, is his attack on the lungs,
-        the fundamental organ where oxygen is captured,
-        So by destroying the cells in our lungs (Pneumolysis)
-        it gradually takes our lives,
-        in the most dramatic way, asphyxia.
-        This means we are suddenly choked to death.
-        it does not matter if you are from the north or the south
-        from the east from the west, if you are male or female,
-        if you are young or old with variations of course of incidence.
-        I am a High Altitude Medicine specialist,
-        I have dealt with Hypoxia all my life,
-        and it is this knowledge gathered in 50 years of experience,
-        that becomes a treasure under these circumstances.
-        At high altitude, I have seen patients suffer from very low oxygen levels,
-        being able to survive.
-        These same oxygen saturation values at sea level, cannot be tolerated and
-        are very feared.
-        I am a specialist, in adaptation to High Altitude.
-        We have developed formulas of adaptation and tolerance to Hypoxia.
-        They become extremely important and we have been
-        working hard to give this knowledge to the world.
-        We have joined hands with Professor Malali Gowda, Dr. Pruthvi Chakravarthi, Natalia
-        Zubieta-DeUrioste (my daughter) and a wonderful team to make this conference
-        a reality.
-        We are driven only by the intention to help the people from all
-        around the world, and to do good with science.
-        Because those are the fundamental principles that have driven our life
-        “Science, Honor and Truth” written in a medal that we award to
-        2 people every 2 years during the Chronic Hypoxia Symposiums.
-        We have in this conference 3 previous awardees, Professor Thuppil Venkatesh,
-        Professor Kusal Das, and Professor Andrew Pollard, Director of the Oxford
-        Vaccine.
-        We have as a speaker, the outstanding Robert Gallo, the man who has discovered HIV.
-        And all the other extraordinary speakers that honor us with their knowledge and Wisdom.
-        The world has the unique opportunity to learn from them.
-        We salute the world,
-        We tell every beating heart that we will continue in the struggle
-        And I have no doubt we will overcome it and adapt,
-        reducing the Coronavirus to a lower level of importance in our lives
-        And those hearts should rest assured, should base their objective
-        in life, to provide love to all their loved ones,
-        to all the animals, to all the plants, and to the sun and we must always express our gratitude to existence.
+        Life is a gift of nature around our planet. It is precious beyond
+        anything else in the universe. It results from a cosmic miracle. And it
+        depends on many fundamental elements, being one of the most important,
+        oxygen. This coronavirus 2, attacks many parts of our body. The most
+        dramatic, is his attack on the lungs, the fundamental organ where oxygen
+        is captured, So by destroying the cells in our lungs (Pneumolysis) it
+        gradually takes our lives, in the most dramatic way, asphyxia. This
+        means we are suddenly choked to death. it does not matter if you are
+        from the north or the south from the east from the west, if you are male
+        or female, if you are young or old with variations of course of
+        incidence. I am a High Altitude Medicine specialist, I have dealt with
+        Hypoxia all my life, and it is this knowledge gathered in 50 years of
+        experience, that becomes a treasure under these circumstances. At high
+        altitude, I have seen patients suffer from very low oxygen levels, being
+        able to survive. These same oxygen saturation values at sea level,
+        cannot be tolerated and are very feared. I am a specialist, in
+        adaptation to High Altitude. We have developed formulas of adaptation
+        and tolerance to Hypoxia. They become extremely important and we have
+        been working hard to give this knowledge to the world. We have joined
+        hands with Professor Malali Gowda, Dr. Pruthvi Chakravarthi, Natalia
+        Zubieta-DeUrioste (my daughter) and a wonderful team to make this
+        conference a reality. We are driven only by the intention to help the
+        people from all around the world, and to do good with science. Because
+        those are the fundamental principles that have driven our life “Science,
+        Honor and Truth” written in a medal that we award to 2 people every 2
+        years during the Chronic Hypoxia Symposiums. We have in this conference
+        3 previous awardees, Professor Thuppil Venkatesh, Professor Kusal Das,
+        and Professor Andrew Pollard, Director of the Oxford Vaccine. We have as
+        a speaker, the outstanding Robert Gallo, the man who has discovered HIV.
+        And all the other extraordinary speakers that honor us with their
+        knowledge and Wisdom. The world has the unique opportunity to learn from
+        them. We salute the world, We tell every beating heart that we will
+        continue in the struggle And I have no doubt we will overcome it and
+        adapt, reducing the Coronavirus to a lower level of importance in our
+        lives And those hearts should rest assured, should base their objective
+        in life, to provide love to all their loved ones, to all the animals, to
+        all the plants, and to the sun and we must always express our gratitude
+        to existence.
       </p>
     </section>
     <section class="rolling-speakers">
@@ -263,7 +266,9 @@
           </div>
         </div>
       </div>
-      <p style="width: 100%; text-align: center;padding: 0 0.1rem; overflow: hidden;">
+      <p
+        style="width: 100%; text-align: center;padding: 0 0.1rem; overflow: hidden;cursore:pointer;"
+      >
         To see the full speaker list with abstracts,
         <span @click="route(8)" class="link">Click Here</span>
       </p>
@@ -297,10 +302,7 @@
       </div>
       <p>
         To see the complete organizing commitee & institutions,
-        <span
-          @click="route(9)"
-          class="link"
-        >Click Here</span>
+        <span @click="route(9)" class="link">Click Here</span>
       </p>
     </section>
     <section class="videos">
@@ -360,7 +362,12 @@
         <div class="small-line"></div>
       </div>
       <div class="carousel-container">
-        <img src="../assets/Gallery/left.svg" alt="left" @click="decrementCarousel()" class="arrow" />
+        <img
+          src="../assets/Gallery/left.svg"
+          alt="left"
+          @click="decrementCarousel()"
+          class="arrow"
+        />
         <div class="carousel">
           <transition
             name="custom-classes-transition"
@@ -371,91 +378,91 @@
             appear
           >
             <img
-              v-if="carouselCount==1"
+              v-if="carouselCount == 1"
               src="../assets/Gallery/carousel-1.png"
               alt="carousel"
               key="1"
             />
             <img
-              v-else-if="carouselCount==2"
+              v-else-if="carouselCount == 2"
               src="../assets/Gallery/carousel-2.jpg"
               alt="carousel"
               key="2"
             />
             <img
-              v-else-if="carouselCount==3"
+              v-else-if="carouselCount == 3"
               src="../assets/Gallery/carousel-3.jpg"
               alt="carousel"
               key="3"
             />
             <img
-              v-else-if="carouselCount==4"
+              v-else-if="carouselCount == 4"
               src="../assets/Gallery/carousel-4.jpg"
               alt="carousel"
               key="4"
             />
             <img
-              v-else-if="carouselCount==5"
+              v-else-if="carouselCount == 5"
               src="../assets/Gallery/carousel-5.jpg"
               alt="carousel"
               key="5"
             />
             <img
-              v-else-if="carouselCount==6"
+              v-else-if="carouselCount == 6"
               src="../assets/Gallery/carousel-6.jpg"
               alt="carousel"
               key="6"
             />
             <img
-              v-else-if="carouselCount==7"
+              v-else-if="carouselCount == 7"
               src="../assets/Gallery/carousel-7.jpg"
               alt="carousel"
               key="7"
             />
             <img
-              v-else-if="carouselCount==8"
+              v-else-if="carouselCount == 8"
               src="../assets/Gallery/carousel-8.jpg"
               alt="carousel"
               key="8"
             />
             <img
-              v-else-if="carouselCount==9"
+              v-else-if="carouselCount == 9"
               src="../assets/Gallery/carousel-9.jpg"
               alt="carousel"
               key="9"
             />
             <img
-              v-else-if="carouselCount==10"
+              v-else-if="carouselCount == 10"
               src="../assets/Gallery/carousel-10.jpg"
               alt="carousel"
               key="10"
             />
             <img
-              v-else-if="carouselCount==11"
+              v-else-if="carouselCount == 11"
               src="../assets/Gallery/carousel-11.jpg"
               alt="carousel"
               key="11"
             />
             <img
-              v-else-if="carouselCount==12"
+              v-else-if="carouselCount == 12"
               src="../assets/Gallery/carousel-12.jpg"
               alt="carousel"
               key="12"
             />
             <img
-              v-else-if="carouselCount==13"
+              v-else-if="carouselCount == 13"
               src="../assets/Gallery/carousel-13.jpg"
               alt="carousel"
               key="13"
             />
             <img
-              v-else-if="carouselCount==14"
+              v-else-if="carouselCount == 14"
               src="../assets/Gallery/carousel-14.jpg"
               alt="carousel"
               key="14"
             />
             <img
-              v-else-if="carouselCount==15"
+              v-else-if="carouselCount == 15"
               src="../assets/Gallery/carousel-15.jpg"
               alt="carousel"
               key="15"
@@ -486,7 +493,8 @@
             download
             target="_blank"
             class="btn"
-          >Download</a>
+            >Download</a
+          >
         </div>
         <div class="card grow">
           <div class="body">
@@ -498,7 +506,8 @@
             download
             target="_blank"
             class="btn"
-          >Download</a>
+            >Download</a
+          >
         </div>
         <div class="card grow">
           <div class="body">
@@ -510,7 +519,8 @@
             download
             target="_blank"
             class="btn"
-          >Download</a>
+            >Download</a
+          >
         </div>
         <div class="card grow">
           <div class="body">
@@ -522,7 +532,8 @@
             download
             target="_blank"
             class="btn"
-          >Download</a>
+            >Download</a
+          >
         </div>
       </div>
       <h3 style="width: 100%; text-align: center;">
@@ -531,7 +542,8 @@
           href="https://www.bgc-genomics.com/ICCVG/home.html"
           target="_blank"
           class="link"
-        >here</a>
+          >here</a
+        >
       </h3>
     </div>
     <section class="gallery">
@@ -540,7 +552,12 @@
         <div class="small-line"></div>
       </div>
       <div class="carousel-container">
-        <img src="../assets/Gallery/left.svg" alt="left" @click="decrementPoem()" class="arrow" />
+        <img
+          src="../assets/Gallery/left.svg"
+          alt="left"
+          @click="decrementPoem()"
+          class="arrow"
+        />
         <div class="carousel">
           <transition
             name="custom-classes-transition"
@@ -550,16 +567,56 @@
             mode="out-in"
             appear
           >
-            <img v-if="poemCount==1" src="../assets/Poem/poem (1).png" alt="carousel" key="1" />
-            <img v-else-if="poemCount==2" src="../assets/Poem/poem (2).png" alt="carousel" key="2" />
-            <img v-else-if="poemCount==3" src="../assets/Poem/poem (3).png" alt="carousel" key="3" />
-            <img v-else-if="poemCount==4" src="../assets/Poem/poem (4).png" alt="carousel" key="4" />
-            <img v-else-if="poemCount==5" src="../assets/Poem/poem (5).png" alt="carousel" key="5" />
-            <img v-else-if="poemCount==6" src="../assets/Poem/poem (6).png" alt="carousel" key="6" />
-            <img v-else-if="poemCount==7" src="../assets/Poem/poem (7).png" alt="carousel" key="7" />
+            <img
+              v-if="poemCount == 1"
+              src="../assets/Poem/poem (1).png"
+              alt="carousel"
+              key="1"
+            />
+            <img
+              v-else-if="poemCount == 2"
+              src="../assets/Poem/poem (2).png"
+              alt="carousel"
+              key="2"
+            />
+            <img
+              v-else-if="poemCount == 3"
+              src="../assets/Poem/poem (3).png"
+              alt="carousel"
+              key="3"
+            />
+            <img
+              v-else-if="poemCount == 4"
+              src="../assets/Poem/poem (4).png"
+              alt="carousel"
+              key="4"
+            />
+            <img
+              v-else-if="poemCount == 5"
+              src="../assets/Poem/poem (5).png"
+              alt="carousel"
+              key="5"
+            />
+            <img
+              v-else-if="poemCount == 6"
+              src="../assets/Poem/poem (6).png"
+              alt="carousel"
+              key="6"
+            />
+            <img
+              v-else-if="poemCount == 7"
+              src="../assets/Poem/poem (7).png"
+              alt="carousel"
+              key="7"
+            />
           </transition>
         </div>
-        <img src="../assets/Gallery/right.svg" alt="right" @click="incrementPoem()" class="arrow" />
+        <img
+          src="../assets/Gallery/right.svg"
+          alt="right"
+          @click="incrementPoem()"
+          class="arrow"
+        />
       </div>
     </section>
     <div class="condolence">
@@ -567,7 +624,11 @@
         <h1>Condolences</h1>
         <div class="small-line"></div>
       </div>
-      <p>We deeply regret to inform the sad demise of Dr. M Manoharan who was a victim to COVID-19. He was a great source of inspiration to many and we acknowledge his services to the research community</p>
+      <p>
+        We deeply regret to inform the sad demise of Dr. M Manoharan who was a
+        victim to COVID-19. He was a great source of inspiration to many and we
+        acknowledge his services to the research community
+      </p>
       <iframe
         class="cond"
         src="https://www.youtube.com/embed/WL9lwnycDcQ"
@@ -584,7 +645,8 @@ export default {
   data() {
     return {
       carouselCount: 1,
-      poemCount: 1
+      poemCount: 1,
+      unsubscribe: null
     };
   },
   methods: {
@@ -621,6 +683,8 @@ export default {
         case 10:
           this.$router.push("/pricing");
           break;
+        case 12:
+          this.$router.push("/dr-gustavo-zubieta");
       }
     },
     incrementCarousel() {

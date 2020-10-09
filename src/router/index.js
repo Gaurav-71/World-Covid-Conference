@@ -33,6 +33,8 @@ import Workshop from "../views/Admin/Registrations/Workshop.vue";
 import Pricing from "../views/Pricing.vue";
 import RecordingLogin from "../views/RecordingLogin.vue";
 import Research from "../views/Research.vue";
+import Zubz from "../views/Zubz.vue";
+import Recordings from "../views/Recordings.vue";
 
 Vue.use(VueRouter);
 
@@ -41,6 +43,11 @@ const routes = [
     path: "/",
     name: "About",
     component: About,
+  },
+  {
+    path: "/dr-gustavo-zubieta",
+    name: "Zubz",
+    component: Zubz,
   },
   {
     path: "/login",
@@ -231,7 +238,11 @@ const routes = [
     name: "RecordingLogin",
     component: RecordingLogin,
   },
-
+  {
+    path: "/recordings",
+    name: "Recordings",
+    component: Recordings,
+  },
   {
     path: "/research-papers",
     name: "Research",
