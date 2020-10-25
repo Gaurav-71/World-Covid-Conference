@@ -17,7 +17,7 @@ import SuccessfulRegistration from "../views/Register/SuccessfulRegistration.vue
 import Contacts from "../views/Contacts.vue";
 import Organizers from "../views/Organizers.vue";
 import Speakers from "../views/Speakers.vue";
-import Schedule from "../views/Schedule.vue";
+import Schedule from "../views/Highlights.vue";
 import Login from "../views/Admin/Login.vue";
 import Home from "../views/Admin/Home.vue";
 import Activity from "../views/Admin/Activity.vue";
@@ -163,7 +163,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/schedule",
+    path: "/highlights",
     name: "Schedule",
     component: Schedule,
   },

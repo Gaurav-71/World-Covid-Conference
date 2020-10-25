@@ -24,6 +24,7 @@
         />
         <ul :class="{ 'list-nav': isMenuOpen }" class="hide">
           <li @click="route(1, 'close')">Home</li>
+          <li @click="route(10, 'close')">Highlights</li>
           <li @click="route(5, 'close')">Research Papers</li>
           <li @click="route(9, 'close')">Recordings</li>
           <li @click="route(3, 'close')">Organizers</li>
@@ -34,6 +35,7 @@
         </ul>
         <ul class="flex-nav">
           <li @click="route(1)">Home</li>
+          <li @click="route(10)">Highlights</li>
           <li @click="route(5)">Research Papers</li>
           <li @click="route(9)">Recordings</li>
           <li @click="route(3)">Organizers</li>
@@ -94,6 +96,9 @@ export default {
           break;
         case 9:
           this.$router.push("/recordings/login");
+          break;
+        case 10:
+          this.$router.push("/highlights");
           break;
       }
     },

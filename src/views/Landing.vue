@@ -116,7 +116,7 @@
           >to read more about Dr. Gustavo Zubieta-Calleja
         </h5>
       </h3>
-      <p style="padding: 0 2rem; line-height:2rem;">
+      <p style="padding: 0 2rem; line-height:2.8rem;">
         Life is a gift of nature around our planet. It is precious beyond
         anything else in the universe. It results from a cosmic miracle. And it
         depends on many fundamental elements, being one of the most important,

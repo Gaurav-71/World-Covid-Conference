@@ -102,6 +102,151 @@ export default {
           title:
             "Epidemiology of COVID-19 in the high altitude regions of Perú",
           src: "https://www.youtube.com/embed/LH56mqElqwg"
+        },
+        {
+          name: "Dr. Robert Kuhnhenn",
+          title: "Family Medicine Physician",
+          src: "https://www.youtube.com/embed/NqHzzcLJhhE"
+        },
+        {
+          name: "Dr. Kusal Das",
+          title: "Environment and COVID-19: A UNESCO COVID-19 Panel Review",
+          src: "https://www.youtube.com/embed/O4UvemissX8"
+        },
+        {
+          name: "Dr. Mario Canitrot",
+          title: "Neurological compromise in Covid-19",
+          src: "https://www.youtube.com/embed/znZ0hAtEZCo"
+        },
+        {
+          name: "Augusto Ittig",
+          title:
+            "Telemedicine in remote places: how to reduce doctor-patient contact during COVID-19 pandemic",
+          src: "https://www.youtube.com/embed/znZ0hAtEZCo"
+        },
+        {
+          name: "Dr. Clint Hendrikse",
+          title:
+            "Evidence and feasibility of prone positioning in COVID - 19: a resource challenged perspective",
+          src: "https://www.youtube.com/embed/p6kiodC1DOw"
+        },
+        {
+          name: "Harish P",
+          title: "Cancer treatment in covid times Medical Oncologist",
+          src: "https://www.youtube.com/embed/RyG9KTqBeKY"
+        },
+        {
+          name: "Dr. Robert Gallo",
+          title: "Arresting Covid-19",
+          src: "https://www.youtube.com/embed/1S_rifbBUFo"
+        },
+        {
+          name: "Dr. Fakhruddin",
+          title: "2wcc Dr. Fakhruddin",
+          src: "https://www.youtube.com/embed/JLgWqo509Xg"
+        },
+        {
+          name: "Dr. Jose Antonio Carmona",
+          title: "My concerns of Mexico - Covid",
+          src: "https://www.youtube.com/embed/X5O9tWVMisw"
+        },
+        {
+          name: "Dr. Gabriela Urquieta",
+          title: "Chest CT findings in COVID -19 at very high altitude",
+          src: "https://www.youtube.com/embed/aIErLaDoVWw"
+        },
+        {
+          name: "Dr. Walter Calderon",
+          title:
+            "Epidemiology of COVID-19 in the high altitude regions of Perú",
+          src: "https://www.youtube.com/embed/LH56mqElqwg"
+        },
+        {
+          name: "Dr. Chitra Pattabiraman",
+          title: "",
+          src: "https://www.youtube.com/embed/1WjaIXlYlpg"
+        },
+        {
+          name: "Dr. Martin Begemann",
+          title:
+            "Neurological and psychiatric presentations in COVID-19 and neuroprotective treatment potential of recombinant human erythropoietin",
+          src: "https://www.youtube.com/embed/qYHgIJJILTs"
+        },
+        {
+          name: "Prof. Murray Epstein",
+          title:
+            "Risks and Impact of Angiotensin Converting Enzyme inhibitors or Angiotensin Receptor Blockers",
+          src: "https://www.youtube.com/embed/8u75p5-TAI4"
+        },
+        {
+          name: "Vaidya P. Rammanohar",
+          title: "Ayurveda and COVID-19 : Research and Clinical Updates",
+          src: "https://www.youtube.com/embed/fvVRyxqCRH4"
+        },
+        {
+          name: "Dr. Hamid Mobasheri",
+          title:
+            "SARS-Cov2 biophysical nature of Coronavirus, means of its stability and susceptibility",
+          src: "https://www.youtube.com/embed/iS6yKsHI2R0"
+        },
+        {
+          name: "Dr. Giuseppe Miserocchi",
+          title: "Respiratory failure due to gas diffusion limitation",
+          src: "https://www.youtube.com/embed/UHCQIxKBco8"
+        },
+        {
+          name: "Dr. Andrew Pollard",
+          title: "COVID-19 Vaccines",
+          src: "https://www.youtube.com/embed/UHCQIxKBco8"
+        },
+        {
+          name: "Dr. Usha Lalla",
+          title:
+            "The impact on high-flow nasal oxygen on the mortality of respiratory failure secondary to COVID-19 pneumonia",
+          src: "https://www.youtube.com/embed/cB5oxfkcZFg"
+        },
+        {
+          name: "Dr. Thuppil Venktesh",
+          title: "Global life style changes during and post COVID 19",
+          src: "https://www.youtube.com/embed/Ob11LEvOo2c"
+        },
+        {
+          name: "Dr. Danutzia Marques",
+          title: "Sex differences in the mortality by COVID-19",
+          src: "https://www.youtube.com/embed/7a-nn_6T1oc"
+        },
+        {
+          name: "Dr. Ross Hofmeyr",
+          title:
+            "Creating systems for safe COVID airway management: The Groote Schuur experience",
+          src: "https://www.youtube.com/embed/2HFa2NugmwU"
+        },
+        {
+          name: "Dr. Milena Garcia",
+          title: "Covid in Colombia",
+          src: "https://www.youtube.com/embed/dsRkl8FEmJM"
+        },
+        {
+          name: "Dr. Shaji Bharath",
+          title: "Accupunture for COVID-19",
+          src: "https://www.youtube.com/embed/kocgLGSXvhk"
+        },
+        {
+          name: "Dr. Malali Gowda",
+          title: "Human Genome Project",
+          src: "https://www.youtube.com/embed/QLwhSpo7DY8"
+        },
+        {
+          name: "Dr. Su Datt Lam",
+          title:
+            "SARS-COV 2 spike protein predicted to form complexes with host receptor protein orthologues from a broad range of mammals",
+          src: "https://www.youtube.com/embed/OUSPGCal2Qo"
+        },
+        {
+          name: "Dr. Jim Russell",
+          title:
+            "Host Response Mediators in COVID-19 infection - Is there a protective effect of angiotensin II",
+          src: "https://www.youtube.com/embed/wuQLnoGmyrk"
         }
       ]
     };
