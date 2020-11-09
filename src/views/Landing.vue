@@ -109,52 +109,74 @@
         Prof. Dr. Gustavo Zubieta-Calleja
         <br />Head <br />High Altitude Pulmonary and Pathology Institute
         (HAPPI-IPPA)
-
-        <h5 style="margin:0; padding:0;">
-          <span @click="route(12)" style="color: red;margin-right: 0.5rem;"
-            >Click Here,</span
+        <h5 style="margin:0.5rem 0; padding:0;">
+          <span
+            @click="route(12)"
+            style="color: white; margin-right: 0.5rem; background: red; border-radius: 0.8rem; padding: 0.5rem; cursor : pointer;"
+            >Click Here</span
           >to read more about Dr. Gustavo Zubieta-Calleja
         </h5>
       </h3>
-      <p style="padding: 0 2rem; line-height:2.8rem;">
-        Life is a gift of nature around our planet. It is precious beyond
-        anything else in the universe. It results from a cosmic miracle. And it
-        depends on many fundamental elements, being one of the most important,
-        oxygen. This coronavirus 2, attacks many parts of our body. The most
-        dramatic, is his attack on the lungs, the fundamental organ where oxygen
-        is captured, So by destroying the cells in our lungs (Pneumolysis) it
-        gradually takes our lives, in the most dramatic way, asphyxia. This
-        means we are suddenly choked to death. it does not matter if you are
-        from the north or the south from the east from the west, if you are male
-        or female, if you are young or old with variations of course of
-        incidence. I am a High Altitude Medicine specialist, I have dealt with
-        Hypoxia all my life, and it is this knowledge gathered in 50 years of
-        experience, that becomes a treasure under these circumstances. At high
-        altitude, I have seen patients suffer from very low oxygen levels, being
-        able to survive. These same oxygen saturation values at sea level,
-        cannot be tolerated and are very feared. I am a specialist, in
-        adaptation to High Altitude. We have developed formulas of adaptation
-        and tolerance to Hypoxia. They become extremely important and we have
-        been working hard to give this knowledge to the world. We have joined
-        hands with Professor Malali Gowda, Dr. Pruthvi Chakravarthi, Natalia
-        Zubieta-DeUrioste (my daughter) and a wonderful team to make this
-        conference a reality. We are driven only by the intention to help the
-        people from all around the world, and to do good with science. Because
-        those are the fundamental principles that have driven our life “Science,
-        Honor and Truth” written in a medal that we award to 2 people every 2
-        years during the Chronic Hypoxia Symposiums. We have in this conference
-        3 previous awardees, Professor Thuppil Venkatesh, Professor Kusal Das,
-        and Professor Andrew Pollard, Director of the Oxford Vaccine. We have as
-        a speaker, the outstanding Robert Gallo, the man who has discovered HIV.
+      <br />
+      <p style="padding: 0 2rem; line-height:2.4rem;">
+        Life is a gift of nature around our planet.
+        <br />
+        It is precious beyond anything else in the universe. <br />
+        It results from a cosmic miracle. <br />
+        And it depends on many fundamental elements, being one of the most
+        important, oxygen.
+        <br />
+        This coronavirus 2, attacks many parts of our body. <br />
+        The most dramatic, is his attack on the lungs, the fundamental organ
+        where oxygen is captured, <br />
+        So by destroying the cells in our lungs (Pneumolysis) it gradually takes
+        our lives, in the most dramatic way, asphyxia.
+        <br />
+        This means we are suddenly choked to death. <br />
+        it does not matter if you are from the north or the south from the east
+        from the west, if you are male or female, <br />
+        if you are young or old with variations of course of incidence. <br />
+        I am a High Altitude Medicine specialist, I have dealt with Hypoxia all
+        my life, and it is this knowledge gathered in 50 years of experience,
+        <br />
+        that becomes a treasure under these circumstances.
+        <br />
+        At high altitude, I have seen patients suffer from very low oxygen
+        levels, being able to survive. <br />
+        These same oxygen saturation values at sea level, cannot be tolerated
+        and are very feared. <br />
+        I am a specialist, in adaptation to High Altitude. <br />
+        We have developed formulas of adaptation and tolerance to Hypoxia.
+        <br />
+        They become extremely important and we have been working hard to give
+        this knowledge to the world. <br />
+        We have joined hands with Professor Malali Gowda, Dr. Pruthvi
+        Chakravarthi, <br />
+        Natalia Zubieta-DeUrioste (my daughter) and a wonderful team to make
+        this conference a reality. <br />
+        We are driven only by the intention to help the people from all around
+        the world, and to do good with science. <br />
+        Because those are the fundamental principles that have driven our life
+        “Science, Honor and Truth” <br />
+        written in a medal that we award to 2 people every 2 years during the
+        Chronic Hypoxia Symposiums. <br />
+        We have in this conference 3 previous awardees, Professor Thuppil
+        Venkatesh, Professor Kusal Das, and Professor Andrew Pollard,<br />
+        Director of the Oxford Vaccine. <br />
+        We have as a speaker, the outstanding Robert Gallo, the man who has
+        discovered HIV. <br />
         And all the other extraordinary speakers that honor us with their
-        knowledge and Wisdom. The world has the unique opportunity to learn from
-        them. We salute the world, We tell every beating heart that we will
-        continue in the struggle And I have no doubt we will overcome it and
-        adapt, reducing the Coronavirus to a lower level of importance in our
-        lives And those hearts should rest assured, should base their objective
-        in life, to provide love to all their loved ones, to all the animals, to
-        all the plants, and to the sun and we must always express our gratitude
-        to existence.
+        knowledge and Wisdom. <br />
+        The world has the unique opportunity to learn from them. <br />
+        We salute the world, We tell every beating heart that we will continue
+        in the struggle And I have no doubt we will overcome it and adapt,
+        <br />
+        reducing the Coronavirus to a lower level of importance in our lives And
+        those hearts should rest assured, <br />
+        should base their objective in life, to provide love to all their loved
+        ones, to all the animals, to all the plants, <br />
+        and to the sun and we must always express our gratitude to existence.
+        <br />
       </p>
     </section>
     <section class="rolling-speakers">

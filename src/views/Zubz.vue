@@ -40,25 +40,31 @@
           <ol>
             <li style="margin:1rem 0;">
               Pneumolysis, a new concept defined as progressive
-              alveolar-capillary destruction resulting from CoV-2 attack on
+              alveolar-capillary destruction (resulting from CoV-2 attack on
               pneumocytes) is fundamental to explain the pathophysiology of
               COVID-19. Pneumolysis + capillary vasodilatation + superimposed
               inflammation + overexpressed immunity + HAPE-type edema result in
               a significantly reduced pulmonary gas exchange area with
               intra-pulmonary shunting, uneven ventilation/perfusion and
-              diffusion alteration
+              diffusion alteration.
             </li>
             <li style="margin:1rem 0;">
               Extensive experience in high altitude medicine allows for
               explaining A) the Oxygen Transport Triad: Pneumo-Dynamic Pump,
-              Hemo-Dynamic Pump and Hemoglobin and its COVID-19 compromise and
-              B) Pathophysiology of COVID-19 involving 3 stages: Silent
+              Hemo-Dynamic Pump and Hemoglobin and its compromise in COVID-19
+              and B) Pathophysiology of COVID-19 involving 3 stages: Silent
               hypoxemia, Gasping, and Death zone
             </li>
             <li style="margin:1rem 0;">
               Application of the Tolerance to Hypoxia formula = Hb/PaCO2 +3.01
               to COVID-19, enlightens the understanding of critical hypoxemia
-              and suggests the favorable use of Erythropoietin
+              and suggests the favorable use of Erythropoietin.
+            </li>
+            <li style="margin:1rem 0;">
+              Lower incidence of COVID-19 at high altitude due to higher
+              Ultra-Violet Radiation, higher inter-molecular distance due to
+              lower barometric pressure, lower humidity, and possibly lower
+              quantity of ACE2 receptors in the lungs.
             </li>
           </ol>
         </div>

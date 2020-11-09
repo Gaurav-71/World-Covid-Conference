@@ -19,7 +19,7 @@
           <img style="box-shadow:none;" src="../assets/highlights.svg" alt />
           <div class="data">
             <a
-              href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHighlights%20of%20the%20Conference%20(1).pdf?alt=media&token=32042e9b-2609-4d19-91e3-81399549411c"
+              href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHighlights%20of%20the%20Conference%20(2).pdf?alt=media&token=0fde8eb2-072f-437e-82b0-43e8ed4e3083"
               target="_blank"
               class="btn"
               >Speech Highlights</a

@@ -312,7 +312,7 @@
               </datalist>
             </div>
           </form>
-          <div class="flex">
+          <!-- <div class="flex">
             <div class="gender">
               <label>Gender</label>
               <form>
@@ -395,8 +395,9 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div>--->
         </div>
+        <!---
         <transition
           name="custom-classes-transition"
           enter-active-class="animated bounceInLeft"
@@ -605,7 +606,7 @@
               </div>
             </form>
           </div>
-        </div>
+        </div> --->
       </div>
     </transition>
     <div @click="validate" class="btn shake">Save & Pay</div>
@@ -896,13 +897,11 @@ export default {
         return "Phone Number";
       } else if (this.detail.email == "") {
         return "Email";
-      } else if (this.detail.gender == "") {
+      } /* else if (this.detail.gender == "") {
         return "Gender";
       } else if (this.detail.profession == null) {
         return "Profession";
-      } else if (this.detail.country == "") {
-        return "Country - Postal Address";
-      } else if (this.detail.profession == "s") {
+      }  else if (this.detail.profession == "s") {
         if (this.detail.universityName == "") {
           return "University Name";
         } else if (this.detail.stream == "") {
@@ -920,6 +919,10 @@ export default {
         }
       } else if (this.detail.feedback == null) {
         return "Survey";
+      }*/ else if (
+        this.detail.country == ""
+      ) {
+        return "Country - Postal Address";
       }
       return "allFilled";
     },

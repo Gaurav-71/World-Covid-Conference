@@ -55,9 +55,19 @@ export default {
       },
       recordings: [
         {
+          name: "2nd World COVID Conference Opening Ceremony",
+          title: "",
+          src: "https://www.youtube.com/embed/D8FpGFJIY90"
+        },
+        {
           name: "Prof. Dr. Gustavo Zubieta-Calleja",
           title: "Pneumolysis and Silent Hypoxemia in COVID-19: A new concept",
           src: "https://www.youtube.com/embed/wXwrGWOWNN8"
+        },
+        {
+          name: "Dr. Malali Gowda",
+          title: "Human Genome Project",
+          src: "https://www.youtube.com/embed/QLwhSpo7DY8"
         },
         {
           name: "Dr. Roberto Achinell",
@@ -105,7 +115,8 @@ export default {
         },
         {
           name: "Dr. Robert Kuhnhenn",
-          title: "Family Medicine Physician",
+          title:
+            " Statistical analysis of COVID-19 and development of a prediction formula",
           src: "https://www.youtube.com/embed/NqHzzcLJhhE"
         },
         {
@@ -116,7 +127,7 @@ export default {
         {
           name: "Dr. Mario Canitrot",
           title: "Neurological compromise in Covid-19",
-          src: "https://www.youtube.com/embed/znZ0hAtEZCo"
+          src: "https://www.youtube.com/embed/1j00_kylSdA"
         },
         {
           name: "Augusto Ittig",
@@ -137,17 +148,20 @@ export default {
         },
         {
           name: "Dr. Robert Gallo",
-          title: "Arresting Covid-19",
+          title:
+            "Lessons from the Past Pandemics; Implications for Arresting Covid-19",
           src: "https://www.youtube.com/embed/1S_rifbBUFo"
         },
         {
           name: "Dr. Fakhruddin",
-          title: "2wcc Dr. Fakhruddin",
+          title:
+            "Efficacy of homeopathic profilaxis in COVID/19 as an immune-booster",
           src: "https://www.youtube.com/embed/JLgWqo509Xg"
         },
         {
           name: "Dr. Jose Antonio Carmona",
-          title: "My concerns of Mexico - Covid",
+          title:
+            "Machiavelli and Rouseau - The judges of Covid-19 in its Neurol Manifest",
           src: "https://www.youtube.com/embed/X5O9tWVMisw"
         },
         {
@@ -160,17 +174,6 @@ export default {
           title:
             "Epidemiology of COVID-19 in the high altitude regions of Perú",
           src: "https://www.youtube.com/embed/LH56mqElqwg"
-        },
-        {
-          name: "Dr. Chitra Pattabiraman",
-          title: "",
-          src: "https://www.youtube.com/embed/1WjaIXlYlpg"
-        },
-        {
-          name: "Dr. Martin Begemann",
-          title:
-            "Neurological and psychiatric presentations in COVID-19 and neuroprotective treatment potential of recombinant human erythropoietin",
-          src: "https://www.youtube.com/embed/qYHgIJJILTs"
         },
         {
           name: "Prof. Murray Epstein",
@@ -231,11 +234,7 @@ export default {
           title: "Accupunture for COVID-19",
           src: "https://www.youtube.com/embed/kocgLGSXvhk"
         },
-        {
-          name: "Dr. Malali Gowda",
-          title: "Human Genome Project",
-          src: "https://www.youtube.com/embed/QLwhSpo7DY8"
-        },
+
         {
           name: "Dr. Su Datt Lam",
           title:
@@ -247,6 +246,82 @@ export default {
           title:
             "Host Response Mediators in COVID-19 infection - Is there a protective effect of angiotensin II",
           src: "https://www.youtube.com/embed/wuQLnoGmyrk"
+        },
+        {
+          name: "Dr. Lindsay Brown",
+          title: "Linking the obesity and COVID-19 pandemics",
+          src: "https://www.youtube.com/embed/xivHXsKQjF4"
+        },
+        {
+          name: "Dr. Alberto Lopez",
+          title: "New Technologies of the recent application of COVID-19",
+          src: "https://www.youtube.com/embed/u-BoIDplpww"
+        },
+        {
+          name: "Dr. Felipe Montelongo",
+          title:
+            "Management of severe pneumonia in COVID-19, and the resulting histology",
+          src: "https://www.youtube.com/embed/GypSH8BodNQ"
+        },
+        {
+          name: "Dr. Oscar Murillo",
+          title: "Treatment of COVID-19 In long term facilities ",
+          src: "https://www.youtube.com/embed/MYPZTuEODic"
+        },
+        {
+          name: "Dr. Sumanta Goswani",
+          title: "New diagnostic assays for COVID-19",
+          src: "https://www.youtube.com/embed/l0kEYHDeC1o"
+        },
+        {
+          name: "Dr. Sudhir Krishna",
+          title:
+            "Creating teams for Indian viral sequences based nucleic acid vaccine systems",
+          src: "https://www.youtube.com/embed/kwT4h9OSeU8"
+        },
+        {
+          name: "Dr. Gordon Dickinson",
+          title:
+            "Two viruses HIV and SARS-Cov2: Synergistic, Antogonistic or Neutral?",
+          src: "https://www.youtube.com/embed/VBTTuld7l48"
+        },
+        {
+          name: "Dr. Gaurav Sharma",
+          title:
+            "Diversity and evolution of coronaviruses: whole genom and pan-genom perspective",
+          src: "https://www.youtube.com/embed/9g5rgGVyhSU"
+        },
+        {
+          name: "Dr. Manjunath",
+          title:
+            "PCR and CBNAAT based diagnostic methodology for COVID-19. Diagnosis of COVID-19 lab",
+          src: "https://www.youtube.com/embed/-ojkOHDc_KY"
+        },
+        {
+          name: "Dr. Christine Ebert-Santos",
+          title: "Pediatrics and COVID-19 ",
+          src: "https://www.youtube.com/embed/6asITUfVtPg"
+        },
+        {
+          name: "Dr. Imtayiaz Hassan",
+          title: "Identification of high-affinity inhibitors of SARS-Cov2",
+          src: "https://www.youtube.com/embed/hKKtX7edTPE"
+        },
+        {
+          name: "Dr. Shaji Bharat",
+          title: "Accupuncture for COVID-19",
+          src: "https://www.youtube.com/embed/kocgLGSXvhk"
+        },
+        {
+          name: "Dr. Byron Canelos",
+          title: "Experience with Nitaxonazide in Ecuador",
+          src: "https://www.youtube.com/embed/8g8EOT6Rwog"
+        },
+        {
+          name: "Dr. Meera Sudheer",
+          title:
+            "Ayurveda medicine nutrition to eliminate COVID-19 morbidities",
+          src: "https://www.youtube.com/embed/Pj8_sTw5lhQ"
         }
       ]
     };
