@@ -322,6 +322,12 @@ export default {
           title:
             "Ayurveda medicine nutrition to eliminate COVID-19 morbidities",
           src: "https://www.youtube.com/embed/Pj8_sTw5lhQ"
+        },
+        {
+          name: "Dr. Sanjay Jain",
+          title:
+            "Integration of Ayurveda in the management of critically ill patients of Covid-19 enables remarkably",
+          src: "https://www.youtube.com/embed/LkDOmpvrzNQ"
         }
       ]
     };

@@ -22,7 +22,7 @@
               href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FHighlights%20of%20the%20Conference%20(2).pdf?alt=media&token=0fde8eb2-072f-437e-82b0-43e8ed4e3083"
               target="_blank"
               class="btn"
-              >Speech Highlights</a
+              >Speaker Highlights</a
             >
             <a
               href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/DownloadFiles%2FAbstract%20Book%20(1).pdf?alt=media&token=5e7989af-6399-4c82-9003-d02df566833e"
@@ -34,7 +34,7 @@
               href="https://firebasestorage.googleapis.com/v0/b/world-covid-conference-79354.appspot.com/o/Research%20Papers%2FResearch%20Papers.zip?alt=media&token=767085fe-357b-4c11-bc56-59ed1888552d"
               target="_blank"
               class="btn"
-              >Research Papers</a
+              >Research Papers Download</a
             >
           </div>
         </div>
